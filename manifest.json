@@ -1,0 +1,58 @@
+{
+  "version": "3.0.0",
+
+  "models": [
+    {
+      "guid": "8018d2e5-0d26-4468-8402-98ef880adf96",
+      "model_zoo_name": "tf_SSD_mobilenetv1_0.25_imagenet_128_128_27M_2.5.zip",
+      "kernel": "RefineDet-Medical_EDD_tf",
+      "ml_task": "detection",
+      "hardware_type": "VCK5000",
+      "hardware_arch": "DPUCVDX8H",
+      "hardware_dpu_config": "6pe", 
+      "model_format": "xmodel",
+      "ml_lib": "tensorflow1.0",
+      "inference_lib": "vitis1.4.1",
+      "checksum": "93a8a19cbea8340055f04f8a9dd25db5",
+      "download_link": "https://www.xilinx.com/bin/public/openDownload?filename=plate_detect-vck5000-DPUCVDX8H-4pe-r2.5.0.tar.gz", 
+      "ops": "0.54G",
+      "input_size": "412x120",
+      "dataset": "coco",
+      "node_pbtxt": "551b0bdc-66ed-4f37-b3db-1078b16cf1a9" ,
+      "pipeline_pbtxt": "2d77256a-7077-4132-b8da-1ebaca1768a4"
+    }
+  ],
+
+  "nodes": [
+    {
+      "guid": "2ba440fa-079e-4d07-93d0-10e1488124ad",
+      "type": "aupera_free",
+      "name": "box_detector",
+      "vendor": "Aupera",
+      "pbtxt": "76376ec4-f2e4-4e8a-b375-94f8d37ebfe2",
+      "hardware_types": ["VCK5000", "U50"],
+      "hardware_archs": ["DPUCVDX8H", "DPUCVD3k1R"],
+      "hardware_engines": ["6pe", "4pe"]
+    }
+  ],
+
+  "examples": [
+    {
+      "guid": "e2e664a2-c8d8-4598-a98c-e041da477aa7",
+      "name": "retain throughput matching",
+      "description": "measures the throughput of detections and classifications",
+      "models": ["8018d2e5-0d26-4468-8402-98ef880adf96", "b61d1657-5f37-4679-9e10-0001f686d312"],
+      "nodes": ["2ba440fa-079e-4d07-93d0-10e1488124ad", "e2e664a2-c8d8-4598-a98c-e041da477aa7", "b61d1657-5f37-4679-9e10-0001f686d312"]
+    }
+  ],
+
+  "enums":{
+    "hardware_types": ["VCK5000", "U50"],
+    "hardware_archs": ["DPUCVDX8H", "DPUCVD3k1R"],
+    "hardware_engines": ["6pe", "4pe"],
+    "ml_tasks": ["detection", "classification", "encoding", "segmentation"],
+    "model_formats": ["xmodel", "tf", "pt"],
+    "ml_libs": ["tensorflow1.0", "tensorflow2.0", "pytorch1.1", "pytorch2.1"],
+    "inference_libs": ["vitis1.4.1", "vitis2.0.0", "ZenDNN1.1.0"],
+  }
+}
