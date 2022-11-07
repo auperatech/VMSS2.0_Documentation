@@ -9,7 +9,7 @@
       "ml_task": "detection",
       "hardware_type": "VCK5000",
       "hardware_arch": "DPUCVDX8H",
-      "hardware_dpu_config": "6pe", 
+      "hardware_engine": "6pe", 
       "model_format": "xmodel",
       "ml_lib": "tensorflow1.0",
       "inference_lib": "vitis1.4.1",
