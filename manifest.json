@@ -30,7 +30,7 @@
       "hardware_arch": "DPUCVDX8H",
       "hardware_engine": "8pe", 
       "model_format": "xmodel",
-      "ml_lib": "darknet2.0",
+      "ml_lib": "darknet",
       "inference_lib": "vitis2.0",
       "checksum": "dcefebad00eb4912259d453bcdf9ea60",
       "download_link": "https://www.xilinx.com/bin/public/openDownload?filename=tiny_yolov3_vmss-vck50008pe-DPUCVDX8H-r2.0.0.tar.gz", 
@@ -39,6 +39,25 @@
       "dataset": "private-dataset",
       "node_pbtxt": "88f8526e-9198-4d15-bfc7-312e44e0a1f0",
       "pipeline_pbtxt": "9bedc4b3-2fbc-4429-8b0f-23b8cb012ea6"
+    },
+    {
+      "guid": "d8162c17-3e98-4f2b-bd72-a1ebdba556c2",
+      "model_zoo_name": "dk_yolov2_voc_448_448_34G_2.0",
+      "kernel": "yolov2_voc",
+      "ml_task": "detection",
+      "hardware_type": "VCK5000",
+      "hardware_arch": "DPUCVDX8H",
+      "hardware_engine": "8pe", 
+      "model_format": "xmodel",
+      "ml_lib": "darknet",
+      "inference_lib": "vitis2.0",
+      "checksum": "6101fe4fd16aa8f014bb85e542852ab7",
+      "download_link": "https://www.xilinx.com/bin/public/openDownload?filename=yolov2_voc-vck50008pe-DPUCVDX8H-r2.0.0.tar.gz", 
+      "ops": "34G",
+      "input_size": "448x448",
+      "dataset": "voc",
+      "node_pbtxt": "d1daf5a8-7be1-4831-823d-5defcde73db8",
+      "pipeline_pbtxt": "bb6a0bca-075a-4f04-a201-252b1d8a8289"
     }
   ],
 
@@ -62,6 +81,16 @@
       "hardware_types": ["VCK5000", "U50"],
       "hardware_archs": ["DPUCVDX8H", "DPUCVD3k1R"],
       "hardware_engines": ["4pe", "6pe", "8pe"]
+    },
+    {
+      "guid": "d1daf5a8-7be1-4831-823d-5defcde73db8",
+      "type": "aupera_free",
+      "name": "box_detector",
+      "vendor": "Aupera",
+      "pbtxt": "6f93503e-52ce-4acf-a6bb-1599d20b0db4",
+      "hardware_types": ["VCK5000", "U50"],
+      "hardware_archs": ["DPUCVDX8H", "DPUCVD3k1R"],
+      "hardware_engines": ["4pe", "6pe", "8pe"]
     }
   ],
   
@@ -77,10 +106,18 @@
     {
       "guid": "cda939b5-be38-4674-9ceb-a6453cd7aa74",
       "name": "demo: smart retail object detection",
-      "description": "smart retail object detector runs on retail videos",
+      "description": "smart retail object detector (tiny_yolov3_vmss) runs on retail videos",
       "pbtxt": "9bedc4b3-2fbc-4429-8b0f-23b8cb012ea6",
       "models": ["daadf8b8-32a5-41f8-8c81-24f161ec4a8a"],
       "nodes": ["88f8526e-9198-4d15-bfc7-312e44e0a1f0"]
+    },
+    {
+      "guid": "db139a25-628b-40ad-b111-0dffdd3f6050",
+      "name": "demo: smart retail object detection",
+      "description": "smart retail object detector (yolov2_voc) runs on retail videos",
+      "pbtxt": "bb6a0bca-075a-4f04-a201-252b1d8a8289",
+      "models": ["d8162c17-3e98-4f2b-bd72-a1ebdba556c2"],
+      "nodes": ["d1daf5a8-7be1-4831-823d-5defcde73db8"]
     }
   ],
 
@@ -89,8 +126,10 @@
       "guid": "6f93503e-52ce-4acf-a6bb-1599d20b0db4",
       "name": "node: box detector default",
       "description": "default parameters for box detector node",
-      "models": ["f358d776-130b-4daa-9d33-c017d20307de", "daadf8b8-32a5-41f8-8c81-24f161ec4a8a"],
-      "nodes": ["d6140572-a5b6-45d7-97e3-50e5f031df24", "88f8526e-9198-4d15-bfc7-312e44e0a1f0"]
+      "models": ["f358d776-130b-4daa-9d33-c017d20307de", "daadf8b8-32a5-41f8-8c81-24f161ec4a8a",
+                "d8162c17-3e98-4f2b-bd72-a1ebdba556c2"],
+      "nodes": ["d6140572-a5b6-45d7-97e3-50e5f031df24", "88f8526e-9198-4d15-bfc7-312e44e0a1f0",
+                "d1daf5a8-7be1-4831-823d-5defcde73db8"]
     },
 
     {
@@ -103,7 +142,7 @@
     {
       "guid": "d6140572-a5b6-45d7-97e3-50e5f031df24",
       "name": "node: head person detection",
-      "description": "box detector for runs head person detector",
+      "description": "box detector (resnet) as head person detector",
       "models": ["f358d776-130b-4daa-9d33-c017d20307de"],
       "nodes": ["d6140572-a5b6-45d7-97e3-50e5f031df24"]
     },
@@ -118,9 +157,23 @@
     {
       "guid": "88f8526e-9198-4d15-bfc7-312e44e0a1f0",
       "name": "node: smart retail object detection",
-      "description": "box detector for runs retail object detector",
+      "description": "box detector (tiny_yolov3_vmss) as retail object detector",
       "models": ["daadf8b8-32a5-41f8-8c81-24f161ec4a8a"],
       "nodes": ["88f8526e-9198-4d15-bfc7-312e44e0a1f0"]
+    },
+    {
+      "guid": "bb6a0bca-075a-4f04-a201-252b1d8a8289",
+      "name": "demo: smart retail object detection",
+      "description": "smart retail object detector runs on retail videos",
+      "models": ["d8162c17-3e98-4f2b-bd72-a1ebdba556c2"],
+      "nodes": ["d1daf5a8-7be1-4831-823d-5defcde73db8"]
+    },
+    {
+      "guid": "d1daf5a8-7be1-4831-823d-5defcde73db8",
+      "name": "node: smart retail object detection",
+      "description": "box detector (yolov2_voc) as retail object detector",
+      "models": ["d8162c17-3e98-4f2b-bd72-a1ebdba556c2"],
+      "nodes": ["d1daf5a8-7be1-4831-823d-5defcde73db8"]
     }
   ],
 
@@ -128,7 +181,7 @@
     "hardware_engines": ["4pe", "6pe", "8pe"],
     "ml_tasks": ["detection", "classification", "encoding", "segmentation"],
     "model_formats": ["xmodel", "tf", "pt"],
-    "ml_libs": ["tensorflow1.0", "tensorflow2.0", "pytorch1.1", "pytorch2.1", "caffe1.0", "darknet2.0"],
+    "ml_libs": ["tensorflow1.0", "tensorflow2.0", "pytorch1.1", "pytorch2.1", "caffe1.0", "darknet"],
     "inference_libs": ["vitis1.4.1", "vitis2.0.0", "ZenDNN1.1.0"]
   },
   
