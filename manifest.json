@@ -4,7 +4,7 @@
   "models": [
     {
       "guid": "f358d776-130b-4daa-9d33-c017d20307de",
-      "model_zoo_name": "cf_SSD-RESNET18_PERSON-HEAD-SHIUN_960_540_1_6.3G_2.0",
+      "model_zoo_name": "cf_SSD-RESNET18_PERSON-HEAD-SHIUN_960_540_0_6.3G_2.0",
       "kernel": "RESNET18SSD_ITER90000_PRIVATE_FINAL501IMAGES_ADDED_07JUNE2021_CROWD_FLOW_PERSON_HEAD",
       "ml_task": "detection",
       "hardware_type": "VCK5000",
@@ -18,14 +18,43 @@
       "ops": "6.3G",
       "input_size": "960x540",
       "dataset": "person-head-shiun",
-      "node_pbtxt": "d6140572-a5b6-45d7-97e3-50e5f031df24" ,
+      "node_pbtxt": "d6140572-a5b6-45d7-97e3-50e5f031df24",
       "pipeline_pbtxt": "614daebb-0c6f-4baa-8154-4657f5254997"
+    },
+    {
+      "guid": "daadf8b8-32a5-41f8-8c81-24f161ec4a8a",
+      "model_zoo_name": "dk_tiny-yolov3_416_416_5.46G_2.0",
+      "kernel": "tiny_yolov3_vmss",
+      "ml_task": "detection",
+      "hardware_type": "VCK5000",
+      "hardware_arch": "DPUCVDX8H",
+      "hardware_engine": "8pe", 
+      "model_format": "xmodel",
+      "ml_lib": "darknet2.0",
+      "inference_lib": "vitis2.0",
+      "checksum": "dcefebad00eb4912259d453bcdf9ea60",
+      "download_link": "https://www.xilinx.com/bin/public/openDownload?filename=tiny_yolov3_vmss-vck50008pe-DPUCVDX8H-r2.0.0.tar.gz", 
+      "ops": "5.46G",
+      "input_size": "416x416",
+      "dataset": "private-dataset",
+      "node_pbtxt": "88f8526e-9198-4d15-bfc7-312e44e0a1f0",
+      "pipeline_pbtxt": "9bedc4b3-2fbc-4429-8b0f-23b8cb012ea6"
     }
   ],
 
   "nodes": [
     {
       "guid": "d6140572-a5b6-45d7-97e3-50e5f031df24",
+      "type": "aupera_free",
+      "name": "box_detector",
+      "vendor": "Aupera",
+      "pbtxt": "6f93503e-52ce-4acf-a6bb-1599d20b0db4",
+      "hardware_types": ["VCK5000", "U50"],
+      "hardware_archs": ["DPUCVDX8H", "DPUCVD3k1R"],
+      "hardware_engines": ["4pe", "6pe", "8pe"]
+    },
+    {
+      "guid": "88f8526e-9198-4d15-bfc7-312e44e0a1f0",
       "type": "aupera_free",
       "name": "box_detector",
       "vendor": "Aupera",
@@ -44,10 +73,26 @@
       "pbtxt": "614daebb-0c6f-4baa-8154-4657f5254997",
       "models": ["f358d776-130b-4daa-9d33-c017d20307de"],
       "nodes": ["d6140572-a5b6-45d7-97e3-50e5f031df24"]
+    },
+    {
+      "guid": "cda939b5-be38-4674-9ceb-a6453cd7aa74",
+      "name": "demo: smart retail object detection",
+      "description": "smart retail object detector runs on retail videos",
+      "pbtxt": "9bedc4b3-2fbc-4429-8b0f-23b8cb012ea6",
+      "models": ["daadf8b8-32a5-41f8-8c81-24f161ec4a8a"],
+      "nodes": ["88f8526e-9198-4d15-bfc7-312e44e0a1f0"]
     }
   ],
 
   "pbtxts": [
+    {
+      "guid": "6f93503e-52ce-4acf-a6bb-1599d20b0db4",
+      "name": "node: box detector default",
+      "description": "default parameters for box detector node",
+      "models": ["f358d776-130b-4daa-9d33-c017d20307de", "daadf8b8-32a5-41f8-8c81-24f161ec4a8a"],
+      "nodes": ["d6140572-a5b6-45d7-97e3-50e5f031df24", "88f8526e-9198-4d15-bfc7-312e44e0a1f0"]
+    },
+
     {
       "guid": "614daebb-0c6f-4baa-8154-4657f5254997",
       "name": "demo: head person detection",
@@ -62,12 +107,20 @@
       "models": ["f358d776-130b-4daa-9d33-c017d20307de"],
       "nodes": ["d6140572-a5b6-45d7-97e3-50e5f031df24"]
     },
+
     {
-      "guid": "6f93503e-52ce-4acf-a6bb-1599d20b0db4",
-      "name": "node: box detector default",
-      "description": "default parameters for box detector node",
-      "models": ["f358d776-130b-4daa-9d33-c017d20307de"],
-      "nodes": ["d6140572-a5b6-45d7-97e3-50e5f031df24"]
+      "guid": "9bedc4b3-2fbc-4429-8b0f-23b8cb012ea6",
+      "name": "demo: smart retail object detection",
+      "description": "smart retail object detector runs on retail videos",
+      "models": ["daadf8b8-32a5-41f8-8c81-24f161ec4a8a"],
+      "nodes": ["88f8526e-9198-4d15-bfc7-312e44e0a1f0"]
+    },
+    {
+      "guid": "88f8526e-9198-4d15-bfc7-312e44e0a1f0",
+      "name": "node: smart retail object detection",
+      "description": "box detector for runs retail object detector",
+      "models": ["daadf8b8-32a5-41f8-8c81-24f161ec4a8a"],
+      "nodes": ["88f8526e-9198-4d15-bfc7-312e44e0a1f0"]
     }
   ],
 
@@ -75,7 +128,7 @@
     "hardware_engines": ["4pe", "6pe", "8pe"],
     "ml_tasks": ["detection", "classification", "encoding", "segmentation"],
     "model_formats": ["xmodel", "tf", "pt"],
-    "ml_libs": ["tensorflow1.0", "tensorflow2.0", "pytorch1.1", "pytorch2.1", "caffe1.0"],
+    "ml_libs": ["tensorflow1.0", "tensorflow2.0", "pytorch1.1", "pytorch2.1", "caffe1.0", "darknet2.0"],
     "inference_libs": ["vitis1.4.1", "vitis2.0.0", "ZenDNN1.1.0"]
   },
   
