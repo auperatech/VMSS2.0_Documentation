@@ -1,0 +1,355 @@
+control_port: 51881
+graph_input: "graph_input1"
+graph_output: "graph_output1"
+
+
+node {
+  name: "demux_node"
+  calculator: "stream_demux"
+  vendor: "Aupera"
+  graph_input: "graph_input1"
+  output_stream: "packetstream1"
+  output_stream: "video_stream_info_from_demux"
+  node_options: {
+    [type.googleapis.com/aup.avaf.StreamMuxOptions]: {
+      demux: {
+        rtsp_transport: "tcp"  
+        iframe_extract: false
+        auto_reconnect: true
+      }
+    }
+  }
+}
+
+
+node {
+  name: "decode_node"
+  calculator: "x86_dec"
+  vendor: "Aupera"
+  input_stream: "packetstream1"
+  input_stream: "video_stream_info_from_demux"
+  output_stream: "imgStream1080p"
+  output_stream: "video_stream_info_from_decode"
+  node_options: {
+    [type.googleapis.com/aup.avaf.VideoCodecOptions]: {
+      dec: {
+        name: "x86_dec_h2645"  
+        ow: 1920
+        oh: 1080
+        opixfmt: PIXFMT_BGR24
+        queue_size: 12
+        low_latency: false
+      }
+    }
+  }
+}
+
+
+node {
+  name: "detector"
+  calculator: "box_detector"
+  input_stream: "imgStream1080p"
+  output_stream: "detectionsStream"
+  output_stream: "detect_interval"
+  stream_sync: {
+    drop_strategy: DROP_INCOMPLETE_PACKETS
+    timeout_ms: 5000
+  }
+  node_options: {
+    [type.googleapis.com/aup.avaf.BoxDetectorOptions]: {
+      detect_interval: 1
+      detector_type: "YoloV3"
+      kernel_name: "yolov3_voc_tf"      
+      need_preprocess: true
+      log_performance: false
+      run_on_letterboxed_img: false
+      batch_size: 1
+      return_frames_inorder: true 
+      batch_collection_timeout_ms: 0
+      ignore_black_frames: false
+      max_detection_lib_q_size: 30
+      mean: {
+        r: 0
+        g: 0
+        b: 0
+      }
+      scale: {
+        ch1: 0.00390625
+        ch2: 0.00390625
+        ch3: 0.00390625
+      }
+      label_confidence: {
+        label: 0
+        confidence: 0.3
+      }
+      label_confidence: {
+        label: 1
+        confidence: 0.3
+      }
+      label_confidence: {
+        label: 2
+        confidence: 0.3
+      }
+      label_confidence: {
+        label: 3
+        confidence: 0.3
+      }
+      label_confidence: {
+        label: 4
+        confidence: 0.3
+      }
+      label_confidence: {
+        label: 3
+        confidence: 0.3
+      }
+      label_confidence: {
+        label: 6
+        confidence: 0.3
+      }
+      label_confidence: {
+        label: 7
+        confidence: 0.3
+      }
+      label_confidence: {
+        label: 8
+        confidence: 0.3
+      }
+      label_confidence: {
+        label: 9
+        confidence: 0.3
+      }
+      label_confidence: {
+        label: 10
+        confidence: 0.3
+      }
+      label_confidence: {
+        label: 11
+        confidence: 0.3
+      }
+      label_confidence: {
+        label: 12
+        confidence: 0.3
+      }
+      label_confidence: {
+        label: 13
+        confidence: 0.3
+      }
+      label_confidence: {
+        label: 14
+        confidence: 0.3
+      }
+      label_confidence: {
+        label: 15
+        confidence: 0.3
+      }
+      label_confidence: {
+        label: 16
+        confidence: 0.3
+      }
+      label_confidence: {
+        label: 17
+        confidence: 0.3
+      }
+      label_confidence: {
+        label: 18
+        confidence: 0.3
+      }
+      label_confidence: {
+        label: 19
+        confidence: 0.3
+      }
+      inter_class_nms: {
+        labels: 0
+        threshold: 0.45
+      }
+      inter_class_nms: {
+        labels: 1
+        threshold: 0.45
+      }
+      inter_class_nms: {
+        labels: 2
+        threshold: 0.45
+      }
+      inter_class_nms: {
+        labels: 3
+        threshold: 0.45
+      }
+      inter_class_nms: {
+        labels: 4
+        threshold: 0.45
+      }
+      inter_class_nms: {
+        labels: 5
+        threshold: 0.45
+      }
+      inter_class_nms: {
+        labels: 6
+        threshold: 0.45
+      }
+      inter_class_nms: {
+        labels: 7
+        threshold: 0.45
+      }
+      inter_class_nms: {
+        labels: 8
+        threshold: 0.45
+      }
+      inter_class_nms: {
+        labels: 9
+        threshold: 0.45
+      }
+      inter_class_nms: {
+        labels: 10
+        threshold: 0.45
+      }
+      inter_class_nms: {
+        labels: 11
+        threshold: 0.45
+      }
+      inter_class_nms: {
+        labels: 12
+        threshold: 0.45
+      }
+      inter_class_nms: {
+        labels: 13
+        threshold: 0.45
+      }
+      inter_class_nms: {
+        labels: 14
+        threshold: 0.45
+      }
+      inter_class_nms: {
+        labels: 15
+        threshold: 0.45
+      }
+      inter_class_nms: {
+        labels: 16
+        threshold: 0.45
+      }
+      inter_class_nms: {
+        labels: 17
+        threshold: 0.45
+      }
+      inter_class_nms: {
+        labels: 18
+        threshold: 0.45
+      }
+      inter_class_nms: {
+        labels: 19
+        threshold: 0.45
+      }
+    }
+  }
+}
+
+
+node {
+  name: "visualizer"
+  calculator: "box_visualizer"
+  input_stream: "detectionsStream"
+  input_stream: "imgStream1080p"
+  output_stream: "imgStream1080p_fromVisualizer"
+  stream_sync: {
+    drop_strategy: DROP_INCOMPLETE_PACKETS
+    timeout_ms: 5000
+  }
+  node_options: {
+    [type.googleapis.com/aup.avaf.BoxVisualizerOptions]: {
+      text_color: {
+        r: 255
+        g: 0
+        b: 0
+      }
+      box_color: {
+        r: 255
+        g: 0
+        b: 0
+      }
+      class_color: {
+        label: 1
+        color: {
+          r: 0
+          g: 0
+          b: 0
+        }
+      }
+      class_color: {
+        label: 2
+        color: {
+          r: 0
+          g: 255
+          b: 0
+        }
+      }
+      text_offset: {
+        x: 0
+        y: 0
+      }
+      font: 0 
+      line_type: 0
+      box_thickness: 3
+      text_size:3 
+    }
+  }
+}
+
+
+node {
+  name: "vfilter_node1"
+  calculator: "ff_vfilter"
+  vendor: "Aupera"
+  input_stream: "imgStream1080p_fromVisualizer"
+  input_stream: "video_stream_info_from_decode"
+  output_stream: "imgStream720p_ffOut"
+  output_stream: "video_stream_info_from_vfilter"
+  node_options: {
+    [type.googleapis.com/aup.avaf.VideoFilterOptions]: {
+      roi_x: 0
+      roi_y: 0
+      roi_w: 0
+      roi_h: 0
+      opixfmt: PIXFMT_I420
+      ow: 1280
+      oh: 720
+    }
+  }
+}
+
+
+node {
+  name: "encode_node1"
+  calculator: "x86_enc"
+  vendor: "Aupera"
+  input_stream: "imgStream720p_ffOut"
+  input_stream: "video_stream_info_from_vfilter"
+  output_stream: "packetStream_fromDecoder"
+  output_stream: "codec_context_stream"
+  node_options: {
+    [type.googleapis.com/aup.avaf.VideoCodecOptions]: {
+     enc: {
+       type: H264
+       w: 0 
+       h: 0
+       fps: 0
+     }
+    }
+  }
+}
+
+
+node {
+  name: "mux_node1"
+  calculator: "stream_mux"
+  vendor: "Aupera"
+  input_stream: "packetStream_fromDecoder"
+  input_stream: "codec_context_stream"
+  graph_output: "graph_output1"
+  node_options: {
+    [type.googleapis.com/aup.avaf.StreamMuxOptions]: {
+     mux: {
+       rtsp_transport: "tcp"
+       auto_reconnect: true
+     }
+    }
+  }
+}
