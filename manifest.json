@@ -1,58 +1,86 @@
 {
-  "version": "3.0.0",
+  "avaf_version": "3.0.0",
 
   "models": [
     {
-      "guid": "8018d2e5-0d26-4468-8402-98ef880adf96",
-      "model_zoo_name": "tf_SSD_mobilenetv1_0.25_imagenet_128_128_27M_2.5.zip",
-      "kernel": "RefineDet-Medical_EDD_tf",
+      "guid": "f358d776-130b-4daa-9d33-c017d20307de",
+      "model_zoo_name": "cf_SSD-RESNET18_PERSON-HEAD-SHIUN_960_540_1_6.3G_2.0",
+      "kernel": "RESNET18SSD_ITER90000_PRIVATE_FINAL501IMAGES_ADDED_07JUNE2021_CROWD_FLOW_PERSON_HEAD",
       "ml_task": "detection",
       "hardware_type": "VCK5000",
       "hardware_arch": "DPUCVDX8H",
-      "hardware_dpu_config": "6pe", 
+      "hardware_engine": "8pe", 
       "model_format": "xmodel",
-      "ml_lib": "tensorflow1.0",
-      "inference_lib": "vitis1.4.1",
-      "checksum": "93a8a19cbea8340055f04f8a9dd25db5",
-      "download_link": "https://www.xilinx.com/bin/public/openDownload?filename=plate_detect-vck5000-DPUCVDX8H-4pe-r2.5.0.tar.gz", 
-      "ops": "0.54G",
-      "input_size": "412x120",
-      "dataset": "coco",
-      "node_pbtxt": "551b0bdc-66ed-4f37-b3db-1078b16cf1a9" ,
-      "pipeline_pbtxt": "2d77256a-7077-4132-b8da-1ebaca1768a4"
+      "ml_lib": "caffe1.0",
+      "inference_lib": "vitis2.0",
+      "checksum": "5b91a570a09325b662c9141fcff6486d",
+      "download_link": "", 
+      "ops": "6.3G",
+      "input_size": "960x540",
+      "dataset": "person-head-shiun",
+      "node_pbtxt": "d6140572-a5b6-45d7-97e3-50e5f031df24" ,
+      "pipeline_pbtxt": "614daebb-0c6f-4baa-8154-4657f5254997"
     }
   ],
 
   "nodes": [
     {
-      "guid": "2ba440fa-079e-4d07-93d0-10e1488124ad",
+      "guid": "d6140572-a5b6-45d7-97e3-50e5f031df24",
       "type": "aupera_free",
       "name": "box_detector",
       "vendor": "Aupera",
-      "pbtxt": "76376ec4-f2e4-4e8a-b375-94f8d37ebfe2",
+      "pbtxt": "6f93503e-52ce-4acf-a6bb-1599d20b0db4",
       "hardware_types": ["VCK5000", "U50"],
       "hardware_archs": ["DPUCVDX8H", "DPUCVD3k1R"],
-      "hardware_engines": ["6pe", "4pe"]
+      "hardware_engines": ["4pe", "6pe", "8pe"]
+    }
+  ],
+  
+  "example_pipelines": [
+    {
+      "guid": "572caa09-5f85-47f4-a165-09cba51df07b",
+      "name": "demo: head person detection",
+      "description": "head person detector runs on crowd videos",
+      "pbtxt": "614daebb-0c6f-4baa-8154-4657f5254997",
+      "models": ["f358d776-130b-4daa-9d33-c017d20307de"],
+      "nodes": ["d6140572-a5b6-45d7-97e3-50e5f031df24"]
     }
   ],
 
-  "examples": [
+  "pbtxts": [
     {
-      "guid": "e2e664a2-c8d8-4598-a98c-e041da477aa7",
-      "name": "retain throughput matching",
-      "description": "measures the throughput of detections and classifications",
-      "models": ["8018d2e5-0d26-4468-8402-98ef880adf96", "b61d1657-5f37-4679-9e10-0001f686d312"],
-      "nodes": ["2ba440fa-079e-4d07-93d0-10e1488124ad", "e2e664a2-c8d8-4598-a98c-e041da477aa7", "b61d1657-5f37-4679-9e10-0001f686d312"]
+      "guid": "614daebb-0c6f-4baa-8154-4657f5254997",
+      "name": "demo: head person detection",
+      "description": "head person detector runs on crowd videos",
+      "models": ["f358d776-130b-4daa-9d33-c017d20307de"],
+      "nodes": ["d6140572-a5b6-45d7-97e3-50e5f031df24"]
+    },
+    {
+      "guid": "d6140572-a5b6-45d7-97e3-50e5f031df24",
+      "name": "node: head person detection",
+      "description": "box detector for runs head person detector",
+      "models": ["f358d776-130b-4daa-9d33-c017d20307de"],
+      "nodes": ["d6140572-a5b6-45d7-97e3-50e5f031df24"]
+    },
+    {
+      "guid": "6f93503e-52ce-4acf-a6bb-1599d20b0db4",
+      "name": "node: box detector default",
+      "description": "default parameters for box detector node",
+      "models": ["f358d776-130b-4daa-9d33-c017d20307de"],
+      "nodes": ["d6140572-a5b6-45d7-97e3-50e5f031df24"]
     }
   ],
 
   "enums":{
-    "hardware_types": ["VCK5000", "U50"],
-    "hardware_archs": ["DPUCVDX8H", "DPUCVD3k1R"],
-    "hardware_engines": ["6pe", "4pe"],
+    "hardware_engines": ["4pe", "6pe", "8pe"],
     "ml_tasks": ["detection", "classification", "encoding", "segmentation"],
     "model_formats": ["xmodel", "tf", "pt"],
-    "ml_libs": ["tensorflow1.0", "tensorflow2.0", "pytorch1.1", "pytorch2.1"],
-    "inference_libs": ["vitis1.4.1", "vitis2.0.0", "ZenDNN1.1.0"],
-  }
+    "ml_libs": ["tensorflow1.0", "tensorflow2.0", "pytorch1.1", "pytorch2.1", "caffe1.0"],
+    "inference_libs": ["vitis1.4.1", "vitis2.0.0", "ZenDNN1.1.0"]
+  },
+  
+  "hardware_types_to_arch_mapping":[
+    {"arch": "DPUCVDX8H", "types": ["VCK5000"]},
+    {"arch": "DPUCVD3k1R", "types": ["U50"]},
+  ]
 }
