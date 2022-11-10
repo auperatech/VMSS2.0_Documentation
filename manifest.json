@@ -1,5 +1,5 @@
 {
-  "version": "3.0.0",
+  "avaf_version": "3.0.0",
 
   "models": [
     {
@@ -469,12 +469,15 @@
   ],
 
   "enums":{
-    "hardware_types": ["VCK5000", "U50"],
-    "hardware_archs": ["DPUCVDX8H", "DPUCVD3k1R"],
     "hardware_engines": ["4pe", "6pe", "8pe"],
     "ml_tasks": ["detection", "classification", "encoding", "segmentation"],
     "model_formats": ["xmodel", "tf", "pt"],
     "ml_libs": ["tensorflow1.0", "tensorflow2.0", "pytorch1.1", "pytorch2.1", "caffe1.0", "darknet"],
     "inference_libs": ["vitis1.4.1", "vitis2.0.0", "ZenDNN1.1.0"]
-  }
+  },
+  
+  "hardware_types_to_arch_mapping":[
+    {"arch": "DPUCVDX8H", "types": ["VCK5000"]},
+    {"arch": "DPUCVD3k1R", "types": ["U50"]},
+  ]
 }
