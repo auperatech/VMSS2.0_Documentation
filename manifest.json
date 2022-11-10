@@ -115,6 +115,25 @@
       "dataset": "voc",
       "node_pbtxt": "acfaec5e-148b-414b-b36d-72773cf8fa53",
       "pipeline_pbtxt": "6df6495f-1500-48ad-b758-1711d804a058"
+    },
+    {
+      "guid": "2e7e57b2-e7ab-47d1-935f-7e3e7426945a",
+      "model_zoo_name": "dk_yolov3_voc_416_416_65.42G_2.0",
+      "kernel": "yolov3_voc",
+      "ml_task": "detection",
+      "hardware_type": "VCK5000",
+      "hardware_arch": "DPUCVDX8H",
+      "hardware_engine": "8pe", 
+      "model_format": "xmodel",
+      "ml_lib": "darknet",
+      "inference_lib": "vitis2.0",
+      "checksum": "014db7fe3848e3676ea07a3eb117bc7c",
+      "download_link": "https://www.xilinx.com/bin/public/openDownload?filename=yolov3_voc-vck50008pe-DPUCVDX8H-r2.0.0.tar.gz", 
+      "ops": "65.42G",
+      "input_size": "416x416",
+      "dataset": "voc",
+      "node_pbtxt": "05a48f70-3b37-417d-83cd-52420e0c5cbb",
+      "pipeline_pbtxt": "2e3e1c87-9c3a-42c7-8006-ac39e2ea7aa4"
     }
   ],
 
@@ -178,6 +197,16 @@
       "hardware_types": ["VCK5000", "U50"],
       "hardware_archs": ["DPUCVDX8H", "DPUCVD3k1R"],
       "hardware_engines": ["4pe", "6pe", "8pe"]
+    },
+    {
+      "guid": "05a48f70-3b37-417d-83cd-52420e0c5cbb",
+      "type": "aupera_free",
+      "name": "box_detector",
+      "vendor": "Aupera",
+      "pbtxt": "6f93503e-52ce-4acf-a6bb-1599d20b0db4",
+      "hardware_types": ["VCK5000", "U50"],
+      "hardware_archs": ["DPUCVDX8H", "DPUCVD3k1R"],
+      "hardware_engines": ["4pe", "6pe", "8pe"]
     }
   ],
   
@@ -199,10 +228,12 @@
       "description": "default parameters for box detector node",
       "models": ["f358d776-130b-4daa-9d33-c017d20307de", "daadf8b8-32a5-41f8-8c81-24f161ec4a8a",
                 "d8162c17-3e98-4f2b-bd72-a1ebdba556c2", "2b13b627-2404-40ff-aefd-6410a9cee545",
-                "63802927-1c1b-4d34-a452-95ba050fddd7", "c7c0ae6b-2ca9-4f7a-afcc-13203d912ace"],
+                "63802927-1c1b-4d34-a452-95ba050fddd7", "c7c0ae6b-2ca9-4f7a-afcc-13203d912ace",
+                "2e7e57b2-e7ab-47d1-935f-7e3e7426945a"],
       "nodes": ["d6140572-a5b6-45d7-97e3-50e5f031df24", "88f8526e-9198-4d15-bfc7-312e44e0a1f0",
                 "d1daf5a8-7be1-4831-823d-5defcde73db8", "3e4fb873-6cee-46c1-a295-9081bf17dcae",
-                "98e56049-126b-4582-960b-2bec65ce7e3a", "acfaec5e-148b-414b-b36d-72773cf8fa53"]
+                "98e56049-126b-4582-960b-2bec65ce7e3a", "acfaec5e-148b-414b-b36d-72773cf8fa53",
+                "05a48f70-3b37-417d-83cd-52420e0c5cbb"]
     },
 
     {
@@ -289,6 +320,20 @@
       "description": "box detector (yolov2_voc_pruned_0_7) as head person detector",
       "models": ["c7c0ae6b-2ca9-4f7a-afcc-13203d912ace"],
       "nodes": ["acfaec5e-148b-414b-b36d-72773cf8fa53"]
+    },
+    {
+      "guid": "2e3e1c87-9c3a-42c7-8006-ac39e2ea7aa4",
+      "name": "demo: head person detection",
+      "description": "head person detector (yolov3_voc) runs on crowd videos",
+      "models": ["2e7e57b2-e7ab-47d1-935f-7e3e7426945a"],
+      "nodes": ["05a48f70-3b37-417d-83cd-52420e0c5cbb"]
+    },
+    {
+      "guid": "05a48f70-3b37-417d-83cd-52420e0c5cbb",
+      "name": "node: head person detection",
+      "description": "box detector (yolov3_voc) as head person detector",
+      "models": ["2e7e57b2-e7ab-47d1-935f-7e3e7426945a"],
+      "nodes": ["05a48f70-3b37-417d-83cd-52420e0c5cbb"]
     }
   ],
 
