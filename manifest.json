@@ -478,6 +478,6 @@
   
   "hardware_types_to_arch_mapping":[
     {"arch": "DPUCVDX8H", "types": ["VCK5000"]},
-    {"arch": "DPUCVD3k1R", "types": ["U50"]},
+    {"arch": "DPUCVD3k1R", "types": ["U50"]}
   ]
 }
