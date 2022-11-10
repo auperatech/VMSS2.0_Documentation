@@ -99,7 +99,7 @@ node {
         confidence: 0.5
       }
       label_confidence: {
-        label: 3
+        label: 5
         confidence: 0.5
       }
       label_confidence: {
