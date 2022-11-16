@@ -191,6 +191,158 @@
       "dataset": "voc",
       "node_pbtxt": "b40f79d4-b0ed-4d70-b4ae-2f37e6adcd41",
       "pipeline_pbtxt": "12ed46a6-3c53-471c-bd17-673c58b968eb"
+    },
+    {
+      "guid": "917a3a08-848e-4adc-9934-3072d4bdcfa6",
+      "model_zoo_name": "cf_refinedet_coco_360_480_123G_2.0",
+      "kernel": "refinedet_baseline",
+      "ml_task": "detection",
+      "hardware_type": "VCK5000",
+      "hardware_arch": "DPUCVDX8H",
+      "hardware_engine": "8pe", 
+      "model_format": "xmodel",
+      "ml_lib": "caffe1.0",
+      "inference_lib": "vitis2.0",
+      "checksum": "ec4d81e4bf3be64017f7a2fefbe9de06",
+      "download_link": "https://www.xilinx.com/bin/public/openDownload?filename=refinedet_baseline-vck50008pe-DPUCVDX8H-r2.0.0.tar.gz", 
+      "ops": "123G",
+      "input_size": "360x480",
+      "dataset": "coco",
+      "node_pbtxt": "fcba3acf-c6ae-466c-a668-95917c480907",
+      "pipeline_pbtxt": "4f7dd976-a54d-41e2-bebd-b48de8860c63"
+    },
+    {
+      "guid": "aefc7081-bd2e-401c-a124-4c50ea4c582a",
+      "model_zoo_name": "cf_refinedet_coco_360_480_0.8_25G_2.0",
+      "kernel": "refinedet_pruned_0_8",
+      "ml_task": "detection",
+      "hardware_type": "VCK5000",
+      "hardware_arch": "DPUCVDX8H",
+      "hardware_engine": "8pe", 
+      "model_format": "xmodel",
+      "ml_lib": "caffe1.0",
+      "inference_lib": "vitis2.0",
+      "checksum": "c6f91975832da6c20b498e1ddee7a627",
+      "download_link": "https://www.xilinx.com/bin/public/openDownload?filename=refinedet_pruned_0_8-vck50008pe-DPUCVDX8H-r2.0.0.tar.gz", 
+      "ops": "25G",
+      "input_size": "360x480",
+      "dataset": "coco",
+      "node_pbtxt": "f6b20e85-8a04-4960-acc4-2bfed0b04412",
+      "pipeline_pbtxt": "39b24852-5614-47ea-93c9-b50b69dc56c5"
+    },
+    {
+      "guid": "bf4ea265-d4b4-486c-a25c-d2bb2923e488",
+      "model_zoo_name": "cf_refinedet_coco_360_480_0.92_10.10G_2.0",
+      "kernel": "refinedet_pruned_0_92",
+      "ml_task": "detection",
+      "hardware_type": "VCK5000",
+      "hardware_arch": "DPUCVDX8H",
+      "hardware_engine": "8pe", 
+      "model_format": "xmodel",
+      "ml_lib": "caffe1.0",
+      "inference_lib": "vitis2.0",
+      "checksum": "1e36c4f9a4aed32f8d6f36a9aa43a374",
+      "download_link": "https://www.xilinx.com/bin/public/openDownload?filename=refinedet_pruned_0_92-vck50008pe-DPUCVDX8H-r2.0.0.tar.gz", 
+      "ops": "10.10G",
+      "input_size": "360x480",
+      "dataset": "coco",
+      "node_pbtxt": "7aa3a7b1-b290-4b52-817c-6a03ddef4262",
+      "pipeline_pbtxt": "0e3fb98c-dc0d-49b3-aa46-129e8d35fb10"
+    },
+    {
+      "guid": "f680167d-c288-467b-9f23-4ea01e318b32",
+      "model_zoo_name": "cf_refinedet_coco_360_480_0.96_5.08G_2.0",
+      "kernel": "refinedet_pruned_0_96",
+      "ml_task": "detection",
+      "hardware_type": "VCK5000",
+      "hardware_arch": "DPUCVDX8H",
+      "hardware_engine": "8pe", 
+      "model_format": "xmodel",
+      "ml_lib": "caffe1.0",
+      "inference_lib": "vitis2.0",
+      "checksum": "f1d5409099bd8449a5ba5615f9a11d86",
+      "download_link": "https://www.xilinx.com/bin/public/openDownload?filename=refinedet_pruned_0_96-vck50008pe-DPUCVDX8H-r2.0.0.tar.gz", 
+      "ops": "5.08G",
+      "input_size": "360x480",
+      "dataset": "coco",
+      "node_pbtxt": "fc91c3f9-5dc1-4df3-8ab6-795a828605f4",
+      "pipeline_pbtxt": "466a42b9-85d6-4adf-ba51-1c992b62fca8"
+    },
+    {
+      "guid": "d69d9541-85eb-4a7b-aa97-0e49e3243562",
+      "model_zoo_name": "tf_refinedet_VOC_320_320_81.9G_2.0",
+      "kernel": "refinedet_VOC_tf",
+      "ml_task": "detection",
+      "hardware_type": "VCK5000",
+      "hardware_arch": "DPUCVDX8H",
+      "hardware_engine": "8pe", 
+      "model_format": "xmodel",
+      "ml_lib": "tensorflow1.0",
+      "inference_lib": "vitis2.0",
+      "checksum": "0fa021d3ee72c49e2d0b39940c4e3e27",
+      "download_link": "https://www.xilinx.com/bin/public/openDownload?filename=refinedet_VOC_tf-vck50008pe-DPUCVDX8H-r2.0.0.tar.gz", 
+      "ops": "81.9G",
+      "input_size": "320x320",
+      "dataset": "voc",
+      "node_pbtxt": "d471bc3b-4617-49bd-8442-ffbdcf43b84a",
+      "pipeline_pbtxt": "55874bc2-21c9-4d1c-8ade-53263e28c068"
+    },
+    {
+      "guid": "93dc13ee-c805-4452-95ec-d31840c11a95",
+      "model_zoo_name": "cf_ssdadas_bdd_360_480_0.95_6.3G_2.0",
+      "kernel": "ssd_adas_pruned_0_95",
+      "ml_task": "detection",
+      "hardware_type": "VCK5000",
+      "hardware_arch": "DPUCVDX8H",
+      "hardware_engine": "8pe", 
+      "model_format": "xmodel",
+      "ml_lib": "caffe1.0",
+      "inference_lib": "vitis2.0",
+      "checksum": "2ad625535f2a518c878c0d5faee9d8b5",
+      "download_link": "https://www.xilinx.com/bin/public/openDownload?filename=ssd_adas_pruned_0_95-vck50008pe-DPUCVDX8H-r2.0.0.tar.gz", 
+      "ops": "6.3G",
+      "input_size": "360x480",
+      "dataset": "private-dataset",
+      "node_pbtxt": "a7d8676e-c9fb-4386-b94e-4404685a060d",
+      "pipeline_pbtxt": "99c4f723-1cd9-47ab-a649-b31787154d56"
+    },
+    {
+      "guid": "e8f816ee-35ce-43d6-bb5b-e00e9ff047d2",
+      "model_zoo_name": "cf_ssdpedestrian_coco_360_640_0.97_5.9G_2.0",
+      "kernel": "ssd_pedestrian_pruned_0_97",
+      "ml_task": "detection",
+      "hardware_type": "VCK5000",
+      "hardware_arch": "DPUCVDX8H",
+      "hardware_engine": "8pe", 
+      "model_format": "xmodel",
+      "ml_lib": "caffe1.0",
+      "inference_lib": "vitis2.0",
+      "checksum": "0fcc4bc09d0d24963a6fe0bcd0bdb06c",
+      "download_link": "https://www.xilinx.com/bin/public/openDownload?filename=ssd_pedestrian_pruned_0_97-vck50008pe-DPUCVDX8H-r2.0.0.tar.gz", 
+      "ops": "5.9G",
+      "input_size": "360x640",
+      "dataset": "coco",
+      "node_pbtxt": "bf1e18d4-8631-4558-a2e2-a579a5d065b4",
+      "pipeline_pbtxt": "26b14df7-b14d-4285-9d2a-de74079b58d9"
+    },
+    {
+      "guid": "b743d1ee-e5f7-4984-929d-1e066fff6fda",
+      "model_zoo_name": "cf_ssdtraffic_360_480_0.9_11.6G_2.0",
+      "kernel": "ssd_traffic_pruned_0_9",
+      "ml_task": "detection",
+      "hardware_type": "VCK5000",
+      "hardware_arch": "DPUCVDX8H",
+      "hardware_engine": "8pe", 
+      "model_format": "xmodel",
+      "ml_lib": "caffe1.0",
+      "inference_lib": "vitis2.0",
+      "checksum": "f9bfabb89d06f49f6ce6b90d6a545765",
+      "download_link": "https://www.xilinx.com/bin/public/openDownload?filename=ssd_traffic_pruned_0_9-vck50008pe-DPUCVDX8H-r2.0.0.tar.gz", 
+      "ops": "11.6G",
+      "input_size": "360x480",
+      "dataset": "private-dataset",
+      "node_pbtxt": "89afd296-ff3e-4a10-8b56-84931e080736",
+      "pipeline_pbtxt": "9bcb3cf8-5c5e-4c74-b33e-ef5e61312722"
     }
   ],
 
@@ -294,6 +446,86 @@
       "hardware_types": ["VCK5000", "U50"],
       "hardware_archs": ["DPUCVDX8H", "DPUCVD3k1R"],
       "hardware_engines": ["4pe", "6pe", "8pe"]
+    },
+    {
+      "guid": "fcba3acf-c6ae-466c-a668-95917c480907",
+      "type": "aupera_free",
+      "name": "box_detector",
+      "vendor": "Aupera",
+      "pbtxt": "6f93503e-52ce-4acf-a6bb-1599d20b0db4",
+      "hardware_types": ["VCK5000", "U50"],
+      "hardware_archs": ["DPUCVDX8H", "DPUCVD3k1R"],
+      "hardware_engines": ["4pe", "6pe", "8pe"]
+    },
+    {
+      "guid": "f6b20e85-8a04-4960-acc4-2bfed0b04412",
+      "type": "aupera_free",
+      "name": "box_detector",
+      "vendor": "Aupera",
+      "pbtxt": "6f93503e-52ce-4acf-a6bb-1599d20b0db4",
+      "hardware_types": ["VCK5000", "U50"],
+      "hardware_archs": ["DPUCVDX8H", "DPUCVD3k1R"],
+      "hardware_engines": ["4pe", "6pe", "8pe"]
+    },
+    {
+      "guid": "7aa3a7b1-b290-4b52-817c-6a03ddef4262",
+      "type": "aupera_free",
+      "name": "box_detector",
+      "vendor": "Aupera",
+      "pbtxt": "6f93503e-52ce-4acf-a6bb-1599d20b0db4",
+      "hardware_types": ["VCK5000", "U50"],
+      "hardware_archs": ["DPUCVDX8H", "DPUCVD3k1R"],
+      "hardware_engines": ["4pe", "6pe", "8pe"]
+    },
+    {
+      "guid": "fc91c3f9-5dc1-4df3-8ab6-795a828605f4",
+      "type": "aupera_free",
+      "name": "box_detector",
+      "vendor": "Aupera",
+      "pbtxt": "6f93503e-52ce-4acf-a6bb-1599d20b0db4",
+      "hardware_types": ["VCK5000", "U50"],
+      "hardware_archs": ["DPUCVDX8H", "DPUCVD3k1R"],
+      "hardware_engines": ["4pe", "6pe", "8pe"]
+    },
+    {
+      "guid": "d471bc3b-4617-49bd-8442-ffbdcf43b84a",
+      "type": "aupera_free",
+      "name": "box_detector",
+      "vendor": "Aupera",
+      "pbtxt": "6f93503e-52ce-4acf-a6bb-1599d20b0db4",
+      "hardware_types": ["VCK5000", "U50"],
+      "hardware_archs": ["DPUCVDX8H", "DPUCVD3k1R"],
+      "hardware_engines": ["4pe", "6pe", "8pe"]
+    },
+    {
+      "guid": "a7d8676e-c9fb-4386-b94e-4404685a060d",
+      "type": "aupera_free",
+      "name": "box_detector",
+      "vendor": "Aupera",
+      "pbtxt": "6f93503e-52ce-4acf-a6bb-1599d20b0db4",
+      "hardware_types": ["VCK5000", "U50"],
+      "hardware_archs": ["DPUCVDX8H", "DPUCVD3k1R"],
+      "hardware_engines": ["4pe", "6pe", "8pe"]
+    },
+    {
+      "guid": "bf1e18d4-8631-4558-a2e2-a579a5d065b4",
+      "type": "aupera_free",
+      "name": "box_detector",
+      "vendor": "Aupera",
+      "pbtxt": "6f93503e-52ce-4acf-a6bb-1599d20b0db4",
+      "hardware_types": ["VCK5000", "U50"],
+      "hardware_archs": ["DPUCVDX8H", "DPUCVD3k1R"],
+      "hardware_engines": ["4pe", "6pe", "8pe"]
+    },
+    {
+      "guid": "89afd296-ff3e-4a10-8b56-84931e080736",
+      "type": "aupera_free",
+      "name": "box_detector",
+      "vendor": "Aupera",
+      "pbtxt": "6f93503e-52ce-4acf-a6bb-1599d20b0db4",
+      "hardware_types": ["VCK5000", "U50"],
+      "hardware_archs": ["DPUCVDX8H", "DPUCVD3k1R"],
+      "hardware_engines": ["4pe", "6pe", "8pe"]
     }
   ],
   
@@ -317,12 +549,20 @@
                 "d8162c17-3e98-4f2b-bd72-a1ebdba556c2", "2b13b627-2404-40ff-aefd-6410a9cee545",
                 "63802927-1c1b-4d34-a452-95ba050fddd7", "c7c0ae6b-2ca9-4f7a-afcc-13203d912ace",
                 "2e7e57b2-e7ab-47d1-935f-7e3e7426945a", "b95e6da1-b424-47d4-8291-daa081057b6d",
-                "cc3e5c2c-f35f-435f-b82f-1a3e35508bec", "343b8ee0-d0e6-43ba-b06c-8a6b8c9c4ffb"],
+                "cc3e5c2c-f35f-435f-b82f-1a3e35508bec", "343b8ee0-d0e6-43ba-b06c-8a6b8c9c4ffb",
+                "917a3a08-848e-4adc-9934-3072d4bdcfa6", "aefc7081-bd2e-401c-a124-4c50ea4c582a",
+                "bf4ea265-d4b4-486c-a25c-d2bb2923e488", "f680167d-c288-467b-9f23-4ea01e318b32",
+                "d69d9541-85eb-4a7b-aa97-0e49e3243562", "93dc13ee-c805-4452-95ec-d31840c11a95",
+                "e8f816ee-35ce-43d6-bb5b-e00e9ff047d2", "b743d1ee-e5f7-4984-929d-1e066fff6fda"],
       "nodes": ["d6140572-a5b6-45d7-97e3-50e5f031df24", "88f8526e-9198-4d15-bfc7-312e44e0a1f0",
                 "d1daf5a8-7be1-4831-823d-5defcde73db8", "3e4fb873-6cee-46c1-a295-9081bf17dcae",
                 "98e56049-126b-4582-960b-2bec65ce7e3a", "acfaec5e-148b-414b-b36d-72773cf8fa53",
                 "05a48f70-3b37-417d-83cd-52420e0c5cbb", "853c7d4e-5a00-4022-ab5f-23b81c04ead1",
-                "601f380f-0599-4e2f-bd0a-820d8d8c3695", "b40f79d4-b0ed-4d70-b4ae-2f37e6adcd41"]
+                "601f380f-0599-4e2f-bd0a-820d8d8c3695", "b40f79d4-b0ed-4d70-b4ae-2f37e6adcd41",
+                "fcba3acf-c6ae-466c-a668-95917c480907", "f6b20e85-8a04-4960-acc4-2bfed0b04412",
+                "7aa3a7b1-b290-4b52-817c-6a03ddef4262", "fc91c3f9-5dc1-4df3-8ab6-795a828605f4",
+                "d471bc3b-4617-49bd-8442-ffbdcf43b84a", "a7d8676e-c9fb-4386-b94e-4404685a060d",
+                "bf1e18d4-8631-4558-a2e2-a579a5d065b4", "89afd296-ff3e-4a10-8b56-84931e080736"]
     },
 
     {
@@ -342,129 +582,241 @@
 
     {
       "guid": "9bedc4b3-2fbc-4429-8b0f-23b8cb012ea6",
-      "name": "demo: head person detection",
-      "description": "head person detector (tiny_yolov3_vmss) runs on crowd videos",
+      "name": "demo: person detection",
+      "description": "person detector (tiny_yolov3_vmss) runs on crowd videos",
       "models": ["daadf8b8-32a5-41f8-8c81-24f161ec4a8a"],
       "nodes": ["88f8526e-9198-4d15-bfc7-312e44e0a1f0"]
     },
     {
       "guid": "88f8526e-9198-4d15-bfc7-312e44e0a1f0",
-      "name": "node: head person detection",
-      "description": "box detector (tiny_yolov3_vmss) as head person detector",
+      "name": "node: person detection",
+      "description": "box detector (tiny_yolov3_vmss) as person detector",
       "models": ["daadf8b8-32a5-41f8-8c81-24f161ec4a8a"],
       "nodes": ["88f8526e-9198-4d15-bfc7-312e44e0a1f0"]
     },
     {
       "guid": "bb6a0bca-075a-4f04-a201-252b1d8a8289",
-      "name": "demo: head person detection",
-      "description": "head person detector (yolov2_voc) runs on crowd videos",
+      "name": "demo: person detection",
+      "description": "person detector (yolov2_voc) runs on crowd videos",
       "models": ["d8162c17-3e98-4f2b-bd72-a1ebdba556c2"],
       "nodes": ["d1daf5a8-7be1-4831-823d-5defcde73db8"]
     },
     {
       "guid": "d1daf5a8-7be1-4831-823d-5defcde73db8",
-      "name": "node: head person detection",
-      "description": "box detector (yolov2_voc) as head person detector",
+      "name": "node: person detection",
+      "description": "box detector (yolov2_voc) as person detector",
       "models": ["d8162c17-3e98-4f2b-bd72-a1ebdba556c2"],
       "nodes": ["d1daf5a8-7be1-4831-823d-5defcde73db8"]
     },
     {
       "guid": "2a31cd55-04a4-44c6-b500-e14b9cd1533b",
-      "name": "demo: head person detection",
-      "description": "head person detector (yolov2_voc_pruned_0_66) runs on crowd videos",
+      "name": "demo: person detection",
+      "description": "person detector (yolov2_voc_pruned_0_66) runs on crowd videos",
       "models": ["2b13b627-2404-40ff-aefd-6410a9cee545"],
       "nodes": ["3e4fb873-6cee-46c1-a295-9081bf17dcae"]
     },
     {
       "guid": "3e4fb873-6cee-46c1-a295-9081bf17dcae",
-      "name": "node: head person detection",
-      "description": "box detector (yolov2_voc_pruned_0_66) as head person detector",
+      "name": "node: person detection",
+      "description": "box detector (yolov2_voc_pruned_0_66) as person detector",
       "models": ["2b13b627-2404-40ff-aefd-6410a9cee545"],
       "nodes": ["3e4fb873-6cee-46c1-a295-9081bf17dcae"]
     },
     {
       "guid": "9fbd018b-a386-4bf4-b6cc-c8b450f31f5f",
-      "name": "demo: head person detection",
-      "description": "head person detector (yolov2_voc_pruned_0_71) runs on crowd videos",
+      "name": "demo: person detection",
+      "description": "person detector (yolov2_voc_pruned_0_71) runs on crowd videos",
       "models": ["63802927-1c1b-4d34-a452-95ba050fddd7"],
       "nodes": ["98e56049-126b-4582-960b-2bec65ce7e3a"]
     },
     {
       "guid": "98e56049-126b-4582-960b-2bec65ce7e3a",
-      "name": "node: head person detection",
-      "description": "box detector (yolov2_voc_pruned_0_71) as head person detector",
+      "name": "node: person detection",
+      "description": "box detector (yolov2_voc_pruned_0_71) as person detector",
       "models": ["63802927-1c1b-4d34-a452-95ba050fddd7"],
       "nodes": ["98e56049-126b-4582-960b-2bec65ce7e3a"]
     },
     {
       "guid": "6df6495f-1500-48ad-b758-1711d804a058",
-      "name": "demo: head person detection",
-      "description": "head person detector (yolov2_voc_pruned_0_77) runs on crowd videos",
+      "name": "demo: person detection",
+      "description": "person detector (yolov2_voc_pruned_0_77) runs on crowd videos",
       "models": ["c7c0ae6b-2ca9-4f7a-afcc-13203d912ace"],
       "nodes": ["acfaec5e-148b-414b-b36d-72773cf8fa53"]
     },
     {
       "guid": "acfaec5e-148b-414b-b36d-72773cf8fa53",
-      "name": "node: head person detection",
-      "description": "box detector (yolov2_voc_pruned_0_77) as head person detector",
+      "name": "node: person detection",
+      "description": "box detector (yolov2_voc_pruned_0_77) as person detector",
       "models": ["c7c0ae6b-2ca9-4f7a-afcc-13203d912ace"],
       "nodes": ["acfaec5e-148b-414b-b36d-72773cf8fa53"]
     },
     {
       "guid": "2e3e1c87-9c3a-42c7-8006-ac39e2ea7aa4",
-      "name": "demo: head person detection",
-      "description": "head person detector (yolov3_voc) runs on crowd videos",
+      "name": "demo: person detection",
+      "description": "person detector (yolov3_voc) runs on crowd videos",
       "models": ["2e7e57b2-e7ab-47d1-935f-7e3e7426945a"],
       "nodes": ["05a48f70-3b37-417d-83cd-52420e0c5cbb"]
     },
     {
       "guid": "05a48f70-3b37-417d-83cd-52420e0c5cbb",
-      "name": "node: head person detection",
-      "description": "box detector (yolov3_voc) as head person detector",
+      "name": "node: person detection",
+      "description": "box detector (yolov3_voc) as person detector",
       "models": ["2e7e57b2-e7ab-47d1-935f-7e3e7426945a"],
       "nodes": ["05a48f70-3b37-417d-83cd-52420e0c5cbb"]
     },
     {
       "guid": "54a0e5dd-0f19-4259-a9f3-4b8ea446372a",
-      "name": "demo: head person detection",
-      "description": "head person detector (yolov3_bdd) runs on crowd videos",
+      "name": "demo: person detection",
+      "description": "person detector (yolov3_bdd) runs on crowd videos",
       "models": ["b95e6da1-b424-47d4-8291-daa081057b6d"],
       "nodes": ["853c7d4e-5a00-4022-ab5f-23b81c04ead1"]
     },
     {
       "guid": "853c7d4e-5a00-4022-ab5f-23b81c04ead1",
-      "name": "node: head person detection",
-      "description": "box detector (yolov3_bdd) as head person detector",
+      "name": "node: person detection",
+      "description": "box detector (yolov3_bdd) as person detector",
       "models": ["b95e6da1-b424-47d4-8291-daa081057b6d"],
       "nodes": ["853c7d4e-5a00-4022-ab5f-23b81c04ead1"]
     },
     {
       "guid": "083bdabb-48e0-4118-b408-15322341c705",
-      "name": "demo: head person detection",
-      "description": "head person detector (yolov3_adas_pruned_0_9) runs on crowd videos",
+      "name": "demo: person detection",
+      "description": "person detector (yolov3_adas_pruned_0_9) runs on crowd videos",
       "models": ["cc3e5c2c-f35f-435f-b82f-1a3e35508bec"],
       "nodes": ["601f380f-0599-4e2f-bd0a-820d8d8c3695"]
     },
     {
       "guid": "601f380f-0599-4e2f-bd0a-820d8d8c3695",
-      "name": "node: head person detection",
-      "description": "box detector (yolov3_adas_pruned_0_9) as head person detector",
+      "name": "node: person detection",
+      "description": "box detector (yolov3_adas_pruned_0_9) as person detector",
       "models": ["cc3e5c2c-f35f-435f-b82f-1a3e35508bec"],
       "nodes": ["601f380f-0599-4e2f-bd0a-820d8d8c3695"]
     },
     {
       "guid": "12ed46a6-3c53-471c-bd17-673c58b968eb",
-      "name": "demo: head person detection",
-      "description": "head person detector (yolov3_voc_tf) runs on crowd videos",
+      "name": "demo: person detection",
+      "description": "person detector (yolov3_voc_tf) runs on crowd videos",
       "models": ["343b8ee0-d0e6-43ba-b06c-8a6b8c9c4ffb"],
       "nodes": ["b40f79d4-b0ed-4d70-b4ae-2f37e6adcd41"]
     },
     {
       "guid": "b40f79d4-b0ed-4d70-b4ae-2f37e6adcd41",
-      "name": "node: head person detection",
-      "description": "box detector (yolov3_voc_tf) as head person detector",
+      "name": "node: person detection",
+      "description": "box detector (yolov3_voc_tf) as person detector",
       "models": ["343b8ee0-d0e6-43ba-b06c-8a6b8c9c4ffb"],
       "nodes": ["b40f79d4-b0ed-4d70-b4ae-2f37e6adcd41"]
+    },
+    {
+      "guid": "4f7dd976-a54d-41e2-bebd-b48de8860c63",
+      "name": "demo: person detection",
+      "description": "person detector (refinedet_baseline) runs on crowd videos",
+      "models": ["917a3a08-848e-4adc-9934-3072d4bdcfa6"],
+      "nodes": ["fcba3acf-c6ae-466c-a668-95917c480907"]
+    },
+    {
+      "guid": "fcba3acf-c6ae-466c-a668-95917c480907",
+      "name": "node: person detection",
+      "description": "box detector (refinedet_baseline) as person detector",
+      "models": ["917a3a08-848e-4adc-9934-3072d4bdcfa6"],
+      "nodes": ["fcba3acf-c6ae-466c-a668-95917c480907"]
+    },
+    {
+      "guid": "39b24852-5614-47ea-93c9-b50b69dc56c5",
+      "name": "demo: person detection",
+      "description": "person detector (refinedet_pruned_0_8) runs on crowd videos",
+      "models": ["aefc7081-bd2e-401c-a124-4c50ea4c582a"],
+      "nodes": ["f6b20e85-8a04-4960-acc4-2bfed0b04412"]
+    },
+    {
+      "guid": "f6b20e85-8a04-4960-acc4-2bfed0b04412",
+      "name": "node: person detection",
+      "description": "box detector (refinedet_pruned_0_8) as person detector",
+      "models": ["aefc7081-bd2e-401c-a124-4c50ea4c582a"],
+      "nodes": ["f6b20e85-8a04-4960-acc4-2bfed0b04412"]
+    },
+    {
+      "guid": "0e3fb98c-dc0d-49b3-aa46-129e8d35fb10",
+      "name": "demo: person detection",
+      "description": "person detector (refinedet_pruned_0_92) runs on crowd videos",
+      "models": ["bf4ea265-d4b4-486c-a25c-d2bb2923e488"],
+      "nodes": ["7aa3a7b1-b290-4b52-817c-6a03ddef4262"]
+    },
+    {
+      "guid": "7aa3a7b1-b290-4b52-817c-6a03ddef4262",
+      "name": "node: person detection",
+      "description": "box detector (refinedet_pruned_0_92) as person detector",
+      "models": ["bf4ea265-d4b4-486c-a25c-d2bb2923e488"],
+      "nodes": ["7aa3a7b1-b290-4b52-817c-6a03ddef4262"]
+    },
+    {
+      "guid": "466a42b9-85d6-4adf-ba51-1c992b62fca8",
+      "name": "demo: person detection",
+      "description": "person detector (refinedet_pruned_0_96) runs on crowd videos",
+      "models": ["f680167d-c288-467b-9f23-4ea01e318b32"],
+      "nodes": ["fc91c3f9-5dc1-4df3-8ab6-795a828605f4"]
+    },
+    {
+      "guid": "fc91c3f9-5dc1-4df3-8ab6-795a828605f4",
+      "name": "node: person detection",
+      "description": "box detector (refinedet_pruned_0_96) as person detector",
+      "models": ["f680167d-c288-467b-9f23-4ea01e318b32"],
+      "nodes": ["fc91c3f9-5dc1-4df3-8ab6-795a828605f4"]
+    },
+    {
+      "guid": "55874bc2-21c9-4d1c-8ade-53263e28c068",
+      "name": "demo: person detection",
+      "description": "person detector (refinedet_VOC_tf) runs on crowd videos",
+      "models": ["d69d9541-85eb-4a7b-aa97-0e49e3243562"],
+      "nodes": ["d471bc3b-4617-49bd-8442-ffbdcf43b84a"]
+    },
+    {
+      "guid": "d471bc3b-4617-49bd-8442-ffbdcf43b84a",
+      "name": "node: person detection",
+      "description": "box detector (refinedet_VOC_tf) as person detector",
+      "models": ["d69d9541-85eb-4a7b-aa97-0e49e3243562"],
+      "nodes": ["d471bc3b-4617-49bd-8442-ffbdcf43b84a"]
+    },
+    {
+      "guid": "99c4f723-1cd9-47ab-a649-b31787154d56",
+      "name": "demo: person detection",
+      "description": "person detector (ssd_adas_pruned_0_95) runs on crowd videos",
+      "models": ["93dc13ee-c805-4452-95ec-d31840c11a95"],
+      "nodes": ["a7d8676e-c9fb-4386-b94e-4404685a060d"]
+    },
+    {
+      "guid": "a7d8676e-c9fb-4386-b94e-4404685a060d",
+      "name": "node: person detection",
+      "description": "box detector (ssd_adas_pruned_0_95) as person detector",
+      "models": ["93dc13ee-c805-4452-95ec-d31840c11a95"],
+      "nodes": ["a7d8676e-c9fb-4386-b94e-4404685a060d"]
+    },
+    {
+      "guid": "26b14df7-b14d-4285-9d2a-de74079b58d9",
+      "name": "demo: person detection",
+      "description": "person detector (ssd_pedestrian_pruned_0_97) runs on crowd videos",
+      "models": ["e8f816ee-35ce-43d6-bb5b-e00e9ff047d2"],
+      "nodes": ["bf1e18d4-8631-4558-a2e2-a579a5d065b4"]
+    },
+    {
+      "guid": "bf1e18d4-8631-4558-a2e2-a579a5d065b4",
+      "name": "node: person detection",
+      "description": "box detector (ssd_pedestrian_pruned_0_97) as person detector",
+      "models": ["e8f816ee-35ce-43d6-bb5b-e00e9ff047d2"],
+      "nodes": ["bf1e18d4-8631-4558-a2e2-a579a5d065b4"]
+    },
+    {
+      "guid": "9bcb3cf8-5c5e-4c74-b33e-ef5e61312722",
+      "name": "demo: person detection",
+      "description": "person detector (ssd_traffic_pruned_0_9) runs on crowd videos",
+      "models": ["b743d1ee-e5f7-4984-929d-1e066fff6fda"],
+      "nodes": ["89afd296-ff3e-4a10-8b56-84931e080736"]
+    },
+    {
+      "guid": "89afd296-ff3e-4a10-8b56-84931e080736",
+      "name": "node: person detection",
+      "description": "box detector (ssd_traffic_pruned_0_9) as person detector",
+      "models": ["b743d1ee-e5f7-4984-929d-1e066fff6fda"],
+      "nodes": ["89afd296-ff3e-4a10-8b56-84931e080736"]
     }
   ],
 

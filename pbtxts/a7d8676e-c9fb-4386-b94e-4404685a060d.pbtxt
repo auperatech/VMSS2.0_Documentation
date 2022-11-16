@@ -1,0 +1,68 @@
+node {
+  name: "detector"
+  calculator: "box_detector"
+  input_stream: "imgStream1080p"
+  output_stream: "detectionsStream"
+  output_stream: "detect_interval"
+  stream_sync: {
+    drop_strategy: DROP_INCOMPLETE_PACKETS
+    timeout_ms: 5000
+  }
+  node_options: {
+    [type.googleapis.com/aup.avaf.BoxDetectorOptions]: {
+      detect_interval: 1
+      detector_type: "SSD"
+      kernel_name: "ssd_adas_pruned_0_95"      
+      need_preprocess: true
+      log_performance: false
+      run_on_letterboxed_img: false
+      batch_size: 1
+      return_frames_inorder: true 
+      batch_collection_timeout_ms: 0
+      ignore_black_frames: false
+      max_detection_lib_q_size: 30
+      mean: {
+        r: 104.0
+        g: 117.0
+        b: 123.0
+      }
+      scale: {
+        ch1: 1.0
+        ch2: 1.0
+        ch3: 1.0
+      }
+      label_confidence: {
+        label: 0
+        confidence: 0.0
+      }
+      label_confidence: {
+        label: 1
+        confidence: 0.6
+      }
+      label_confidence: {
+        label: 2
+        confidence: 0.4
+      }
+      label_confidence: {
+        label: 3
+        confidence: 0.3
+      }
+      inter_class_nms: {
+        labels: 0
+        threshold: 0.4
+      }
+      inter_class_nms: {
+        labels: 1
+        threshold: 0.4
+      }
+      inter_class_nms: {
+        labels: 2
+        threshold: 0.4
+      }
+      inter_class_nms: {
+        labels: 3
+        threshold: 0.4
+      }
+    }
+  }
+}
