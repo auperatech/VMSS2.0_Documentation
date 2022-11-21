@@ -7,6 +7,7 @@
       "model_zoo_name": "cf_SSD-RESNET18_PERSON-HEAD-SHIUN_960_540_1_6.3G_2.0",
       "kernel": "RESNET18SSD_ITER90000_PRIVATE_FINAL501IMAGES_ADDED_07JUNE2021_CROWD_FLOW_PERSON_HEAD",
       "ml_task": "detection",
+      "application": "person-head-detection",
       "hardware_type": "VCK5000",
       "hardware_arch": "DPUCVDX8H",
       "hardware_engine": "8pe", 
@@ -17,6 +18,8 @@
       "download_link": "", 
       "ops": "6.3G",
       "input_size": "960x540",
+      "float_accuracy": "0.8037",
+      "quantized_accuracy": "0.6323",
       "dataset": "person-head-shiun",
       "node_pbtxt": "d6140572-a5b6-45d7-97e3-50e5f031df24" ,
       "pipeline_pbtxt": "614daebb-0c6f-4baa-8154-4657f5254997"
