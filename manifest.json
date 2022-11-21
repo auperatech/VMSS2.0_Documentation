@@ -47,6 +47,14 @@
       "pbtxt": "614daebb-0c6f-4baa-8154-4657f5254997",
       "models": ["f358d776-130b-4daa-9d33-c017d20307de"],
       "nodes": ["d6140572-a5b6-45d7-97e3-50e5f031df24"]
+    },
+    {
+      "guid": "1c3cb3c3-7abc-4651-bc94-dd603a672a14",
+      "name": "demo: encoding and decoding",
+      "description": "just decoding and encoding with no ml models",
+      "pbtxt": "bb989898-064d-4efd-8b3e-88ca388a6bc0",
+      "models": [""],
+      "nodes": [""]
     }
   ],
 
@@ -71,6 +79,13 @@
       "description": "default parameters for box detector node",
       "models": ["f358d776-130b-4daa-9d33-c017d20307de"],
       "nodes": ["d6140572-a5b6-45d7-97e3-50e5f031df24"]
+    },
+    {
+      "guid": "bb989898-064d-4efd-8b3e-88ca388a6bc0",
+      "name": "demo: decoder and encoder",
+      "description": "just decoding and encoding with no ml models",
+      "models": [],
+      "nodes": []
     }
   ],
 
