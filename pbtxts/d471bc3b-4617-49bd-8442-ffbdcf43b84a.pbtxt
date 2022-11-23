@@ -1,8 +1,8 @@
 node {
   name: "detector"
   calculator: "box_detector"
-  input_stream: "imgStream1080p"
-  output_stream: "detectionsStream"
+  input_stream: "image_stream_decode"
+  output_stream: "detections_stream"
   output_stream: "detect_interval"
   stream_sync: {
     drop_strategy: DROP_INCOMPLETE_PACKETS
@@ -111,10 +111,6 @@ node {
         label: 19
         confidence: 0.5
       }
-      label_confidence: {
-        label: 20
-        confidence: 0.5
-      }
       inter_class_nms: {
         labels: 0
         threshold: 0.45
@@ -193,10 +189,6 @@ node {
       }
       inter_class_nms: {
         labels: 19
-        threshold: 0.45
-      }
-      inter_class_nms: {
-        labels: 20
         threshold: 0.45
       }
     }
