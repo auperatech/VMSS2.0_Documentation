@@ -1,0 +1,17 @@
+node {
+  name: "demux_node"
+  calculator: "stream_demux"
+  vendor: "Aupera"
+  graph_input: "graph_input1"
+  output_stream: "packet_stream_demux"
+  output_stream: "video_stream_info_demux"
+  node_options: {
+    [type.googleapis.com/aup.avaf.StreamMuxOptions]: {
+      demux: {
+        rtsp_transport: "tcp"  
+        iframe_extract: false
+        auto_reconnect: false
+      }
+    }
+  }
+}

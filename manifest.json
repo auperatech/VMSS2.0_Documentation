@@ -580,6 +580,66 @@
       "hardware_types": ["VCK5000", "U50"],
       "hardware_archs": ["DPUCVDX8H", "DPUCVD3k1R"],
       "hardware_engines": ["4pe", "6pe", "8pe"]
+    },
+    {
+      "guid": "b177e388-d082-4d3c-ad8e-9f9d8ebcce8b",
+      "type": "aupera_free",
+      "name": "stream_demux",
+      "vendor": "Aupera",
+      "pbtxt": "5c0ce784-3b87-48c7-8acd-1dd38ede125b",
+      "hardware_types": ["VCK5000", "U50"],
+      "hardware_archs": ["DPUCVDX8H", "DPUCVD3k1R"],
+      "hardware_engines": ["4pe", "6pe", "8pe"]
+    },
+    {
+      "guid": "1c34840d-2ca9-4d42-b229-101c55115824",
+      "type": "aupera_free",
+      "name": "x86_dec",
+      "vendor": "Aupera",
+      "pbtxt": "5b04b5a6-beb9-48ef-994e-95107e0b3133",
+      "hardware_types": ["VCK5000", "U50"],
+      "hardware_archs": ["DPUCVDX8H", "DPUCVD3k1R"],
+      "hardware_engines": ["4pe", "6pe", "8pe"]
+    },
+    {
+      "guid": "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
+      "type": "aupera_free",
+      "name": "box_visualizer",
+      "vendor": "Aupera",
+      "pbtxt": "8149a886-36ac-4446-a63d-b8a29aab2cfb",
+      "hardware_types": ["VCK5000", "U50"],
+      "hardware_archs": ["DPUCVDX8H", "DPUCVD3k1R"],
+      "hardware_engines": ["4pe", "6pe", "8pe"]
+    },
+    {
+      "guid": "cbbeb075-5517-4d0e-9f56-cec8cad595da",
+      "type": "aupera_free",
+      "name": "ff_vfilter",
+      "vendor": "Aupera",
+      "pbtxt": "7a2daef4-a0f8-49de-8755-3ca174a61ef1",
+      "hardware_types": ["VCK5000", "U50"],
+      "hardware_archs": ["DPUCVDX8H", "DPUCVD3k1R"],
+      "hardware_engines": ["4pe", "6pe", "8pe"]
+    },
+    {
+      "guid": "8a2d1c42-0d85-4423-be85-2651d9e13a50",
+      "type": "aupera_free",
+      "name": "x86_enc",
+      "vendor": "Aupera",
+      "pbtxt": "99838e85-60d2-4bec-a4b2-51dfe11289a3",
+      "hardware_types": ["VCK5000", "U50"],
+      "hardware_archs": ["DPUCVDX8H", "DPUCVD3k1R"],
+      "hardware_engines": ["4pe", "6pe", "8pe"]
+    },
+    {
+      "guid": "60e96d25-07dd-45be-8c19-4175b2884fc3",
+      "type": "aupera_free",
+      "name": "stream_mux",
+      "vendor": "Aupera",
+      "pbtxt": "fbf0be08-d6d1-4c0d-94f5-7da9e87c1315",
+      "hardware_types": ["VCK5000", "U50"],
+      "hardware_archs": ["DPUCVDX8H", "DPUCVD3k1R"],
+      "hardware_engines": ["4pe", "6pe", "8pe"]
     }
   ],
   
@@ -590,22 +650,28 @@
       "description": "head person detector runs on crowd videos",
       "pbtxt": "614daebb-0c6f-4baa-8154-4657f5254997",
       "models": ["f358d776-130b-4daa-9d33-c017d20307de"],
-      "nodes": ["d6140572-a5b6-45d7-97e3-50e5f031df24"]
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
+                "d6140572-a5b6-45d7-97e3-50e5f031df24", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
+                "60e96d25-07dd-45be-8c19-4175b2884fc3"]
+      
     },
     {
       "guid": "1c3cb3c3-7abc-4651-bc94-dd603a672a14",
       "name": "demo: encoding and decoding",
       "description": "just decoding and encoding with no ml models",
       "pbtxt": "bb989898-064d-4efd-8b3e-88ca388a6bc0",
-      "models": [""],
-      "nodes": [""]
+      "models": [],
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
+                "60e96d25-07dd-45be-8c19-4175b2884fc3"]
     }
   ],
 
   "pbtxts": [
     {
       "guid": "6f93503e-52ce-4acf-a6bb-1599d20b0db4",
-      "name": "node: box detector default",
+      "name": "node: box_detector default",
       "description": "default parameters for box detector node",
       "models": ["f358d776-130b-4daa-9d33-c017d20307de", "daadf8b8-32a5-41f8-8c81-24f161ec4a8a",
                 "d8162c17-3e98-4f2b-bd72-a1ebdba556c2", "2b13b627-2404-40ff-aefd-6410a9cee545",
@@ -627,18 +693,111 @@
                 "bf1e18d4-8631-4558-a2e2-a579a5d065b4", "89afd296-ff3e-4a10-8b56-84931e080736"]
     },
     {
+      "guid": "5c0ce784-3b87-48c7-8acd-1dd38ede125b",
+      "name": "node: stream_demux default",
+      "description": "default parameters for stream_demux node",
+      "models": [],
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b"]
+    },
+    {
+      "guid": "b177e388-d082-4d3c-ad8e-9f9d8ebcce8b",
+      "name": "node: stream_demux",
+      "description": "connect to a RTSP stream, receive the packets, and perform demux operation",
+      "models": [],
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b"]
+    },
+    {
+      "guid": "5b04b5a6-beb9-48ef-994e-95107e0b3133",
+      "name": "node: x86_dec default",
+      "description": "default parameters for x86_dec node",
+      "models": [],
+      "nodes": ["1c34840d-2ca9-4d42-b229-101c55115824"]
+    },
+    {
+      "guid": "1c34840d-2ca9-4d42-b229-101c55115824",
+      "name": "node: x86_dec",
+      "description": "receive the packets from a demux node and decode them",
+      "models": [],
+      "nodes": ["1c34840d-2ca9-4d42-b229-101c55115824"]
+    },
+    {
+      "guid": "8149a886-36ac-4446-a63d-b8a29aab2cfb",
+      "name": "node: box_visualizer default",
+      "description": "default parameters for box_visualizer node",
+      "models": [],
+      "nodes": ["f6d4c0be-7146-463e-9e75-7c7aae7dbdac"]
+    },
+    {
+      "guid": "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
+      "name": "node: box_visualizer",
+      "description": "visualize the output of object detector",
+      "models": [],
+      "nodes": ["f6d4c0be-7146-463e-9e75-7c7aae7dbdac"]
+    },
+    {
+      "guid": "7a2daef4-a0f8-49de-8755-3ca174a61ef1",
+      "name": "node: ff_vfilter default",
+      "description": "default parameters for ff_vfilter node",
+      "models": [],
+      "nodes": ["cbbeb075-5517-4d0e-9f56-cec8cad595da"]
+    },
+    {
+      "guid": "cbbeb075-5517-4d0e-9f56-cec8cad595da",
+      "name": "node: ff_vfilter",
+      "description": "adjust the video streaming parameters",
+      "models": [],
+      "nodes": ["cbbeb075-5517-4d0e-9f56-cec8cad595da"]
+    },
+    {
+      "guid": "99838e85-60d2-4bec-a4b2-51dfe11289a3",
+      "name": "node: x86_enc default",
+      "description": "default parameters for x86_enc node",
+      "models": [],
+      "nodes": ["8a2d1c42-0d85-4423-be85-2651d9e13a50"]
+    },
+    {
+      "guid": "8a2d1c42-0d85-4423-be85-2651d9e13a50",
+      "name": "node: x86_enc",
+      "description": "receive the frames and compress them into video packets",
+      "models": [],
+      "nodes": ["8a2d1c42-0d85-4423-be85-2651d9e13a50"]
+    },
+    {
+      "guid": "fbf0be08-d6d1-4c0d-94f5-7da9e87c1315",
+      "name": "node: stream_mux default",
+      "description": "default parameters for stream_mux node",
+      "models": [],
+      "nodes": ["60e96d25-07dd-45be-8c19-4175b2884fc3"]
+    },
+    {
+      "guid": "60e96d25-07dd-45be-8c19-4175b2884fc3",
+      "name": "node: stream_mux",
+      "description": "receive the encoded frame and pass it in an rtsp stream",
+      "models": [],
+      "nodes": ["60e96d25-07dd-45be-8c19-4175b2884fc3"]
+    },
+
+    {
       "guid": "bb989898-064d-4efd-8b3e-88ca388a6bc0",
       "name": "demo: decoder and encoder",
       "description": "just decoding and encoding with no ml models",
       "models": [],
-      "nodes": []
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
+                "60e96d25-07dd-45be-8c19-4175b2884fc3"]
     },
+
+
+
     {
       "guid": "614daebb-0c6f-4baa-8154-4657f5254997",
       "name": "demo: head person detection",
       "description": "head person detector (RESNET18) runs on crowd videos",
       "models": ["f358d776-130b-4daa-9d33-c017d20307de"],
-      "nodes": ["d6140572-a5b6-45d7-97e3-50e5f031df24"]
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
+                "d6140572-a5b6-45d7-97e3-50e5f031df24", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
+                "60e96d25-07dd-45be-8c19-4175b2884fc3"]
     },
     {
       "guid": "d6140572-a5b6-45d7-97e3-50e5f031df24",
@@ -653,7 +812,10 @@
       "name": "demo: person detection",
       "description": "person detector (tiny_yolov3_vmss) runs on crowd videos",
       "models": ["daadf8b8-32a5-41f8-8c81-24f161ec4a8a"],
-      "nodes": ["88f8526e-9198-4d15-bfc7-312e44e0a1f0"]
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
+                "88f8526e-9198-4d15-bfc7-312e44e0a1f0", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
+                "60e96d25-07dd-45be-8c19-4175b2884fc3"]
     },
     {
       "guid": "88f8526e-9198-4d15-bfc7-312e44e0a1f0",
@@ -667,7 +829,10 @@
       "name": "demo: person detection",
       "description": "person detector (yolov2_voc) runs on crowd videos",
       "models": ["d8162c17-3e98-4f2b-bd72-a1ebdba556c2"],
-      "nodes": ["d1daf5a8-7be1-4831-823d-5defcde73db8"]
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
+                "d1daf5a8-7be1-4831-823d-5defcde73db8", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
+                "60e96d25-07dd-45be-8c19-4175b2884fc3"]
     },
     {
       "guid": "d1daf5a8-7be1-4831-823d-5defcde73db8",
@@ -681,7 +846,10 @@
       "name": "demo: person detection",
       "description": "person detector (yolov2_voc_pruned_0_66) runs on crowd videos",
       "models": ["2b13b627-2404-40ff-aefd-6410a9cee545"],
-      "nodes": ["3e4fb873-6cee-46c1-a295-9081bf17dcae"]
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
+                "3e4fb873-6cee-46c1-a295-9081bf17dcae", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
+                "60e96d25-07dd-45be-8c19-4175b2884fc3"]
     },
     {
       "guid": "3e4fb873-6cee-46c1-a295-9081bf17dcae",
@@ -695,7 +863,10 @@
       "name": "demo: person detection",
       "description": "person detector (yolov2_voc_pruned_0_71) runs on crowd videos",
       "models": ["63802927-1c1b-4d34-a452-95ba050fddd7"],
-      "nodes": ["98e56049-126b-4582-960b-2bec65ce7e3a"]
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
+                "98e56049-126b-4582-960b-2bec65ce7e3a", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
+                "60e96d25-07dd-45be-8c19-4175b2884fc3"]
     },
     {
       "guid": "98e56049-126b-4582-960b-2bec65ce7e3a",
@@ -709,7 +880,10 @@
       "name": "demo: person detection",
       "description": "person detector (yolov2_voc_pruned_0_77) runs on crowd videos",
       "models": ["c7c0ae6b-2ca9-4f7a-afcc-13203d912ace"],
-      "nodes": ["acfaec5e-148b-414b-b36d-72773cf8fa53"]
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
+                "acfaec5e-148b-414b-b36d-72773cf8fa53", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
+                "60e96d25-07dd-45be-8c19-4175b2884fc3"]
     },
     {
       "guid": "acfaec5e-148b-414b-b36d-72773cf8fa53",
@@ -723,7 +897,10 @@
       "name": "demo: person detection",
       "description": "person detector (yolov3_voc) runs on crowd videos",
       "models": ["2e7e57b2-e7ab-47d1-935f-7e3e7426945a"],
-      "nodes": ["05a48f70-3b37-417d-83cd-52420e0c5cbb"]
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
+                "05a48f70-3b37-417d-83cd-52420e0c5cbb", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
+                "60e96d25-07dd-45be-8c19-4175b2884fc3"]
     },
     {
       "guid": "05a48f70-3b37-417d-83cd-52420e0c5cbb",
@@ -737,7 +914,10 @@
       "name": "demo: person detection",
       "description": "person detector (yolov3_bdd) runs on crowd videos",
       "models": ["b95e6da1-b424-47d4-8291-daa081057b6d"],
-      "nodes": ["853c7d4e-5a00-4022-ab5f-23b81c04ead1"]
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
+                "853c7d4e-5a00-4022-ab5f-23b81c04ead1", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
+                "60e96d25-07dd-45be-8c19-4175b2884fc3"]
     },
     {
       "guid": "853c7d4e-5a00-4022-ab5f-23b81c04ead1",
@@ -751,7 +931,10 @@
       "name": "demo: person detection",
       "description": "person detector (yolov3_adas_pruned_0_9) runs on crowd videos",
       "models": ["cc3e5c2c-f35f-435f-b82f-1a3e35508bec"],
-      "nodes": ["601f380f-0599-4e2f-bd0a-820d8d8c3695"]
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
+                "601f380f-0599-4e2f-bd0a-820d8d8c3695", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
+                "60e96d25-07dd-45be-8c19-4175b2884fc3"]
     },
     {
       "guid": "601f380f-0599-4e2f-bd0a-820d8d8c3695",
@@ -765,7 +948,10 @@
       "name": "demo: person detection",
       "description": "person detector (yolov3_voc_tf) runs on crowd videos",
       "models": ["343b8ee0-d0e6-43ba-b06c-8a6b8c9c4ffb"],
-      "nodes": ["b40f79d4-b0ed-4d70-b4ae-2f37e6adcd41"]
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
+                "b40f79d4-b0ed-4d70-b4ae-2f37e6adcd41", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
+                "60e96d25-07dd-45be-8c19-4175b2884fc3"]
     },
     {
       "guid": "b40f79d4-b0ed-4d70-b4ae-2f37e6adcd41",
@@ -779,7 +965,10 @@
       "name": "demo: person detection",
       "description": "person detector (refinedet_baseline) runs on crowd videos",
       "models": ["917a3a08-848e-4adc-9934-3072d4bdcfa6"],
-      "nodes": ["fcba3acf-c6ae-466c-a668-95917c480907"]
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
+                "fcba3acf-c6ae-466c-a668-95917c480907", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
+                "60e96d25-07dd-45be-8c19-4175b2884fc3"]
     },
     {
       "guid": "fcba3acf-c6ae-466c-a668-95917c480907",
@@ -793,7 +982,10 @@
       "name": "demo: person detection",
       "description": "person detector (refinedet_pruned_0_8) runs on crowd videos",
       "models": ["aefc7081-bd2e-401c-a124-4c50ea4c582a"],
-      "nodes": ["f6b20e85-8a04-4960-acc4-2bfed0b04412"]
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
+                "f6b20e85-8a04-4960-acc4-2bfed0b04412", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
+                "60e96d25-07dd-45be-8c19-4175b2884fc3"]
     },
     {
       "guid": "f6b20e85-8a04-4960-acc4-2bfed0b04412",
@@ -807,7 +999,10 @@
       "name": "demo: person detection",
       "description": "person detector (refinedet_pruned_0_92) runs on crowd videos",
       "models": ["bf4ea265-d4b4-486c-a25c-d2bb2923e488"],
-      "nodes": ["7aa3a7b1-b290-4b52-817c-6a03ddef4262"]
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
+                "7aa3a7b1-b290-4b52-817c-6a03ddef4262", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
+                "60e96d25-07dd-45be-8c19-4175b2884fc3"]
     },
     {
       "guid": "7aa3a7b1-b290-4b52-817c-6a03ddef4262",
@@ -821,7 +1016,10 @@
       "name": "demo: person detection",
       "description": "person detector (refinedet_pruned_0_96) runs on crowd videos",
       "models": ["f680167d-c288-467b-9f23-4ea01e318b32"],
-      "nodes": ["fc91c3f9-5dc1-4df3-8ab6-795a828605f4"]
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
+                "fc91c3f9-5dc1-4df3-8ab6-795a828605f4", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
+                "60e96d25-07dd-45be-8c19-4175b2884fc3"]
     },
     {
       "guid": "fc91c3f9-5dc1-4df3-8ab6-795a828605f4",
@@ -835,7 +1033,10 @@
       "name": "demo: person detection",
       "description": "person detector (refinedet_VOC_tf) runs on crowd videos",
       "models": ["d69d9541-85eb-4a7b-aa97-0e49e3243562"],
-      "nodes": ["d471bc3b-4617-49bd-8442-ffbdcf43b84a"]
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
+                "d471bc3b-4617-49bd-8442-ffbdcf43b84a", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
+                "60e96d25-07dd-45be-8c19-4175b2884fc3"]
     },
     {
       "guid": "d471bc3b-4617-49bd-8442-ffbdcf43b84a",
@@ -849,7 +1050,10 @@
       "name": "demo: person detection",
       "description": "person detector (ssd_adas_pruned_0_95) runs on crowd videos",
       "models": ["93dc13ee-c805-4452-95ec-d31840c11a95"],
-      "nodes": ["a7d8676e-c9fb-4386-b94e-4404685a060d"]
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
+                "a7d8676e-c9fb-4386-b94e-4404685a060d", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
+                "60e96d25-07dd-45be-8c19-4175b2884fc3"]
     },
     {
       "guid": "a7d8676e-c9fb-4386-b94e-4404685a060d",
@@ -863,7 +1067,10 @@
       "name": "demo: person detection",
       "description": "person detector (ssd_pedestrian_pruned_0_97) runs on crowd videos",
       "models": ["e8f816ee-35ce-43d6-bb5b-e00e9ff047d2"],
-      "nodes": ["bf1e18d4-8631-4558-a2e2-a579a5d065b4"]
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
+                "bf1e18d4-8631-4558-a2e2-a579a5d065b4", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
+                "60e96d25-07dd-45be-8c19-4175b2884fc3"]
     },
     {
       "guid": "bf1e18d4-8631-4558-a2e2-a579a5d065b4",
@@ -876,6 +1083,16 @@
       "guid": "9bcb3cf8-5c5e-4c74-b33e-ef5e61312722",
       "name": "demo: person detection",
       "description": "person detector (ssd_traffic_pruned_0_9) runs on crowd videos",
+      "models": ["b743d1ee-e5f7-4984-929d-1e066fff6fda"],
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
+                "89afd296-ff3e-4a10-8b56-84931e080736", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
+                "60e96d25-07dd-45be-8c19-4175b2884fc3"]
+    },
+    {
+      "guid": "89afd296-ff3e-4a10-8b56-84931e080736",
+      "name": "node: person detection",
+      "description": "box detector (ssd_traffic_pruned_0_9) as person detector",
       "models": ["b743d1ee-e5f7-4984-929d-1e066fff6fda"],
       "nodes": ["89afd296-ff3e-4a10-8b56-84931e080736"]
     }
