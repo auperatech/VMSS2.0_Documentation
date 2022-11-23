@@ -1,0 +1,15 @@
+node {
+  name: "mux_node1"
+  calculator: "stream_mux"
+  input_stream: "packet_stream_encode1"
+  input_stream: "codec_context_stream1"
+  graph_output: "graph_output1"
+  node_options: {
+    [type.googleapis.com/aup.avaf.StreamMuxOptions]: {
+     mux: {
+       rtsp_transport: "tcp"
+       auto_reconnect: true
+     }
+    }
+  }
+}

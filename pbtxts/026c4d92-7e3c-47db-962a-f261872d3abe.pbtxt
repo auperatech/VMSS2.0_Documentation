@@ -1,0 +1,18 @@
+node {
+  name: "encode_node2"
+  calculator: "x86_enc"
+  input_stream: "image_stream_vfilter2"
+  input_stream: "video_stream_info_vfilter2"
+  output_stream: "packet_stream_encode2"
+  output_stream: "codec_context_stream2"
+  node_options: {
+    [type.googleapis.com/aup.avaf.VideoCodecOptions]: {
+     enc: {
+       type: H264
+       w: 0 
+       h: 0
+       fps: 0
+     }
+    }
+  }
+}

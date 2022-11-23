@@ -1,0 +1,20 @@
+node {
+  name: "decode_node2"
+  calculator: "x86_dec"
+  input_stream: "packet_stream_demux2"
+  input_stream: "video_stream_info_demux2"
+  output_stream: "image_stream_decode2"
+  output_stream: "video_stream_info_decode2"
+  node_options: {
+    [type.googleapis.com/aup.avaf.VideoCodecOptions]: {
+      dec: {
+        name: "u30_dec_h2645"  
+        ow: 1920
+        oh: 1080
+        opixfmt: PIXFMT_BGR24
+        queue_size: 12
+        low_latency: false
+      }
+    }
+  }
+}

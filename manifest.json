@@ -397,6 +397,28 @@
       "dataset": "private-dataset",
       "node_pbtxt": "89afd296-ff3e-4a10-8b56-84931e080736",
       "pipeline_pbtxt": "9bcb3cf8-5c5e-4c74-b33e-ef5e61312722"
+    },
+    {
+      "guid": "787a35fb-2e55-417f-bf14-903b53b33017",
+      "model_zoo_name": "cf_resnet18_imagenet_224_224_3.65G_2.0",
+      "kernel": "resnet18",
+      "ml_task": "classification",
+      "application": "general",
+      "hardware_type": "VCK5000",
+      "hardware_arch": "DPUCVDX8H",
+      "hardware_engine": "8pe", 
+      "model_format": "xmodel",
+      "ml_lib": "caffe1.0",
+      "inference_lib": "vitis2.0",
+      "checksum": "3a1d1b0c2178c8bfe66084a7eaec0c17",
+      "download_link": "https://www.xilinx.com/bin/public/openDownload?filename=resnet18-vck50008pe-DPUCVDX8H-r2.0.0.tar.gz", 
+      "ops": "3.65G",
+      "input_size": "224*224",
+      "float_accuracy": "0.6844/0.8864",
+      "quantized_accuracy": "0.6699/0.8826",
+      "dataset": "ImageNet",
+      "node_pbtxt": "e0bd1228-1adc-407b-bf28-3c698ce7daca",
+      "pipeline_pbtxt": "20b35b1e-da33-4092-bcf0-b9b242acd1aa"
     }
   ],
 
@@ -640,6 +662,147 @@
       "hardware_types": ["VCK5000", "U50"],
       "hardware_archs": ["DPUCVDX8H", "DPUCVD3k1R"],
       "hardware_engines": ["4pe", "6pe", "8pe"]
+    },
+    
+    {
+      "guid": "e0bd1228-1adc-407b-bf28-3c698ce7daca",
+      "type": "aupera_free",
+      "name": "box_classifier",
+      "vendor": "Aupera",
+      "pbtxt": "c957184a-5275-4a8b-b14a-24e2c8e7cace",
+      "hardware_types": ["VCK5000", "U50"],
+      "hardware_archs": ["DPUCVDX8H", "DPUCVD3k1R"],
+      "hardware_engines": ["4pe", "6pe", "8pe"]
+    },
+    {
+      "guid": "3721eca6-426f-4359-b6d8-1a00be26f7b3",
+      "type": "aupera_free",
+      "name": "box_detector",
+      "vendor": "Aupera",
+      "pbtxt": "6f93503e-52ce-4acf-a6bb-1599d20b0db4",
+      "hardware_types": ["VCK5000", "U50"],
+      "hardware_archs": ["DPUCVDX8H", "DPUCVD3k1R"],
+      "hardware_engines": ["4pe", "6pe", "8pe"]
+    },
+    {
+      "guid": "f313156f-2bc5-4db5-bc88-25bdf0cc0165",
+      "type": "aupera_free",
+      "name": "stream_demux",
+      "vendor": "Aupera",
+      "pbtxt": "5c0ce784-3b87-48c7-8acd-1dd38ede125b",
+      "hardware_types": ["VCK5000", "U50"],
+      "hardware_archs": ["DPUCVDX8H", "DPUCVD3k1R"],
+      "hardware_engines": ["4pe", "6pe", "8pe"]
+    },
+    {
+      "guid": "002b5e9d-17aa-4d44-a022-706e3ca41b98",
+      "type": "aupera_free",
+      "name": "stream_demux",
+      "vendor": "Aupera",
+      "pbtxt": "5c0ce784-3b87-48c7-8acd-1dd38ede125b",
+      "hardware_types": ["VCK5000", "U50"],
+      "hardware_archs": ["DPUCVDX8H", "DPUCVD3k1R"],
+      "hardware_engines": ["4pe", "6pe", "8pe"]
+    },
+    {
+      "guid": "df5ba621-f173-4a7f-8b83-44ff488669e8",
+      "type": "aupera_free",
+      "name": "x86_dec",
+      "vendor": "Aupera",
+      "pbtxt": "5b04b5a6-beb9-48ef-994e-95107e0b3133",
+      "hardware_types": ["VCK5000", "U50"],
+      "hardware_archs": ["DPUCVDX8H", "DPUCVD3k1R"],
+      "hardware_engines": ["4pe", "6pe", "8pe"]
+    },
+    {
+      "guid": "d3bd7fb6-59d8-42f1-9c62-3a2438f7523a",
+      "type": "aupera_free",
+      "name": "x86_dec",
+      "vendor": "Aupera",
+      "pbtxt": "5b04b5a6-beb9-48ef-994e-95107e0b3133",
+      "hardware_types": ["VCK5000", "U50"],
+      "hardware_archs": ["DPUCVDX8H", "DPUCVD3k1R"],
+      "hardware_engines": ["4pe", "6pe", "8pe"]
+    },
+    {
+      "guid": "58dadb7f-d6ef-4fde-b83b-b243fce6472d",
+      "type": "aupera_free",
+      "name": "box_visualizer",
+      "vendor": "Aupera",
+      "pbtxt": "8149a886-36ac-4446-a63d-b8a29aab2cfb",
+      "hardware_types": ["VCK5000", "U50"],
+      "hardware_archs": ["DPUCVDX8H", "DPUCVD3k1R"],
+      "hardware_engines": ["4pe", "6pe", "8pe"]
+    },
+    {
+      "guid": "daccd597-8e82-4ecb-b1b9-86f794f07576",
+      "type": "aupera_free",
+      "name": "box_visualizer",
+      "vendor": "Aupera",
+      "pbtxt": "8149a886-36ac-4446-a63d-b8a29aab2cfb",
+      "hardware_types": ["VCK5000", "U50"],
+      "hardware_archs": ["DPUCVDX8H", "DPUCVD3k1R"],
+      "hardware_engines": ["4pe", "6pe", "8pe"]
+    },
+    {
+      "guid": "81af1459-db2f-40f8-a4c5-f8103cbc2811",
+      "type": "aupera_free",
+      "name": "ff_vfilter",
+      "vendor": "Aupera",
+      "pbtxt": "7a2daef4-a0f8-49de-8755-3ca174a61ef1",
+      "hardware_types": ["VCK5000", "U50"],
+      "hardware_archs": ["DPUCVDX8H", "DPUCVD3k1R"],
+      "hardware_engines": ["4pe", "6pe", "8pe"]
+    },
+    {
+      "guid": "cd5b66bf-408d-42c3-92af-146b2189d941",
+      "type": "aupera_free",
+      "name": "ff_vfilter",
+      "vendor": "Aupera",
+      "pbtxt": "7a2daef4-a0f8-49de-8755-3ca174a61ef1",
+      "hardware_types": ["VCK5000", "U50"],
+      "hardware_archs": ["DPUCVDX8H", "DPUCVD3k1R"],
+      "hardware_engines": ["4pe", "6pe", "8pe"]
+    },
+    {
+      "guid": "5b6b26e2-e9b4-4880-982f-0fd1ea827870",
+      "type": "aupera_free",
+      "name": "x86_enc",
+      "vendor": "Aupera",
+      "pbtxt": "99838e85-60d2-4bec-a4b2-51dfe11289a3",
+      "hardware_types": ["VCK5000", "U50"],
+      "hardware_archs": ["DPUCVDX8H", "DPUCVD3k1R"],
+      "hardware_engines": ["4pe", "6pe", "8pe"]
+    },
+    {
+      "guid": "026c4d92-7e3c-47db-962a-f261872d3abe",
+      "type": "aupera_free",
+      "name": "x86_enc",
+      "vendor": "Aupera",
+      "pbtxt": "99838e85-60d2-4bec-a4b2-51dfe11289a3",
+      "hardware_types": ["VCK5000", "U50"],
+      "hardware_archs": ["DPUCVDX8H", "DPUCVD3k1R"],
+      "hardware_engines": ["4pe", "6pe", "8pe"]
+    },
+    {
+      "guid": "b53d209f-5cdd-497c-a98d-6ffbd70e1e90",
+      "type": "aupera_free",
+      "name": "stream_mux",
+      "vendor": "Aupera",
+      "pbtxt": "fbf0be08-d6d1-4c0d-94f5-7da9e87c1315",
+      "hardware_types": ["VCK5000", "U50"],
+      "hardware_archs": ["DPUCVDX8H", "DPUCVD3k1R"],
+      "hardware_engines": ["4pe", "6pe", "8pe"]
+    },
+    {
+      "guid": "4d6d6f2d-5193-4925-b89a-c7ef26ef9cae",
+      "type": "aupera_free",
+      "name": "stream_mux",
+      "vendor": "Aupera",
+      "pbtxt": "fbf0be08-d6d1-4c0d-94f5-7da9e87c1315",
+      "hardware_types": ["VCK5000", "U50"],
+      "hardware_archs": ["DPUCVDX8H", "DPUCVD3k1R"],
+      "hardware_engines": ["4pe", "6pe", "8pe"]
     }
   ],
   
@@ -665,6 +828,20 @@
       "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
                 "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
                 "60e96d25-07dd-45be-8c19-4175b2884fc3"]
+    },
+    {
+      "guid": "95c82288-0ce6-40b7-93f3-047ee805c822",
+      "name": "demo: general classification",
+      "description": "box detector and classifier cascade runs on retail videos",
+      "pbtxt": "20b35b1e-da33-4092-bcf0-b9b242acd1aa",
+      "models": ["daadf8b8-32a5-41f8-8c81-24f161ec4a8a", "787a35fb-2e55-417f-bf14-903b53b33017"],
+      "nodes": ["e0bd1228-1adc-407b-bf28-3c698ce7daca", "3721eca6-426f-4359-b6d8-1a00be26f7b3",
+                "f313156f-2bc5-4db5-bc88-25bdf0cc0165", "002b5e9d-17aa-4d44-a022-706e3ca41b98",
+                "df5ba621-f173-4a7f-8b83-44ff488669e8", "d3bd7fb6-59d8-42f1-9c62-3a2438f7523a",
+                "58dadb7f-d6ef-4fde-b83b-b243fce6472d", "daccd597-8e82-4ecb-b1b9-86f794f07576",
+                "81af1459-db2f-40f8-a4c5-f8103cbc2811", "cd5b66bf-408d-42c3-92af-146b2189d941",
+                "5b6b26e2-e9b4-4880-982f-0fd1ea827870", "026c4d92-7e3c-47db-962a-f261872d3abe",
+                "b53d209f-5cdd-497c-a98d-6ffbd70e1e90", "4d6d6f2d-5193-4925-b89a-c7ef26ef9cae"]
     }
   ],
 
@@ -690,93 +867,66 @@
                 "fcba3acf-c6ae-466c-a668-95917c480907", "f6b20e85-8a04-4960-acc4-2bfed0b04412",
                 "7aa3a7b1-b290-4b52-817c-6a03ddef4262", "fc91c3f9-5dc1-4df3-8ab6-795a828605f4",
                 "d471bc3b-4617-49bd-8442-ffbdcf43b84a", "a7d8676e-c9fb-4386-b94e-4404685a060d",
-                "bf1e18d4-8631-4558-a2e2-a579a5d065b4", "89afd296-ff3e-4a10-8b56-84931e080736"]
+                "bf1e18d4-8631-4558-a2e2-a579a5d065b4", "89afd296-ff3e-4a10-8b56-84931e080736",
+                "3721eca6-426f-4359-b6d8-1a00be26f7b3"]
+    },
+    {
+      "guid": "c957184a-5275-4a8b-b14a-24e2c8e7cace",
+      "name": "node: box_classifier default",
+      "description": "default parameters for box_classifier node",
+      "models": ["787a35fb-2e55-417f-bf14-903b53b33017"],
+      "nodes": ["e0bd1228-1adc-407b-bf28-3c698ce7daca"]
     },
     {
       "guid": "5c0ce784-3b87-48c7-8acd-1dd38ede125b",
       "name": "node: stream_demux default",
       "description": "default parameters for stream_demux node",
       "models": [],
-      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b"]
-    },
-    {
-      "guid": "b177e388-d082-4d3c-ad8e-9f9d8ebcce8b",
-      "name": "node: stream_demux",
-      "description": "connect to a RTSP stream, receive the packets, and perform demux operation",
-      "models": [],
-      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b"]
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "f313156f-2bc5-4db5-bc88-25bdf0cc0165",
+                "002b5e9d-17aa-4d44-a022-706e3ca41b98"]
     },
     {
       "guid": "5b04b5a6-beb9-48ef-994e-95107e0b3133",
       "name": "node: x86_dec default",
       "description": "default parameters for x86_dec node",
       "models": [],
-      "nodes": ["1c34840d-2ca9-4d42-b229-101c55115824"]
-    },
-    {
-      "guid": "1c34840d-2ca9-4d42-b229-101c55115824",
-      "name": "node: x86_dec",
-      "description": "receive the packets from a demux node and decode them",
-      "models": [],
-      "nodes": ["1c34840d-2ca9-4d42-b229-101c55115824"]
+      "nodes": ["1c34840d-2ca9-4d42-b229-101c55115824", "df5ba621-f173-4a7f-8b83-44ff488669e8",
+                "d3bd7fb6-59d8-42f1-9c62-3a2438f7523a"]
     },
     {
       "guid": "8149a886-36ac-4446-a63d-b8a29aab2cfb",
       "name": "node: box_visualizer default",
       "description": "default parameters for box_visualizer node",
       "models": [],
-      "nodes": ["f6d4c0be-7146-463e-9e75-7c7aae7dbdac"]
-    },
-    {
-      "guid": "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
-      "name": "node: box_visualizer",
-      "description": "visualize the output of object detector",
-      "models": [],
-      "nodes": ["f6d4c0be-7146-463e-9e75-7c7aae7dbdac"]
+      "nodes": ["f6d4c0be-7146-463e-9e75-7c7aae7dbdac", "58dadb7f-d6ef-4fde-b83b-b243fce6472d",
+                "daccd597-8e82-4ecb-b1b9-86f794f07576"]
     },
     {
       "guid": "7a2daef4-a0f8-49de-8755-3ca174a61ef1",
       "name": "node: ff_vfilter default",
       "description": "default parameters for ff_vfilter node",
       "models": [],
-      "nodes": ["cbbeb075-5517-4d0e-9f56-cec8cad595da"]
-    },
-    {
-      "guid": "cbbeb075-5517-4d0e-9f56-cec8cad595da",
-      "name": "node: ff_vfilter",
-      "description": "adjust the video streaming parameters",
-      "models": [],
-      "nodes": ["cbbeb075-5517-4d0e-9f56-cec8cad595da"]
+      "nodes": ["cbbeb075-5517-4d0e-9f56-cec8cad595da", "81af1459-db2f-40f8-a4c5-f8103cbc2811",
+                "cd5b66bf-408d-42c3-92af-146b2189d941"]
     },
     {
       "guid": "99838e85-60d2-4bec-a4b2-51dfe11289a3",
       "name": "node: x86_enc default",
       "description": "default parameters for x86_enc node",
       "models": [],
-      "nodes": ["8a2d1c42-0d85-4423-be85-2651d9e13a50"]
-    },
-    {
-      "guid": "8a2d1c42-0d85-4423-be85-2651d9e13a50",
-      "name": "node: x86_enc",
-      "description": "receive the frames and compress them into video packets",
-      "models": [],
-      "nodes": ["8a2d1c42-0d85-4423-be85-2651d9e13a50"]
+      "nodes": ["8a2d1c42-0d85-4423-be85-2651d9e13a50", "5b6b26e2-e9b4-4880-982f-0fd1ea827870",
+                "026c4d92-7e3c-47db-962a-f261872d3abe"]
     },
     {
       "guid": "fbf0be08-d6d1-4c0d-94f5-7da9e87c1315",
       "name": "node: stream_mux default",
       "description": "default parameters for stream_mux node",
       "models": [],
-      "nodes": ["60e96d25-07dd-45be-8c19-4175b2884fc3"]
-    },
-    {
-      "guid": "60e96d25-07dd-45be-8c19-4175b2884fc3",
-      "name": "node: stream_mux",
-      "description": "receive the encoded frame and pass it in an rtsp stream",
-      "models": [],
-      "nodes": ["60e96d25-07dd-45be-8c19-4175b2884fc3"]
+      "nodes": ["60e96d25-07dd-45be-8c19-4175b2884fc3", "b53d209f-5cdd-497c-a98d-6ffbd70e1e90",
+                "4d6d6f2d-5193-4925-b89a-c7ef26ef9cae"]
     },
 
+    
     {
       "guid": "bb989898-064d-4efd-8b3e-88ca388a6bc0",
       "name": "demo: decoder and encoder",
@@ -786,9 +936,42 @@
                 "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
                 "60e96d25-07dd-45be-8c19-4175b2884fc3"]
     },
-
-
-
+    {
+      "guid": "b177e388-d082-4d3c-ad8e-9f9d8ebcce8b",
+      "name": "node: stream_demux",
+      "description": "demux_node: connect to a RTSP stream, receive the packets, and perform demux operation",
+      "models": [],
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b"]
+    },
+    {
+      "guid": "1c34840d-2ca9-4d42-b229-101c55115824",
+      "name": "node: x86_dec",
+      "description": "decode_node: receive the packets from a demux node and decode them",
+      "models": [],
+      "nodes": ["1c34840d-2ca9-4d42-b229-101c55115824"]
+    },
+    {
+      "guid": "cbbeb075-5517-4d0e-9f56-cec8cad595da",
+      "name": "node: ff_vfilter",
+      "description": "vfilter_node: adjust the video streaming parameters",
+      "models": [],
+      "nodes": ["cbbeb075-5517-4d0e-9f56-cec8cad595da"]
+    },
+    {
+      "guid": "8a2d1c42-0d85-4423-be85-2651d9e13a50",
+      "name": "node: x86_enc",
+      "description": "encode_node: receive the frames and compress them into video packets",
+      "models": [],
+      "nodes": ["8a2d1c42-0d85-4423-be85-2651d9e13a50"]
+    },
+    {
+      "guid": "60e96d25-07dd-45be-8c19-4175b2884fc3",
+      "name": "node: stream_mux",
+      "description": "mux_node: receive the encoded frame and pass it in an rtsp stream",
+      "models": [],
+      "nodes": ["60e96d25-07dd-45be-8c19-4175b2884fc3"]
+    },
+    
     {
       "guid": "614daebb-0c6f-4baa-8154-4657f5254997",
       "name": "demo: head person detection",
@@ -801,16 +984,23 @@
     },
     {
       "guid": "d6140572-a5b6-45d7-97e3-50e5f031df24",
-      "name": "node: head person detection",
+      "name": "node: box_detector",
       "description": "box detector (RESNET18) as head person detector",
       "models": ["f358d776-130b-4daa-9d33-c017d20307de"],
       "nodes": ["d6140572-a5b6-45d7-97e3-50e5f031df24"]
     },
+    {
+      "guid": "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
+      "name": "node: box_visualizer",
+      "description": "visualize the output of object detector",
+      "models": [],
+      "nodes": ["f6d4c0be-7146-463e-9e75-7c7aae7dbdac"]
+    },
 
     {
       "guid": "9bedc4b3-2fbc-4429-8b0f-23b8cb012ea6",
-      "name": "demo: person detection",
-      "description": "person detector (tiny_yolov3_vmss) runs on crowd videos",
+      "name": "demo: retail detection",
+      "description": "retail detector (tiny_yolov3_vmss) runs on retail videos",
       "models": ["daadf8b8-32a5-41f8-8c81-24f161ec4a8a"],
       "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
                 "88f8526e-9198-4d15-bfc7-312e44e0a1f0", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
@@ -819,15 +1009,15 @@
     },
     {
       "guid": "88f8526e-9198-4d15-bfc7-312e44e0a1f0",
-      "name": "node: person detection",
-      "description": "box detector (tiny_yolov3_vmss) as person detector",
+      "name": "node: box_detector",
+      "description": "box detector (tiny_yolov3_vmss) as retail detector",
       "models": ["daadf8b8-32a5-41f8-8c81-24f161ec4a8a"],
       "nodes": ["88f8526e-9198-4d15-bfc7-312e44e0a1f0"]
     },
     {
       "guid": "bb6a0bca-075a-4f04-a201-252b1d8a8289",
-      "name": "demo: person detection",
-      "description": "person detector (yolov2_voc) runs on crowd videos",
+      "name": "demo: general detection",
+      "description": "general detector (yolov2_voc) runs on crowd videos",
       "models": ["d8162c17-3e98-4f2b-bd72-a1ebdba556c2"],
       "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
                 "d1daf5a8-7be1-4831-823d-5defcde73db8", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
@@ -836,15 +1026,15 @@
     },
     {
       "guid": "d1daf5a8-7be1-4831-823d-5defcde73db8",
-      "name": "node: person detection",
-      "description": "box detector (yolov2_voc) as person detector",
+      "name": "node: box_detector",
+      "description": "box detector (yolov2_voc) as general detector",
       "models": ["d8162c17-3e98-4f2b-bd72-a1ebdba556c2"],
       "nodes": ["d1daf5a8-7be1-4831-823d-5defcde73db8"]
     },
     {
       "guid": "2a31cd55-04a4-44c6-b500-e14b9cd1533b",
-      "name": "demo: person detection",
-      "description": "person detector (yolov2_voc_pruned_0_66) runs on crowd videos",
+      "name": "demo: general detection",
+      "description": "general detector (yolov2_voc_pruned_0_66) runs on crowd videos",
       "models": ["2b13b627-2404-40ff-aefd-6410a9cee545"],
       "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
                 "3e4fb873-6cee-46c1-a295-9081bf17dcae", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
@@ -853,15 +1043,15 @@
     },
     {
       "guid": "3e4fb873-6cee-46c1-a295-9081bf17dcae",
-      "name": "node: person detection",
-      "description": "box detector (yolov2_voc_pruned_0_66) as person detector",
+      "name": "node: box_detector",
+      "description": "box detector (yolov2_voc_pruned_0_66) as general detector",
       "models": ["2b13b627-2404-40ff-aefd-6410a9cee545"],
       "nodes": ["3e4fb873-6cee-46c1-a295-9081bf17dcae"]
     },
     {
       "guid": "9fbd018b-a386-4bf4-b6cc-c8b450f31f5f",
-      "name": "demo: person detection",
-      "description": "person detector (yolov2_voc_pruned_0_71) runs on crowd videos",
+      "name": "demo: general detection",
+      "description": "general detector (yolov2_voc_pruned_0_71) runs on crowd videos",
       "models": ["63802927-1c1b-4d34-a452-95ba050fddd7"],
       "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
                 "98e56049-126b-4582-960b-2bec65ce7e3a", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
@@ -870,15 +1060,15 @@
     },
     {
       "guid": "98e56049-126b-4582-960b-2bec65ce7e3a",
-      "name": "node: person detection",
-      "description": "box detector (yolov2_voc_pruned_0_71) as person detector",
+      "name": "node: box_detector",
+      "description": "box detector (yolov2_voc_pruned_0_71) as general detector",
       "models": ["63802927-1c1b-4d34-a452-95ba050fddd7"],
       "nodes": ["98e56049-126b-4582-960b-2bec65ce7e3a"]
     },
     {
       "guid": "6df6495f-1500-48ad-b758-1711d804a058",
-      "name": "demo: person detection",
-      "description": "person detector (yolov2_voc_pruned_0_77) runs on crowd videos",
+      "name": "demo: general detection",
+      "description": "general detector (yolov2_voc_pruned_0_77) runs on crowd videos",
       "models": ["c7c0ae6b-2ca9-4f7a-afcc-13203d912ace"],
       "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
                 "acfaec5e-148b-414b-b36d-72773cf8fa53", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
@@ -887,15 +1077,15 @@
     },
     {
       "guid": "acfaec5e-148b-414b-b36d-72773cf8fa53",
-      "name": "node: person detection",
-      "description": "box detector (yolov2_voc_pruned_0_77) as person detector",
+      "name": "node: box_detector",
+      "description": "box detector (yolov2_voc_pruned_0_77) as general detector",
       "models": ["c7c0ae6b-2ca9-4f7a-afcc-13203d912ace"],
       "nodes": ["acfaec5e-148b-414b-b36d-72773cf8fa53"]
     },
     {
       "guid": "2e3e1c87-9c3a-42c7-8006-ac39e2ea7aa4",
-      "name": "demo: person detection",
-      "description": "person detector (yolov3_voc) runs on crowd videos",
+      "name": "demo: general detection",
+      "description": "general detector (yolov3_voc) runs on crowd videos",
       "models": ["2e7e57b2-e7ab-47d1-935f-7e3e7426945a"],
       "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
                 "05a48f70-3b37-417d-83cd-52420e0c5cbb", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
@@ -904,15 +1094,15 @@
     },
     {
       "guid": "05a48f70-3b37-417d-83cd-52420e0c5cbb",
-      "name": "node: person detection",
-      "description": "box detector (yolov3_voc) as person detector",
+      "name": "node: box_detector",
+      "description": "box detector (yolov3_voc) as general detector",
       "models": ["2e7e57b2-e7ab-47d1-935f-7e3e7426945a"],
       "nodes": ["05a48f70-3b37-417d-83cd-52420e0c5cbb"]
     },
     {
       "guid": "54a0e5dd-0f19-4259-a9f3-4b8ea446372a",
-      "name": "demo: person detection",
-      "description": "person detector (yolov3_bdd) runs on crowd videos",
+      "name": "demo: adas detection",
+      "description": "adas detector (yolov3_bdd) runs on crowd videos",
       "models": ["b95e6da1-b424-47d4-8291-daa081057b6d"],
       "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
                 "853c7d4e-5a00-4022-ab5f-23b81c04ead1", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
@@ -921,15 +1111,15 @@
     },
     {
       "guid": "853c7d4e-5a00-4022-ab5f-23b81c04ead1",
-      "name": "node: person detection",
-      "description": "box detector (yolov3_bdd) as person detector",
+      "name": "node: box_detector",
+      "description": "box detector (yolov3_bdd) as adas detector",
       "models": ["b95e6da1-b424-47d4-8291-daa081057b6d"],
       "nodes": ["853c7d4e-5a00-4022-ab5f-23b81c04ead1"]
     },
     {
       "guid": "083bdabb-48e0-4118-b408-15322341c705",
-      "name": "demo: person detection",
-      "description": "person detector (yolov3_adas_pruned_0_9) runs on crowd videos",
+      "name": "demo: adas detection",
+      "description": "adas detector (yolov3_adas_pruned_0_9) runs on crowd videos",
       "models": ["cc3e5c2c-f35f-435f-b82f-1a3e35508bec"],
       "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
                 "601f380f-0599-4e2f-bd0a-820d8d8c3695", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
@@ -938,15 +1128,15 @@
     },
     {
       "guid": "601f380f-0599-4e2f-bd0a-820d8d8c3695",
-      "name": "node: person detection",
-      "description": "box detector (yolov3_adas_pruned_0_9) as person detector",
+      "name": "node: box_detector",
+      "description": "box detector (yolov3_adas_pruned_0_9) as adas detector",
       "models": ["cc3e5c2c-f35f-435f-b82f-1a3e35508bec"],
       "nodes": ["601f380f-0599-4e2f-bd0a-820d8d8c3695"]
     },
     {
       "guid": "12ed46a6-3c53-471c-bd17-673c58b968eb",
-      "name": "demo: person detection",
-      "description": "person detector (yolov3_voc_tf) runs on crowd videos",
+      "name": "demo: general detection",
+      "description": "general detector (yolov3_voc_tf) runs on crowd videos",
       "models": ["343b8ee0-d0e6-43ba-b06c-8a6b8c9c4ffb"],
       "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
                 "b40f79d4-b0ed-4d70-b4ae-2f37e6adcd41", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
@@ -955,15 +1145,15 @@
     },
     {
       "guid": "b40f79d4-b0ed-4d70-b4ae-2f37e6adcd41",
-      "name": "node: person detection",
-      "description": "box detector (yolov3_voc_tf) as person detector",
+      "name": "node: box_detector",
+      "description": "box detector (yolov3_voc_tf) as general detector",
       "models": ["343b8ee0-d0e6-43ba-b06c-8a6b8c9c4ffb"],
       "nodes": ["b40f79d4-b0ed-4d70-b4ae-2f37e6adcd41"]
     },
     {
       "guid": "4f7dd976-a54d-41e2-bebd-b48de8860c63",
-      "name": "demo: person detection",
-      "description": "person detector (refinedet_baseline) runs on crowd videos",
+      "name": "demo: general detection",
+      "description": "general detector (refinedet_baseline) runs on crowd videos",
       "models": ["917a3a08-848e-4adc-9934-3072d4bdcfa6"],
       "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
                 "fcba3acf-c6ae-466c-a668-95917c480907", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
@@ -972,15 +1162,15 @@
     },
     {
       "guid": "fcba3acf-c6ae-466c-a668-95917c480907",
-      "name": "node: person detection",
-      "description": "box detector (refinedet_baseline) as person detector",
+      "name": "node: box_detector",
+      "description": "box detector (refinedet_baseline) as general detector",
       "models": ["917a3a08-848e-4adc-9934-3072d4bdcfa6"],
       "nodes": ["fcba3acf-c6ae-466c-a668-95917c480907"]
     },
     {
       "guid": "39b24852-5614-47ea-93c9-b50b69dc56c5",
-      "name": "demo: person detection",
-      "description": "person detector (refinedet_pruned_0_8) runs on crowd videos",
+      "name": "demo: general detection",
+      "description": "general detector (refinedet_pruned_0_8) runs on crowd videos",
       "models": ["aefc7081-bd2e-401c-a124-4c50ea4c582a"],
       "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
                 "f6b20e85-8a04-4960-acc4-2bfed0b04412", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
@@ -989,15 +1179,15 @@
     },
     {
       "guid": "f6b20e85-8a04-4960-acc4-2bfed0b04412",
-      "name": "node: person detection",
-      "description": "box detector (refinedet_pruned_0_8) as person detector",
+      "name": "node: box_detector",
+      "description": "box detector (refinedet_pruned_0_8) as general detector",
       "models": ["aefc7081-bd2e-401c-a124-4c50ea4c582a"],
       "nodes": ["f6b20e85-8a04-4960-acc4-2bfed0b04412"]
     },
     {
       "guid": "0e3fb98c-dc0d-49b3-aa46-129e8d35fb10",
-      "name": "demo: person detection",
-      "description": "person detector (refinedet_pruned_0_92) runs on crowd videos",
+      "name": "demo: general detection",
+      "description": "general detector (refinedet_pruned_0_92) runs on crowd videos",
       "models": ["bf4ea265-d4b4-486c-a25c-d2bb2923e488"],
       "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
                 "7aa3a7b1-b290-4b52-817c-6a03ddef4262", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
@@ -1006,15 +1196,15 @@
     },
     {
       "guid": "7aa3a7b1-b290-4b52-817c-6a03ddef4262",
-      "name": "node: person detection",
-      "description": "box detector (refinedet_pruned_0_92) as person detector",
+      "name": "node: box_detector",
+      "description": "box detector (refinedet_pruned_0_92) as general detector",
       "models": ["bf4ea265-d4b4-486c-a25c-d2bb2923e488"],
       "nodes": ["7aa3a7b1-b290-4b52-817c-6a03ddef4262"]
     },
     {
       "guid": "466a42b9-85d6-4adf-ba51-1c992b62fca8",
-      "name": "demo: person detection",
-      "description": "person detector (refinedet_pruned_0_96) runs on crowd videos",
+      "name": "demo: general detection",
+      "description": "general detector (refinedet_pruned_0_96) runs on crowd videos",
       "models": ["f680167d-c288-467b-9f23-4ea01e318b32"],
       "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
                 "fc91c3f9-5dc1-4df3-8ab6-795a828605f4", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
@@ -1023,15 +1213,15 @@
     },
     {
       "guid": "fc91c3f9-5dc1-4df3-8ab6-795a828605f4",
-      "name": "node: person detection",
-      "description": "box detector (refinedet_pruned_0_96) as person detector",
+      "name": "node: box_detector",
+      "description": "box detector (refinedet_pruned_0_96) as general detector",
       "models": ["f680167d-c288-467b-9f23-4ea01e318b32"],
       "nodes": ["fc91c3f9-5dc1-4df3-8ab6-795a828605f4"]
     },
     {
       "guid": "55874bc2-21c9-4d1c-8ade-53263e28c068",
-      "name": "demo: person detection",
-      "description": "person detector (refinedet_VOC_tf) runs on crowd videos",
+      "name": "demo: general detection",
+      "description": "general detector (refinedet_VOC_tf) runs on crowd videos",
       "models": ["d69d9541-85eb-4a7b-aa97-0e49e3243562"],
       "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
                 "d471bc3b-4617-49bd-8442-ffbdcf43b84a", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
@@ -1040,15 +1230,15 @@
     },
     {
       "guid": "d471bc3b-4617-49bd-8442-ffbdcf43b84a",
-      "name": "node: person detection",
-      "description": "box detector (refinedet_VOC_tf) as person detector",
+      "name": "node: box_detector",
+      "description": "box detector (refinedet_VOC_tf) as general detector",
       "models": ["d69d9541-85eb-4a7b-aa97-0e49e3243562"],
       "nodes": ["d471bc3b-4617-49bd-8442-ffbdcf43b84a"]
     },
     {
       "guid": "99c4f723-1cd9-47ab-a649-b31787154d56",
-      "name": "demo: person detection",
-      "description": "person detector (ssd_adas_pruned_0_95) runs on crowd videos",
+      "name": "demo: general detection",
+      "description": "general detector (ssd_adas_pruned_0_95) runs on crowd videos",
       "models": ["93dc13ee-c805-4452-95ec-d31840c11a95"],
       "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
                 "a7d8676e-c9fb-4386-b94e-4404685a060d", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
@@ -1057,15 +1247,15 @@
     },
     {
       "guid": "a7d8676e-c9fb-4386-b94e-4404685a060d",
-      "name": "node: person detection",
-      "description": "box detector (ssd_adas_pruned_0_95) as person detector",
+      "name": "node: box_detector",
+      "description": "box detector (ssd_adas_pruned_0_95) as general detector",
       "models": ["93dc13ee-c805-4452-95ec-d31840c11a95"],
       "nodes": ["a7d8676e-c9fb-4386-b94e-4404685a060d"]
     },
     {
       "guid": "26b14df7-b14d-4285-9d2a-de74079b58d9",
-      "name": "demo: person detection",
-      "description": "person detector (ssd_pedestrian_pruned_0_97) runs on crowd videos",
+      "name": "demo: general detection",
+      "description": "general detector (ssd_pedestrian_pruned_0_97) runs on crowd videos",
       "models": ["e8f816ee-35ce-43d6-bb5b-e00e9ff047d2"],
       "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
                 "bf1e18d4-8631-4558-a2e2-a579a5d065b4", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
@@ -1074,15 +1264,15 @@
     },
     {
       "guid": "bf1e18d4-8631-4558-a2e2-a579a5d065b4",
-      "name": "node: person detection",
-      "description": "box detector (ssd_pedestrian_pruned_0_97) as person detector",
+      "name": "node: box_detector",
+      "description": "box detector (ssd_pedestrian_pruned_0_97) as general detector",
       "models": ["e8f816ee-35ce-43d6-bb5b-e00e9ff047d2"],
       "nodes": ["bf1e18d4-8631-4558-a2e2-a579a5d065b4"]
     },
     {
       "guid": "9bcb3cf8-5c5e-4c74-b33e-ef5e61312722",
-      "name": "demo: person detection",
-      "description": "person detector (ssd_traffic_pruned_0_9) runs on crowd videos",
+      "name": "demo: general detection",
+      "description": "general detector (ssd_traffic_pruned_0_9) runs on crowd videos",
       "models": ["b743d1ee-e5f7-4984-929d-1e066fff6fda"],
       "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
                 "89afd296-ff3e-4a10-8b56-84931e080736", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
@@ -1091,11 +1281,124 @@
     },
     {
       "guid": "89afd296-ff3e-4a10-8b56-84931e080736",
-      "name": "node: person detection",
-      "description": "box detector (ssd_traffic_pruned_0_9) as person detector",
+      "name": "node: box_detector",
+      "description": "box detector (ssd_traffic_pruned_0_9) as general detector",
       "models": ["b743d1ee-e5f7-4984-929d-1e066fff6fda"],
       "nodes": ["89afd296-ff3e-4a10-8b56-84931e080736"]
+    },
+    
+    {
+      "guid": "20b35b1e-da33-4092-bcf0-b9b242acd1aa",
+      "name": "demo: general classification",
+      "description": "box detector and classifier cascade runs on retail videos",
+      "models": ["daadf8b8-32a5-41f8-8c81-24f161ec4a8a", "787a35fb-2e55-417f-bf14-903b53b33017"],
+      "nodes": ["e0bd1228-1adc-407b-bf28-3c698ce7daca", "3721eca6-426f-4359-b6d8-1a00be26f7b3",
+                "f313156f-2bc5-4db5-bc88-25bdf0cc0165", "002b5e9d-17aa-4d44-a022-706e3ca41b98",
+                "df5ba621-f173-4a7f-8b83-44ff488669e8", "d3bd7fb6-59d8-42f1-9c62-3a2438f7523a",
+                "58dadb7f-d6ef-4fde-b83b-b243fce6472d", "daccd597-8e82-4ecb-b1b9-86f794f07576",
+                "81af1459-db2f-40f8-a4c5-f8103cbc2811", "cd5b66bf-408d-42c3-92af-146b2189d941",
+                "5b6b26e2-e9b4-4880-982f-0fd1ea827870", "026c4d92-7e3c-47db-962a-f261872d3abe",
+                "b53d209f-5cdd-497c-a98d-6ffbd70e1e90", "4d6d6f2d-5193-4925-b89a-c7ef26ef9cae"]
+    },
+    {
+      "guid": "e0bd1228-1adc-407b-bf28-3c698ce7daca",
+      "name": "node: box_classifier",
+      "description": "box classifier (resnet18) as general classifier",
+      "models": ["787a35fb-2e55-417f-bf14-903b53b33017"],
+      "nodes": ["e0bd1228-1adc-407b-bf28-3c698ce7daca"]
+    },
+    {
+      "guid": "3721eca6-426f-4359-b6d8-1a00be26f7b3",
+      "name": "node: box_detector",
+      "description": "box detector (tiny_yolov3_vmss) as retail detector",
+      "models": ["daadf8b8-32a5-41f8-8c81-24f161ec4a8a"],
+      "nodes": ["3721eca6-426f-4359-b6d8-1a00be26f7b3"]
+    },
+    {
+      "guid": "f313156f-2bc5-4db5-bc88-25bdf0cc0165",
+      "name": "node: stream_demux",
+      "description": "demux_node1: connect to a RTSP stream, receive the packets, and perform demux operation",
+      "models": [],
+      "nodes": ["f313156f-2bc5-4db5-bc88-25bdf0cc0165"]
+    },
+    {
+      "guid": "002b5e9d-17aa-4d44-a022-706e3ca41b98",
+      "name": "node: stream_demux",
+      "description": "demux_node2: connect to a RTSP stream, receive the packets, and perform demux operation",
+      "models": [],
+      "nodes": ["002b5e9d-17aa-4d44-a022-706e3ca41b98"]
+    },
+    {
+      "guid": "df5ba621-f173-4a7f-8b83-44ff488669e8",
+      "name": "node: x86_dec",
+      "description": "decode_node1: receive the packets from demux_node1 and decode them",
+      "models": [],
+      "nodes": ["df5ba621-f173-4a7f-8b83-44ff488669e8"]
+    },
+    {
+      "guid": "d3bd7fb6-59d8-42f1-9c62-3a2438f7523a",
+      "name": "node: x86_dec",
+      "description": "decode_node2: receive the packets from demux_node2 and decode them",
+      "models": [],
+      "nodes": ["d3bd7fb6-59d8-42f1-9c62-3a2438f7523a"]
+    },
+    {
+      "guid": "58dadb7f-d6ef-4fde-b83b-b243fce6472d",
+      "name": "node: box_visualizer",
+      "description": "visualizer1: visualize the output of object detector/classifier",
+      "models": [],
+      "nodes": ["58dadb7f-d6ef-4fde-b83b-b243fce6472d"]
+    },
+    {
+      "guid": "daccd597-8e82-4ecb-b1b9-86f794f07576",
+      "name": "node: box_visualizer",
+      "description": "visualizer2: visualize the output of object detector/classifier",
+      "models": [],
+      "nodes": ["daccd597-8e82-4ecb-b1b9-86f794f07576"]
+    },
+    {
+      "guid": "81af1459-db2f-40f8-a4c5-f8103cbc2811",
+      "name": "node: ff_vfilter",
+      "description": "vfilter_node1: adjust the video streaming parameters",
+      "models": [],
+      "nodes": ["81af1459-db2f-40f8-a4c5-f8103cbc2811"]
+    },
+    {
+      "guid": "cd5b66bf-408d-42c3-92af-146b2189d941",
+      "name": "node: ff_vfilter",
+      "description": "vfilter_node2: adjust the video streaming parameters",
+      "models": [],
+      "nodes": ["cd5b66bf-408d-42c3-92af-146b2189d941"]
+    },
+    {
+      "guid": "5b6b26e2-e9b4-4880-982f-0fd1ea827870",
+      "name": "node: x86_enc",
+      "description": "encode_node1: receive the frames and compress them into video packets",
+      "models": [],
+      "nodes": ["5b6b26e2-e9b4-4880-982f-0fd1ea827870"]
+    },
+    {
+      "guid": "026c4d92-7e3c-47db-962a-f261872d3abe",
+      "name": "node: x86_enc",
+      "description": "encode_node1: receive the frames and compress them into video packets",
+      "models": [],
+      "nodes": ["026c4d92-7e3c-47db-962a-f261872d3abe"]
+    },
+    {
+      "guid": "b53d209f-5cdd-497c-a98d-6ffbd70e1e90",
+      "name": "node: stream_mux",
+      "description": "mux_node1: receive the encoded frame and pass it in an rtsp stream",
+      "models": [],
+      "nodes": ["b53d209f-5cdd-497c-a98d-6ffbd70e1e90"]
+    },
+    {
+      "guid": "4d6d6f2d-5193-4925-b89a-c7ef26ef9cae",
+      "name": "node: stream_mux",
+      "description": "mux_node2: receive the encoded frame and pass it in an rtsp stream",
+      "models": [],
+      "nodes": ["4d6d6f2d-5193-4925-b89a-c7ef26ef9cae"]
     }
+
   ],
 
   "enums":{

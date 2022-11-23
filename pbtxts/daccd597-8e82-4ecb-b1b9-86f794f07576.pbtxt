@@ -1,0 +1,58 @@
+node {
+  name: "visualizer2"
+  calculator: "box_visualizer"
+  input_stream: "classification_stream2"
+  input_stream: "image_stream_decode2"
+  output_stream: "image_stream_viz2"
+  stream_sync: {
+    drop_strategy: DROP_INCOMPLETE_PACKETS
+    timeout_ms: 5000
+  }
+  node_options: {
+    [type.googleapis.com/aup.avaf.BoxVisualizerOptions] {
+      input_type: INPUT_TYPE_CLASSIFICATION
+      text_color: {
+        r: 255
+        g: 0
+        b: 0
+      }
+      box_color: {
+        r: 255
+        g: 0
+        b: 0
+      }
+      class_color: {
+        label: 1
+        color: {
+          r: 0
+          g: 0
+          b: 0
+        }
+      }
+      class_color: {
+        label: 2
+        color: {
+          r: 0
+          g: 255
+          b: 0
+        }
+      }
+      class_color: {
+        label: 3
+        color: {
+          r: 255
+          g: 0
+          b: 0
+        }
+      }
+      text_offset: {
+        x: 0
+        y: 0
+      }
+      box_thickness: 5
+      text_size: 2
+      font: 0
+      line_type: 0
+    }
+  }
+}
