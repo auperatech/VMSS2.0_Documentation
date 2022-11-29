@@ -8,9 +8,9 @@ node {
   node_options: {
     [type.googleapis.com/aup.avaf.StreamMuxOptions]: {
       demux: {
-        rtsp_transport: "tcp"  
+        rtsp_transport: "tcp"
         iframe_extract: false
-        auto_reconnect: false
+        auto_reconnect: true
       }
     }
   }

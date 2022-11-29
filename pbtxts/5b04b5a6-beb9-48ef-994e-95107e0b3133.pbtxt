@@ -9,11 +9,11 @@ node {
   node_options: {
     [type.googleapis.com/aup.avaf.VideoCodecOptions]: {
       dec: {
-        name: ""  
-        ow: 0
-        oh: 0
+        name: "x86_dec_h2645" 
+        ow: 1920
+        oh: 1080
         opixfmt: PIXFMT_BGR24
-        queue_size: 1
+        queue_size: 12
         low_latency: false
       }
     }

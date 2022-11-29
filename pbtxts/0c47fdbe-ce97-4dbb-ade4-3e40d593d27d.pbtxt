@@ -12,28 +12,27 @@ node {
   }
   node_options: {
     [type.googleapis.com/aup.avaf.AplCrowdFlowOptions]: {
-      update_interval_seconds: 0
+      update_interval_seconds: 30
       initial_entering_count: 0
       initial_exiting_count: 0
-      max_allowed_borders: 0
-      
+      max_allowed_borders: 10
+      use_roi: false
       common_fields: {
-        max_file_cache: 0
-        max_cluster_size: 0
+        max_file_cache: 100
+        max_cluster_size: 100
         debug: false
-        draw: false
-        
+        draw: true
         border: {
           p1: {
             x: 0
-            y: 0
+            y: 900
             
           }
           p2: {
-            x: 0
-            y: 0
+            x: 1920
+            y: 900
           }
-          threshold: 0
+          threshold: 0.055
         }
       }
     }

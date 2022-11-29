@@ -13,11 +13,14 @@ node {
       detect_interval: 1
       detector_type: ""
       kernel_name: ""
+      obfuscated_token: ""
       need_preprocess: false
       log_performance: false
       run_on_letterboxed_img: false
       batch_size: 1
       return_frames_inorder: false 
+      detection_threads: 1
+      force_batch_size: false
       batch_collection_timeout_ms: 0
       ignore_black_frames: false
       max_detection_lib_q_size: 30

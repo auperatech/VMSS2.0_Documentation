@@ -13,8 +13,8 @@ node {
       roi_w: 0
       roi_h: 0
       opixfmt: PIXFMT_I420
-      ow: 0
-      oh: 0
+      ow: 1280
+      oh: 720
     }
   }
 }

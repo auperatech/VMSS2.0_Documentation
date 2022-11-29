@@ -16,10 +16,12 @@ node {
       batch_size: 1
       return_in_order: false
       classification_threads: 1
+      orce_batch_size: false
       batch_collection_timeout_ms: 0
       use_detections: false
       log_performance: false
-      max_classification_lib_q_size: 200
+      max_classification_lib_q_size: 32
+      max_frame_cache_size: 32
     }
   }
 }

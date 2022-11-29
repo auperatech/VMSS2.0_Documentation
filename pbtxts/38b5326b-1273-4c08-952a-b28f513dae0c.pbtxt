@@ -7,20 +7,20 @@ node {
   output_stream: "tracks_stream"
   node_options: {
     [type.googleapis.com/aup.avaf.BoxTrackerOptions]: {
-      speed_buffer_max_size: 0
-      max_keep_alive: 0
+      speed_buffer_max_size: 5
+      max_keep_alive: 5
       min_hits: 1
-      keep_tracker_iou_thresh: 0
-      bind_obj_iou_thresh: 0
-      affinity_threshold: 0  
+      keep_tracker_iou_thresh: 0.9
+      bind_obj_iou_thresh: 0.6
+      affinity_threshold: 0.008
       shape_weight: 1
       position_weight: 1
       appearnace_weight: 1
       shape_dist_max: 1
       position_dist_max: 1
-      use_exp_cost: false
-      tracker_type: ""
-      min_object_area_th: 0
+      use_exp_cost: true
+      tracker_type: "SORT++"
+      min_object_area_th: 200
     }
   }
 }
