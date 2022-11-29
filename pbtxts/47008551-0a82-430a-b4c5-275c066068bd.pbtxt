@@ -1,0 +1,25 @@
+node {
+  name: "classifier"
+  calculator: "box_classifier"
+  input_stream: "detections_stream1"
+  input_stream: "detections_stream2"
+  input_stream: "image_stream_decode1"
+  input_stream: "image_stream_decode2"
+  output_stream: "classification_stream1"
+  output_stream: "classification_stream2"
+  node_options: {
+    [type.googleapis.com/aup.avaf.BoxClassifierOptions]: {
+      classifier_type: "General"
+      kernel_name: "resnet_v1_50_tf"
+      need_preprocess: true
+      run_on_letterboxed_img: false
+      batch_size: 8
+      return_in_order: true
+      classification_threads: 1
+      batch_collection_timeout_ms: 0
+      use_detections: true
+      log_performance: false
+      max_classification_lib_q_size: 200
+    }
+  }
+}

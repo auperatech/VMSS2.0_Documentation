@@ -1,0 +1,19 @@
+node {
+  name: "encode_node1"
+  calculator: "x86_enc"
+  vendor: "Aupera"
+  input_stream: "image_stream_vfilter1"
+  input_stream: "video_stream_info_vfilter1"
+  output_stream: "packet_stream_encode1"
+  output_stream: "codec_context_stream1"
+  node_options: {
+    [type.googleapis.com/aup.avaf.VideoCodecOptions]: {
+     enc: {
+       type: H264
+       w: 0 
+       h: 0
+       fps: 0
+     }
+    }
+  }
+}

@@ -13,7 +13,7 @@ node {
   node_options: {
     [type.googleapis.com/aup.avaf.StreamMuxOptions]: {
       demux: {
-        rtsp_transport: "tcp"  
+        rtsp_transport: "tcp"
         iframe_extract: false
         auto_reconnect: true
       }
@@ -33,7 +33,7 @@ node {
   node_options: {
     [type.googleapis.com/aup.avaf.VideoCodecOptions]: {
       dec: {
-        name: "x86_dec_h2645"  
+        name: "x86_dec_h2645"
         ow: 1920
         oh: 1080
         opixfmt: PIXFMT_BGR24
@@ -49,42 +49,30 @@ node {
   name: "detector"
   calculator: "box_detector"
   input_stream: "image_stream_decode"
-  output_stream: "detections_stream"
+  output_stream: "detection_stream"
   output_stream: "detect_interval"
-  stream_sync: {
-    drop_strategy: DROP_INCOMPLETE_PACKETS
-    timeout_ms: 5000
-  }
   node_options: {
     [type.googleapis.com/aup.avaf.BoxDetectorOptions]: {
-      detect_interval: 1
+      detect_interval: 5
       detector_type: "SSD"
       kernel_name: "RESNET18SSD_ITER90000_PRIVATE_FINAL501IMAGES_ADDED_07JUNE2021_CROWD_FLOW_PERSON_HEAD"
       need_preprocess: true
       log_performance: false
       run_on_letterboxed_img: false
+      detection_threads: 1
       batch_size: 1
-      return_frames_inorder: true 
+      force_batch_size: false
       batch_collection_timeout_ms: 0
+      return_frames_inorder: true
       ignore_black_frames: false
       max_detection_lib_q_size: 30
-      mean: {
-        r: 125.319099
-        g: 123.484794
-        b: 120.935805
-      }
-      scale: {
-        ch1: 1
-        ch2: 1
-        ch3: 1
-      }
       label_confidence: {
         label: 2
         confidence: 0.5
       }
       inter_class_nms: {
-        labels: 2
-        threshold: 0.5
+       labels: 2
+       threshold: 0.5
       }
     }
   }
@@ -92,51 +80,71 @@ node {
 
 
 node {
-  name: "visualizer"
-  calculator: "box_visualizer"
-  input_stream: "detections_stream"
+  name: "tracker"
+  calculator: "box_tracker"
+  input_stream: "detection_stream"
   input_stream: "image_stream_decode"
-  output_stream: "image_stream_viz"
+  input_stream: "detect_interval"
+  output_stream: "tracks_stream"
+  node_options: {
+    [type.googleapis.com/aup.avaf.BoxTrackerOptions]: {
+      speed_buffer_max_size: 5
+      max_keep_alive: 5
+      min_hits: 1
+      keep_tracker_iou_thresh: 0.9
+      bind_obj_iou_thresh: 0.6
+      affinity_threshold: 0.008  
+      shape_weight: 1
+      position_weight: 1
+      appearnace_weight: 1
+      shape_dist_max: 1
+      position_dist_max: 1
+      use_exp_cost: true
+      tracker_type: "SORT++"
+      min_object_area_th: 200
+    }
+  }
+}
+
+
+node {
+  name: "crowd_flow"
+  calculator: "apl_crowd_flow"
+  input_stream: "tracks_stream"
+  input_stream: "image_stream_decode"
+  input_stream: "video_stream_info_demux"
+  input_stream: "detect_interval"
+  output_stream: "image_stream_crowd_flow"
   stream_sync: {
     drop_strategy: DROP_INCOMPLETE_PACKETS
     timeout_ms: 5000
   }
   node_options: {
-    [type.googleapis.com/aup.avaf.BoxVisualizerOptions]: {
-      text_color: {
-        r: 255
-        g: 0
-        b: 0
-      }
-      box_color: {
-        r: 255
-        g: 0
-        b: 0
-      }
-      class_color: {
-        label: 1
-        color: {
-          r: 0
-          g: 0
-          b: 0
+    [type.googleapis.com/aup.avaf.AplCrowdFlowOptions]: {
+      update_interval_seconds: 30
+      initial_entering_count: 0
+      initial_exiting_count: 0
+      max_allowed_borders: 10
+      
+      common_fields: {
+        max_file_cache: 100
+        max_cluster_size: 100
+        debug: true
+        draw: true
+        
+        border: {
+          p1: {
+            x: 0
+            y: 900
+            
+          }
+          p2: {
+            x: 1920
+            y: 900
+          }
+          threshold: 0.055
         }
       }
-      class_color: {
-        label: 2
-        color: {
-          r: 0
-          g: 255
-          b: 0
-        }
-      }
-      text_offset: {
-        x: 0
-        y: 0
-      }
-      box_thickness: 5
-      text_size: 2
-      font: 1
-      line_type: 0
     }
   }
 }
@@ -146,7 +154,7 @@ node {
   name: "vfilter_node"
   calculator: "ff_vfilter"
   vendor: "Aupera"
-  input_stream: "image_stream_viz"
+  input_stream: "image_stream_crowd_flow"
   input_stream: "video_stream_info_decode"
   output_stream: "image_stream_vfilter"
   output_stream: "video_stream_info_vfilter"
@@ -159,7 +167,6 @@ node {
       opixfmt: PIXFMT_I420
       ow: 1280
       oh: 720
-      ofps: 20
     }
   }
 }
@@ -177,9 +184,9 @@ node {
     [type.googleapis.com/aup.avaf.VideoCodecOptions]: {
      enc: {
        type: H264
-       w: 0 
+       w: 0
        h: 0
-       fps: 0
+       fps: 20
      }
     }
   }

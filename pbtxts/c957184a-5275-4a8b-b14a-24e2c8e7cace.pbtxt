@@ -1,0 +1,27 @@
+node {
+  name: "classifier"
+  calculator: "box_classifier"
+  input_stream: "detections_stream1"
+  input_stream: "detections_stream2"
+  input_stream: "image_stream_decode1"
+  input_stream: "image_stream_decode2"
+  output_stream: "classification_stream1"
+  output_stream: "classification_stream2"
+  node_options: {
+    [type.googleapis.com/aup.avaf.BoxClassifierOptions]: {
+      classifier_type: ""
+      kernel_name: ""
+      need_preprocess: false
+      run_on_letterboxed_img: false
+      batch_size: 1
+      return_in_order: false
+      classification_threads: 1
+      orce_batch_size: false
+      batch_collection_timeout_ms: 0
+      use_detections: false
+      log_performance: false
+      max_classification_lib_q_size: 32
+      max_frame_cache_size: 32
+    }
+  }
+}

@@ -1,0 +1,16 @@
+node {
+  name: "mux_node"
+  calculator: "stream_mux"
+  vendor: "Aupera"
+  input_stream: "packet_stream_encode"
+  input_stream: "codec_context_stream"
+  graph_output: "graph_output1"
+  node_options: {
+    [type.googleapis.com/aup.avaf.StreamMuxOptions]: {
+     mux: {
+       rtsp_transport: "tcp"
+       auto_reconnect: false
+     }
+    }
+  }
+}

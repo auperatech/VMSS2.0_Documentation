@@ -1,0 +1,49 @@
+node {
+  name: "visualizer"
+  calculator: "box_visualizer"
+  input_stream: "detections_stream"
+  input_stream: "image_stream_decode"
+  output_stream: "image_stream_viz"
+  stream_sync: {
+    drop_strategy: DROP_INCOMPLETE_PACKETS
+    timeout_ms: 5000
+  }
+  node_options: {
+    [type.googleapis.com/aup.avaf.BoxVisualizerOptions]: {
+      text_color: {
+        r: 255
+        g: 0
+        b: 0
+      }
+      box_color: {
+        r: 255
+        g: 0
+        b: 0
+      }
+      class_color: {
+        label: 1
+        color: {
+          r: 0
+          g: 0
+          b: 0
+        }
+      }
+      class_color: {
+        label: 2
+        color: {
+          r: 0
+          g: 255
+          b: 0
+        }
+      }
+      text_offset: {
+        x: 0
+        y: 0
+      }
+      font: 0 
+      line_type: 0
+      box_thickness: 3
+      text_size:3 
+    }
+  }
+}

@@ -58,8 +58,8 @@ node {
   node_options: {
     [type.googleapis.com/aup.avaf.BoxDetectorOptions]: {
       detect_interval: 1
-      detector_type: "SSD"
-      kernel_name: "RESNET18SSD_ITER90000_PRIVATE_FINAL501IMAGES_ADDED_07JUNE2021_CROWD_FLOW_PERSON_HEAD"
+      detector_type: "YoloV2"
+      kernel_name: "yolov2_voc"      
       need_preprocess: true
       log_performance: false
       run_on_letterboxed_img: false
@@ -69,22 +69,174 @@ node {
       ignore_black_frames: false
       max_detection_lib_q_size: 30
       mean: {
-        r: 125.319099
-        g: 123.484794
-        b: 120.935805
+        r: 0
+        g: 0
+        b: 0
       }
       scale: {
-        ch1: 1
-        ch2: 1
-        ch3: 1
+        ch1: 0.00390625
+        ch2: 0.00390625
+        ch3: 0.00390625
+      }
+      label_confidence: {
+        label: 0
+        confidence: 0.3
+      }
+      label_confidence: {
+        label: 1
+        confidence: 0.3
       }
       label_confidence: {
         label: 2
-        confidence: 0.5
+        confidence: 0.3
+      }
+      label_confidence: {
+        label: 3
+        confidence: 0.3
+      }
+      label_confidence: {
+        label: 4
+        confidence: 0.3
+      }
+      label_confidence: {
+        label: 5
+        confidence: 0.3
+      }
+      label_confidence: {
+        label: 6
+        confidence: 0.3
+      }
+      label_confidence: {
+        label: 7
+        confidence: 0.3
+      }
+      label_confidence: {
+        label: 8
+        confidence: 0.3
+      }
+      label_confidence: {
+        label: 9
+        confidence: 0.3
+      }
+      label_confidence: {
+        label: 10
+        confidence: 0.3
+      }
+      label_confidence: {
+        label: 11
+        confidence: 0.3
+      }
+      label_confidence: {
+        label: 12
+        confidence: 0.3
+      }
+      label_confidence: {
+        label: 13
+        confidence: 0.3
+      }
+      label_confidence: {
+        label: 14
+        confidence: 0.3
+      }
+      label_confidence: {
+        label: 15
+        confidence: 0.3
+      }
+      label_confidence: {
+        label: 16
+        confidence: 0.3
+      }
+      label_confidence: {
+        label: 17
+        confidence: 0.3
+      }
+      label_confidence: {
+        label: 18
+        confidence: 0.3
+      }
+      label_confidence: {
+        label: 19
+        confidence: 0.3
+      }
+      inter_class_nms: {
+        labels: 0
+        threshold: 0.45
+      }
+      inter_class_nms: {
+        labels: 1
+        threshold: 0.45
       }
       inter_class_nms: {
         labels: 2
-        threshold: 0.5
+        threshold: 0.45
+      }
+      inter_class_nms: {
+        labels: 3
+        threshold: 0.45
+      }
+      inter_class_nms: {
+        labels: 4
+        threshold: 0.45
+      }
+      inter_class_nms: {
+        labels: 5
+        threshold: 0.45
+      }
+      inter_class_nms: {
+        labels: 6
+        threshold: 0.45
+      }
+      inter_class_nms: {
+        labels: 7
+        threshold: 0.45
+      }
+      inter_class_nms: {
+        labels: 8
+        threshold: 0.45
+      }
+      inter_class_nms: {
+        labels: 9
+        threshold: 0.45
+      }
+      inter_class_nms: {
+        labels: 10
+        threshold: 0.45
+      }
+      inter_class_nms: {
+        labels: 11
+        threshold: 0.45
+      }
+      inter_class_nms: {
+        labels: 12
+        threshold: 0.45
+      }
+      inter_class_nms: {
+        labels: 13
+        threshold: 0.45
+      }
+      inter_class_nms: {
+        labels: 14
+        threshold: 0.45
+      }
+      inter_class_nms: {
+        labels: 15
+        threshold: 0.45
+      }
+      inter_class_nms: {
+        labels: 16
+        threshold: 0.45
+      }
+      inter_class_nms: {
+        labels: 17
+        threshold: 0.45
+      }
+      inter_class_nms: {
+        labels: 18
+        threshold: 0.45
+      }
+      inter_class_nms: {
+        labels: 19
+        threshold: 0.45
       }
     }
   }
@@ -133,10 +285,10 @@ node {
         x: 0
         y: 0
       }
-      box_thickness: 5
-      text_size: 2
-      font: 1
+      font: 0 
       line_type: 0
+      box_thickness: 3
+      text_size:3 
     }
   }
 }
@@ -159,7 +311,6 @@ node {
       opixfmt: PIXFMT_I420
       ow: 1280
       oh: 720
-      ofps: 20
     }
   }
 }
