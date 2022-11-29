@@ -1091,6 +1091,87 @@
       "hardware_types": ["VCK5000", "U50"],
       "hardware_archs": ["DPUCVDX8H", "DPUCVD3k1R"],
       "hardware_engines": ["4pe", "6pe", "8pe"]
+    },
+
+    {
+      "guid": "65186a8f-80c0-4b26-8453-bd05da30eecd",
+      "type": "aupera_free",
+      "name": "box_tracker",
+      "vendor": "Aupera",
+      "pbtxt": "38b5326b-1273-4c08-952a-b28f513dae0c",
+      "hardware_types": ["VCK5000", "U50"],
+      "hardware_archs": ["DPUCVDX8H", "DPUCVD3k1R"],
+      "hardware_engines": ["4pe", "6pe", "8pe"]
+    },
+    {
+      "guid": "642bc22b-1038-465b-b90a-895a99d18474",
+      "type": "aupera_free",
+      "name": "apl_crowd_flow",
+      "vendor": "Aupera",
+      "pbtxt": "0c47fdbe-ce97-4dbb-ade4-3e40d593d27d",
+      "hardware_types": ["VCK5000", "U50"],
+      "hardware_archs": ["DPUCVDX8H", "DPUCVD3k1R"],
+      "hardware_engines": ["4pe", "6pe", "8pe"]
+    },
+    {
+      "guid": "7b021031-60e3-49d7-91e8-135ebec9a3f0",
+      "type": "aupera_free",
+      "name": "box_detector",
+      "vendor": "Aupera",
+      "pbtxt": "6f93503e-52ce-4acf-a6bb-1599d20b0db4",
+      "hardware_types": ["VCK5000", "U50"],
+      "hardware_archs": ["DPUCVDX8H", "DPUCVD3k1R"],
+      "hardware_engines": ["4pe", "6pe", "8pe"]
+    },
+    {
+      "guid": "32083a61-19cd-43fe-82ad-2647c8af4571",
+      "type": "aupera_free",
+      "name": "stream_demux",
+      "vendor": "Aupera",
+      "pbtxt": "5c0ce784-3b87-48c7-8acd-1dd38ede125b",
+      "hardware_types": ["VCK5000", "U50"],
+      "hardware_archs": ["DPUCVDX8H", "DPUCVD3k1R"],
+      "hardware_engines": ["4pe", "6pe", "8pe"]
+    },
+    {
+      "guid": "d87be67a-3ed1-42ac-a433-202704d537c1",
+      "type": "aupera_free",
+      "name": "x86_dec",
+      "vendor": "Aupera",
+      "pbtxt": "5b04b5a6-beb9-48ef-994e-95107e0b3133",
+      "hardware_types": ["VCK5000", "U50"],
+      "hardware_archs": ["DPUCVDX8H", "DPUCVD3k1R"],
+      "hardware_engines": ["4pe", "6pe", "8pe"]
+    },
+    {
+      "guid": "57888fd3-0373-438b-a17c-2f8740588424",
+      "type": "aupera_free",
+      "name": "ff_vfilter",
+      "vendor": "Aupera",
+      "pbtxt": "7a2daef4-a0f8-49de-8755-3ca174a61ef1",
+      "hardware_types": ["VCK5000", "U50"],
+      "hardware_archs": ["DPUCVDX8H", "DPUCVD3k1R"],
+      "hardware_engines": ["4pe", "6pe", "8pe"]
+    },
+    {
+      "guid": "e05b3fdf-8771-49cd-9f00-f0bd0abd60f2",
+      "type": "aupera_free",
+      "name": "x86_enc",
+      "vendor": "Aupera",
+      "pbtxt": "99838e85-60d2-4bec-a4b2-51dfe11289a3",
+      "hardware_types": ["VCK5000", "U50"],
+      "hardware_archs": ["DPUCVDX8H", "DPUCVD3k1R"],
+      "hardware_engines": ["4pe", "6pe", "8pe"]
+    },
+    {
+      "guid": "82ad04f4-e140-4125-ae41-a27420c8363a",
+      "type": "aupera_free",
+      "name": "stream_mux",
+      "vendor": "Aupera",
+      "pbtxt": "fbf0be08-d6d1-4c0d-94f5-7da9e87c1315",
+      "hardware_types": ["VCK5000", "U50"],
+      "hardware_archs": ["DPUCVDX8H", "DPUCVD3k1R"],
+      "hardware_engines": ["4pe", "6pe", "8pe"]
     }
   ],
   
@@ -1105,7 +1186,6 @@
                 "d6140572-a5b6-45d7-97e3-50e5f031df24", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
                 "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
                 "60e96d25-07dd-45be-8c19-4175b2884fc3"]
-      
     },
     {
       "guid": "1c3cb3c3-7abc-4651-bc94-dd603a672a14",
@@ -1130,6 +1210,17 @@
                 "81af1459-db2f-40f8-a4c5-f8103cbc2811", "cd5b66bf-408d-42c3-92af-146b2189d941",
                 "5b6b26e2-e9b4-4880-982f-0fd1ea827870", "026c4d92-7e3c-47db-962a-f261872d3abe",
                 "b53d209f-5cdd-497c-a98d-6ffbd70e1e90", "4d6d6f2d-5193-4925-b89a-c7ef26ef9cae"]
+    },
+    {
+      "guid": "fd0b3d8a-a36c-4228-aeb2-2bd4e63012df",
+      "name": "demo: crowd flow application",
+      "description": "crowd flow application runs on crowd videos",
+      "pbtxt": "861aff86-72d5-4604-bba3-f0e4bc1ba998",
+      "models": ["f358d776-130b-4daa-9d33-c017d20307de"],
+      "nodes": ["65186a8f-80c0-4b26-8453-bd05da30eecd", "642bc22b-1038-465b-b90a-895a99d18474",
+                "7b021031-60e3-49d7-91e8-135ebec9a3f0", "32083a61-19cd-43fe-82ad-2647c8af4571",
+                "d87be67a-3ed1-42ac-a433-202704d537c1", "57888fd3-0373-438b-a17c-2f8740588424",
+                "e05b3fdf-8771-49cd-9f00-f0bd0abd60f2", "82ad04f4-e140-4125-ae41-a27420c8363a"]
     }
   ],
 
@@ -1156,7 +1247,7 @@
                 "7aa3a7b1-b290-4b52-817c-6a03ddef4262", "fc91c3f9-5dc1-4df3-8ab6-795a828605f4",
                 "d471bc3b-4617-49bd-8442-ffbdcf43b84a", "a7d8676e-c9fb-4386-b94e-4404685a060d",
                 "bf1e18d4-8631-4558-a2e2-a579a5d065b4", "89afd296-ff3e-4a10-8b56-84931e080736",
-                "3721eca6-426f-4359-b6d8-1a00be26f7b3"]
+                "3721eca6-426f-4359-b6d8-1a00be26f7b3", "7b021031-60e3-49d7-91e8-135ebec9a3f0"]
     },
     {
       "guid": "c957184a-5275-4a8b-b14a-24e2c8e7cace",
@@ -1174,12 +1265,26 @@
                 "1999772e-e4f3-46a5-bceb-a5573371cf68", "47008551-0a82-430a-b4c5-275c066068bd"]
     },
     {
+      "guid": "38b5326b-1273-4c08-952a-b28f513dae0c",
+      "name": "node: box_tracker default",
+      "description": "default parameters for box_tracker node",
+      "models": [],
+      "nodes": ["65186a8f-80c0-4b26-8453-bd05da30eecd"]
+    },
+    {
+      "guid": "0c47fdbe-ce97-4dbb-ade4-3e40d593d27d",
+      "name": "node: apl_crowd_flow default",
+      "description": "default parameters for apl_crowd_flow node",
+      "models": [],
+      "nodes": ["642bc22b-1038-465b-b90a-895a99d18474"]
+    },
+    {
       "guid": "5c0ce784-3b87-48c7-8acd-1dd38ede125b",
       "name": "node: stream_demux default",
       "description": "default parameters for stream_demux node",
       "models": [],
       "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "f313156f-2bc5-4db5-bc88-25bdf0cc0165",
-                "002b5e9d-17aa-4d44-a022-706e3ca41b98"]
+                "002b5e9d-17aa-4d44-a022-706e3ca41b98", "32083a61-19cd-43fe-82ad-2647c8af4571"]
     },
     {
       "guid": "5b04b5a6-beb9-48ef-994e-95107e0b3133",
@@ -1187,7 +1292,7 @@
       "description": "default parameters for x86_dec node",
       "models": [],
       "nodes": ["1c34840d-2ca9-4d42-b229-101c55115824", "df5ba621-f173-4a7f-8b83-44ff488669e8",
-                "d3bd7fb6-59d8-42f1-9c62-3a2438f7523a"]
+                "d3bd7fb6-59d8-42f1-9c62-3a2438f7523a", "d87be67a-3ed1-42ac-a433-202704d537c1"]
     },
     {
       "guid": "8149a886-36ac-4446-a63d-b8a29aab2cfb",
@@ -1203,7 +1308,7 @@
       "description": "default parameters for ff_vfilter node",
       "models": [],
       "nodes": ["cbbeb075-5517-4d0e-9f56-cec8cad595da", "81af1459-db2f-40f8-a4c5-f8103cbc2811",
-                "cd5b66bf-408d-42c3-92af-146b2189d941"]
+                "cd5b66bf-408d-42c3-92af-146b2189d941", "57888fd3-0373-438b-a17c-2f8740588424"]
     },
     {
       "guid": "99838e85-60d2-4bec-a4b2-51dfe11289a3",
@@ -1211,7 +1316,7 @@
       "description": "default parameters for x86_enc node",
       "models": [],
       "nodes": ["8a2d1c42-0d85-4423-be85-2651d9e13a50", "5b6b26e2-e9b4-4880-982f-0fd1ea827870",
-                "026c4d92-7e3c-47db-962a-f261872d3abe"]
+                "026c4d92-7e3c-47db-962a-f261872d3abe", "e05b3fdf-8771-49cd-9f00-f0bd0abd60f2"]
     },
     {
       "guid": "fbf0be08-d6d1-4c0d-94f5-7da9e87c1315",
@@ -1219,7 +1324,7 @@
       "description": "default parameters for stream_mux node",
       "models": [],
       "nodes": ["60e96d25-07dd-45be-8c19-4175b2884fc3", "b53d209f-5cdd-497c-a98d-6ffbd70e1e90",
-                "4d6d6f2d-5193-4925-b89a-c7ef26ef9cae"]
+                "4d6d6f2d-5193-4925-b89a-c7ef26ef9cae", "82ad04f4-e140-4125-ae41-a27420c8363a"]
     },
 
     
@@ -1874,6 +1979,73 @@
       "description": "mux_node2: receive the encoded frame and pass it in an rtsp stream",
       "models": [],
       "nodes": ["4d6d6f2d-5193-4925-b89a-c7ef26ef9cae"]
+    },
+    
+    {
+      "guid": "861aff86-72d5-4604-bba3-f0e4bc1ba998",
+      "name": "demo: crowd flow application",
+      "description": "crowd flow application runs on crowd videos",
+      "models": ["f358d776-130b-4daa-9d33-c017d20307de"],
+      "nodes": ["65186a8f-80c0-4b26-8453-bd05da30eecd", "642bc22b-1038-465b-b90a-895a99d18474",
+                "7b021031-60e3-49d7-91e8-135ebec9a3f0", "32083a61-19cd-43fe-82ad-2647c8af4571",
+                "d87be67a-3ed1-42ac-a433-202704d537c1", "57888fd3-0373-438b-a17c-2f8740588424",
+                "e05b3fdf-8771-49cd-9f00-f0bd0abd60f2", "82ad04f4-e140-4125-ae41-a27420c8363a"]
+    },
+    {
+      "guid": "65186a8f-80c0-4b26-8453-bd05da30eecd",
+      "name": "node: box_tracker",
+      "description": "box_tracker: support multi-object tracking on a single stream",
+      "models": [],
+      "nodes": ["65186a8f-80c0-4b26-8453-bd05da30eecd"]
+    },
+    {
+      "guid": "642bc22b-1038-465b-b90a-895a99d18474",
+      "name": "node: apl_crowd_flow",
+      "description": "apl_crowd_flow: crowd flow application node",
+      "models": [],
+      "nodes": ["642bc22b-1038-465b-b90a-895a99d18474"]
+    },
+    {
+      "guid": "7b021031-60e3-49d7-91e8-135ebec9a3f0",
+      "name": "node: box_detector",
+      "description": "box detector (RESNET18) as crowd flow detector",
+      "models": ["f358d776-130b-4daa-9d33-c017d20307de"],
+      "nodes": ["7b021031-60e3-49d7-91e8-135ebec9a3f0"]
+    },
+    {
+      "guid": "32083a61-19cd-43fe-82ad-2647c8af4571",
+      "name": "node: stream_demux",
+      "description": "demux_node: connect to a RTSP stream, receive the packets, and perform demux operation",
+      "models": [],
+      "nodes": ["32083a61-19cd-43fe-82ad-2647c8af4571"]
+    },
+    {
+      "guid": "d87be67a-3ed1-42ac-a433-202704d537c1",
+      "name": "node: x86_dec",
+      "description": "decode_node: receive the packets from a demux node and decode them",
+      "models": [],
+      "nodes": ["d87be67a-3ed1-42ac-a433-202704d537c1"]
+    },
+    {
+      "guid": "57888fd3-0373-438b-a17c-2f8740588424",
+      "name": "node: ff_vfilter",
+      "description": "vfilter_node: adjust the video streaming parameters",
+      "models": [],
+      "nodes": ["57888fd3-0373-438b-a17c-2f8740588424"]
+    },
+    {
+      "guid": "e05b3fdf-8771-49cd-9f00-f0bd0abd60f2",
+      "name": "node: x86_enc",
+      "description": "encode_node: receive the frames and compress them into video packets",
+      "models": [],
+      "nodes": ["e05b3fdf-8771-49cd-9f00-f0bd0abd60f2"]
+    },
+    {
+      "guid": "82ad04f4-e140-4125-ae41-a27420c8363a",
+      "name": "node: stream_mux",
+      "description": "mux_node: receive the encoded frame and pass it in an rtsp stream",
+      "models": [],
+      "nodes": ["82ad04f4-e140-4125-ae41-a27420c8363a"]
     }
 
   ],
