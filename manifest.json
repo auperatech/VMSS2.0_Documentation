@@ -474,7 +474,7 @@
       "hardware_arch": "DPUCVDX8H",
       "hardware_engine": "8pe", 
       "model_format": "xmodel",
-      "ml_lib": "pytorch2.1",
+      "ml_lib": "pytorch1.7.1",
       "inference_lib": "vitis2.0",
       "checksum": "9a2c2a83dca473bc0fbc8db73eaaa730",
       "download_link": "https://www.xilinx.com/bin/public/openDownload?filename=resnet50_pt-vck50008pe-DPUCVDX8H-r2.0.0.tar.gz", 
@@ -2054,7 +2054,7 @@
     "hardware_engines": ["4pe", "6pe", "8pe"],
     "ml_tasks": ["detection", "classification", "encoding", "segmentation"],
     "model_formats": ["xmodel", "tf", "pt"],
-    "ml_libs": ["tensorflow1.0", "tensorflow2.0", "pytorch1.1", "pytorch2.1", "caffe1.0", "darknet"],
+    "ml_libs": ["tensorflow1.0", "tensorflow2.0", "pytorch1.1", "pytorch2.1", "pytorch1.7.1", "caffe1.0", "darknet"],
     "inference_libs": ["vitis1.4.1", "vitis2.0.0", "ZenDNN1.1.0"]
   },
   
