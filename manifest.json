@@ -353,7 +353,7 @@
       "kernel": "ssd_adas_pruned_0_95",
       "vendor": "Xilinx",
       "ml_task": "detection",
-      "application": "general",
+      "application": "adas",
       "hardware_type": "VCK5000",
       "hardware_arch": "DPUCVDX8H",
       "hardware_engine": "8pe", 
@@ -399,7 +399,7 @@
       "kernel": "ssd_traffic_pruned_0_9",
       "vendor": "Xilinx",
       "ml_task": "detection",
-      "application": "general",
+      "application": "adas",
       "hardware_type": "VCK5000",
       "hardware_arch": "DPUCVDX8H",
       "hardware_engine": "8pe", 
@@ -1138,8 +1138,8 @@
     },
     {
       "guid": "99c4f723-1cd9-47ab-a649-b31787154d56",
-      "name": "demo: general detection",
-      "description": "general detector (ssd_adas_pruned_0_95) runs on crowd videos",
+      "name": "demo: adas detection",
+      "description": "adas detector (ssd_adas_pruned_0_95) runs on crowd videos",
       "models": ["93dc13ee-c805-4452-95ec-d31840c11a95"],
       "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
                 "cde737e0-5865-46d6-be71-b43b5522ea15", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
@@ -1149,7 +1149,7 @@
     {
       "guid": "a7d8676e-c9fb-4386-b94e-4404685a060d",
       "name": "node: box_detector",
-      "description": "box detector (ssd_adas_pruned_0_95) as general detector",
+      "description": "box detector (ssd_adas_pruned_0_95) as adas detector",
       "models": ["93dc13ee-c805-4452-95ec-d31840c11a95"],
       "nodes": ["cde737e0-5865-46d6-be71-b43b5522ea15"]
     },
@@ -1172,8 +1172,8 @@
     },
     {
       "guid": "9bcb3cf8-5c5e-4c74-b33e-ef5e61312722",
-      "name": "demo: general detection",
-      "description": "general detector (ssd_traffic_pruned_0_9) runs on crowd videos",
+      "name": "demo: adas detection",
+      "description": "adas detector (ssd_traffic_pruned_0_9) runs on crowd videos",
       "models": ["b743d1ee-e5f7-4984-929d-1e066fff6fda"],
       "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
                 "cde737e0-5865-46d6-be71-b43b5522ea15", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
@@ -1183,7 +1183,7 @@
     {
       "guid": "89afd296-ff3e-4a10-8b56-84931e080736",
       "name": "node: box_detector",
-      "description": "box detector (ssd_traffic_pruned_0_9) as general detector",
+      "description": "box detector (ssd_traffic_pruned_0_9) as adas detector",
       "models": ["b743d1ee-e5f7-4984-929d-1e066fff6fda"],
       "nodes": ["cde737e0-5865-46d6-be71-b43b5522ea15"]
     },
