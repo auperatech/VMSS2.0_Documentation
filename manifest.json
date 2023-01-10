@@ -665,7 +665,7 @@
       "name": "stream_demux",
       "vendor": "Aupera",
       "pbtxt": "5c0ce784-3b87-48c7-8acd-1dd38ede125b",
-      "hardware_types": ["xilinx_vck5000_gen3x16_xdma_base_1", "A-U50-P00G-LV-G", "aupera_v205_1" "aupera_u30_gen3x4_base_1"],
+      "hardware_types": ["xilinx_vck5000_gen3x16_xdma_base_1", "A-U50-P00G-LV-G", "aupera_v205_1", "aupera_u30_gen3x4_base_1"],
       "hardware_archs": ["DPUCVDX8H", "DPUCVD3k1R"],
       "hardware_engines": ["4pe", "6pe", "8pe"]
     },
