@@ -4,18 +4,15 @@ node {
   input_stream: "image_stream_decode"
   output_stream: "detections_stream"
   output_stream: "detect_interval"
-  stream_sync: {
-    drop_strategy: DROP_INCOMPLETE_PACKETS
-    timeout_ms: 5000
-  }
+  ml_model_kernel_name: ""
   node_options: {
     [type.googleapis.com/aup.avaf.BoxDetectorOptions]: {
       detect_interval: 1
       detector_type: ""
-      kernel_name: ""
       obfuscated_token: ""
       need_preprocess: false
       log_performance: false
+      log_info: false
       run_on_letterboxed_img: false
       batch_size: 1
       return_frames_inorder: false 
@@ -24,6 +21,8 @@ node {
       batch_collection_timeout_ms: 0
       ignore_black_frames: false
       max_detection_lib_q_size: 30
+      total_classes: 1
+      default_confidence_threshold: 0.5
       mean: {
         r: 0
         g: 0

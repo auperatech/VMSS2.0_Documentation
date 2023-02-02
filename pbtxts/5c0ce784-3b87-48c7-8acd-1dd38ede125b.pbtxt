@@ -11,6 +11,7 @@ node {
         rtsp_transport: "tcp"
         iframe_extract: false
         auto_reconnect: true
+        force_fps: 0
       }
     }
   }

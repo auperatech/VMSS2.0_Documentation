@@ -13,6 +13,8 @@ node {
        w: 0 
        h: 0
        fps: 0
+      # queue_size: 12
+      # threads: 1
      }
     }
   }
