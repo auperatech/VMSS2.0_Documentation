@@ -1,16 +1,13 @@
 node {
   name: "classifier"
   calculator: "box_classifier"
-  input_stream: "detections_stream1"
-  input_stream: "detections_stream2"
-  input_stream: "image_stream_decode1"
-  input_stream: "image_stream_decode2"
-  output_stream: "classification_stream1"
-  output_stream: "classification_stream2"
+  input_stream: "detections_stream"
+  input_stream: "image_stream_decode"
+  output_stream: "classification_stream"
+  ml_model_kernel_name: "MLPerf_resnet50_v1.5_tf"
   node_options: {
     [type.googleapis.com/aup.avaf.BoxClassifierOptions]: {
       classifier_type: "General"
-      kernel_name: "MLPerf_resnet50_v1.5_tf"
       need_preprocess: true
       run_on_letterboxed_img: false
       batch_size: 8

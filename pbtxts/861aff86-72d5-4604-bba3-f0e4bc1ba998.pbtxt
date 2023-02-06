@@ -51,11 +51,11 @@ node {
   input_stream: "image_stream_decode"
   output_stream: "detection_stream"
   output_stream: "detect_interval"
+  ml_model_kernel_name: "RESNET18SSD_ITER90000_PRIVATE_FINAL501IMAGES_ADDED_07JUNE2021_CROWD_FLOW_PERSON_HEAD"
   node_options: {
     [type.googleapis.com/aup.avaf.BoxDetectorOptions]: {
       detect_interval: 5
       detector_type: "SSD"
-      kernel_name: "RESNET18SSD_ITER90000_PRIVATE_FINAL501IMAGES_ADDED_07JUNE2021_CROWD_FLOW_PERSON_HEAD"
       need_preprocess: true
       log_performance: false
       run_on_letterboxed_img: false

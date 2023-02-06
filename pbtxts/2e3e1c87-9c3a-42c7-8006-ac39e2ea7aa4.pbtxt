@@ -51,15 +51,11 @@ node {
   input_stream: "image_stream_decode"
   output_stream: "detections_stream"
   output_stream: "detect_interval"
-  stream_sync: {
-    drop_strategy: DROP_INCOMPLETE_PACKETS
-    timeout_ms: 5000
-  }
+  ml_model_kernel_name: "yolov3_voc"
   node_options: {
     [type.googleapis.com/aup.avaf.BoxDetectorOptions]: {
       detect_interval: 1
       detector_type: "YoloV3"
-      kernel_name: "yolov3_voc"      
       need_preprocess: true
       log_performance: false
       run_on_letterboxed_img: false

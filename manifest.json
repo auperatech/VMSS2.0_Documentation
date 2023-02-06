@@ -786,6 +786,17 @@
                 "8a2d1c42-0d85-4423-be85-2651d9e13a50", "60e96d25-07dd-45be-8c19-4175b2884fc3"]
     },
     {
+      "guid": "07b03f52-3f67-44da-920a-0832c7432513",
+      "name": "demo: general classification (two streams)",
+      "description": "box detector and classifier cascade (two streams) runs on retail videos",
+      "pbtxt": "5dc2ef3e-2057-40ce-a2b0-1d056ffb1914",
+      "models": ["daadf8b8-32a5-41f8-8c81-24f161ec4a8a", "787a35fb-2e55-417f-bf14-903b53b33017"],
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
+                "cde737e0-5865-46d6-be71-b43b5522ea15", "1d049bee-88bb-419f-97c9-4f10db4008b3",
+                "f6d4c0be-7146-463e-9e75-7c7aae7dbdac", "cbbeb075-5517-4d0e-9f56-cec8cad595da",
+                "8a2d1c42-0d85-4423-be85-2651d9e13a50", "60e96d25-07dd-45be-8c19-4175b2884fc3"]
+    },
+    {
       "guid": "fd0b3d8a-a36c-4228-aeb2-2bd4e63012df",
       "name": "demo: crowd flow application",
       "description": "crowd flow application runs on crowd videos",
@@ -1191,6 +1202,16 @@
     {
       "guid": "20b35b1e-da33-4092-bcf0-b9b242acd1aa",
       "name": "demo: general classification",
+      "description": "box detector (tiny_yolov3_vmss) and classifier (resnet18) cascade runs on retail videos",
+      "models": ["daadf8b8-32a5-41f8-8c81-24f161ec4a8a", "787a35fb-2e55-417f-bf14-903b53b33017"],
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
+                "cde737e0-5865-46d6-be71-b43b5522ea15", "1d049bee-88bb-419f-97c9-4f10db4008b3",
+                "f6d4c0be-7146-463e-9e75-7c7aae7dbdac", "cbbeb075-5517-4d0e-9f56-cec8cad595da",
+                "8a2d1c42-0d85-4423-be85-2651d9e13a50", "60e96d25-07dd-45be-8c19-4175b2884fc3"]
+    },
+    {
+      "guid": "5dc2ef3e-2057-40ce-a2b0-1d056ffb1914",
+      "name": "demo: general classification (two streams)",
       "description": "box detector (tiny_yolov3_vmss) and classifier (resnet18) cascade runs on retail videos",
       "models": ["daadf8b8-32a5-41f8-8c81-24f161ec4a8a", "787a35fb-2e55-417f-bf14-903b53b33017"],
       "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
