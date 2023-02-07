@@ -44,13 +44,12 @@ node {
   }
 }
 
-########################################################################################
 
 node {
   name: "vfilter_node"
   calculator: "ff_vfilter"
   vendor: "Aupera"
-  input_stream: "image_stream_viz"
+  input_stream: "image_stream_decode"
   input_stream: "video_stream_info_decode"
   output_stream: "image_stream_vfilter"
   output_stream: "video_stream_info_vfilter"
