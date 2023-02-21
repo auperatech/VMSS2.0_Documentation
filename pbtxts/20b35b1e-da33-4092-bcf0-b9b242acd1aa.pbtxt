@@ -64,6 +64,8 @@ node {
       batch_collection_timeout_ms: 0
       ignore_black_frames: false
       max_detection_lib_q_size: 30
+      total_classes: 10
+      default_confidence_threshold: 0.3
       mean: {
         r: 0
         g: 0
@@ -73,46 +75,6 @@ node {
         ch1: 0.00390625
         ch2: 0.00390625
         ch3: 0.00390625
-      }
-      label_confidence: {
-        label: 0
-        confidence: 0.3
-      }
-      label_confidence: {
-        label: 1
-        confidence: 0.3
-      }
-      label_confidence: {
-        label: 2
-        confidence: 0.3
-      }
-      label_confidence: {
-        label: 3
-        confidence: 0.3
-      }
-      label_confidence: {
-        label: 4
-        confidence: 0.3
-      }
-      label_confidence: {
-        label: 5
-        confidence: 0.3
-      }
-      label_confidence: {
-        label: 6
-        confidence: 0.3
-      }
-      label_confidence: {
-        label: 7
-        confidence: 0.3
-      }
-      label_confidence: {
-        label: 8
-        confidence: 0.3
-      }
-      label_confidence: {
-        label: 9
-        confidence: 0.3
       }
       inter_class_nms: {
         labels: 0
