@@ -51,11 +51,11 @@ node {
   input_stream: "image_stream_decode"
   output_stream: "detections_stream"
   output_stream: "detect_interval"
-  ml_model_kernel_name: "refinedet_pruned_0_92"
+  ml_model_kernel_name: "mlperf_ssd_resnet34_tf"
   node_options: {
     [type.googleapis.com/aup.avaf.BoxDetectorOptions]: {
       detect_interval: 1
-      detector_type: "RefineDet"
+      detector_type: "SSD"
       need_preprocess: true
       log_performance: false
       run_on_letterboxed_img: false
@@ -64,25 +64,21 @@ node {
       batch_collection_timeout_ms: 0
       ignore_black_frames: false
       max_detection_lib_q_size: 30
-      total_classes: 2
+      total_classes: 81
       default_confidence_threshold: 0.5
       mean: {
-        r: 104.0
-        g: 117.0
-        b: 123.0
+        r: 103.94
+        g: 116.78
+        b: 123.68
       }
       scale: {
-        ch1: 1.0
-        ch2: 1.0
-        ch3: 1.0
+        ch1: 0.0174
+        ch2: 0.0175
+        ch3: 0.01712
       }
       inter_class_nms: {
         labels: 0
-        threshold: 0.4
-      }
-      inter_class_nms: {
-        labels: 1
-        threshold: 0.4
+        threshold: 0.5
       }
     }
   }
