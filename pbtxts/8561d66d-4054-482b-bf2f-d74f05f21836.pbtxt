@@ -46,125 +46,8 @@ node {
 
 
 node {
-  name: "detector"
-  calculator: "box_detector"
-  input_stream: "image_stream_decode"
-  output_stream: "detections_stream"
-  output_stream: "detect_interval"
-  ml_model_kernel_name: "yolov3_voc"
-  node_options: {
-    [type.googleapis.com/aup.avaf.BoxDetectorOptions]: {
-      detect_interval: 1
-      detector_type: "YoloV3"
-      need_preprocess: true
-      log_performance: false
-      run_on_letterboxed_img: false
-      batch_size: 1
-      return_frames_inorder: true 
-      batch_collection_timeout_ms: 0
-      ignore_black_frames: false
-      max_detection_lib_q_size: 30
-      total_classes: 20
-      default_confidence_threshold: 0.3
-      mean: {
-        r: 0
-        g: 0
-        b: 0
-      }
-      scale: {
-        ch1: 0.00390625
-        ch2: 0.00390625
-        ch3: 0.00390625
-      }
-      inter_class_nms: {
-        labels: 0
-        threshold: 0.45
-      }
-      inter_class_nms: {
-        labels: 1
-        threshold: 0.45
-      }
-      inter_class_nms: {
-        labels: 2
-        threshold: 0.45
-      }
-      inter_class_nms: {
-        labels: 3
-        threshold: 0.45
-      }
-      inter_class_nms: {
-        labels: 4
-        threshold: 0.45
-      }
-      inter_class_nms: {
-        labels: 5
-        threshold: 0.45
-      }
-      inter_class_nms: {
-        labels: 6
-        threshold: 0.45
-      }
-      inter_class_nms: {
-        labels: 7
-        threshold: 0.45
-      }
-      inter_class_nms: {
-        labels: 8
-        threshold: 0.45
-      }
-      inter_class_nms: {
-        labels: 9
-        threshold: 0.45
-      }
-      inter_class_nms: {
-        labels: 10
-        threshold: 0.45
-      }
-      inter_class_nms: {
-        labels: 11
-        threshold: 0.45
-      }
-      inter_class_nms: {
-        labels: 12
-        threshold: 0.45
-      }
-      inter_class_nms: {
-        labels: 13
-        threshold: 0.45
-      }
-      inter_class_nms: {
-        labels: 14
-        threshold: 0.45
-      }
-      inter_class_nms: {
-        labels: 15
-        threshold: 0.45
-      }
-      inter_class_nms: {
-        labels: 16
-        threshold: 0.45
-      }
-      inter_class_nms: {
-        labels: 17
-        threshold: 0.45
-      }
-      inter_class_nms: {
-        labels: 18
-        threshold: 0.45
-      }
-      inter_class_nms: {
-        labels: 19
-        threshold: 0.45
-      }
-    }
-  }
-}
-
-
-node {
   name: "classifier"
   calculator: "box_classifier"
-  input_stream: "detections_stream"
   input_stream: "image_stream_decode"
   output_stream: "classification_stream"
   ml_model_kernel_name: "resnet_v1_50_tf"
@@ -177,7 +60,7 @@ node {
       return_in_order: true
       classification_threads: 1
       batch_collection_timeout_ms: 0
-      use_detections: true
+      use_detections: false
       log_performance: false
       max_classification_lib_q_size: 200
     }

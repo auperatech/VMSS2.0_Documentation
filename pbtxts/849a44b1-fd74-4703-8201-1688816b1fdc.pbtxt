@@ -50,7 +50,7 @@ node {
   calculator: "box_classifier"
   input_stream: "image_stream_decode"
   output_stream: "classification_stream"
-  ml_model_kernel_name: "MLPerf_resnet50_v1.5_tf"
+  ml_model_kernel_name: "resnet18"
   node_options: {
     [type.googleapis.com/aup.avaf.BoxClassifierOptions]: {
       classifier_type: "General"

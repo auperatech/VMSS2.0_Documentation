@@ -460,7 +460,7 @@
       "quantized_accuracy": "0.6699/0.8826",
       "dataset": "ImageNet",
       "node_pbtxt": "e0bd1228-1adc-407b-bf28-3c698ce7daca",
-      "pipeline_pbtxt": "20b35b1e-da33-4092-bcf0-b9b242acd1aa"
+      "pipeline_pbtxt": "849a44b1-fd74-4703-8201-1688816b1fdc"
     },
     {
       "guid": "23e39701-c400-44dd-bb4a-82e06347fc8f",
@@ -798,8 +798,19 @@
                 "60e96d25-07dd-45be-8c19-4175b2884fc3"]
     },
     {
-      "guid": "95c82288-0ce6-40b7-93f3-047ee805c822",
+      "guid": "21ec6faa-bca0-4ca3-8e47-0fe0715bd288",
       "name": "demo: general classification",
+      "description": "box classifier runs on retail videos",
+      "pbtxt": "849a44b1-fd74-4703-8201-1688816b1fdc",
+      "models": ["787a35fb-2e55-417f-bf14-903b53b33017"],
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
+                "1d049bee-88bb-419f-97c9-4f10db4008b3", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac", 
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50", 
+                "60e96d25-07dd-45be-8c19-4175b2884fc3"]
+    },
+    {
+      "guid": "95c82288-0ce6-40b7-93f3-047ee805c822",
+      "name": "demo: general detection and classification cascade",
       "description": "box detector and classifier cascade runs on retail videos",
       "pbtxt": "20b35b1e-da33-4092-bcf0-b9b242acd1aa",
       "models": ["2e7e57b2-e7ab-47d1-935f-7e3e7426945a", "787a35fb-2e55-417f-bf14-903b53b33017"],
@@ -1227,10 +1238,20 @@
       "models": ["3b51d873-31fe-4168-8bd5-0c9e6ad294ce"],
       "nodes": ["cde737e0-5865-46d6-be71-b43b5522ea15"]
     },
-    
+
+    {
+      "guid": "849a44b1-fd74-4703-8201-1688816b1fdc",
+      "name": "demo: general classification",
+      "description": "box classifier (resnet18) runs on retail videos",
+      "models": ["787a35fb-2e55-417f-bf14-903b53b33017"],
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
+                "1d049bee-88bb-419f-97c9-4f10db4008b3", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac", 
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50", 
+                "60e96d25-07dd-45be-8c19-4175b2884fc3"]
+    },
     {
       "guid": "20b35b1e-da33-4092-bcf0-b9b242acd1aa",
-      "name": "demo: general classification",
+      "name": "demo: general detection and classification cascade",
       "description": "box detector (yolov3_voc) and classifier (resnet18) cascade runs on retail videos",
       "models": ["2e7e57b2-e7ab-47d1-935f-7e3e7426945a", "787a35fb-2e55-417f-bf14-903b53b33017"],
       "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
@@ -1248,12 +1269,12 @@
     {
       "guid": "28211777-0d95-427b-9919-9185060277b6",
       "name": "demo: general classification",
-      "description": "box detector (yolov3_voc) and classifier (resnet50) cascade runs on retail videos",
-      "models": ["2e7e57b2-e7ab-47d1-935f-7e3e7426945a", "23e39701-c400-44dd-bb4a-82e06347fc8f"],
+      "description": "box classifier (resnet50) runs on retail videos",
+      "models": ["23e39701-c400-44dd-bb4a-82e06347fc8f"],
       "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
-                "cde737e0-5865-46d6-be71-b43b5522ea15", "1d049bee-88bb-419f-97c9-4f10db4008b3",
-                "f6d4c0be-7146-463e-9e75-7c7aae7dbdac", "cbbeb075-5517-4d0e-9f56-cec8cad595da",
-                "8a2d1c42-0d85-4423-be85-2651d9e13a50", "60e96d25-07dd-45be-8c19-4175b2884fc3"]
+                "1d049bee-88bb-419f-97c9-4f10db4008b3", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac", 
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50", 
+                "60e96d25-07dd-45be-8c19-4175b2884fc3"]
     },
     {
       "guid": "efa3b58e-b84d-4c6f-8aa2-538a499ed4b4",
@@ -1265,12 +1286,12 @@
     {
       "guid": "3791c051-9a22-4157-bb7e-ed5cfbaa0b3c",
       "name": "demo: general classification",
-      "description": "box detector (yolov3_voc) and classifier (resnet50_pt) cascade runs on retail videos",
-      "models": ["2e7e57b2-e7ab-47d1-935f-7e3e7426945a", "f4502cca-0bc2-4e53-bdce-83545ece09e7"],
+      "description": "box classifier (resnet50_pt) runs on retail videos",
+      "models": ["f4502cca-0bc2-4e53-bdce-83545ece09e7"],
       "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
-                "cde737e0-5865-46d6-be71-b43b5522ea15", "1d049bee-88bb-419f-97c9-4f10db4008b3",
-                "f6d4c0be-7146-463e-9e75-7c7aae7dbdac", "cbbeb075-5517-4d0e-9f56-cec8cad595da",
-                "8a2d1c42-0d85-4423-be85-2651d9e13a50", "60e96d25-07dd-45be-8c19-4175b2884fc3"]
+                "1d049bee-88bb-419f-97c9-4f10db4008b3", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac", 
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50", 
+                "60e96d25-07dd-45be-8c19-4175b2884fc3"]
     },
     {
       "guid": "bb039634-2d79-448a-8274-30fc996b7346",
@@ -1282,12 +1303,12 @@
     {
       "guid": "15587634-dd08-41c5-9de7-ee813a7739b9",
       "name": "demo: general classification",
-      "description": "box detector (yolov3_voc) and classifier (inception_v1) cascade runs on retail videos",
-      "models": ["2e7e57b2-e7ab-47d1-935f-7e3e7426945a", "d0d3501e-fe0b-4c44-bc0f-e968dfc1b42e"],
+      "description": "box classifier (inception_v1) runs on retail videos",
+      "models": ["d0d3501e-fe0b-4c44-bc0f-e968dfc1b42e"],
       "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
-                "cde737e0-5865-46d6-be71-b43b5522ea15", "1d049bee-88bb-419f-97c9-4f10db4008b3",
-                "f6d4c0be-7146-463e-9e75-7c7aae7dbdac", "cbbeb075-5517-4d0e-9f56-cec8cad595da",
-                "8a2d1c42-0d85-4423-be85-2651d9e13a50", "60e96d25-07dd-45be-8c19-4175b2884fc3"]
+                "1d049bee-88bb-419f-97c9-4f10db4008b3", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac", 
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50", 
+                "60e96d25-07dd-45be-8c19-4175b2884fc3"]
     },
     {
       "guid": "58879aff-8bff-4516-b773-3b86bf1b43c7",
@@ -1299,12 +1320,12 @@
     {
       "guid": "64d47f94-fdea-46ca-b373-8dc977979afd",
       "name": "demo: general classification",
-      "description": "box detector (yolov3_voc) and classifier (resnet50_tf2) cascade runs on retail videos",
-      "models": ["2e7e57b2-e7ab-47d1-935f-7e3e7426945a", "3e7605b0-4944-4576-8376-389c3cbb26c1"],
+      "description": "box classifier (resnet50_tf2) runs on retail videos",
+      "models": ["3e7605b0-4944-4576-8376-389c3cbb26c1"],
       "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
-                "cde737e0-5865-46d6-be71-b43b5522ea15", "1d049bee-88bb-419f-97c9-4f10db4008b3",
-                "f6d4c0be-7146-463e-9e75-7c7aae7dbdac", "cbbeb075-5517-4d0e-9f56-cec8cad595da",
-                "8a2d1c42-0d85-4423-be85-2651d9e13a50", "60e96d25-07dd-45be-8c19-4175b2884fc3"]
+                "1d049bee-88bb-419f-97c9-4f10db4008b3", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac", 
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50", 
+                "60e96d25-07dd-45be-8c19-4175b2884fc3"]
     },
     {
       "guid": "5912565d-b04d-42ef-a313-e1ed7857a702",
@@ -1316,12 +1337,12 @@
     {
       "guid": "97da01b9-62c8-4942-9638-0ced59552bb1",
       "name": "demo: general classification",
-      "description": "box detector (yolov3_voc) and classifier (inception_v1_tf) cascade runs on retail videos",
-      "models": ["2e7e57b2-e7ab-47d1-935f-7e3e7426945a", "eaee951e-2b8c-433a-be1e-0e5bf3eade52"],
+      "description": "box classifier (inception_v1_tf) runs on retail videos",
+      "models": ["eaee951e-2b8c-433a-be1e-0e5bf3eade52"],
       "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
-                "cde737e0-5865-46d6-be71-b43b5522ea15", "1d049bee-88bb-419f-97c9-4f10db4008b3",
-                "f6d4c0be-7146-463e-9e75-7c7aae7dbdac", "cbbeb075-5517-4d0e-9f56-cec8cad595da",
-                "8a2d1c42-0d85-4423-be85-2651d9e13a50", "60e96d25-07dd-45be-8c19-4175b2884fc3"]
+                "1d049bee-88bb-419f-97c9-4f10db4008b3", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac", 
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50", 
+                "60e96d25-07dd-45be-8c19-4175b2884fc3"]
     },
     {
       "guid": "b917e0f6-53de-4cfc-b98d-82d42cdec407",
@@ -1333,12 +1354,12 @@
     {
       "guid": "2b9108e9-4e97-4546-9ee5-2131ab1e2584",
       "name": "demo: general classification",
-      "description": "box detector (yolov3_voc) and classifier (MLPerf_resnet50_v1.5_tf) cascade runs on retail videos",
-      "models": ["2e7e57b2-e7ab-47d1-935f-7e3e7426945a", "55fdd050-05da-482f-a236-b30b4f7504cd"],
+      "description": "box classifier (MLPerf_resnet50_v1.5_tf) runs on retail videos",
+      "models": ["55fdd050-05da-482f-a236-b30b4f7504cd"],
       "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
-                "cde737e0-5865-46d6-be71-b43b5522ea15", "1d049bee-88bb-419f-97c9-4f10db4008b3",
-                "f6d4c0be-7146-463e-9e75-7c7aae7dbdac", "cbbeb075-5517-4d0e-9f56-cec8cad595da",
-                "8a2d1c42-0d85-4423-be85-2651d9e13a50", "60e96d25-07dd-45be-8c19-4175b2884fc3"]
+                "1d049bee-88bb-419f-97c9-4f10db4008b3", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac", 
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50", 
+                "60e96d25-07dd-45be-8c19-4175b2884fc3"]
     },
     {
       "guid": "c88d58b9-4b89-485d-8166-d3d853b092ae",
@@ -1350,12 +1371,12 @@
     {
       "guid": "05ddb5d4-b745-4eff-b67e-694e3c383875",
       "name": "demo: general classification",
-      "description": "box detector (yolov3_voc) and classifier (resnet_v1_101_tf) cascade runs on retail videos",
-      "models": ["2e7e57b2-e7ab-47d1-935f-7e3e7426945a", "5bee3d69-5858-47dc-9d33-dbf4ca90a5c1"],
+      "description": "box classifier (resnet_v1_101_tf) runs on retail videos",
+      "models": ["5bee3d69-5858-47dc-9d33-dbf4ca90a5c1"],
       "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
-                "cde737e0-5865-46d6-be71-b43b5522ea15", "1d049bee-88bb-419f-97c9-4f10db4008b3",
-                "f6d4c0be-7146-463e-9e75-7c7aae7dbdac", "cbbeb075-5517-4d0e-9f56-cec8cad595da",
-                "8a2d1c42-0d85-4423-be85-2651d9e13a50", "60e96d25-07dd-45be-8c19-4175b2884fc3"]
+                "1d049bee-88bb-419f-97c9-4f10db4008b3", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac", 
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50", 
+                "60e96d25-07dd-45be-8c19-4175b2884fc3"]
     },
     {
       "guid": "e8659fad-73ea-46ab-adfa-93e36133f3aa",
@@ -1367,12 +1388,12 @@
     {
       "guid": "5f634297-ba78-41e1-938d-3ad002b0533d",
       "name": "demo: general classification",
-      "description": "box detector (yolov3_voc) and classifier (resnet_v1_152_tf) cascade runs on retail videos",
-      "models": ["2e7e57b2-e7ab-47d1-935f-7e3e7426945a", "dd13d83a-d77a-495e-8c89-2d2971e222be"],
+      "description": "box classifier (resnet_v1_152_tf) runs on retail videos",
+      "models": ["dd13d83a-d77a-495e-8c89-2d2971e222be"],
       "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
-                "cde737e0-5865-46d6-be71-b43b5522ea15", "1d049bee-88bb-419f-97c9-4f10db4008b3",
-                "f6d4c0be-7146-463e-9e75-7c7aae7dbdac", "cbbeb075-5517-4d0e-9f56-cec8cad595da",
-                "8a2d1c42-0d85-4423-be85-2651d9e13a50", "60e96d25-07dd-45be-8c19-4175b2884fc3"]
+                "1d049bee-88bb-419f-97c9-4f10db4008b3", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac", 
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50", 
+                "60e96d25-07dd-45be-8c19-4175b2884fc3"]
     },
     {
       "guid": "1999772e-e4f3-46a5-bceb-a5573371cf68",
@@ -1384,12 +1405,12 @@
     {
       "guid": "8561d66d-4054-482b-bf2f-d74f05f21836",
       "name": "demo: general classification",
-      "description": "box detector (yolov3_voc) and classifier (resnet_v1_50_tf) cascade runs on retail videos",
-      "models": ["2e7e57b2-e7ab-47d1-935f-7e3e7426945a", "f53b10d6-1c40-46ce-a6db-6273e53cf6a2"],
+      "description": "box classifier (resnet_v1_50_tf) runs on retail videos",
+      "models": ["f53b10d6-1c40-46ce-a6db-6273e53cf6a2"],
       "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
-                "cde737e0-5865-46d6-be71-b43b5522ea15", "1d049bee-88bb-419f-97c9-4f10db4008b3",
-                "f6d4c0be-7146-463e-9e75-7c7aae7dbdac", "cbbeb075-5517-4d0e-9f56-cec8cad595da",
-                "8a2d1c42-0d85-4423-be85-2651d9e13a50", "60e96d25-07dd-45be-8c19-4175b2884fc3"]
+                "1d049bee-88bb-419f-97c9-4f10db4008b3", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac", 
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50", 
+                "60e96d25-07dd-45be-8c19-4175b2884fc3"]
     },
     {
       "guid": "47008551-0a82-430a-b4c5-275c066068bd",
