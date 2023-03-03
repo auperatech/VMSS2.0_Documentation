@@ -1,7 +1,6 @@
 node {
   name: "classifier"
   calculator: "box_classifier"
-  input_stream: "detections_stream"
   input_stream: "image_stream_decode"
   output_stream: "classification_stream"
   ml_model_kernel_name: ""
