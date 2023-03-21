@@ -78,10 +78,6 @@ node {
         ch2: 0.0175
         ch3: 0.01712
       }
-      inter_class_nms: {
-        labels: 0
-        threshold: 0.5
-      }
     }
   }
 }

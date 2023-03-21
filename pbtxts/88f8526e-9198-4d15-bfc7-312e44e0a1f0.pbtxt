@@ -29,46 +29,6 @@ node {
         ch2: 0.00390625
         ch3: 0.00390625
       }
-      inter_class_nms: {
-        labels: 0
-        threshold: 0.45
-      }
-      inter_class_nms: {
-        labels: 1
-        threshold: 0.45
-      }
-      inter_class_nms: {
-        labels: 2
-        threshold: 0.45
-      }
-      inter_class_nms: {
-        labels: 3
-        threshold: 0.45
-      }
-      inter_class_nms: {
-        labels: 4
-        threshold: 0.45
-      }
-      inter_class_nms: {
-        labels: 5
-        threshold: 0.45
-      }
-      inter_class_nms: {
-        labels: 6
-        threshold: 0.45
-      }
-      inter_class_nms: {
-        labels: 7
-        threshold: 0.45
-      }
-      inter_class_nms: {
-        labels: 8
-        threshold: 0.45
-      }
-      inter_class_nms: {
-        labels: 9
-        threshold: 0.45
-      }
     }
   }
 }

@@ -72,10 +72,6 @@ node {
         label: 2
         confidence: 0.5
       }
-      inter_class_nms: {
-       labels: 2
-       threshold: 0.5
-      }
     }
   }
 }
