@@ -1,0 +1,18 @@
+node {
+    name: "statistics_reader"
+    calculator: "statistics_reader"
+    output_stream: "json_notification"
+    node_options: {
+    [type.googleapis.com/aup.avaf.StatisticsReaderOptions]: {
+        # enum InputType {
+        #   DIRECTORY = 0;
+        #   FILE = 1;
+        # }
+        interval_us: 1000000
+        input_path: ""
+        loop_over: true
+        input_type: FILE
+        only_send_throughput: true
+    }
+  }
+}

@@ -1,0 +1,23 @@
+node {
+  name: "img_stream"
+  calculator: "image_stream"
+  graph_input: "graph_input1"
+  output_stream: "image_stream_1080p"
+  output_stream: "decode_vid_info_side_packet"
+  output_stream_attributes: {
+    name: "image_stream_1080p"
+    capacity: 128
+  }
+  node_options: {
+    [type.googleapis.com/aup.avaf.ImageStreamOptions]: {
+      playback_fps: 10000
+      directory: ""
+      width: 0
+      height: 0
+      vooya_input: false
+      loop_over: true
+      pool_size: 128
+      preload_images: true
+    }
+  }
+}
