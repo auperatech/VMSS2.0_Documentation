@@ -14,7 +14,7 @@ node {
   node_options: {
     [type.googleapis.com/aup.avaf.ImageStreamOptions]: {
       playback_fps: 10000
-      directory: "/home/chengyou/VMSS/images/one_img/448_448/"
+      directory: "/opt/aupera/avas/examples/images/448_448"
       width: 448
       height: 448
       loop_over: true
@@ -61,7 +61,7 @@ node {
 }
 
 statistics_collector: {
-  target_file: "/tmp/stats/yolov2_voc_pruned_0_66_throughput.json"
+  target_file: "/tmp/yolov2_voc_pruned_0_66_throughput.json"
   throughput_stream_name: "detections_stream"
   throughput_ignore_initial_packets_count: 1000
 }
@@ -73,7 +73,7 @@ node {
     node_options: {
     [type.googleapis.com/aup.avaf.StatisticsReaderOptions]: {
         interval_us: 1000000
-        input_path: "/tmp/stats/yolov2_voc_pruned_0_66_throughput.json"
+        input_path: "/tmp/yolov2_voc_pruned_0_66_throughput.json"
         loop_over: true
         input_type: FILE
         only_send_throughput: true

@@ -14,7 +14,7 @@ node {
   node_options: {
     [type.googleapis.com/aup.avaf.ImageStreamOptions]: {
       playback_fps: 10000
-      directory: "/home/chengyou/VMSS/images/one_img/224_224/"
+      directory: "/opt/aupera/avas/examples/images/224_224"
       width: 224
       height: 224
       loop_over: true
@@ -47,7 +47,7 @@ node {
 }
 
 statistics_collector: {
-  target_file: "/tmp/stats/inception_v1_tf_throughput.json"
+  target_file: "/tmp/inception_v1_tf_throughput.json"
   throughput_stream_name: "classification_stream"
   throughput_ignore_initial_packets_count: 1000
 }
@@ -59,7 +59,7 @@ node {
     node_options: {
     [type.googleapis.com/aup.avaf.StatisticsReaderOptions]: {
         interval_us: 1000000
-        input_path: "/tmp/stats/inception_v1_tf_throughput.json"
+        input_path: "/tmp/inception_v1_tf_throughput.json"
         loop_over: true
         input_type: FILE
         only_send_throughput: true
