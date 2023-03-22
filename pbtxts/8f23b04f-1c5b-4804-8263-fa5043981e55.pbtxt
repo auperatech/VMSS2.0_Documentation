@@ -1,0 +1,16 @@
+node {
+    name: "notification_web"
+    calculator: "notification_web"
+    input_stream: "json_notification"
+    node_options: {
+    [type.googleapis.com/aup.avaf.NotificationWebOptions]: {
+        # enum ProtocolType {
+        #     HTTP = 0;
+        #     UDP = 1;
+        # }
+        notification_url: ""
+        notification_q_size: 1
+        protocol_type: HTTP
+    }
+  }
+}

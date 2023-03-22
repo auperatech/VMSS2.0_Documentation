@@ -4,7 +4,7 @@
   "models": [
     {
       "guid": "f358d776-130b-4daa-9d33-c017d20307de",
-      "model_zoo_name": "cf_SSD-RESNET18_PERSON-HEAD-SHIUN_960_540_0_6.3G_2.0",
+      "model_zoo_name": "cf_SSD-RESNET18_PERSON-HEAD-SHIUN_540_960_0_6.3G_2.0",
       "kernel": "RESNET18SSD_ITER90000_PRIVATE_FINAL501IMAGES_ADDED_07JUNE2021_CROWD_FLOW_PERSON_HEAD",
       "vendor": "Aupera",
       "ml_task": "detection",
@@ -18,12 +18,13 @@
       "checksum": "5b91a570a09325b662c9141fcff6486d",
       "download_link": "", 
       "ops": "6.3G",
-      "input_size": "960x540",
+      "input_size": "540x960",
       "float_accuracy": "0.8037",
       "quantized_accuracy": "0.6323",
       "dataset": "person-head-shiun",
       "node_pbtxt": "d6140572-a5b6-45d7-97e3-50e5f031df24",
-      "pipeline_pbtxt": "614daebb-0c6f-4baa-8154-4657f5254997"
+      "pipeline_pbtxt": "614daebb-0c6f-4baa-8154-4657f5254997",
+      "throughput_pbtxt": "bc00d1f1-9eb1-40b6-bf0c-c5e5de62026e"
     },
     {
       "guid": "daadf8b8-32a5-41f8-8c81-24f161ec4a8a",
@@ -46,7 +47,8 @@
       "quantized_accuracy": "0.9650",
       "dataset": "private-dataset",
       "node_pbtxt": "88f8526e-9198-4d15-bfc7-312e44e0a1f0",
-      "pipeline_pbtxt": "9bedc4b3-2fbc-4429-8b0f-23b8cb012ea6"
+      "pipeline_pbtxt": "9bedc4b3-2fbc-4429-8b0f-23b8cb012ea6",
+      "throughput_pbtxt": "a29f18d3-ece7-4d2a-9c99-4fba0f420d19"
     },
     {
       "guid": "d8162c17-3e98-4f2b-bd72-a1ebdba556c2",
@@ -69,7 +71,8 @@
       "quantized_accuracy": "0.7740",
       "dataset": "voc",
       "node_pbtxt": "d1daf5a8-7be1-4831-823d-5defcde73db8",
-      "pipeline_pbtxt": "bb6a0bca-075a-4f04-a201-252b1d8a8289"
+      "pipeline_pbtxt": "bb6a0bca-075a-4f04-a201-252b1d8a8289",
+      "throughput_pbtxt": "4f64fb27-9620-4dd8-b8df-91051d526d9f"
     },
     {
       "guid": "2b13b627-2404-40ff-aefd-6410a9cee545",
@@ -92,7 +95,8 @@
       "quantized_accuracy": "0.7610",
       "dataset": "voc",
       "node_pbtxt": "3e4fb873-6cee-46c1-a295-9081bf17dcae",
-      "pipeline_pbtxt": "2a31cd55-04a4-44c6-b500-e14b9cd1533b"
+      "pipeline_pbtxt": "2a31cd55-04a4-44c6-b500-e14b9cd1533b",
+      "throughput_pbtxt": "33500b00-6d56-478b-ab4f-b6b845a2029a"
     },
     {
       "guid": "63802927-1c1b-4d34-a452-95ba050fddd7",
@@ -115,7 +119,8 @@
       "quantized_accuracy": "0.7540",
       "dataset": "voc",
       "node_pbtxt": "98e56049-126b-4582-960b-2bec65ce7e3a",
-      "pipeline_pbtxt": "9fbd018b-a386-4bf4-b6cc-c8b450f31f5f"
+      "pipeline_pbtxt": "9fbd018b-a386-4bf4-b6cc-c8b450f31f5f",
+      "throughput_pbtxt": "7d0c82f3-dcb6-4f5b-84ab-1bc6dffd2c47"
     },
     {
       "guid": "c7c0ae6b-2ca9-4f7a-afcc-13203d912ace",
@@ -138,7 +143,8 @@
       "quantized_accuracy": "0.7500",
       "dataset": "voc",
       "node_pbtxt": "acfaec5e-148b-414b-b36d-72773cf8fa53",
-      "pipeline_pbtxt": "6df6495f-1500-48ad-b758-1711d804a058"
+      "pipeline_pbtxt": "6df6495f-1500-48ad-b758-1711d804a058",
+      "throughput_pbtxt": "9a0be826-745c-436d-a81e-6fa9abf42712"
     },
     {
       "guid": "2e7e57b2-e7ab-47d1-935f-7e3e7426945a",
@@ -161,7 +167,8 @@
       "quantized_accuracy": "0.8130",
       "dataset": "voc",
       "node_pbtxt": "05a48f70-3b37-417d-83cd-52420e0c5cbb",
-      "pipeline_pbtxt": "2e3e1c87-9c3a-42c7-8006-ac39e2ea7aa4"
+      "pipeline_pbtxt": "2e3e1c87-9c3a-42c7-8006-ac39e2ea7aa4",
+      "throughput_pbtxt": "02d6c98f-a712-44dc-a99e-c7665122971f"
     },
     {
       "guid": "b95e6da1-b424-47d4-8291-daa081057b6d",
@@ -184,7 +191,8 @@
       "quantized_accuracy": "0.4910",
       "dataset": "bdd",
       "node_pbtxt": "853c7d4e-5a00-4022-ab5f-23b81c04ead1",
-      "pipeline_pbtxt": "54a0e5dd-0f19-4259-a9f3-4b8ea446372a"
+      "pipeline_pbtxt": "54a0e5dd-0f19-4259-a9f3-4b8ea446372a",
+      "throughput_pbtxt": "ac71efc3-197b-4294-88aa-2df3c961b56e"
     },
     {
       "guid": "cc3e5c2c-f35f-435f-b82f-1a3e35508bec",
@@ -207,7 +215,8 @@
       "quantized_accuracy": "0.5300",
       "dataset": "cityscapes",
       "node_pbtxt": "601f380f-0599-4e2f-bd0a-820d8d8c3695",
-      "pipeline_pbtxt": "083bdabb-48e0-4118-b408-15322341c705"
+      "pipeline_pbtxt": "083bdabb-48e0-4118-b408-15322341c705",
+      "throughput_pbtxt": "fc7a1f72-fa19-4467-b199-afd1c36ba9e1"
     },
     {
       "guid": "343b8ee0-d0e6-43ba-b06c-8a6b8c9c4ffb",
@@ -230,7 +239,8 @@
       "quantized_accuracy": "0.7729",
       "dataset": "voc",
       "node_pbtxt": "b40f79d4-b0ed-4d70-b4ae-2f37e6adcd41",
-      "pipeline_pbtxt": "12ed46a6-3c53-471c-bd17-673c58b968eb"
+      "pipeline_pbtxt": "12ed46a6-3c53-471c-bd17-673c58b968eb",
+      "throughput_pbtxt": "43d64f07-680f-4171-817a-7999877a4a4c"
     },
     {
       "guid": "917a3a08-848e-4adc-9934-3072d4bdcfa6",
@@ -253,7 +263,8 @@
       "quantized_accuracy": "0.7042",
       "dataset": "coco",
       "node_pbtxt": "fcba3acf-c6ae-466c-a668-95917c480907",
-      "pipeline_pbtxt": "4f7dd976-a54d-41e2-bebd-b48de8860c63"
+      "pipeline_pbtxt": "4f7dd976-a54d-41e2-bebd-b48de8860c63",
+      "throughput_pbtxt": "33020ffa-2ebb-4893-a569-4ae1bde35513"
     },
     {
       "guid": "aefc7081-bd2e-401c-a124-4c50ea4c582a",
@@ -276,7 +287,8 @@
       "quantized_accuracy": "0.6790",
       "dataset": "coco",
       "node_pbtxt": "f6b20e85-8a04-4960-acc4-2bfed0b04412",
-      "pipeline_pbtxt": "39b24852-5614-47ea-93c9-b50b69dc56c5"
+      "pipeline_pbtxt": "39b24852-5614-47ea-93c9-b50b69dc56c5",
+      "throughput_pbtxt": "303977e7-9b27-4667-ba8e-68d72df27a3f"
     },
     {
       "guid": "bf4ea265-d4b4-486c-a25c-d2bb2923e488",
@@ -299,7 +311,8 @@
       "quantized_accuracy": "0.6487",
       "dataset": "coco",
       "node_pbtxt": "7aa3a7b1-b290-4b52-817c-6a03ddef4262",
-      "pipeline_pbtxt": "0e3fb98c-dc0d-49b3-aa46-129e8d35fb10"
+      "pipeline_pbtxt": "0e3fb98c-dc0d-49b3-aa46-129e8d35fb10",
+      "throughput_pbtxt": "9bd009a0-76dd-4797-b133-9947e1c930f8"
     },
     {
       "guid": "f680167d-c288-467b-9f23-4ea01e318b32",
@@ -322,7 +335,8 @@
       "quantized_accuracy": "0.6112",
       "dataset": "coco",
       "node_pbtxt": "fc91c3f9-5dc1-4df3-8ab6-795a828605f4",
-      "pipeline_pbtxt": "466a42b9-85d6-4adf-ba51-1c992b62fca8"
+      "pipeline_pbtxt": "466a42b9-85d6-4adf-ba51-1c992b62fca8",
+      "throughput_pbtxt": "66f10cdb-24d2-4657-9a28-679f3b6fbfc2"
     },
     {
       "guid": "d69d9541-85eb-4a7b-aa97-0e49e3243562",
@@ -345,7 +359,8 @@
       "quantized_accuracy": "0.7999",
       "dataset": "voc",
       "node_pbtxt": "d471bc3b-4617-49bd-8442-ffbdcf43b84a",
-      "pipeline_pbtxt": "55874bc2-21c9-4d1c-8ade-53263e28c068"
+      "pipeline_pbtxt": "55874bc2-21c9-4d1c-8ade-53263e28c068",
+      "throughput_pbtxt": "dba188b4-7275-4986-883b-ff898057b500"
     },
     {
       "guid": "93dc13ee-c805-4452-95ec-d31840c11a95",
@@ -368,7 +383,8 @@
       "quantized_accuracy": "0.4200",
       "dataset": "private-dataset",
       "node_pbtxt": "a7d8676e-c9fb-4386-b94e-4404685a060d",
-      "pipeline_pbtxt": "99c4f723-1cd9-47ab-a649-b31787154d56"
+      "pipeline_pbtxt": "99c4f723-1cd9-47ab-a649-b31787154d56",
+      "throughput_pbtxt": "a142fe5a-74ad-469e-91cc-0f21335deaf5"
     },
     {
       "guid": "e8f816ee-35ce-43d6-bb5b-e00e9ff047d2",
@@ -391,7 +407,8 @@
       "quantized_accuracy": "0.5857",
       "dataset": "coco",
       "node_pbtxt": "bf1e18d4-8631-4558-a2e2-a579a5d065b4",
-      "pipeline_pbtxt": "26b14df7-b14d-4285-9d2a-de74079b58d9"
+      "pipeline_pbtxt": "26b14df7-b14d-4285-9d2a-de74079b58d9",
+      "throughput_pbtxt": "28c72189-7649-40f1-9595-7f653faf88b6"
     },
     {
       "guid": "b743d1ee-e5f7-4984-929d-1e066fff6fda",
@@ -414,7 +431,8 @@
       "quantized_accuracy": "0.5920",
       "dataset": "private-dataset",
       "node_pbtxt": "89afd296-ff3e-4a10-8b56-84931e080736",
-      "pipeline_pbtxt": "9bcb3cf8-5c5e-4c74-b33e-ef5e61312722"
+      "pipeline_pbtxt": "9bcb3cf8-5c5e-4c74-b33e-ef5e61312722",
+      "throughput_pbtxt": "e1daec39-56e1-4df1-a996-3cd9d696b89e"
     },
     {
       "guid": "3b51d873-31fe-4168-8bd5-0c9e6ad294ce",
@@ -437,7 +455,8 @@
       "quantized_accuracy": "0.2130",
       "dataset": "coco",
       "node_pbtxt": "ec64bf25-beb9-4ffb-a247-321eab095641",
-      "pipeline_pbtxt": "5945f20a-6900-4791-a3b2-82a4a9911c8f"
+      "pipeline_pbtxt": "5945f20a-6900-4791-a3b2-82a4a9911c8f",
+      "throughput_pbtxt": "12b14cbf-894d-4f4e-a4cb-dabb96c57e59"
     },
     {
       "guid": "787a35fb-2e55-417f-bf14-903b53b33017",
@@ -460,7 +479,8 @@
       "quantized_accuracy": "0.6699/0.8826",
       "dataset": "ImageNet",
       "node_pbtxt": "e0bd1228-1adc-407b-bf28-3c698ce7daca",
-      "pipeline_pbtxt": "849a44b1-fd74-4703-8201-1688816b1fdc"
+      "pipeline_pbtxt": "849a44b1-fd74-4703-8201-1688816b1fdc",
+      "throughput_pbtxt": "61773c8f-c3f1-45bd-8bfa-e7584f3ffa84"
     },
     {
       "guid": "23e39701-c400-44dd-bb4a-82e06347fc8f",
@@ -483,7 +503,8 @@
       "quantized_accuracy": "0.7335/0.9130",
       "dataset": "ImageNet",
       "node_pbtxt": "efa3b58e-b84d-4c6f-8aa2-538a499ed4b4",
-      "pipeline_pbtxt": "28211777-0d95-427b-9919-9185060277b6"
+      "pipeline_pbtxt": "28211777-0d95-427b-9919-9185060277b6",
+      "throughput_pbtxt": "3be9cbe4-9906-4207-b405-3347bd1a1c62"
     },
     {
       "guid": "d0d3501e-fe0b-4c44-bc0f-e968dfc1b42e",
@@ -506,7 +527,8 @@
       "quantized_accuracy": "0.6964/0.8942",
       "dataset": "ImageNet",
       "node_pbtxt": "58879aff-8bff-4516-b773-3b86bf1b43c7",
-      "pipeline_pbtxt": "15587634-dd08-41c5-9de7-ee813a7739b9"
+      "pipeline_pbtxt": "15587634-dd08-41c5-9de7-ee813a7739b9",
+      "throughput_pbtxt": "d93180e7-972e-4be1-97cc-abccc3430b2e"
     },
     {
       "guid": "f4502cca-0bc2-4e53-bdce-83545ece09e7",
@@ -529,7 +551,8 @@
       "quantized_accuracy": "0.7603/0.9280",
       "dataset": "ImageNet",
       "node_pbtxt": "bb039634-2d79-448a-8274-30fc996b7346",
-      "pipeline_pbtxt": "3791c051-9a22-4157-bb7e-ed5cfbaa0b3c"
+      "pipeline_pbtxt": "3791c051-9a22-4157-bb7e-ed5cfbaa0b3c",
+      "throughput_pbtxt": "d34d3145-1d87-4d7f-a096-560a03222bfb"
     },
     {
       "guid": "3e7605b0-4944-4576-8376-389c3cbb26c1",
@@ -552,7 +575,8 @@
       "quantized_accuracy": "0.7437/0.9214",
       "dataset": "ImageNet",
       "node_pbtxt": "5912565d-b04d-42ef-a313-e1ed7857a702",
-      "pipeline_pbtxt": "64d47f94-fdea-46ca-b373-8dc977979afd"
+      "pipeline_pbtxt": "64d47f94-fdea-46ca-b373-8dc977979afd",
+      "throughput_pbtxt": "679fca9e-216f-4519-b457-ce2f27036499"
     },
     {
       "guid": "eaee951e-2b8c-433a-be1e-0e5bf3eade52",
@@ -575,7 +599,8 @@
       "quantized_accuracy": "0.6786/0.8852",
       "dataset": "ImageNet",
       "node_pbtxt": "b917e0f6-53de-4cfc-b98d-82d42cdec407",
-      "pipeline_pbtxt": "97da01b9-62c8-4942-9638-0ced59552bb1"
+      "pipeline_pbtxt": "97da01b9-62c8-4942-9638-0ced59552bb1",
+      "throughput_pbtxt": "f9e7db06-6ce4-4be1-aba2-e9747c4353af"
     },
     {
       "guid": "55fdd050-05da-482f-a236-b30b4f7504cd",
@@ -598,7 +623,8 @@
       "quantized_accuracy": "0.7536/0.9264",
       "dataset": "ImageNet",
       "node_pbtxt": "c88d58b9-4b89-485d-8166-d3d853b092ae",
-      "pipeline_pbtxt": "2b9108e9-4e97-4546-9ee5-2131ab1e2584"
+      "pipeline_pbtxt": "2b9108e9-4e97-4546-9ee5-2131ab1e2584",
+      "throughput_pbtxt": "f9669193-2e55-4f0c-965b-e1bf4180597c"
     },
     {
       "guid": "5bee3d69-5858-47dc-9d33-dbf4ca90a5c1",
@@ -621,7 +647,8 @@
       "quantized_accuracy": "0.7414/0.9176",
       "dataset": "ImageNet",
       "node_pbtxt": "e8659fad-73ea-46ab-adfa-93e36133f3aa",
-      "pipeline_pbtxt": "05ddb5d4-b745-4eff-b67e-694e3c383875"
+      "pipeline_pbtxt": "05ddb5d4-b745-4eff-b67e-694e3c383875",
+      "throughput_pbtxt": "f431baac-59ae-41d2-8bb2-0f42c7c8d74d"
     },
     {
       "guid": "dd13d83a-d77a-495e-8c89-2d2971e222be",
@@ -644,7 +671,8 @@
       "quantized_accuracy": "0.7464/0.9220",
       "dataset": "ImageNet",
       "node_pbtxt": "1999772e-e4f3-46a5-bceb-a5573371cf68",
-      "pipeline_pbtxt": "5f634297-ba78-41e1-938d-3ad002b0533d"
+      "pipeline_pbtxt": "5f634297-ba78-41e1-938d-3ad002b0533d",
+      "throughput_pbtxt": "864d6684-86b1-4433-bad0-c720ef1e3116"
     },
     {
       "guid": "f53b10d6-1c40-46ce-a6db-6273e53cf6a2",
@@ -667,7 +695,8 @@
       "quantized_accuracy": "0.7411/0.9167",
       "dataset": "ImageNet",
       "node_pbtxt": "47008551-0a82-430a-b4c5-275c066068bd",
-      "pipeline_pbtxt": "8561d66d-4054-482b-bf2f-d74f05f21836"
+      "pipeline_pbtxt": "8561d66d-4054-482b-bf2f-d74f05f21836",
+      "throughput_pbtxt": "55a78aa4-b95c-404b-9f8a-336d2e41d9fa"
     }
   ],
 
@@ -772,6 +801,36 @@
       "hardware_types": ["xilinx_vck5000_gen3x16_xdma_base_1", "A-U50-P00G-LV-G", "aupera_v205_1", "aupera_u30_gen3x4_base_1"],
       "hardware_archs": ["DPUCVDX8H", "DPUCVD3k1R"],
       "hardware_engines": ["4pe", "6pe", "8pe"]
+    },
+    {
+      "guid": "5618ff66-748c-4342-86f9-fb019535430f",
+      "type": "aupera_free",
+      "name": "image_stream",
+      "vendor": "Aupera",
+      "pbtxt": "5d7d91a0-4a4c-4a48-87f0-e7bf42de0e98",
+      "hardware_types": ["xilinx_vck5000_gen3x16_xdma_base_1", "A-U50-P00G-LV-G", "aupera_v205_1", "aupera_u30_gen3x4_base_1"],
+      "hardware_archs": ["DPUCVDX8H", "DPUCVD3k1R"],
+      "hardware_engines": ["4pe", "6pe", "8pe"]
+    },
+    {
+      "guid": "ef596576-6e27-4637-af19-38272b008593",
+      "type": "aupera_free",
+      "name": "statistics_reader",
+      "vendor": "Aupera",
+      "pbtxt": "5b63abdf-4669-48ad-b48f-8850d814833a",
+      "hardware_types": ["xilinx_vck5000_gen3x16_xdma_base_1", "A-U50-P00G-LV-G", "aupera_v205_1", "aupera_u30_gen3x4_base_1"],
+      "hardware_archs": ["DPUCVDX8H", "DPUCVD3k1R"],
+      "hardware_engines": ["4pe", "6pe", "8pe"]
+    },
+    {
+      "guid": "abf9b8da-d8bc-4f89-b181-aef7c025536e",
+      "type": "aupera_free",
+      "name": "notification_web",
+      "vendor": "Aupera",
+      "pbtxt": "8f23b04f-1c5b-4804-8263-fa5043981e55",
+      "hardware_types": ["xilinx_vck5000_gen3x16_xdma_base_1", "A-U50-P00G-LV-G", "aupera_v205_1", "aupera_u30_gen3x4_base_1"],
+      "hardware_archs": ["DPUCVDX8H", "DPUCVD3k1R"],
+      "hardware_engines": ["4pe", "6pe", "8pe"]
     }
   ],
   
@@ -829,6 +888,15 @@
                 "cde737e0-5865-46d6-be71-b43b5522ea15", "65186a8f-80c0-4b26-8453-bd05da30eecd",
                 "642bc22b-1038-465b-b90a-895a99d18474", "cbbeb075-5517-4d0e-9f56-cec8cad595da",
                 "8a2d1c42-0d85-4423-be85-2651d9e13a50", "60e96d25-07dd-45be-8c19-4175b2884fc3"]
+    },
+    {
+      "guid": "3f8ed874-2f17-491b-b703-f47dc07f0c34",
+      "name": "demo: throughput measurement",
+      "description": "throughput measurement for head person detector (RESNET18)",
+      "pbtxt": "bc00d1f1-9eb1-40b6-bf0c-c5e5de62026e",
+      "models": ["f358d776-130b-4daa-9d33-c017d20307de"],
+      "nodes": ["5618ff66-748c-4342-86f9-fb019535430f", "cde737e0-5865-46d6-be71-b43b5522ea15",
+                "ef596576-6e27-4637-af19-38272b008593", "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
     }
   ],
 
@@ -903,6 +971,27 @@
       "models": [],
       "nodes": ["60e96d25-07dd-45be-8c19-4175b2884fc3"]
     },
+    {
+      "guid": "5d7d91a0-4a4c-4a48-87f0-e7bf42de0e98",
+      "name": "node: image_stream default",
+      "description": "default parameters for image_stream node",
+      "models": [],
+      "nodes": ["5618ff66-748c-4342-86f9-fb019535430f"]
+    },
+    {
+      "guid": "5b63abdf-4669-48ad-b48f-8850d814833a",
+      "name": "node: statistics_reader default",
+      "description": "default parameters for statistics_reader node",
+      "models": [],
+      "nodes": ["ef596576-6e27-4637-af19-38272b008593"]
+    },
+    {
+      "guid": "8f23b04f-1c5b-4804-8263-fa5043981e55",
+      "name": "node: notification_web default",
+      "description": "default parameters for notification_web node",
+      "models": [],
+      "nodes": ["abf9b8da-d8bc-4f89-b181-aef7c025536e"]
+    },
 
     
     {
@@ -931,6 +1020,14 @@
       "models": ["f358d776-130b-4daa-9d33-c017d20307de"],
       "nodes": ["cde737e0-5865-46d6-be71-b43b5522ea15"]
     },
+    {
+      "guid": "bc00d1f1-9eb1-40b6-bf0c-c5e5de62026e",
+      "name": "demo: throughput measurement",
+      "description": "throughput measurement for head person detector (RESNET18)",
+      "models": ["f358d776-130b-4daa-9d33-c017d20307de"],
+      "nodes": ["5618ff66-748c-4342-86f9-fb019535430f", "cde737e0-5865-46d6-be71-b43b5522ea15",
+                "ef596576-6e27-4637-af19-38272b008593", "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
+    },
 
     {
       "guid": "9bedc4b3-2fbc-4429-8b0f-23b8cb012ea6",
@@ -950,6 +1047,14 @@
       "nodes": ["cde737e0-5865-46d6-be71-b43b5522ea15"]
     },
     {
+      "guid": "a29f18d3-ece7-4d2a-9c99-4fba0f420d19",
+      "name": "demo: throughput measurement",
+      "description": "throughput measurement for retail detector (tiny_yolov3_vmss)",
+      "models": ["daadf8b8-32a5-41f8-8c81-24f161ec4a8a"],
+      "nodes": ["5618ff66-748c-4342-86f9-fb019535430f", "cde737e0-5865-46d6-be71-b43b5522ea15",
+                "ef596576-6e27-4637-af19-38272b008593", "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
+    },
+    {
       "guid": "bb6a0bca-075a-4f04-a201-252b1d8a8289",
       "name": "demo: general detection",
       "description": "general detector (yolov2_voc) runs on car videos",
@@ -965,6 +1070,14 @@
       "description": "box detector (yolov2_voc) as general detector",
       "models": ["d8162c17-3e98-4f2b-bd72-a1ebdba556c2"],
       "nodes": ["cde737e0-5865-46d6-be71-b43b5522ea15"]
+    },
+    {
+      "guid": "4f64fb27-9620-4dd8-b8df-91051d526d9f",
+      "name": "demo: throughput measurement",
+      "description": "throughput measurement for general detector (yolov2_voc)",
+      "models": ["d8162c17-3e98-4f2b-bd72-a1ebdba556c2"],
+      "nodes": ["5618ff66-748c-4342-86f9-fb019535430f", "cde737e0-5865-46d6-be71-b43b5522ea15",
+                "ef596576-6e27-4637-af19-38272b008593", "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
     },
     {
       "guid": "2a31cd55-04a4-44c6-b500-e14b9cd1533b",
@@ -984,6 +1097,14 @@
       "nodes": ["cde737e0-5865-46d6-be71-b43b5522ea15"]
     },
     {
+      "guid": "33500b00-6d56-478b-ab4f-b6b845a2029a",
+      "name": "demo: throughput measurement",
+      "description": "throughput measurement for general detector (yolov2_voc_pruned_0_66)",
+      "models": ["2b13b627-2404-40ff-aefd-6410a9cee545"],
+      "nodes": ["5618ff66-748c-4342-86f9-fb019535430f", "cde737e0-5865-46d6-be71-b43b5522ea15",
+                "ef596576-6e27-4637-af19-38272b008593", "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
+    },
+    {
       "guid": "9fbd018b-a386-4bf4-b6cc-c8b450f31f5f",
       "name": "demo: general detection",
       "description": "general detector (yolov2_voc_pruned_0_71) runs on car videos",
@@ -999,6 +1120,14 @@
       "description": "box detector (yolov2_voc_pruned_0_71) as general detector",
       "models": ["63802927-1c1b-4d34-a452-95ba050fddd7"],
       "nodes": ["cde737e0-5865-46d6-be71-b43b5522ea15"]
+    },
+    {
+      "guid": "7d0c82f3-dcb6-4f5b-84ab-1bc6dffd2c47",
+      "name": "demo: throughput measurement",
+      "description": "throughput measurement for general detector (yolov2_voc_pruned_0_71)",
+      "models": ["63802927-1c1b-4d34-a452-95ba050fddd7"],
+      "nodes": ["5618ff66-748c-4342-86f9-fb019535430f", "cde737e0-5865-46d6-be71-b43b5522ea15",
+                "ef596576-6e27-4637-af19-38272b008593", "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
     },
     {
       "guid": "6df6495f-1500-48ad-b758-1711d804a058",
@@ -1018,6 +1147,14 @@
       "nodes": ["cde737e0-5865-46d6-be71-b43b5522ea15"]
     },
     {
+      "guid": "9a0be826-745c-436d-a81e-6fa9abf42712",
+      "name": "demo: throughput measurement",
+      "description": "throughput measurement for general detector (yolov2_voc_pruned_0_77)",
+      "models": ["c7c0ae6b-2ca9-4f7a-afcc-13203d912ace"],
+      "nodes": ["5618ff66-748c-4342-86f9-fb019535430f", "cde737e0-5865-46d6-be71-b43b5522ea15",
+                "ef596576-6e27-4637-af19-38272b008593", "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
+    },
+    {
       "guid": "2e3e1c87-9c3a-42c7-8006-ac39e2ea7aa4",
       "name": "demo: general detection",
       "description": "general detector (yolov3_voc) runs on car videos",
@@ -1033,6 +1170,14 @@
       "description": "box detector (yolov3_voc) as general detector",
       "models": ["2e7e57b2-e7ab-47d1-935f-7e3e7426945a"],
       "nodes": ["cde737e0-5865-46d6-be71-b43b5522ea15"]
+    },
+    {
+      "guid": "02d6c98f-a712-44dc-a99e-c7665122971f",
+      "name": "demo: throughput measurement",
+      "description": "throughput measurement for general detector (yolov3_voc)",
+      "models": ["2e7e57b2-e7ab-47d1-935f-7e3e7426945a"],
+      "nodes": ["5618ff66-748c-4342-86f9-fb019535430f", "cde737e0-5865-46d6-be71-b43b5522ea15",
+                "ef596576-6e27-4637-af19-38272b008593", "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
     },
     {
       "guid": "54a0e5dd-0f19-4259-a9f3-4b8ea446372a",
@@ -1052,6 +1197,14 @@
       "nodes": ["cde737e0-5865-46d6-be71-b43b5522ea15"]
     },
     {
+      "guid": "ac71efc3-197b-4294-88aa-2df3c961b56e",
+      "name": "demo: throughput measurement",
+      "description": "throughput measurement for adas detector (yolov3_bdd)",
+      "models": ["b95e6da1-b424-47d4-8291-daa081057b6d"],
+      "nodes": ["5618ff66-748c-4342-86f9-fb019535430f", "cde737e0-5865-46d6-be71-b43b5522ea15",
+                "ef596576-6e27-4637-af19-38272b008593", "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
+    },
+    {
       "guid": "083bdabb-48e0-4118-b408-15322341c705",
       "name": "demo: adas detection",
       "description": "adas detector (yolov3_adas_pruned_0_9) runs on car videos",
@@ -1067,6 +1220,14 @@
       "description": "box detector (yolov3_adas_pruned_0_9) as adas detector",
       "models": ["cc3e5c2c-f35f-435f-b82f-1a3e35508bec"],
       "nodes": ["cde737e0-5865-46d6-be71-b43b5522ea15"]
+    },
+    {
+      "guid": "fc7a1f72-fa19-4467-b199-afd1c36ba9e1",
+      "name": "demo: throughput measurement",
+      "description": "throughput measurement for adas detector (yolov3_adas_pruned_0_9)",
+      "models": ["cc3e5c2c-f35f-435f-b82f-1a3e35508bec"],
+      "nodes": ["5618ff66-748c-4342-86f9-fb019535430f", "cde737e0-5865-46d6-be71-b43b5522ea15",
+                "ef596576-6e27-4637-af19-38272b008593", "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
     },
     {
       "guid": "12ed46a6-3c53-471c-bd17-673c58b968eb",
@@ -1086,6 +1247,14 @@
       "nodes": ["cde737e0-5865-46d6-be71-b43b5522ea15"]
     },
     {
+      "guid": "43d64f07-680f-4171-817a-7999877a4a4c",
+      "name": "demo: throughput measurement",
+      "description": "throughput measurement for general detector (yolov3_voc_tf)",
+      "models": ["343b8ee0-d0e6-43ba-b06c-8a6b8c9c4ffb"],
+      "nodes": ["5618ff66-748c-4342-86f9-fb019535430f", "cde737e0-5865-46d6-be71-b43b5522ea15",
+                "ef596576-6e27-4637-af19-38272b008593", "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
+    },
+    {
       "guid": "4f7dd976-a54d-41e2-bebd-b48de8860c63",
       "name": "demo: general detection",
       "description": "general detector (refinedet_baseline) runs on crowd videos",
@@ -1101,6 +1270,14 @@
       "description": "box detector (refinedet_baseline) as general detector",
       "models": ["917a3a08-848e-4adc-9934-3072d4bdcfa6"],
       "nodes": ["cde737e0-5865-46d6-be71-b43b5522ea15"]
+    },
+    {
+      "guid": "33020ffa-2ebb-4893-a569-4ae1bde35513",
+      "name": "demo: throughput measurement",
+      "description": "throughput measurement for general detector (refinedet_baseline)",
+      "models": ["917a3a08-848e-4adc-9934-3072d4bdcfa6"],
+      "nodes": ["5618ff66-748c-4342-86f9-fb019535430f", "cde737e0-5865-46d6-be71-b43b5522ea15",
+                "ef596576-6e27-4637-af19-38272b008593", "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
     },
     {
       "guid": "39b24852-5614-47ea-93c9-b50b69dc56c5",
@@ -1120,6 +1297,14 @@
       "nodes": ["cde737e0-5865-46d6-be71-b43b5522ea15"]
     },
     {
+      "guid": "303977e7-9b27-4667-ba8e-68d72df27a3f",
+      "name": "demo: throughput measurement",
+      "description": "throughput measurement for general detector (refinedet_pruned_0_8)",
+      "models": ["aefc7081-bd2e-401c-a124-4c50ea4c582a"],
+      "nodes": ["5618ff66-748c-4342-86f9-fb019535430f", "cde737e0-5865-46d6-be71-b43b5522ea15",
+                "ef596576-6e27-4637-af19-38272b008593", "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
+    },
+    {
       "guid": "0e3fb98c-dc0d-49b3-aa46-129e8d35fb10",
       "name": "demo: general detection",
       "description": "general detector (refinedet_pruned_0_92) runs on crowd videos",
@@ -1135,6 +1320,14 @@
       "description": "box detector (refinedet_pruned_0_92) as general detector",
       "models": ["bf4ea265-d4b4-486c-a25c-d2bb2923e488"],
       "nodes": ["cde737e0-5865-46d6-be71-b43b5522ea15"]
+    },
+    {
+      "guid": "9bd009a0-76dd-4797-b133-9947e1c930f8",
+      "name": "demo: throughput measurement",
+      "description": "throughput measurement for general detector (refinedet_pruned_0_92)",
+      "models": ["bf4ea265-d4b4-486c-a25c-d2bb2923e488"],
+      "nodes": ["5618ff66-748c-4342-86f9-fb019535430f", "cde737e0-5865-46d6-be71-b43b5522ea15",
+                "ef596576-6e27-4637-af19-38272b008593", "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
     },
     {
       "guid": "466a42b9-85d6-4adf-ba51-1c992b62fca8",
@@ -1154,6 +1347,14 @@
       "nodes": ["cde737e0-5865-46d6-be71-b43b5522ea15"]
     },
     {
+      "guid": "66f10cdb-24d2-4657-9a28-679f3b6fbfc2",
+      "name": "demo: throughput measurement",
+      "description": "throughput measurement for general detector (refinedet_pruned_0_96)",
+      "models": ["f680167d-c288-467b-9f23-4ea01e318b32"],
+      "nodes": ["5618ff66-748c-4342-86f9-fb019535430f", "cde737e0-5865-46d6-be71-b43b5522ea15",
+                "ef596576-6e27-4637-af19-38272b008593", "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
+    },
+    {
       "guid": "55874bc2-21c9-4d1c-8ade-53263e28c068",
       "name": "demo: general detection",
       "description": "general detector (refinedet_VOC_tf) runs on car videos",
@@ -1169,6 +1370,14 @@
       "description": "box detector (refinedet_VOC_tf) as general detector",
       "models": ["d69d9541-85eb-4a7b-aa97-0e49e3243562"],
       "nodes": ["cde737e0-5865-46d6-be71-b43b5522ea15"]
+    },
+    {
+      "guid": "dba188b4-7275-4986-883b-ff898057b500",
+      "name": "demo: throughput measurement",
+      "description": "throughput measurement for general detector (refinedet_VOC_tf)",
+      "models": ["d69d9541-85eb-4a7b-aa97-0e49e3243562"],
+      "nodes": ["5618ff66-748c-4342-86f9-fb019535430f", "cde737e0-5865-46d6-be71-b43b5522ea15",
+                "ef596576-6e27-4637-af19-38272b008593", "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
     },
     {
       "guid": "99c4f723-1cd9-47ab-a649-b31787154d56",
@@ -1188,6 +1397,14 @@
       "nodes": ["cde737e0-5865-46d6-be71-b43b5522ea15"]
     },
     {
+      "guid": "a142fe5a-74ad-469e-91cc-0f21335deaf5",
+      "name": "demo: throughput measurement",
+      "description": "throughput measurement for adas detector (ssd_adas_pruned_0_95)",
+      "models": ["93dc13ee-c805-4452-95ec-d31840c11a95"],
+      "nodes": ["5618ff66-748c-4342-86f9-fb019535430f", "cde737e0-5865-46d6-be71-b43b5522ea15",
+                "ef596576-6e27-4637-af19-38272b008593", "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
+    },
+    {
       "guid": "26b14df7-b14d-4285-9d2a-de74079b58d9",
       "name": "demo: general detection",
       "description": "general detector (ssd_pedestrian_pruned_0_97) runs on crowd videos",
@@ -1203,6 +1420,14 @@
       "description": "box detector (ssd_pedestrian_pruned_0_97) as general detector",
       "models": ["e8f816ee-35ce-43d6-bb5b-e00e9ff047d2"],
       "nodes": ["cde737e0-5865-46d6-be71-b43b5522ea15"]
+    },
+    {
+      "guid": "28c72189-7649-40f1-9595-7f653faf88b6",
+      "name": "demo: throughput measurement",
+      "description": "throughput measurement for general detector (ssd_pedestrian_pruned_0_97)",
+      "models": ["e8f816ee-35ce-43d6-bb5b-e00e9ff047d2"],
+      "nodes": ["5618ff66-748c-4342-86f9-fb019535430f", "cde737e0-5865-46d6-be71-b43b5522ea15",
+                "ef596576-6e27-4637-af19-38272b008593", "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
     },
     {
       "guid": "9bcb3cf8-5c5e-4c74-b33e-ef5e61312722",
@@ -1222,6 +1447,14 @@
       "nodes": ["cde737e0-5865-46d6-be71-b43b5522ea15"]
     },
     {
+      "guid": "e1daec39-56e1-4df1-a996-3cd9d696b89e",
+      "name": "demo: throughput measurement",
+      "description": "throughput measurement for general detector (ssd_traffic_pruned_0_9)",
+      "models": ["b743d1ee-e5f7-4984-929d-1e066fff6fda"],
+      "nodes": ["5618ff66-748c-4342-86f9-fb019535430f", "cde737e0-5865-46d6-be71-b43b5522ea15",
+                "ef596576-6e27-4637-af19-38272b008593", "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
+    },
+    {
       "guid": "5945f20a-6900-4791-a3b2-82a4a9911c8f",
       "name": "demo: general detection",
       "description": "general detector (mlperf_ssd_resnet34_tf) runs on car videos",
@@ -1237,6 +1470,14 @@
       "description": "box detector (mlperf_ssd_resnet34_tf) as general detector",
       "models": ["3b51d873-31fe-4168-8bd5-0c9e6ad294ce"],
       "nodes": ["cde737e0-5865-46d6-be71-b43b5522ea15"]
+    },
+    {
+      "guid": "12b14cbf-894d-4f4e-a4cb-dabb96c57e59",
+      "name": "demo: throughput measurement",
+      "description": "throughput measurement for general detector (mlperf_ssd_resnet34_tf)",
+      "models": ["3b51d873-31fe-4168-8bd5-0c9e6ad294ce"],
+      "nodes": ["5618ff66-748c-4342-86f9-fb019535430f", "cde737e0-5865-46d6-be71-b43b5522ea15",
+                "ef596576-6e27-4637-af19-38272b008593", "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
     },
 
     {
@@ -1267,6 +1508,14 @@
       "nodes": ["1d049bee-88bb-419f-97c9-4f10db4008b3"]
     },
     {
+      "guid": "61773c8f-c3f1-45bd-8bfa-e7584f3ffa84",
+      "name": "demo: throughput measurement",
+      "description": "throughput measurement for general classifier (resnet18)",
+      "models": ["787a35fb-2e55-417f-bf14-903b53b33017"],
+      "nodes": ["5618ff66-748c-4342-86f9-fb019535430f", "1d049bee-88bb-419f-97c9-4f10db4008b3",
+                "ef596576-6e27-4637-af19-38272b008593", "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
+    },
+    {
       "guid": "28211777-0d95-427b-9919-9185060277b6",
       "name": "demo: general classification",
       "description": "box classifier (resnet50) runs on imagenet videos",
@@ -1282,6 +1531,14 @@
       "description": "box classifier (resnet50) as general classifier",
       "models": ["23e39701-c400-44dd-bb4a-82e06347fc8f"],
       "nodes": ["1d049bee-88bb-419f-97c9-4f10db4008b3"]
+    },
+    {
+      "guid": "3be9cbe4-9906-4207-b405-3347bd1a1c62",
+      "name": "demo: throughput measurement",
+      "description": "throughput measurement for general classifier (resnet50)",
+      "models": ["23e39701-c400-44dd-bb4a-82e06347fc8f"],
+      "nodes": ["5618ff66-748c-4342-86f9-fb019535430f", "1d049bee-88bb-419f-97c9-4f10db4008b3",
+                "ef596576-6e27-4637-af19-38272b008593", "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
     },
     {
       "guid": "3791c051-9a22-4157-bb7e-ed5cfbaa0b3c",
@@ -1301,6 +1558,14 @@
       "nodes": ["1d049bee-88bb-419f-97c9-4f10db4008b3"]
     },
     {
+      "guid": "d34d3145-1d87-4d7f-a096-560a03222bfb",
+      "name": "demo: throughput measurement",
+      "description": "throughput measurement for general classifier (resnet50_pt)",
+      "models": ["f4502cca-0bc2-4e53-bdce-83545ece09e7"],
+      "nodes": ["5618ff66-748c-4342-86f9-fb019535430f", "1d049bee-88bb-419f-97c9-4f10db4008b3",
+                "ef596576-6e27-4637-af19-38272b008593", "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
+    },
+    {
       "guid": "15587634-dd08-41c5-9de7-ee813a7739b9",
       "name": "demo: general classification",
       "description": "box classifier (inception_v1) runs on imagenet videos",
@@ -1316,6 +1581,14 @@
       "description": "box classifier (inception_v1) as general classifier",
       "models": ["d0d3501e-fe0b-4c44-bc0f-e968dfc1b42e"],
       "nodes": ["1d049bee-88bb-419f-97c9-4f10db4008b3"]
+    },
+    {
+      "guid": "d93180e7-972e-4be1-97cc-abccc3430b2e",
+      "name": "demo: throughput measurement",
+      "description": "throughput measurement for general classifier (inception_v1)",
+      "models": ["d0d3501e-fe0b-4c44-bc0f-e968dfc1b42e"],
+      "nodes": ["5618ff66-748c-4342-86f9-fb019535430f", "1d049bee-88bb-419f-97c9-4f10db4008b3",
+                "ef596576-6e27-4637-af19-38272b008593", "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
     },
     {
       "guid": "64d47f94-fdea-46ca-b373-8dc977979afd",
@@ -1335,6 +1608,14 @@
       "nodes": ["1d049bee-88bb-419f-97c9-4f10db4008b3"]
     },
     {
+      "guid": "679fca9e-216f-4519-b457-ce2f27036499",
+      "name": "demo: throughput measurement",
+      "description": "throughput measurement for general classifier (resnet50_tf2)",
+      "models": ["3e7605b0-4944-4576-8376-389c3cbb26c1"],
+      "nodes": ["5618ff66-748c-4342-86f9-fb019535430f", "1d049bee-88bb-419f-97c9-4f10db4008b3",
+                "ef596576-6e27-4637-af19-38272b008593", "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
+    },
+    {
       "guid": "97da01b9-62c8-4942-9638-0ced59552bb1",
       "name": "demo: general classification",
       "description": "box classifier (inception_v1_tf) runs on imagenet videos",
@@ -1350,6 +1631,14 @@
       "description": "box classifier (inception_v1_tf) as general classifier",
       "models": ["eaee951e-2b8c-433a-be1e-0e5bf3eade52"],
       "nodes": ["1d049bee-88bb-419f-97c9-4f10db4008b3"]
+    },
+    {
+      "guid": "f9e7db06-6ce4-4be1-aba2-e9747c4353af",
+      "name": "demo: throughput measurement",
+      "description": "throughput measurement for general classifier (inception_v1_tf)",
+      "models": ["eaee951e-2b8c-433a-be1e-0e5bf3eade52"],
+      "nodes": ["5618ff66-748c-4342-86f9-fb019535430f", "1d049bee-88bb-419f-97c9-4f10db4008b3",
+                "ef596576-6e27-4637-af19-38272b008593", "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
     },
     {
       "guid": "2b9108e9-4e97-4546-9ee5-2131ab1e2584",
@@ -1369,6 +1658,14 @@
       "nodes": ["1d049bee-88bb-419f-97c9-4f10db4008b3"]
     },
     {
+      "guid": "f9669193-2e55-4f0c-965b-e1bf4180597c",
+      "name": "demo: throughput measurement",
+      "description": "throughput measurement for general classifier (MLPerf_resnet50_v1.5_tf)",
+      "models": ["55fdd050-05da-482f-a236-b30b4f7504cd"],
+      "nodes": ["5618ff66-748c-4342-86f9-fb019535430f", "1d049bee-88bb-419f-97c9-4f10db4008b3",
+                "ef596576-6e27-4637-af19-38272b008593", "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
+    },
+    {
       "guid": "05ddb5d4-b745-4eff-b67e-694e3c383875",
       "name": "demo: general classification",
       "description": "box classifier (resnet_v1_101_tf) runs on imagenet videos",
@@ -1384,6 +1681,14 @@
       "description": "box classifier (resnet_v1_101_tf) as general classifier",
       "models": ["5bee3d69-5858-47dc-9d33-dbf4ca90a5c1"],
       "nodes": ["1d049bee-88bb-419f-97c9-4f10db4008b3"]
+    },
+    {
+      "guid": "f431baac-59ae-41d2-8bb2-0f42c7c8d74d",
+      "name": "demo: throughput measurement",
+      "description": "throughput measurement for general classifier (resnet_v1_101_tf)",
+      "models": ["5bee3d69-5858-47dc-9d33-dbf4ca90a5c1"],
+      "nodes": ["5618ff66-748c-4342-86f9-fb019535430f", "1d049bee-88bb-419f-97c9-4f10db4008b3",
+                "ef596576-6e27-4637-af19-38272b008593", "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
     },
     {
       "guid": "5f634297-ba78-41e1-938d-3ad002b0533d",
@@ -1403,6 +1708,14 @@
       "nodes": ["1d049bee-88bb-419f-97c9-4f10db4008b3"]
     },
     {
+      "guid": "864d6684-86b1-4433-bad0-c720ef1e3116",
+      "name": "demo: throughput measurement",
+      "description": "throughput measurement for general classifier (resnet_v1_152_tf)",
+      "models": ["dd13d83a-d77a-495e-8c89-2d2971e222be"],
+      "nodes": ["5618ff66-748c-4342-86f9-fb019535430f", "1d049bee-88bb-419f-97c9-4f10db4008b3",
+                "ef596576-6e27-4637-af19-38272b008593", "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
+    },
+    {
       "guid": "8561d66d-4054-482b-bf2f-d74f05f21836",
       "name": "demo: general classification",
       "description": "box classifier (resnet_v1_50_tf) runs on imagenet videos",
@@ -1418,6 +1731,14 @@
       "description": "box classifier (resnet_v1_50_tf) as general classifier",
       "models": ["f53b10d6-1c40-46ce-a6db-6273e53cf6a2"],
       "nodes": ["1d049bee-88bb-419f-97c9-4f10db4008b3"]
+    },
+    {
+      "guid": "55a78aa4-b95c-404b-9f8a-336d2e41d9fa",
+      "name": "demo: throughput measurement",
+      "description": "throughput measurement for general classifier (resnet_v1_50_tf)",
+      "models": ["f53b10d6-1c40-46ce-a6db-6273e53cf6a2"],
+      "nodes": ["5618ff66-748c-4342-86f9-fb019535430f", "1d049bee-88bb-419f-97c9-4f10db4008b3",
+                "ef596576-6e27-4637-af19-38272b008593", "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
     },
     
     {
