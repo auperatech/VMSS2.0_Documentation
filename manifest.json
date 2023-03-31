@@ -697,6 +697,54 @@
       "node_pbtxt": "47008551-0a82-430a-b4c5-275c066068bd",
       "pipeline_pbtxt": "8561d66d-4054-482b-bf2f-d74f05f21836",
       "throughput_pbtxt": "55a78aa4-b95c-404b-9f8a-336d2e41d9fa"
+    },
+    {
+      "guid": "5262891e-eda1-4444-8373-0f1134a263d0",
+      "model_zoo_name": "pt_SemanticFPN_cityscapes_256_512_10G_2.0",
+      "kernel": "SemanticFPN_cityscapes_pt",
+      "vendor": "Xilinx",
+      "ml_task": "segmentation",
+      "application": "adas",
+      "hardware_type": "xilinx_vck5000_gen3x16_xdma_base_1",
+      "hardware_arch": "DPUCVDX8H",
+      "hardware_engine": "8pe", 
+      "model_format": "xmodel",
+      "ml_lib": "pytorch1.4.0",
+      "inference_lib": "vitis2.0",
+      "checksum": "d44e8eae1bb60b702b3b3df78890604f",
+      "download_link": "https://www.xilinx.com/bin/public/openDownload?filename=SemanticFPN_cityscapes_pt-vck50008pe-DPUCVDX8H-r2.0.0.tar.gz", 
+      "ops": "10G",
+      "input_size": "256x512",
+      "float_accuracy": "0.6290",
+      "quantized_accuracy": "0.6230",
+      "dataset": "cityscapes",
+      "node_pbtxt": "7da41cf9-b056-4269-914d-e29a3b312317",
+      "pipeline_pbtxt": "9874732d-ca76-4037-b464-84190a175c81",
+      "throughput_pbtxt": "3da9c559-ccd6-4479-bcfe-71fdf099dbe3"
+    },
+    {
+      "guid": "d3eacee9-d70c-4d00-bf9f-d745abacf191",
+      "model_zoo_name": "cf_fpn_cityscapes_256_512_8.9G_2.0",
+      "kernel": "fpn",
+      "vendor": "Xilinx",
+      "ml_task": "segmentation",
+      "application": "adas",
+      "hardware_type": "xilinx_vck5000_gen3x16_xdma_base_1",
+      "hardware_arch": "DPUCVDX8H",
+      "hardware_engine": "8pe", 
+      "model_format": "xmodel",
+      "ml_lib": "caffe1.0",
+      "inference_lib": "vitis2.0",
+      "checksum": "51f32303406c7bc137dd286ff534d134",
+      "download_link": "https://www.xilinx.com/bin/public/openDownload?filename=fpn-vck50008pe-DPUCVDX8H-r2.0.0.tar.gz", 
+      "ops": "8.9G",
+      "input_size": "256x512",
+      "float_accuracy": "0.5669",
+      "quantized_accuracy": "0.5607",
+      "dataset": "cityscapes",
+      "node_pbtxt": "671d6082-80fd-42d9-8efb-66646074b020",
+      "pipeline_pbtxt": "9b643c1f-2c50-42cd-95c9-70fa71865149",
+      "throughput_pbtxt": "09d7c558-9c0e-43b0-9e17-d15669bafa79"
     }
   ],
 
@@ -831,6 +879,16 @@
       "hardware_types": ["xilinx_vck5000_gen3x16_xdma_base_1", "A-U50-P00G-LV-G", "aupera_v205_1", "aupera_u30_gen3x4_base_1"],
       "hardware_archs": ["DPUCVDX8H", "DPUCVD3k1R"],
       "hardware_engines": ["4pe", "6pe", "8pe"]
+    },
+    {
+      "guid": "8649db51-7e22-48a9-819e-fe927b827e07",
+      "type": "aupera_free",
+      "name": "box_segmentor",
+      "vendor": "Aupera",
+      "pbtxt": "9cc76b42-21b1-4f6a-bb6f-81a81f3e7e99",
+      "hardware_types": ["xilinx_vck5000_gen3x16_xdma_base_1", "A-U50-P00G-LV-G", "aupera_v205_1", "aupera_u30_gen3x4_base_1"],
+      "hardware_archs": ["DPUCVDX8H", "DPUCVD3k1R"],
+      "hardware_engines": ["4pe", "6pe", "8pe"]
     }
   ],
   
@@ -897,6 +955,17 @@
       "models": ["f358d776-130b-4daa-9d33-c017d20307de"],
       "nodes": ["5618ff66-748c-4342-86f9-fb019535430f", "cde737e0-5865-46d6-be71-b43b5522ea15",
                 "ef596576-6e27-4637-af19-38272b008593", "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
+    },
+    {
+      "guid": "fa0543eb-b621-49fe-89ad-a685bdeb7712",
+      "name": "demo: adas segmentation",
+      "description": "box segmentor runs on car video",
+      "pbtxt": "9874732d-ca76-4037-b464-84190a175c81",
+      "models": ["5262891e-eda1-4444-8373-0f1134a263d0"],
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
+                "8649db51-7e22-48a9-819e-fe927b827e07", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac", 
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50", 
+                "60e96d25-07dd-45be-8c19-4175b2884fc3"]
     }
   ],
 
@@ -991,6 +1060,13 @@
       "description": "default parameters for notification_web node",
       "models": [],
       "nodes": ["abf9b8da-d8bc-4f89-b181-aef7c025536e"]
+    },
+    {
+      "guid": "9cc76b42-21b1-4f6a-bb6f-81a81f3e7e99",
+      "name": "node: box_segmentor default",
+      "description": "default parameters for box_segmentor node",
+      "models": [],
+      "nodes": ["8649db51-7e22-48a9-819e-fe927b827e07"]
     },
 
     
@@ -1740,6 +1816,56 @@
       "nodes": ["5618ff66-748c-4342-86f9-fb019535430f", "1d049bee-88bb-419f-97c9-4f10db4008b3",
                 "ef596576-6e27-4637-af19-38272b008593", "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
     },
+    {
+      "guid": "9874732d-ca76-4037-b464-84190a175c81",
+      "name": "demo: adas segmentation",
+      "description": "box segmentor (SemanticFPN_cityscapes_pt) runs on car videos",
+      "models": ["5262891e-eda1-4444-8373-0f1134a263d0"],
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
+                "8649db51-7e22-48a9-819e-fe927b827e07", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac", 
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50", 
+                "60e96d25-07dd-45be-8c19-4175b2884fc3"]
+    },
+    {
+      "guid": "7da41cf9-b056-4269-914d-e29a3b312317",
+      "name": "node: box_segmentor",
+      "description": "box segmentor (SemanticFPN_cityscapes_pt) as adas segmentor",
+      "models": ["5262891e-eda1-4444-8373-0f1134a263d0"],
+      "nodes": ["8649db51-7e22-48a9-819e-fe927b827e07"]
+    },
+    {
+      "guid": "3da9c559-ccd6-4479-bcfe-71fdf099dbe3",
+      "name": "demo: throughput measurement",
+      "description": "throughput measurement for adas segmentor (SemanticFPN_cityscapes_pt)",
+      "models": ["5262891e-eda1-4444-8373-0f1134a263d0"],
+      "nodes": ["5618ff66-748c-4342-86f9-fb019535430f", "8649db51-7e22-48a9-819e-fe927b827e07",
+                "ef596576-6e27-4637-af19-38272b008593", "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
+    },
+    {
+      "guid": "9b643c1f-2c50-42cd-95c9-70fa71865149",
+      "name": "demo: adas segmentation",
+      "description": "box segmentor (fpn) runs on car videos",
+      "models": ["d3eacee9-d70c-4d00-bf9f-d745abacf191"],
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
+                "8649db51-7e22-48a9-819e-fe927b827e07", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac", 
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50", 
+                "60e96d25-07dd-45be-8c19-4175b2884fc3"]
+    },
+    {
+      "guid": "671d6082-80fd-42d9-8efb-66646074b020",
+      "name": "node: box_segmentor",
+      "description": "box segmentor (fpn) as adas segmentor",
+      "models": ["d3eacee9-d70c-4d00-bf9f-d745abacf191"],
+      "nodes": ["8649db51-7e22-48a9-819e-fe927b827e07"]
+    },
+    {
+      "guid": "09d7c558-9c0e-43b0-9e17-d15669bafa79",
+      "name": "demo: throughput measurement",
+      "description": "throughput measurement for adas segmentor (fpn)",
+      "models": ["d3eacee9-d70c-4d00-bf9f-d745abacf191"],
+      "nodes": ["5618ff66-748c-4342-86f9-fb019535430f", "8649db51-7e22-48a9-819e-fe927b827e07",
+                "ef596576-6e27-4637-af19-38272b008593", "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
+    },
     
     {
       "guid": "861aff86-72d5-4604-bba3-f0e4bc1ba998",
@@ -1758,7 +1884,7 @@
     "ml_tasks": ["detection", "classification", "encoding", "segmentation"],
     "model_formats": ["xmodel", "tf", "pt"],
     "ml_libs": ["tensorflow1.0", "tensorflow1.15.0", "tensorflow2.0", "tensorflow2.3.0",
-                 "pytorch1.1", "pytorch2.1", "pytorch1.7.1", "caffe1.0", "darknet"],
+                 "pytorch1.1", "pytorch2.1", "pytorch1.7.1", "pytorch1.4.0", "caffe1.0", "darknet"],
     "inference_libs": ["vitis1.4.1", "vitis2.0.0", "ZenDNN1.1.0"]
   },
   
