@@ -15,6 +15,7 @@ node {
       #   INPUT_TYPE_DETECTION = 0;
       #   INPUT_TYPE_CLASSIFICATION = 1;
       #   INPUT_TYPE_LPR = 2;
+      #   INPUT_TYPE_SEGMENTATION = 3;
       # }
       text_color: {
         r: 255
@@ -51,6 +52,7 @@ node {
       text_size: 2
       retail_demo: false
       label_name_file: ""
+      overlay_opacity: 0.5
     }
   }
 }
