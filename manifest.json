@@ -1689,7 +1689,7 @@
     {
       "guid": "20b35b1e-da33-4092-bcf0-b9b242acd1aa",
       "name": "demo: general detection and classification cascade",
-      "description": "box detector (yolov3_voc) and classifier (resnet18) cascade runs on imagenet videos",
+      "description": "box detector (yolov3_voc) and classifier (resnet18) cascade runs on car videos",
       "models": ["2e7e57b2-e7ab-47d1-935f-7e3e7426945a", "787a35fb-2e55-417f-bf14-903b53b33017"],
       "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
                 "cde737e0-5865-46d6-be71-b43b5522ea15", "1d049bee-88bb-419f-97c9-4f10db4008b3",
