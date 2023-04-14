@@ -50,7 +50,6 @@ node {
       line_type: 0
       box_thickness: 2
       text_size: 2
-      retail_demo: false
       label_name_file: ""
       overlay_opacity: 0.5
     }
