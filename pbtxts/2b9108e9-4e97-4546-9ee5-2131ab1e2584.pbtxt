@@ -83,6 +83,7 @@ node {
   node_options: {
     [type.googleapis.com/aup.avaf.BoxVisualizerOptions] {
       input_type: INPUT_TYPE_CLASSIFICATION
+      label_name_file: "/opt/aupera/avas/etc/default_imagenet_classification.labels"
       text_color: {
         r: 255
         g: 0
