@@ -9,7 +9,6 @@ node {
   node_options: {
     [type.googleapis.com/aup.avaf.VideoCodecOptions]: {
       dec: {
-        name: "x86_dec_h2645" 
         ow: 1920
         oh: 1080
         opixfmt: PIXFMT_BGR24
