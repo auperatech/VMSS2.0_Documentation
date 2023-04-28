@@ -21,6 +21,43 @@ This repository provides you with various examples to get you started. We can sp
 - Predefined Graphs
 - Custom Examples
 
+The examples are orgazined as shown below:
+```
+.
+├── commandline_examples
+│   ├── u30_v205
+│   │   ├── box_detector_car
+│   │   ├── box_detector_classifier_cascade
+│   │   ├── box_detector_retail
+│   │   └── custom_pipelines
+│   └── vck5000
+│       ├── custom_pipelines
+│       ├── to_run_on_both_crowd_and_retail_videos
+│       ├── to_run_on_crowd_videos
+│       └── to_run_on_retail_videos
+├── web_client_examples
+│   ├── to_run_on_crowd_videos
+│   │   ├── apl_crowd_flow
+│   │   └── box_detector
+│   └── to_run_on_retail_videos
+│       ├── box_detector
+│       └── box_detector_classifier_cascade
+└── examples
+    ├── Web Client Examples
+    │   ├── to_run_on_crowd_videos
+    │   │   ├── apl_crowd_flow
+    │   │   └── box_detector
+    │   └── to_run_on_retail_videos
+    │       ├── box_detector
+    │       └── box_detector_classifier_cascade
+    ├── Command Line Examples
+    │   ├── u30_v205
+    │   │   ├── box_detector_car
+    │   │   ├── box_detector_classifier_cascade
+    │   │   ├── box_detector_retail
+    │   │   └── custom_pipelines
+```
+
 ### Web Client Examples
 
 This a set of examples of predefined graphs that contain different examples showcasing the capabilities of combining different nodes from the Nodes Toolkit to run by simply inserting the provided pbtxt file in our Web Client application.
