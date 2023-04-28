@@ -23,39 +23,56 @@ This repository provides you with various examples to get you started. We can sp
 
 The examples are orgazined as shown below:
 ```
-.
 ├── commandline_examples
 │   ├── u30_v205
 │   │   ├── box_detector_car
+│   │   │   ├── 1input_1output.pbtxt
+│   │   │   ├── input.pbtxt
+│   │   │   └── output.pbtxt
 │   │   ├── box_detector_classifier_cascade
+│   │   │   ├── 1input_1output.pbtxt
+│   │   │   ├── input.pbtxt
+│   │   │   ├── input-vid.pbtxt
+│   │   │   ├── output.pbtxt
+│   │   │   └── output-vid.pbtxt
 │   │   ├── box_detector_retail
+│   │   │   ├── 1input_1output.pbtxt
+│   │   │   ├── input.pbtxt
+│   │   │   └── output.pbtxt
 │   │   └── custom_pipelines
+│   │       ├── extern
+│   │       └── vehicle_classificaiton
 │   └── vck5000
 │       ├── custom_pipelines
+│       │   ├── extern
+│       │   └── vehicle_access_control
 │       ├── to_run_on_both_crowd_and_retail_videos
+│       │   └── box_detector_parallel
 │       ├── to_run_on_crowd_videos
+│       │   ├── apl_crowd_flow
+│       │   └── box_detector
 │       └── to_run_on_retail_videos
-├── web_client_examples
-│   ├── to_run_on_crowd_videos
-│   │   ├── apl_crowd_flow
-│   │   └── box_detector
-│   └── to_run_on_retail_videos
-│       ├── box_detector
-│       └── box_detector_classifier_cascade
-└── examples
-    ├── Web Client Examples
-    │   ├── to_run_on_crowd_videos
-    │   │   ├── apl_crowd_flow
-    │   │   └── box_detector
-    │   └── to_run_on_retail_videos
-    │       ├── box_detector
-    │       └── box_detector_classifier_cascade
-    ├── Command Line Examples
-    │   ├── u30_v205
-    │   │   ├── box_detector_car
-    │   │   ├── box_detector_classifier_cascade
-    │   │   ├── box_detector_retail
-    │   │   └── custom_pipelines
+│           ├── box_detector_classifier_cascade
+│           └── smart_retail
+└── web_client_examples
+    ├── to_run_on_crowd_videos
+    │   ├── apl_crowd_flow
+    │   │   ├── input.pbtxt
+    │   │   ├── output.pbtxt
+    │   │   └── using_rtsp.pbtxt
+    │   └── box_detector
+    │       ├── input.pbtxt
+    │       ├── output.pbtxt
+    │       └── using_rtsp_1output.pbtxt
+    └── to_run_on_retail_videos
+        ├── box_detector
+        │   ├── input.pbtxt
+        │   ├── output.pbtxt
+        │   └── using_rtsp_1output.pbtxt
+        └── box_detector_classifier_cascade
+            ├── input.pbtxt
+            ├── output.pbtxt
+            └── using_rtsp_1output.pbtxt
 ```
 
 ### Web Client Examples
