@@ -8,9 +8,9 @@ VMSS 2.0 allows packets to be synchronized across multiple streams, enabling str
 
 ## How to access VMSS 2.0?
 
-You can access VMSS 2.0 immediately by signing up for a demo account via our partner VMAccel by visiting our Web site and clicking on [VMSS2.0 here](https://www.example.com/vmss2.0).
+You can access VMSS 2.0 immediately by signing up for a demo account via our partner VMAccel by visiting our Web site and clicking on [VMSS2.0 here](https://vmaccel.com/vmssdemo/).
 
-You can also request the latest versions of our VMSS 2.0 through our website.
+You can also request the latest versions of our VMSS 2.0 through our [website](https://auperatechnologies.com/).
 
 ## How to evaluate VMSS 2.0?
 
@@ -18,8 +18,8 @@ This repository provides you with various examples to get you started. We can sp
 
 - Web Client Examples
 - Command Line Examples
-- Predefined Graphs
-- Custom Examples
+    - Predefined Graphs
+    - Custom Buildable Applications
 
 The examples are orgazined as shown below:
 ```
@@ -79,8 +79,63 @@ The examples are orgazined as shown below:
 
 This a set of examples of predefined graphs that contain different examples showcasing the capabilities of combining different nodes from the Nodes Toolkit to run by simply inserting the provided pbtxt file in our Web Client application.
 
+For each example we have provided under a suggested video. For instance, you can find examples that are suitable to run on a video containing people. Those examples are provided under the directory called `to_run_crowd_video`.
+
 Note that given our web client has a restriction of having one input and one output to display, we have separated the examples for this section. You can find these examples for supported devices in the structure shown below:
 
 ### Command Line Examples
 
-... [Content of Command Line Examples section goes here]
+The command line examples consists of two categories of examples:
+
+- Predefined Graphs
+- Custom Buildable Applications
+
+#### Predefined Graphs
+
+These set of examples are exactly similar to what we have provided for Web Client examples. However, these examples don't have the restriction imposed by the Web Client. In order to run these examples the user needs to launce our AVAF_AVAS Docker container:
+
+```
+docker container exec -it aupera_server bash
+```
+
+Once you start the container, inside the docker you can run any of the provided examples by running `avaser` as shown below:
+
+```
+avaser -i [input.pbtxt] -o [output.pbtxt] -c [config_graph.pbtxt]
+```
+
+The input argument `-i` expects a pbtxt file where all the input rtsp streams are listed.
+The output argumet `-o` exepcts a pbtxt file where all the output rtsp streams are listed.
+The config argumet `-c` expects a pbtxt file where the entire pipeline is defined.
+
+
+#### Custom Buildable Applications
+
+This category of examples are provided to illustrate how to build a custom application by creating your own node.
+
+To add a new node, you need to create a folder under custom_pipelines with the source code and .proto (message definition) files of your node. 
+To build your node you run:
+```
+make clean; make -j6; make install
+```
+Inside the docker you can find them at /opt/aupera/avas/examples/custom_pipelines
+
+This make file will copy the .proto file from your node folder into extern/protos folder. 
+Then, it will build and install avap (which registers your proto with the framework).
+Finally, it will build and install your node. 
+**For U30 nodes the install command of make file will also ssh your node over to the U30 device.
+At this point, you can run your node. 
+
+Note:
+The extern folder inside of the custom_pipelines folder contains the following:
+1. avaf binary. This must not have versions. So if you just built avaf and created libavaf.so.3.0.0, then you need to rename this to libavaf.so and place it inside the extern folder. 
+
+2. avaser binary. This is just called avaser. So if you just built avaser you need to copy the generated binary in this folder. 
+
+3. calculator related headers. Any headers that are calculator (and not framework) specific are placed here. These include library headers (detector.hpp, multitracker.hpp, etc), and calculator specific packets (detect_track_packet.h, etc). You need to update this folder if you generated new packet types, or updated the header for one of the cv libraries that you expect the customer to require for their own nodes. 
+
+4. aup/avaf folder containers the framework related headers and packets. If the framework level headers or packets types change, you need to copy the updated file into this folder
+
+5. protos folder. This contains all the .proto files that the framework recognizes and requires to build avap. This also includes the avap make file. The content of this folder must be identical to the corresponding protos folder in the framework. If you add a new node to the framework, you place the new .proto file here. 
+
+
