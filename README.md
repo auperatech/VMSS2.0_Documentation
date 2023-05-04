@@ -329,7 +329,7 @@ As you can see above, this method will parse the options passed to the node and 
 
 ## Defining the execute method  
 
-NOTE: if you decide to use an execute method you will need to 
+***NOTE:*** if you decide to use an execute method you will need to 
 
 execute 
 
@@ -395,7 +395,7 @@ Then, we check if there is a second input stream. If so, then we will read the 1
 
 Finally, we check whether there is an output stream available to this node. If so, we enqueue our result object for the 1st output stream of this node.  
 
-NOTE: The results in this example can be any class that extends the `PacketBase class`. Since any such class can be transmitted across different nodes. 
+***NOTE:*** The results in this example can be any class that extends the `PacketBase class`. Since any such class can be transmitted across different nodes. 
 
 
 
