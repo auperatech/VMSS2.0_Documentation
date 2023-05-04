@@ -1,5 +1,3 @@
-# Table of Contents
-- [Table of Contents](#table-of-contents)
 - [What is VMSS 2.0?](#what-is-vmss-20)
   - [How to access VMSS 2.0?](#how-to-access-vmss-20)
 - [How to evaluate VMSS 2.0?](#how-to-evaluate-vmss-20)
