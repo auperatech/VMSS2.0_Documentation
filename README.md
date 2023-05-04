@@ -1,3 +1,16 @@
+# Table of Contents
+- [Table of Contents](#table-of-contents)
+- [What is VMSS 2.0?](#what-is-vmss-20)
+  - [How to access VMSS 2.0?](#how-to-access-vmss-20)
+- [How to evaluate VMSS 2.0?](#how-to-evaluate-vmss-20)
+  - [Web Client Examples](#web-client-examples)
+  - [Command Line Examples](#command-line-examples)
+    - [Predefined Graphs](#predefined-graphs)
+    - [Custom Buildable Applications](#custom-buildable-applications)
+  - [Steps for creating VMSS2.0 nodes](#steps-for-creating-vmss20-nodes)
+  - [Node Initialization](#node-initialization)
+  - [Defining the execute method](#defining-the-execute-method)
+
 # What is VMSS 2.0?
 
 VMSS is a software application that functions as a video machine-learning streaming server. Its primary purpose is to provide video analytic services to multiple video streams while efficiently utilizing multiple FPGA resources on a server system.
