@@ -2549,6 +2549,55 @@
       "pipeline_pbtxt": "04d61595-c1a1-4a17-b43c-7ae5a5250ade",
       "throughput_pbtxt": "50ed88a2-5433-42b2-956b-7d9619301e99"
     },
+    
+    {
+      "guid": "af675c78-0377-479e-922f-b8a85bb571cf",
+      "model_zoo_name": "cf_SSD-RESNET18_360_640_0_3.6G_2.5",
+      "kernel": "RESNET18SSD_ITER140000_4CAR_CLEAN_20211020_v205_vitis2_5",
+      "vendor": "Aupera",
+      "ml_task": "detection",
+      "application": "adas",
+      "hardware_type": "aupera_v205_1",
+      "hardware_arch": "DPUCZDX8G",
+      "hardware_engine": "", 
+      "model_format": "xmodel",
+      "ml_lib": "caffe1.0",
+      "inference_lib": "vitis2.5",
+      "checksum": "d8e77690aa7b89286cad3f4e916201d8",
+      "download_link": "", 
+      "ops": "3.6G",
+      "input_size": "360x640",
+      "float_accuracy": "0.9330",
+      "quantized_accuracy": "0.8782",
+      "dataset": "private-dataset",
+      "node_pbtxt": "3f2c7947-87cc-4500-830f-785f55d6a6af",
+      "pipeline_pbtxt": "a58228bc-e6ad-4e05-955f-6ca3c308d88e",
+      "throughput_pbtxt": "1393ca9e-a75c-4c92-8008-bc50af209ddb"
+    },
+    {
+      "guid": "dd12b3ac-e370-4951-8bb7-333d459e3e2a",
+      "model_zoo_name": "cf_ssdadas_bdd_360_480_0.95_6.3G_2.5",
+      "kernel": "ssd_adas_pruned_0_95",
+      "vendor": "Xilinx",
+      "ml_task": "detection",
+      "application": "adas",
+      "hardware_type": "aupera_v205_1",
+      "hardware_arch": "DPUCZDX8G",
+      "hardware_engine": "", 
+      "model_format": "xmodel",
+      "ml_lib": "caffe1.0",
+      "inference_lib": "vitis2.5",
+      "checksum": "7116d81ec9054d6e55cbfc52f5ec58eb",
+      "download_link": "", 
+      "ops": "6.3G",
+      "input_size": "360x480",
+      "float_accuracy": "0.4207",
+      "quantized_accuracy": "0.4200",
+      "dataset": "private-dataset",
+      "node_pbtxt": "662a4786-9365-4ef0-968f-b232d6e6725f",
+      "pipeline_pbtxt": "25c6494e-93fa-4589-9938-33526cdac3c2",
+      "throughput_pbtxt": "40116500-6ffd-4556-99f3-6acfb302f597"
+    },
     {
       "guid": "d05f8f64-14d0-42fe-9908-ff3c29490c66",
       "model_zoo_name": "cf_densebox_wider_320_320_0.49G_2.5",
@@ -3302,6 +3351,16 @@
       "hardware_types": ["xilinx_vck5000_gen3x16_xdma_base_1", "A-U50-P00G-LV-G", "aupera_v205_1", "aupera_u30_gen3x4_base_1", "xilinx_v70_gen5x8_qdma_base_2"],
       "hardware_archs": ["DPUCVDX8H", "DPUCVD3k1R", "DPUCV2DX8G"],
       "hardware_engines": ["4pe", "6pe", "8pe"]
+    },
+    {
+      "guid": "231d2fb4-6527-42b9-aa3e-eade58446a37",
+      "type": "aupera_free",
+      "name": "apl_vehicle_reid",
+      "vendor": "Aupera",
+      "pbtxt": "d6495544-cabf-48e8-a075-58d686383138",
+      "hardware_types": ["xilinx_vck5000_gen3x16_xdma_base_1", "A-U50-P00G-LV-G", "aupera_v205_1", "aupera_u30_gen3x4_base_1", "xilinx_v70_gen5x8_qdma_base_2"],
+      "hardware_archs": ["DPUCVDX8H", "DPUCVD3k1R", "DPUCV2DX8G"],
+      "hardware_engines": ["4pe", "6pe", "8pe"]
     }
   ],
   
@@ -3379,6 +3438,17 @@
                 "8649db51-7e22-48a9-819e-fe927b827e07", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac", 
                 "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50", 
                 "60e96d25-07dd-45be-8c19-4175b2884fc3"]
+    },
+    {
+      "guid": "e8a8098b-8b30-40d1-aa44-9a0c61de134b",
+      "name": "demo: vehicle reid and licence plate recognition",
+      "description": "vehicle reid and licence plate recognition runs on car_singapore video",
+      "pbtxt": "ef722af1-55a0-4f32-8dea-a4b4199c7d61",
+      "models": ["af675c78-0377-479e-922f-b8a85bb571cf"],
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "8785871e-21d8-4f22-84cd-38636297daef",
+                "cde737e0-5865-46d6-be71-b43b5522ea15", "65186a8f-80c0-4b26-8453-bd05da30eecd",
+                "231d2fb4-6527-42b9-aa3e-eade58446a37", "cbbeb075-5517-4d0e-9f56-cec8cad595da", 
+                "8a2d1c42-0d85-4423-be85-2651d9e13a50", "60e96d25-07dd-45be-8c19-4175b2884fc3"]
     }
   ],
 
@@ -3487,6 +3557,13 @@
       "description": "default parameters for box_segmentor node",
       "models": [],
       "nodes": ["8649db51-7e22-48a9-819e-fe927b827e07"]
+    },
+    {
+      "guid": "d6495544-cabf-48e8-a075-58d686383138",
+      "name": "node: apl_vehicle_reid default",
+      "description": "default parameters for apl_vehicle_reid node",
+      "models": [],
+      "nodes": ["231d2fb4-6527-42b9-aa3e-eade58446a37"]
     },
 
     
@@ -6176,6 +6253,67 @@
                 "ef596576-6e27-4637-af19-38272b008593", "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
     },
 
+    
+    {
+      "guid": "a58228bc-e6ad-4e05-955f-6ca3c308d88e",
+      "name": "demo: general detection",
+      "description": "general detector (RESNET18SSD_ITER140000_4CAR_CLEAN_20211020_v205_vitis2_5) runs on car videos",
+      "models": ["af675c78-0377-479e-922f-b8a85bb571cf"],
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "8785871e-21d8-4f22-84cd-38636297daef",
+                "cde737e0-5865-46d6-be71-b43b5522ea15", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
+                "60e96d25-07dd-45be-8c19-4175b2884fc3"]
+    },
+    {
+      "guid": "3f2c7947-87cc-4500-830f-785f55d6a6af",
+      "name": "node: box_detector",
+      "description": "box detector (RESNET18SSD_ITER140000_4CAR_CLEAN_20211020_v205_vitis2_5) as adas detector",
+      "models": ["af675c78-0377-479e-922f-b8a85bb571cf"],
+      "nodes": ["cde737e0-5865-46d6-be71-b43b5522ea15"]
+    },
+    {
+      "guid": "1393ca9e-a75c-4c92-8008-bc50af209ddb",
+      "name": "demo: throughput measurement",
+      "description": "throughput measurement for adas detector (RESNET18SSD_ITER140000_4CAR_CLEAN_20211020_v205_vitis2_5)",
+      "models": ["af675c78-0377-479e-922f-b8a85bb571cf"],
+      "nodes": ["5618ff66-748c-4342-86f9-fb019535430f", "cde737e0-5865-46d6-be71-b43b5522ea15",
+                "ef596576-6e27-4637-af19-38272b008593", "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
+    },
+    {
+      "guid": "ef722af1-55a0-4f32-8dea-a4b4199c7d61",
+      "name": "demo: vehicle reid and licence plate recognition",
+      "description": "vehicle reid and licence plate recognition runs on car_singapore video",
+      "models": ["af675c78-0377-479e-922f-b8a85bb571cf"],
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "8785871e-21d8-4f22-84cd-38636297daef",
+                "cde737e0-5865-46d6-be71-b43b5522ea15", "65186a8f-80c0-4b26-8453-bd05da30eecd",
+                "231d2fb4-6527-42b9-aa3e-eade58446a37", "cbbeb075-5517-4d0e-9f56-cec8cad595da", 
+                "8a2d1c42-0d85-4423-be85-2651d9e13a50", "60e96d25-07dd-45be-8c19-4175b2884fc3"]
+    },
+    {
+      "guid": "25c6494e-93fa-4589-9938-33526cdac3c2",
+      "name": "demo: adas detection",
+      "description": "adas detector (ssd_adas_pruned_0_95) runs on car videos",
+      "models": ["dd12b3ac-e370-4951-8bb7-333d459e3e2a"],
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "8785871e-21d8-4f22-84cd-38636297daef",
+                "cde737e0-5865-46d6-be71-b43b5522ea15", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
+                "60e96d25-07dd-45be-8c19-4175b2884fc3"]
+    },
+    {
+      "guid": "662a4786-9365-4ef0-968f-b232d6e6725f",
+      "name": "node: box_detector",
+      "description": "box detector (ssd_adas_pruned_0_95) as adas detector",
+      "models": ["dd12b3ac-e370-4951-8bb7-333d459e3e2a"],
+      "nodes": ["cde737e0-5865-46d6-be71-b43b5522ea15"]
+    },
+    {
+      "guid": "40116500-6ffd-4556-99f3-6acfb302f597",
+      "name": "demo: throughput measurement",
+      "description": "throughput measurement for adas detector (ssd_adas_pruned_0_95)",
+      "models": ["dd12b3ac-e370-4951-8bb7-333d459e3e2a"],
+      "nodes": ["5618ff66-748c-4342-86f9-fb019535430f", "cde737e0-5865-46d6-be71-b43b5522ea15",
+                "ef596576-6e27-4637-af19-38272b008593", "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
+    },
     {
       "guid": "25c0c279-218d-41ea-a5e2-562c08513bbc",
       "name": "demo: person face detection",

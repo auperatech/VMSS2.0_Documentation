@@ -1,0 +1,125 @@
+node {
+  name: "vehicle_reid"
+  calculator: "apl_vehicle_reid"
+  input_stream: "tracks_stream"
+  input_stream: "image_stream_decode"
+  input_stream: "video_stream_info_demux"
+  input_stream: "detect_interval_side_packet"
+  output_stream: "imgStream1080p_aplOut"
+  stream_sync: {
+    drop_strategy: DROP_INCOMPLETE_PACKETS
+    timeout_ms: 0
+  }
+  node_options: {
+    [type.googleapis.com/aup.avaf.AplVehicleReIDOptions]: {
+      common_fields: {
+        notification_port: 0
+        max_file_cache: 100
+        max_cluster_size: 100
+        debug: false
+        draw: true
+        # use the same rois as the detection_roi
+        roi: {
+          point: {
+            x: 0
+            y: 0
+          }
+          point: {
+            x: 1920
+            y: 0
+          }
+          point: {
+            x: 1920
+            y: 1080
+          }
+          point: {
+            x: 0
+            y: 1080
+          }
+        }
+      }
+      # general fields
+      clean_plot: false
+      save_gallery: false
+      # plate_lib configs
+      traffic_vehicle_plate_vehicle_rotation: 0
+      traffic_plate_confidence_threshold: 0.3
+      traffic_plate_area_threshold: 700
+      traffic_vehicle_plate_detector_from_xilinx: false
+      traffic_vehicle_plate_recognizer_from_xilinx: false
+      traffic_vehicle_plate_detector_skip: false
+      traffic_plate_checksum_verification: true
+      traffic_plate_run_preprocessing: false
+      # General LPR pipeline-related configs  
+      traffic_plate_min_history: 5
+      traffic_vehicle_plate_update_with_area: true
+      traffic_verified_plate_selction_criteria: "default"
+      traffic_plate_update_threshold: 8
+      traffic_get_attributes: false
+      # Vehicle detection-related configs
+      traffic_class_min_history: 10
+      # Tracking-related configs
+      object_movement_iou_threshold: 0.8
+      # Notification-related configs
+      traffic_parking_alert_alarm_time_in_sec: 30.0
+      traffic_parking_zone_notify_time_in_sec: 0.0
+      tracklet_reporting_interval_in_sec: 60
+      http_listener_server: ""
+      alarm_clear_frame_delay: 7
+      # Halting related configs
+      halting_alert_len_in_sec: 10.0
+      active_alert_len_in_sec: 30.0
+      owner_left_alert_len_in_sec: 900.0
+      mse_liveliness_threshold: 8.0
+      avg_active_threshold: 10.0
+      avg_halting_threshold: 10.0
+      # pipeline related RoIs
+      # use the same roi as detection roi
+      manager_roi: {
+        point: {
+          x: 0
+          y: 0
+        }
+        point: {
+          x: 1920
+          y: 0
+        }
+        point: {
+          x: 1920
+          y: 1080
+        }
+        point: {
+          x: 0
+          y: 1080
+        }
+      }
+      # Encoder-related configs
+      traffic_encoder_kernel: ""
+      traffic_encoder_model: ""
+      enable_encoding: false
+      max_camera_avg_enc_objs: 2500
+      cam_avg_enc_update_sim_th: 0.98
+      want_cam_avg_enc: true
+      
+      # LPR-specific config
+      traffic_plate_detection_or_violation_roi_only: true
+      # Notification
+      traffic_only_send_new_image: false
+      traffic_only_notify_vehicle_with_LP: false
+      traffic_notify_reporting_interval: true
+      traffic_update_image_mode: "plate"
+      # Misc
+      save_eval_results: true
+      camera_id: 0
+      traffic_track_in_parking_zone: false
+      setup_base_assets_sleep_insec: 0
+      # Trajectory fitting
+      want_tracklet_curve_fitting: false
+      trajectory_min_points: 5
+      trajectory_poly: 1
+      curve_fitting_method: "parametric"
+      curve_fitting_var: "xy"
+      homography_file: ""
+    }
+  }
+}
