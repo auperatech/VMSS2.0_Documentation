@@ -57,7 +57,7 @@ node {
       log_performance: false
       run_on_letterboxed_img: false
       batch_size: 8
-      detection_threads: 8
+      detection_threads: 1
       return_frames_inorder: false 
       batch_collection_timeout_ms: 0
       ignore_black_frames: false
@@ -144,7 +144,7 @@ node {
         notification_port: 19999
         max_file_cache: 100
         max_cluster_size: 100
-        debug: true
+        debug: false
         draw: false
         # use the same rois as the detection_roi
         roi: {
@@ -247,7 +247,7 @@ node {
       traffic_update_image_mode: "plate"
 
       # Misc
-      save_eval_results: true
+      save_eval_results: false
       camera_id: 1
       traffic_track_in_parking_zone: false
       setup_base_assets_sleep_insec: 0
@@ -266,7 +266,7 @@ node {
 statistics_collector: {
   target_file: "/tmp/vehicleReID_lpr_4models_cascade_throughput.json"
   throughput_stream_name: "imgStream1080p_aplOut"
-  throughput_ignore_initial_packets_count: 10
+  throughput_ignore_initial_packets_count: 1000
 }
 
 node {
