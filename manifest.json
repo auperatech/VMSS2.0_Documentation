@@ -6365,7 +6365,7 @@
                 "ef596576-6e27-4637-af19-38272b008593", "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
     },
     {
-      "guid": "1647f0ee-3612-40a2-8a03-a871878f4763",
+      "guid": "1fe19cd5-6a89-45ee-be40-e7ca3ef36b0c",
       "name": "demo: adas detection",
       "description": "adas detector (ssd_traffic_pruned_0_9) runs on car videos",
       "models": ["33dbdd25-8290-4c46-8e46-9fedea8dcc36"],
@@ -6375,14 +6375,14 @@
                 "60e96d25-07dd-45be-8c19-4175b2884fc3"]
     },
     {
-      "guid": "2208ae19-651f-43f8-b350-6707adaaba57",
+      "guid": "74d447a4-122c-411a-9f00-1b0a4bed99e0",
       "name": "node: box_detector",
       "description": "box detector (ssd_traffic_pruned_0_9) as adas detector",
       "models": ["33dbdd25-8290-4c46-8e46-9fedea8dcc36"],
       "nodes": ["cde737e0-5865-46d6-be71-b43b5522ea15"]
     },
     {
-      "guid": "d4f50823-3c93-4026-9845-0ec61650fec3",
+      "guid": "974c97b6-ae6a-49bb-bb92-223c525a2a8b",
       "name": "demo: throughput measurement",
       "description": "throughput measurement for adas detector (ssd_traffic_pruned_0_9)",
       "models": ["33dbdd25-8290-4c46-8e46-9fedea8dcc36"],
@@ -6390,7 +6390,7 @@
                 "ef596576-6e27-4637-af19-38272b008593", "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
     },
     {
-      "guid": "9bedc4b3-2fbc-4429-8b0f-23b8cb012ea6",
+      "guid": "51d31f23-7be4-480a-a4c7-a41edf1cd901",
       "name": "demo: retail detection",
       "description": "retail detector (tiny_yolov3_vmss) runs on retail videos",
       "models": ["d7b676bb-328d-4ea1-a641-5c22e0b2d783"],
@@ -6400,14 +6400,14 @@
                 "60e96d25-07dd-45be-8c19-4175b2884fc3"]
     },
     {
-      "guid": "88f8526e-9198-4d15-bfc7-312e44e0a1f0",
+      "guid": "5adcee36-0a62-4347-bfad-af079c519ef9",
       "name": "node: box_detector",
       "description": "box detector (tiny_yolov3_vmss) as retail detector",
       "models": ["d7b676bb-328d-4ea1-a641-5c22e0b2d783"],
       "nodes": ["cde737e0-5865-46d6-be71-b43b5522ea15"]
     },
     {
-      "guid": "a29f18d3-ece7-4d2a-9c99-4fba0f420d19",
+      "guid": "9d980123-fe6f-43dd-b033-d8892c0550f6",
       "name": "demo: throughput measurement",
       "description": "throughput measurement for retail detector (tiny_yolov3_vmss)",
       "models": ["d7b676bb-328d-4ea1-a641-5c22e0b2d783"],
