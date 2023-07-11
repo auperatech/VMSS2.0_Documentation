@@ -2575,6 +2575,30 @@
       "throughput_pbtxt": "1393ca9e-a75c-4c92-8008-bc50af209ddb"
     },
     {
+      "guid": "8f9b3901-bc47-4349-b5aa-480338d56d56",
+      "model_zoo_name": "cf_AttentionV9_WildVeRI_192_384_0_23.5G_2.5",
+      "kernel": "CAR_REID_ATTENTION_V9_BATCH64_CFV_VEX_VERI_WILDVERI_14JUNE2021_DOUBLE_ITER50000_v205_2_5",
+      "vendor": "Aupera",
+      "ml_task": "vehicle_reid_lpr",
+      "application": "adas",
+      "hardware_type": "aupera_v205_1",
+      "hardware_arch": "DPUCZDX8G",
+      "hardware_engine": "", 
+      "model_format": "xmodel",
+      "ml_lib": "caffe1.0",
+      "inference_lib": "vitis2.5",
+      "checksum": "0906f3922ab8fc8c08008d613b5b2f63",
+      "download_link": "", 
+      "ops": "23.5G",
+      "input_size": "192x384",
+      "float_accuracy": "0.6630",
+      "quantized_accuracy": "0.6630",
+      "dataset": "WildVeRI",
+      "node_pbtxt": "f7276aae-1c4c-4a72-8069-2a3a90084e16",
+      "pipeline_pbtxt": "ef722af1-55a0-4f32-8dea-a4b4199c7d61",
+      "throughput_pbtxt": "9045423e-8b75-4e13-bcaf-70cdd4ca4230"
+    },
+    {
       "guid": "dd12b3ac-e370-4951-8bb7-333d459e3e2a",
       "model_zoo_name": "cf_ssdadas_bdd_360_480_0.95_6.3G_2.5",
       "kernel": "ssd_adas_pruned_0_95",
@@ -3444,7 +3468,7 @@
       "name": "demo: vehicle reid and licence plate recognition",
       "description": "vehicle reid and licence plate recognition runs on car_singapore video",
       "pbtxt": "ef722af1-55a0-4f32-8dea-a4b4199c7d61",
-      "models": ["af675c78-0377-479e-922f-b8a85bb571cf"],
+      "models": ["af675c78-0377-479e-922f-b8a85bb571cf", "8f9b3901-bc47-4349-b5aa-480338d56d56"],
       "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "8785871e-21d8-4f22-84cd-38636297daef",
                 "cde737e0-5865-46d6-be71-b43b5522ea15", "65186a8f-80c0-4b26-8453-bd05da30eecd",
                 "231d2fb4-6527-42b9-aa3e-eade58446a37", "cbbeb075-5517-4d0e-9f56-cec8cad595da", 
@@ -6283,11 +6307,28 @@
       "guid": "ef722af1-55a0-4f32-8dea-a4b4199c7d61",
       "name": "demo: vehicle reid and licence plate recognition",
       "description": "vehicle reid and licence plate recognition runs on car_singapore video",
-      "models": ["af675c78-0377-479e-922f-b8a85bb571cf"],
+      "models": ["af675c78-0377-479e-922f-b8a85bb571cf", "8f9b3901-bc47-4349-b5aa-480338d56d56"],
       "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "8785871e-21d8-4f22-84cd-38636297daef",
                 "cde737e0-5865-46d6-be71-b43b5522ea15", "65186a8f-80c0-4b26-8453-bd05da30eecd",
                 "231d2fb4-6527-42b9-aa3e-eade58446a37", "cbbeb075-5517-4d0e-9f56-cec8cad595da", 
                 "8a2d1c42-0d85-4423-be85-2651d9e13a50", "60e96d25-07dd-45be-8c19-4175b2884fc3"]
+    },
+    {
+      "guid": "f7276aae-1c4c-4a72-8069-2a3a90084e16",
+      "name": "node: apl_vehicle_reid",
+      "description": "apl_vehicle_reid node for vehicle reid and licence plate recognition",
+      "models": ["8f9b3901-bc47-4349-b5aa-480338d56d56"],
+      "nodes": ["231d2fb4-6527-42b9-aa3e-eade58446a37"]
+    },
+    {
+      "guid": "9045423e-8b75-4e13-bcaf-70cdd4ca4230",
+      "name": "demo: throughput measurement",
+      "description": "throughput measurement for vehicle reid and licence plate recognition pipeline",
+      "models": ["af675c78-0377-479e-922f-b8a85bb571cf", "8f9b3901-bc47-4349-b5aa-480338d56d56"],
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "8785871e-21d8-4f22-84cd-38636297daef",
+                "cde737e0-5865-46d6-be71-b43b5522ea15", "65186a8f-80c0-4b26-8453-bd05da30eecd",
+                "231d2fb4-6527-42b9-aa3e-eade58446a37", "ef596576-6e27-4637-af19-38272b008593", 
+                "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
     },
     {
       "guid": "25c6494e-93fa-4589-9938-33526cdac3c2",
@@ -6943,7 +6984,7 @@
 
   "enums":{
     "hardware_engines": ["4pe", "6pe", "8pe"],
-    "ml_tasks": ["detection", "classification", "encoding", "segmentation"],
+    "ml_tasks": ["detection", "classification", "encoding", "segmentation", "vehicle_reid_lpr"],
     "model_formats": ["xmodel", "tf", "pt"],
     "ml_libs": ["tensorflow1.0", "tensorflow1.15.0", "tensorflow2.0", "tensorflow2.3.0",
                  "pytorch1.1", "pytorch2.1", "pytorch1.7.1", "pytorch1.4.0", "pytorch1.9.0", "pytorch1.10.0", "caffe1.0", "darknet"],
