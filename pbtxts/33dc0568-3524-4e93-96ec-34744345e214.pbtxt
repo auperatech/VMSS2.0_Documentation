@@ -1,0 +1,25 @@
+node {
+  name: "segmentor"
+  calculator: "box_segmentor"
+  input_stream: "image_stream_decode"
+  output_stream: "segmentation_stream"
+  ml_model_kernel_name: "SemanticFPN_Mobilenetv2_pt"
+  node_options: {
+    [type.googleapis.com/aup.avaf.BoxSegmentorOptions]: {
+      segmentor_type: "Segmentation2D"
+      need_preprocess: true
+      log_performance: false
+      log_info: false
+      run_on_letterboxed_img: false
+      batch_size: 8
+      force_batch_size: false
+      return_frames_inorder: true
+      segmentation_threads: 1
+      batch_collection_timeout_ms: 0
+      ignore_black_frames: false
+      max_segmentation_lib_q_size: 30
+      resizing: true
+      interpolation_flag: 0
+    }
+  }
+}
