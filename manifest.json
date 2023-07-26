@@ -2575,6 +2575,30 @@
       "throughput_pbtxt": "1393ca9e-a75c-4c92-8008-bc50af209ddb"
     },
     {
+      "guid": "e55b542d-df38-45c5-a500-d6ce38de965b",
+      "model_zoo_name": "cf_SSD-RESNET18_PERSON-HEAD-SHIUN_540_960_0_6.3G_2.5",
+      "kernel": "RESNET18SSD_ITER115000_PRIVATE_FINAL501IMAGES_AND_55IMAGES_FROMFIELD_ADDED_01JULY2021_CROWD_FLOW_PERSON_HEAD_v205_vitis2_5",
+      "vendor": "Aupera",
+      "ml_task": "detection",
+      "application": "person-head",
+      "hardware_type": "aupera_v205_1",
+      "hardware_arch": "DPUCZDX8G",
+      "hardware_engine": "", 
+      "model_format": "xmodel",
+      "ml_lib": "caffe1.0",
+      "inference_lib": "vitis2.5",
+      "checksum": "368ed909dec07f74a873f5b80970665f",
+      "download_link": "", 
+      "ops": "6.3G",
+      "input_size": "540x960",
+      "float_accuracy": "0.8037",
+      "quantized_accuracy": "0.6323",
+      "dataset": "person-head-shiun",
+      "node_pbtxt": "d6914b63-4b43-42af-9265-aef3b6807339",
+      "pipeline_pbtxt": "daa0a814-4979-4017-9b78-2cb86b005b79",
+      "throughput_pbtxt": "7b0a1832-2359-41ab-bf43-c7851adbc869"
+    },
+    {
       "guid": "8f9b3901-bc47-4349-b5aa-480338d56d56",
       "model_zoo_name": "cf_AttentionV9_WildVeRI_192_384_0_23.5G_2.5",
       "kernel": "CAR_REID_ATTENTION_V9_BATCH64_CFV_VEX_VERI_WILDVERI_14JUNE2021_DOUBLE_ITER50000_v205_2_5",
@@ -4015,6 +4039,17 @@
   
   "example_pipelines": [
     {
+      "guid": "1c3cb3c3-7abc-4651-bc94-dd603a672a14",
+      "name": "demo: encoding and decoding",
+      "description": "just decoding and encoding with no ml models",
+      "pbtxt": "bb989898-064d-4efd-8b3e-88ca388a6bc0",
+      "models": [],
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
+                "60e96d25-07dd-45be-8c19-4175b2884fc3"]
+    },
+
+    {
       "guid": "572caa09-5f85-47f4-a165-09cba51df07b",
       "name": "demo: head person detection",
       "description": "head person detector runs on crowd videos",
@@ -4022,16 +4057,6 @@
       "models": ["f358d776-130b-4daa-9d33-c017d20307de"],
       "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
                 "cde737e0-5865-46d6-be71-b43b5522ea15", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
-                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
-                "60e96d25-07dd-45be-8c19-4175b2884fc3"]
-    },
-    {
-      "guid": "1c3cb3c3-7abc-4651-bc94-dd603a672a14",
-      "name": "demo: encoding and decoding",
-      "description": "just decoding and encoding with no ml models",
-      "pbtxt": "bb989898-064d-4efd-8b3e-88ca388a6bc0",
-      "models": [],
-      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
                 "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
                 "60e96d25-07dd-45be-8c19-4175b2884fc3"]
     },
@@ -4087,6 +4112,71 @@
                 "8649db51-7e22-48a9-819e-fe927b827e07", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac", 
                 "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50", 
                 "60e96d25-07dd-45be-8c19-4175b2884fc3"]
+    },
+
+    {
+      "guid": "a6e494e1-adaf-447f-a754-41464bd5b4c9",
+      "name": "demo: person face detection",
+      "description": "person face detector runs on crowd videos",
+      "pbtxt": "25c0c279-218d-41ea-a5e2-562c08513bbc",
+      "models": ["d05f8f64-14d0-42fe-9908-ff3c29490c66"],
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "8785871e-21d8-4f22-84cd-38636297daef",
+                "cde737e0-5865-46d6-be71-b43b5522ea15", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
+                "60e96d25-07dd-45be-8c19-4175b2884fc3"]
+    },
+    {
+      "guid": "74b5cea0-7a3d-406f-900d-5fae495cc148",
+      "name": "demo: general classification",
+      "description": "box classifier runs on imagenet videos",
+      "pbtxt": "30975cee-a3a1-443b-83d9-dc5f165bfc3b",
+      "models": ["a8729008-88a0-42b6-a68a-34ce76390d3e"],
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "8785871e-21d8-4f22-84cd-38636297daef",
+                "1d049bee-88bb-419f-97c9-4f10db4008b3", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac", 
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50", 
+                "60e96d25-07dd-45be-8c19-4175b2884fc3"]
+    },
+    {
+      "guid": "b35efd22-2fd9-472d-8c58-9bfe184e8b2f",
+      "name": "demo: general detection and classification cascade",
+      "description": "box detector and classifier cascade runs on car videos",
+      "pbtxt": "85d64a54-29a6-4ca4-91e8-369750ac8db2",
+      "models": ["9ddca429-7275-480d-9fee-2b7109423381", "a8729008-88a0-42b6-a68a-34ce76390d3e"],
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "8785871e-21d8-4f22-84cd-38636297daef",
+                "cde737e0-5865-46d6-be71-b43b5522ea15", "1d049bee-88bb-419f-97c9-4f10db4008b3",
+                "f6d4c0be-7146-463e-9e75-7c7aae7dbdac", "cbbeb075-5517-4d0e-9f56-cec8cad595da",
+                "8a2d1c42-0d85-4423-be85-2651d9e13a50", "60e96d25-07dd-45be-8c19-4175b2884fc3"]
+    },
+    {
+      "guid": "4f2b433b-cd0b-4e47-b248-caeb040fa745",
+      "name": "demo: adas segmentation",
+      "description": "box segmentor runs on car videos",
+      "pbtxt": "0669dc6b-93fa-472b-b12b-85f1d4ed2f12",
+      "models": ["f56ceace-fc8c-4b40-b270-7a4dcca59b0b"],
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "8785871e-21d8-4f22-84cd-38636297daef",
+                "8649db51-7e22-48a9-819e-fe927b827e07", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac", 
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50", 
+                "60e96d25-07dd-45be-8c19-4175b2884fc3"]
+    },
+    {
+      "guid": "ca7d2c9a-ed0b-484f-805d-714fd729f117",
+      "name": "demo: throughput measurement",
+      "description": "throughput measurement for general classifier (resnet18)",
+      "pbtxt": "51e3c5ee-e5fc-407d-8912-4e36608609b3",
+      "models": ["a8729008-88a0-42b6-a68a-34ce76390d3e"],
+      "nodes": ["5618ff66-748c-4342-86f9-fb019535430f", "1d049bee-88bb-419f-97c9-4f10db4008b3",
+                "ef596576-6e27-4637-af19-38272b008593", "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
+    },
+    {
+      "guid": "aa0d6170-f964-41e9-b10e-bcf8220d27de",
+      "name": "demo: crowd flow application",
+      "description": "crowd flow application runs on crowd videos",
+      "pbtxt": "cd7b14bc-bc41-49a3-80fa-eba5516527f5",
+      "models": ["e55b542d-df38-45c5-a500-d6ce38de965b"],
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "8785871e-21d8-4f22-84cd-38636297daef",
+                "cde737e0-5865-46d6-be71-b43b5522ea15", "65186a8f-80c0-4b26-8453-bd05da30eecd",
+                "642bc22b-1038-465b-b90a-895a99d18474", "cbbeb075-5517-4d0e-9f56-cec8cad595da",
+                "8a2d1c42-0d85-4423-be85-2651d9e13a50", "60e96d25-07dd-45be-8c19-4175b2884fc3"]
     },
     {
       "guid": "e8a8098b-8b30-40d1-aa44-9a0c61de134b",
@@ -6929,6 +7019,41 @@
                 "ef596576-6e27-4637-af19-38272b008593", "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
     },
     {
+      "guid": "daa0a814-4979-4017-9b78-2cb86b005b79",
+      "name": "demo: head person detection",
+      "description": "head person detector (RESNET18SSD) runs on crowd videos",
+      "models": ["e55b542d-df38-45c5-a500-d6ce38de965b"],
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "8785871e-21d8-4f22-84cd-38636297daef",
+                "cde737e0-5865-46d6-be71-b43b5522ea15", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
+                "60e96d25-07dd-45be-8c19-4175b2884fc3"]
+    },
+    {
+      "guid": "d6914b63-4b43-42af-9265-aef3b6807339",
+      "name": "node: box_detector",
+      "description": "box detector (RESNET18SSD) as head person detector",
+      "models": ["e55b542d-df38-45c5-a500-d6ce38de965b"],
+      "nodes": ["cde737e0-5865-46d6-be71-b43b5522ea15"]
+    },
+    {
+      "guid": "7b0a1832-2359-41ab-bf43-c7851adbc869",
+      "name": "demo: throughput measurement",
+      "description": "throughput measurement for head person detector (RESNET18SSD)",
+      "models": ["e55b542d-df38-45c5-a500-d6ce38de965b"],
+      "nodes": ["5618ff66-748c-4342-86f9-fb019535430f", "cde737e0-5865-46d6-be71-b43b5522ea15",
+                "ef596576-6e27-4637-af19-38272b008593", "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
+    },
+    {
+      "guid": "cd7b14bc-bc41-49a3-80fa-eba5516527f5",
+      "name": "demo: crowd flow application",
+      "description": "crowd flow application runs on crowd videos",
+      "models": ["e55b542d-df38-45c5-a500-d6ce38de965b"],
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "8785871e-21d8-4f22-84cd-38636297daef",
+                "cde737e0-5865-46d6-be71-b43b5522ea15", "65186a8f-80c0-4b26-8453-bd05da30eecd",
+                "642bc22b-1038-465b-b90a-895a99d18474", "cbbeb075-5517-4d0e-9f56-cec8cad595da",
+                "8a2d1c42-0d85-4423-be85-2651d9e13a50", "60e96d25-07dd-45be-8c19-4175b2884fc3"]
+    },
+    {
       "guid": "ef722af1-55a0-4f32-8dea-a4b4199c7d61",
       "name": "demo: vehicle reid and licence plate recognition",
       "description": "vehicle reid and licence plate recognition runs on car_singapore video",
@@ -7604,6 +7729,16 @@
       "models": ["a8729008-88a0-42b6-a68a-34ce76390d3e"],
       "nodes": ["5618ff66-748c-4342-86f9-fb019535430f", "1d049bee-88bb-419f-97c9-4f10db4008b3",
                 "ef596576-6e27-4637-af19-38272b008593", "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
+    },
+    {
+      "guid": "85d64a54-29a6-4ca4-91e8-369750ac8db2",
+      "name": "demo: general detection and classification cascade",
+      "description": "box detector and classifier cascade runs on car videos",
+      "models": ["9ddca429-7275-480d-9fee-2b7109423381", "a8729008-88a0-42b6-a68a-34ce76390d3e"],
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "8785871e-21d8-4f22-84cd-38636297daef",
+                "cde737e0-5865-46d6-be71-b43b5522ea15", "1d049bee-88bb-419f-97c9-4f10db4008b3",
+                "f6d4c0be-7146-463e-9e75-7c7aae7dbdac", "cbbeb075-5517-4d0e-9f56-cec8cad595da",
+                "8a2d1c42-0d85-4423-be85-2651d9e13a50", "60e96d25-07dd-45be-8c19-4175b2884fc3"]
     },
     {
       "guid": "5c872ab0-5915-4f10-9025-c6c2785f9fb5",

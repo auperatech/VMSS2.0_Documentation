@@ -1,0 +1,44 @@
+node {
+  name: "detector"
+  calculator: "box_detector"
+  input_stream: "image_stream_decode"
+  output_stream: "detections_stream"
+  output_stream: "detect_interval"
+  ml_model_kernel_name: "RESNET18SSD_ITER115000_PRIVATE_FINAL501IMAGES_AND_55IMAGES_FROMFIELD_ADDED_01JULY2021_CROWD_FLOW_PERSON_HEAD_v205_vitis2_5"
+  node_options: {
+    [type.googleapis.com/aup.avaf.BoxDetectorOptions]: {
+      detect_interval: 1
+      detector_type: "SSD"
+      need_preprocess: true
+      log_performance: false
+      run_on_letterboxed_img: false
+      batch_size: 1
+      return_frames_inorder: true 
+      batch_collection_timeout_ms: 0
+      ignore_black_frames: false
+      max_detection_lib_q_size: 30
+      mean: {
+        r: 122.358098
+        g: 124.605266
+        b: 126.131243
+      }
+      scale: {
+        ch1: 1
+        ch2: 1
+        ch3: 1
+      }
+      label_confidence: {
+        label: 0
+        confidence: 0.0
+      }
+      label_confidence: {
+        label: 1
+        confidence: 0.3
+      }
+      label_confidence: {
+        label: 2
+        confidence: 0.2
+      }
+    }
+  }
+}
