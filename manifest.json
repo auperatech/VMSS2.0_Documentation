@@ -4096,7 +4096,7 @@
     {
       "guid": "3f8ed874-2f17-491b-b703-f47dc07f0c34",
       "name": "demo: throughput measurement",
-      "description": "throughput measurement for head person detector (RESNET18)",
+      "description": "throughput measurement for head person detector",
       "pbtxt": "bc00d1f1-9eb1-40b6-bf0c-c5e5de62026e",
       "models": ["f358d776-130b-4daa-9d33-c017d20307de"],
       "nodes": ["5618ff66-748c-4342-86f9-fb019535430f", "cde737e0-5865-46d6-be71-b43b5522ea15",
@@ -4112,6 +4112,60 @@
                 "8649db51-7e22-48a9-819e-fe927b827e07", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac", 
                 "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50", 
                 "60e96d25-07dd-45be-8c19-4175b2884fc3"]
+    },
+
+    {
+      "guid": "cbd9c6a5-6a48-48e7-a89b-cccdc7acb5eb",
+      "name": "demo: general detection",
+      "description": "general detector runs on car videos",
+      "pbtxt": "cf118ca0-ddc8-4f91-bb42-a9636ea659cd",
+      "models": ["9b81da10-2a5a-4103-abc9-6bed3c8ea901"],
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
+                "cde737e0-5865-46d6-be71-b43b5522ea15", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
+                "60e96d25-07dd-45be-8c19-4175b2884fc3"]
+    },
+    {
+      "guid": "af2f10b6-870f-410f-94c2-6d5e614d00ec",
+      "name": "demo: general classification",
+      "description": "box classifier runs on imagenet videos",
+      "pbtxt": "42745c86-5a4d-45f6-a092-a3767611028f",
+      "models": ["858ce2ab-a33e-43b1-96f4-bf264606157f"],
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
+                "1d049bee-88bb-419f-97c9-4f10db4008b3", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac", 
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50", 
+                "60e96d25-07dd-45be-8c19-4175b2884fc3"]
+    },
+    {
+      "guid": "04889940-dad8-4d42-80dd-5ae9ae525768",
+      "name": "demo: general detection and classification cascade",
+      "description": "box detector and classifier cascade runs on car videos",
+      "pbtxt": "edf38b45-ff2d-413d-8d32-a9126c65a9ee",
+      "models": ["9b81da10-2a5a-4103-abc9-6bed3c8ea901", "858ce2ab-a33e-43b1-96f4-bf264606157f"],
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
+                "cde737e0-5865-46d6-be71-b43b5522ea15", "1d049bee-88bb-419f-97c9-4f10db4008b3",
+                "f6d4c0be-7146-463e-9e75-7c7aae7dbdac", "cbbeb075-5517-4d0e-9f56-cec8cad595da",
+                "8a2d1c42-0d85-4423-be85-2651d9e13a50", "60e96d25-07dd-45be-8c19-4175b2884fc3"]
+    },
+    {
+      "guid": "25b58512-c77e-4b55-8316-cd033592a98b",
+      "name": "demo: adas segmentation",
+      "description": "box segmentor runs on car videos",
+      "pbtxt": "a677d7ed-bcba-4e9e-9bcd-3ed906627d30",
+      "models": ["1f76ee36-c451-4333-9d16-ffa367fd5e8a"],
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
+                "8649db51-7e22-48a9-819e-fe927b827e07", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac", 
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50", 
+                "60e96d25-07dd-45be-8c19-4175b2884fc3"]
+    },
+    {
+      "guid": "799ca304-3b5d-45ad-901d-fab421abf6f8",
+      "name": "demo: throughput measurement",
+      "description": "throughput measurement for general detector (yolov3_voc_tf)",
+      "pbtxt": "dcf64deb-26ae-40a2-8fb5-53a5e88c7e55",
+      "models": ["9b81da10-2a5a-4103-abc9-6bed3c8ea901"],
+      "nodes": ["5618ff66-748c-4342-86f9-fb019535430f", "cde737e0-5865-46d6-be71-b43b5522ea15",
+                "ef596576-6e27-4637-af19-38272b008593", "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
     },
 
     {
@@ -5564,6 +5618,16 @@
       "models": ["858ce2ab-a33e-43b1-96f4-bf264606157f"],
       "nodes": ["5618ff66-748c-4342-86f9-fb019535430f", "1d049bee-88bb-419f-97c9-4f10db4008b3",
                 "ef596576-6e27-4637-af19-38272b008593", "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
+    },
+    {
+      "guid": "edf38b45-ff2d-413d-8d32-a9126c65a9ee",
+      "name": "demo: general detection and classification cascade",
+      "description": "box detector and classifier cascade runs on car videos",
+      "models": ["9b81da10-2a5a-4103-abc9-6bed3c8ea901", "858ce2ab-a33e-43b1-96f4-bf264606157f"],
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
+                "cde737e0-5865-46d6-be71-b43b5522ea15", "1d049bee-88bb-419f-97c9-4f10db4008b3",
+                "f6d4c0be-7146-463e-9e75-7c7aae7dbdac", "cbbeb075-5517-4d0e-9f56-cec8cad595da",
+                "8a2d1c42-0d85-4423-be85-2651d9e13a50", "60e96d25-07dd-45be-8c19-4175b2884fc3"]
     },
     {
       "guid": "53a08f68-fbac-4866-afee-8cf5423bb368",
