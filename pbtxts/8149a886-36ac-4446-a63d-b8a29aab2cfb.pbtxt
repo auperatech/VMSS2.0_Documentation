@@ -9,7 +9,7 @@ node {
     timeout_ms: 5000
   }
   node_options: {
-    [type.googleapis.com/aup.avaf.BoxVisualizerOptions]: {
+    [type.googleapis.com/aup.avaf.BoxVisualizerOptions] {
       input_type: INPUT_TYPE_DETECTION
       # enum InputType {
       #   INPUT_TYPE_DETECTION = 0;
