@@ -96,7 +96,7 @@ node {
       # Encoder-related configs
       traffic_encoder_kernel: "CAR_REID_ATTENTION_V9_BATCH64_CFV_VEX_VERI_WILDVERI_14JUNE2021_DOUBLE_ITER50000_v205_2_5"
       traffic_encoder_model: "car_attentionnet_reid"
-      enable_encoding: true
+      enable_encoding: false
       max_camera_avg_enc_objs: 2500
       cam_avg_enc_update_sim_th: 0.98
       want_cam_avg_enc: true
