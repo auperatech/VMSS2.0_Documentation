@@ -3880,8 +3880,8 @@
       "name": "box_detector",
       "vendor": "Aupera",
       "pbtxt": "6f93503e-52ce-4acf-a6bb-1599d20b0db4",
-      "hardware_types": ["xilinx_vck5000_gen3x16_xdma_base_1", "A-U50-P00G-LV-G", "aupera_v205_1", "aupera_u30_gen3x4_base_1", "xilinx_v70_gen5x8_qdma_base_2"],
-      "hardware_archs": ["DPUCVDX8H", "DPUCVD3k1R", "DPUCV2DX8G"],
+      "hardware_types": ["xilinx_vck5000_gen3x16_xdma_base_1", "xilinx_v70_gen5x8_qdma_base_2", "A-U50-P00G-LV-G", "aupera_v205_1", "aupera_u30_gen3x4_base_1", "aupera_som_1", "aupera_sbc_x7_1"],
+      "hardware_archs": ["DPUCVDX8H", "DPUCV2DX8G", "DPUCAHX8H", "DPUCAHX8L", "DPUCZDX8G"],
       "hardware_engines": ["4pe", "6pe", "8pe"]
     },
     {
@@ -3890,8 +3890,8 @@
       "name": "stream_demux",
       "vendor": "Aupera",
       "pbtxt": "5c0ce784-3b87-48c7-8acd-1dd38ede125b",
-      "hardware_types": ["xilinx_vck5000_gen3x16_xdma_base_1", "A-U50-P00G-LV-G", "aupera_v205_1", "aupera_u30_gen3x4_base_1", "xilinx_v70_gen5x8_qdma_base_2"],
-      "hardware_archs": ["DPUCVDX8H", "DPUCVD3k1R", "DPUCV2DX8G"],
+      "hardware_types": ["xilinx_vck5000_gen3x16_xdma_base_1", "xilinx_v70_gen5x8_qdma_base_2", "A-U50-P00G-LV-G", "aupera_v205_1", "aupera_u30_gen3x4_base_1", "aupera_som_1", "aupera_sbc_x7_1"],
+      "hardware_archs": ["DPUCVDX8H", "DPUCV2DX8G", "DPUCAHX8H", "DPUCAHX8L", "DPUCZDX8G"],
       "hardware_engines": ["4pe", "6pe", "8pe"]
     },
     {
@@ -3900,8 +3900,8 @@
       "name": "x86_dec",
       "vendor": "Aupera",
       "pbtxt": "5b04b5a6-beb9-48ef-994e-95107e0b3133",
-      "hardware_types": ["xilinx_vck5000_gen3x16_xdma_base_1", "A-U50-P00G-LV-G", "aupera_v205_1", "aupera_u30_gen3x4_base_1", "xilinx_v70_gen5x8_qdma_base_2"],
-      "hardware_archs": ["DPUCVDX8H", "DPUCVD3k1R", "DPUCV2DX8G"],
+      "hardware_types": ["xilinx_vck5000_gen3x16_xdma_base_1", "xilinx_v70_gen5x8_qdma_base_2", "A-U50-P00G-LV-G", "aupera_v205_1", "aupera_u30_gen3x4_base_1", "aupera_som_1", "aupera_sbc_x7_1"],
+      "hardware_archs": ["DPUCVDX8H", "DPUCV2DX8G", "DPUCAHX8H", "DPUCAHX8L", "DPUCZDX8G"],
       "hardware_engines": ["4pe", "6pe", "8pe"]
     },
     {
@@ -3910,9 +3910,9 @@
       "name": "v205_dec",
       "vendor": "Aupera",
       "pbtxt": "f02b12c7-1544-4be4-8834-75ba1d0be59d",
-      "hardware_types": ["xilinx_vck5000_gen3x16_xdma_base_1", "A-U50-P00G-LV-G", "aupera_v205_1", "aupera_u30_gen3x4_base_1", "xilinx_v70_gen5x8_qdma_base_2"],
-      "hardware_archs": ["DPUCVDX8H", "DPUCVD3k1R", "DPUCV2DX8G"],
-      "hardware_engines": ["4pe", "6pe", "8pe"]
+      "hardware_types": ["aupera_v205_1", "aupera_u30_gen3x4_base_1", "aupera_som_1", "aupera_sbc_x7_1"],
+      "hardware_archs": ["DPUCZDX8G"],
+      "hardware_engines": []
     },
     {
       "guid": "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
@@ -3920,8 +3920,8 @@
       "name": "box_visualizer",
       "vendor": "Aupera",
       "pbtxt": "8149a886-36ac-4446-a63d-b8a29aab2cfb",
-      "hardware_types": ["xilinx_vck5000_gen3x16_xdma_base_1", "A-U50-P00G-LV-G", "aupera_v205_1", "aupera_u30_gen3x4_base_1", "xilinx_v70_gen5x8_qdma_base_2"],
-      "hardware_archs": ["DPUCVDX8H", "DPUCVD3k1R", "DPUCV2DX8G"],
+      "hardware_types": ["xilinx_vck5000_gen3x16_xdma_base_1", "xilinx_v70_gen5x8_qdma_base_2", "A-U50-P00G-LV-G", "aupera_v205_1", "aupera_u30_gen3x4_base_1", "aupera_som_1", "aupera_sbc_x7_1"],
+      "hardware_archs": ["DPUCVDX8H", "DPUCV2DX8G", "DPUCAHX8H", "DPUCAHX8L", "DPUCZDX8G"],
       "hardware_engines": ["4pe", "6pe", "8pe"]
     },
     {
@@ -3930,8 +3930,8 @@
       "name": "ff_vfilter",
       "vendor": "Aupera",
       "pbtxt": "7a2daef4-a0f8-49de-8755-3ca174a61ef1",
-      "hardware_types": ["xilinx_vck5000_gen3x16_xdma_base_1", "A-U50-P00G-LV-G", "aupera_v205_1", "aupera_u30_gen3x4_base_1", "xilinx_v70_gen5x8_qdma_base_2"],
-      "hardware_archs": ["DPUCVDX8H", "DPUCVD3k1R", "DPUCV2DX8G"],
+      "hardware_types": ["xilinx_vck5000_gen3x16_xdma_base_1", "xilinx_v70_gen5x8_qdma_base_2", "A-U50-P00G-LV-G", "aupera_v205_1", "aupera_u30_gen3x4_base_1", "aupera_som_1", "aupera_sbc_x7_1"],
+      "hardware_archs": ["DPUCVDX8H", "DPUCV2DX8G", "DPUCAHX8H", "DPUCAHX8L", "DPUCZDX8G"],
       "hardware_engines": ["4pe", "6pe", "8pe"]
     },
     {
@@ -3940,8 +3940,8 @@
       "name": "x86_enc",
       "vendor": "Aupera",
       "pbtxt": "99838e85-60d2-4bec-a4b2-51dfe11289a3",
-      "hardware_types": ["xilinx_vck5000_gen3x16_xdma_base_1", "A-U50-P00G-LV-G", "aupera_v205_1", "aupera_u30_gen3x4_base_1", "xilinx_v70_gen5x8_qdma_base_2"],
-      "hardware_archs": ["DPUCVDX8H", "DPUCVD3k1R", "DPUCV2DX8G"],
+      "hardware_types": ["xilinx_vck5000_gen3x16_xdma_base_1", "xilinx_v70_gen5x8_qdma_base_2", "A-U50-P00G-LV-G", "aupera_v205_1", "aupera_u30_gen3x4_base_1", "aupera_som_1", "aupera_sbc_x7_1"],
+      "hardware_archs": ["DPUCVDX8H", "DPUCV2DX8G", "DPUCAHX8H", "DPUCAHX8L", "DPUCZDX8G"],
       "hardware_engines": ["4pe", "6pe", "8pe"]
     },
     {
@@ -3950,8 +3950,8 @@
       "name": "stream_mux",
       "vendor": "Aupera",
       "pbtxt": "fbf0be08-d6d1-4c0d-94f5-7da9e87c1315",
-      "hardware_types": ["xilinx_vck5000_gen3x16_xdma_base_1", "A-U50-P00G-LV-G", "aupera_v205_1", "aupera_u30_gen3x4_base_1", "xilinx_v70_gen5x8_qdma_base_2"],
-      "hardware_archs": ["DPUCVDX8H", "DPUCVD3k1R", "DPUCV2DX8G"],
+      "hardware_types": ["xilinx_vck5000_gen3x16_xdma_base_1", "xilinx_v70_gen5x8_qdma_base_2", "A-U50-P00G-LV-G", "aupera_v205_1", "aupera_u30_gen3x4_base_1", "aupera_som_1", "aupera_sbc_x7_1"],
+      "hardware_archs": ["DPUCVDX8H", "DPUCV2DX8G", "DPUCAHX8H", "DPUCAHX8L", "DPUCZDX8G"],
       "hardware_engines": ["4pe", "6pe", "8pe"]
     },
     
@@ -3961,8 +3961,8 @@
       "name": "box_classifier",
       "vendor": "Aupera",
       "pbtxt": "c957184a-5275-4a8b-b14a-24e2c8e7cace",
-      "hardware_types": ["xilinx_vck5000_gen3x16_xdma_base_1", "A-U50-P00G-LV-G", "aupera_v205_1", "aupera_u30_gen3x4_base_1", "xilinx_v70_gen5x8_qdma_base_2"],
-      "hardware_archs": ["DPUCVDX8H", "DPUCVD3k1R", "DPUCV2DX8G"],
+      "hardware_types": ["xilinx_vck5000_gen3x16_xdma_base_1", "xilinx_v70_gen5x8_qdma_base_2", "A-U50-P00G-LV-G", "aupera_v205_1", "aupera_u30_gen3x4_base_1", "aupera_som_1", "aupera_sbc_x7_1"],
+      "hardware_archs": ["DPUCVDX8H", "DPUCV2DX8G", "DPUCAHX8H", "DPUCAHX8L", "DPUCZDX8G"],
       "hardware_engines": ["4pe", "6pe", "8pe"]
     },
     {
@@ -3971,8 +3971,8 @@
       "name": "box_tracker",
       "vendor": "Aupera",
       "pbtxt": "38b5326b-1273-4c08-952a-b28f513dae0c",
-      "hardware_types": ["xilinx_vck5000_gen3x16_xdma_base_1", "A-U50-P00G-LV-G", "aupera_v205_1", "aupera_u30_gen3x4_base_1", "xilinx_v70_gen5x8_qdma_base_2"],
-      "hardware_archs": ["DPUCVDX8H", "DPUCVD3k1R", "DPUCV2DX8G"],
+      "hardware_types": ["xilinx_vck5000_gen3x16_xdma_base_1", "xilinx_v70_gen5x8_qdma_base_2", "A-U50-P00G-LV-G", "aupera_v205_1", "aupera_u30_gen3x4_base_1", "aupera_som_1", "aupera_sbc_x7_1"],
+      "hardware_archs": ["DPUCVDX8H", "DPUCV2DX8G", "DPUCAHX8H", "DPUCAHX8L", "DPUCZDX8G"],
       "hardware_engines": ["4pe", "6pe", "8pe"]
     },
     {
@@ -3981,8 +3981,8 @@
       "name": "apl_crowd_flow",
       "vendor": "Aupera",
       "pbtxt": "0c47fdbe-ce97-4dbb-ade4-3e40d593d27d",
-      "hardware_types": ["xilinx_vck5000_gen3x16_xdma_base_1", "A-U50-P00G-LV-G", "aupera_v205_1", "aupera_u30_gen3x4_base_1", "xilinx_v70_gen5x8_qdma_base_2"],
-      "hardware_archs": ["DPUCVDX8H", "DPUCVD3k1R", "DPUCV2DX8G"],
+      "hardware_types": ["xilinx_vck5000_gen3x16_xdma_base_1", "xilinx_v70_gen5x8_qdma_base_2", "A-U50-P00G-LV-G", "aupera_v205_1", "aupera_u30_gen3x4_base_1", "aupera_som_1", "aupera_sbc_x7_1"],
+      "hardware_archs": ["DPUCVDX8H", "DPUCV2DX8G", "DPUCAHX8H", "DPUCAHX8L", "DPUCZDX8G"],
       "hardware_engines": ["4pe", "6pe", "8pe"]
     },
     {
@@ -3991,8 +3991,8 @@
       "name": "image_stream",
       "vendor": "Aupera",
       "pbtxt": "5d7d91a0-4a4c-4a48-87f0-e7bf42de0e98",
-      "hardware_types": ["xilinx_vck5000_gen3x16_xdma_base_1", "A-U50-P00G-LV-G", "aupera_v205_1", "aupera_u30_gen3x4_base_1", "xilinx_v70_gen5x8_qdma_base_2"],
-      "hardware_archs": ["DPUCVDX8H", "DPUCVD3k1R", "DPUCV2DX8G"],
+      "hardware_types": ["xilinx_vck5000_gen3x16_xdma_base_1", "xilinx_v70_gen5x8_qdma_base_2", "A-U50-P00G-LV-G", "aupera_v205_1", "aupera_u30_gen3x4_base_1", "aupera_som_1", "aupera_sbc_x7_1"],
+      "hardware_archs": ["DPUCVDX8H", "DPUCV2DX8G", "DPUCAHX8H", "DPUCAHX8L", "DPUCZDX8G"],
       "hardware_engines": ["4pe", "6pe", "8pe"]
     },
     {
@@ -4001,8 +4001,8 @@
       "name": "statistics_reader",
       "vendor": "Aupera",
       "pbtxt": "5b63abdf-4669-48ad-b48f-8850d814833a",
-      "hardware_types": ["xilinx_vck5000_gen3x16_xdma_base_1", "A-U50-P00G-LV-G", "aupera_v205_1", "aupera_u30_gen3x4_base_1", "xilinx_v70_gen5x8_qdma_base_2"],
-      "hardware_archs": ["DPUCVDX8H", "DPUCVD3k1R", "DPUCV2DX8G"],
+      "hardware_types": ["xilinx_vck5000_gen3x16_xdma_base_1", "xilinx_v70_gen5x8_qdma_base_2", "A-U50-P00G-LV-G", "aupera_v205_1", "aupera_u30_gen3x4_base_1", "aupera_som_1", "aupera_sbc_x7_1"],
+      "hardware_archs": ["DPUCVDX8H", "DPUCV2DX8G", "DPUCAHX8H", "DPUCAHX8L", "DPUCZDX8G"],
       "hardware_engines": ["4pe", "6pe", "8pe"]
     },
     {
@@ -4011,8 +4011,8 @@
       "name": "notification_web",
       "vendor": "Aupera",
       "pbtxt": "8f23b04f-1c5b-4804-8263-fa5043981e55",
-      "hardware_types": ["xilinx_vck5000_gen3x16_xdma_base_1", "A-U50-P00G-LV-G", "aupera_v205_1", "aupera_u30_gen3x4_base_1", "xilinx_v70_gen5x8_qdma_base_2"],
-      "hardware_archs": ["DPUCVDX8H", "DPUCVD3k1R", "DPUCV2DX8G"],
+      "hardware_types": ["xilinx_vck5000_gen3x16_xdma_base_1", "xilinx_v70_gen5x8_qdma_base_2", "A-U50-P00G-LV-G", "aupera_v205_1", "aupera_u30_gen3x4_base_1", "aupera_som_1", "aupera_sbc_x7_1"],
+      "hardware_archs": ["DPUCVDX8H", "DPUCV2DX8G", "DPUCAHX8H", "DPUCAHX8L", "DPUCZDX8G"],
       "hardware_engines": ["4pe", "6pe", "8pe"]
     },
     {
@@ -4021,8 +4021,8 @@
       "name": "box_segmentor",
       "vendor": "Aupera",
       "pbtxt": "9cc76b42-21b1-4f6a-bb6f-81a81f3e7e99",
-      "hardware_types": ["xilinx_vck5000_gen3x16_xdma_base_1", "A-U50-P00G-LV-G", "aupera_v205_1", "aupera_u30_gen3x4_base_1", "xilinx_v70_gen5x8_qdma_base_2"],
-      "hardware_archs": ["DPUCVDX8H", "DPUCVD3k1R", "DPUCV2DX8G"],
+      "hardware_types": ["xilinx_vck5000_gen3x16_xdma_base_1", "xilinx_v70_gen5x8_qdma_base_2", "A-U50-P00G-LV-G", "aupera_v205_1", "aupera_u30_gen3x4_base_1", "aupera_som_1", "aupera_sbc_x7_1"],
+      "hardware_archs": ["DPUCVDX8H", "DPUCV2DX8G", "DPUCAHX8H", "DPUCAHX8L", "DPUCZDX8G"],
       "hardware_engines": ["4pe", "6pe", "8pe"]
     },
     {
@@ -4031,8 +4031,8 @@
       "name": "apl_vehicle_reid",
       "vendor": "Aupera",
       "pbtxt": "d6495544-cabf-48e8-a075-58d686383138",
-      "hardware_types": ["xilinx_vck5000_gen3x16_xdma_base_1", "A-U50-P00G-LV-G", "aupera_v205_1", "aupera_u30_gen3x4_base_1", "xilinx_v70_gen5x8_qdma_base_2"],
-      "hardware_archs": ["DPUCVDX8H", "DPUCVD3k1R", "DPUCV2DX8G"],
+      "hardware_types": ["xilinx_vck5000_gen3x16_xdma_base_1", "xilinx_v70_gen5x8_qdma_base_2", "A-U50-P00G-LV-G", "aupera_v205_1", "aupera_u30_gen3x4_base_1", "aupera_som_1", "aupera_sbc_x7_1"],
+      "hardware_archs": ["DPUCVDX8H", "DPUCV2DX8G", "DPUCAHX8H", "DPUCAHX8L", "DPUCZDX8G"],
       "hardware_engines": ["4pe", "6pe", "8pe"]
     }
   ],
@@ -4040,11 +4040,21 @@
   "example_pipelines": [
     {
       "guid": "1c3cb3c3-7abc-4651-bc94-dd603a672a14",
-      "name": "demo: encoding and decoding",
-      "description": "just decoding and encoding with no ml models",
+      "name": "demo: decoding and encoding (x86)",
+      "description": "x86 decoding and encoding with no ml models",
       "pbtxt": "bb989898-064d-4efd-8b3e-88ca388a6bc0",
       "models": [],
       "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
+                "60e96d25-07dd-45be-8c19-4175b2884fc3"]
+    },
+    {
+      "guid": "4b7ac224-90c4-4f49-bc11-0ef7295ab931",
+      "name": "demo: decoding and encoding (v205)",
+      "description": "v205 decoding and encoding with no ml models",
+      "pbtxt": "246d5fe6-aa11-4120-b175-9d6cc651c335",
+      "models": [],
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "8785871e-21d8-4f22-84cd-38636297daef",
                 "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
                 "60e96d25-07dd-45be-8c19-4175b2884fc3"]
     },
@@ -4362,13 +4372,23 @@
     
     {
       "guid": "bb989898-064d-4efd-8b3e-88ca388a6bc0",
-      "name": "demo: decoder and encoder",
-      "description": "just decoding and encoding with no ml models",
+      "name": "demo: decoding and encoding (x86)",
+      "description": "x86 decoding and encoding with no ml models",
       "models": [],
       "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
                 "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
                 "60e96d25-07dd-45be-8c19-4175b2884fc3"]
     },
+    {
+      "guid": "246d5fe6-aa11-4120-b175-9d6cc651c335",
+      "name": "demo: decoding and encoding (v205)",
+      "description": "v205 decoding and encoding with no ml models",
+      "models": [],
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "8785871e-21d8-4f22-84cd-38636297daef",
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
+                "60e96d25-07dd-45be-8c19-4175b2884fc3"]
+    },
+
     {
       "guid": "614daebb-0c6f-4baa-8154-4657f5254997",
       "name": "demo: head person detection",
@@ -8458,7 +8478,7 @@
 
   "enums":{
     "hardware_engines": ["4pe", "6pe", "8pe"],
-    "ml_tasks": ["detection", "classification", "encoding", "segmentation", "vehicle_reid_lpr"],
+    "ml_tasks": ["detection", "classification", "segmentation", "vehicle_reid_lpr"],
     "model_formats": ["xmodel", "tf", "pt"],
     "ml_libs": ["tensorflow1.0", "tensorflow1.15.0", "tensorflow2.0", "tensorflow2.3.0",
                  "pytorch1.1", "pytorch2.1", "pytorch1.7.1", "pytorch1.4.0", "pytorch1.9.0", "pytorch1.10.0", "caffe1.0", "darknet"],
@@ -8468,10 +8488,11 @@
   "hardware_types_to_arch_mapping":[
     {"arch": "DPUCVDX8H", "types": ["xilinx_vck5000_gen3x16_xdma_base_1"]},
     {"arch": "DPUCV2DX8G", "types": ["xilinx_v70_gen5x8_qdma_base_2"]},
-    {"arch": "DPUCVD3k1R", "types": ["A-U50-P00G-LV-G"]},
     {"arch": "DPUCAHX8H", "types": ["A-U50-P00G-LV-G"]},
     {"arch": "DPUCAHX8L", "types": ["A-U50-P00G-LV-G"]},
     {"arch": "DPUCZDX8G", "types": ["aupera_v205_1"]},
-    {"arch": "DPUCZDX8G", "types": ["aupera_u30_gen3x4_base_1"]}
+    {"arch": "DPUCZDX8G", "types": ["aupera_u30_gen3x4_base_1"]},
+    {"arch": "DPUCZDX8G", "types": ["aupera_som_1"]},
+    {"arch": "DPUCZDX8G", "types": ["aupera_sbc_x7_1"]}
   ]
 }
