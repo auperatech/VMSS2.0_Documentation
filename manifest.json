@@ -2660,7 +2660,7 @@
       "ml_lib": "caffe1.0",
       "inference_lib": "vitis2.5",
       "checksum": "769f69100c0e003a7b6518b4577aa9f4",
-      "download_link": "", 
+      "download_link": "https://auperatechvancouver.sharepoint.com/:u:/g/ESmHglxioJVKhiGJJMyHPCIBmes5IsBz_wlPZEqlIxlnrA?e=rAgTXE&download=1", 
       "ops": "0.49G",
       "input_size": "320x320",
       "float_accuracy": "0.8833",
