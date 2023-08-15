@@ -3261,7 +3261,7 @@
       "ml_lib": "caffe1.0",
       "inference_lib": "vitis2.5",
       "checksum": "1febbad148e54aa5300f016cfa7f93c6",
-      "download_link": "", 
+      "download_link": "https://www.xilinx.com/bin/public/openDownload?filename=resnet50-vck50008pe-DPUCVDX8H-r2.0.0.tar.gz", 
       "ops": "7.7G",
       "input_size": "224x224",
       "float_accuracy": "0.7444/0.9185",
@@ -4252,6 +4252,17 @@
                 "cde737e0-5865-46d6-be71-b43b5522ea15", "65186a8f-80c0-4b26-8453-bd05da30eecd",
                 "231d2fb4-6527-42b9-aa3e-eade58446a37", "cbbeb075-5517-4d0e-9f56-cec8cad595da", 
                 "8a2d1c42-0d85-4423-be85-2651d9e13a50", "60e96d25-07dd-45be-8c19-4175b2884fc3"]
+    },
+    {
+      "guid": "848b99d4-1982-46d8-b2e3-aea28c7ffbff",
+      "name": "test: general classification",
+      "description": "box classifier runs on imagenet videos",
+      "pbtxt": "5c872ab0-5915-4f10-9025-c6c2785f9fb5",
+      "models": ["645bf6bf-c1f7-4599-829b-3db0e050f25f"],
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "8785871e-21d8-4f22-84cd-38636297daef",
+                "1d049bee-88bb-419f-97c9-4f10db4008b3", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac", 
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50", 
+                "60e96d25-07dd-45be-8c19-4175b2884fc3"]
     }
   ],
 
