@@ -3260,7 +3260,7 @@
       "model_format": "xmodel",
       "ml_lib": "caffe1.0",
       "inference_lib": "vitis2.5",
-      "checksum": "30b307f45597a0001cc61e12c7740f06",
+      "checksum": "1febbad148e54aa5300f016cfa7f93c6",
       "download_link": "https://www.xilinx.com/bin/public/openDownload?filename=resnet50-vck50008pe-DPUCVDX8H-r2.0.0.tar.gz", 
       "ops": "7.7G",
       "input_size": "224x224",
