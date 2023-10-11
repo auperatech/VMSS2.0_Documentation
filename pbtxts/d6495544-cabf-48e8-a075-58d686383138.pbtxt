@@ -5,7 +5,9 @@ node {
   input_stream: "image_stream_decode"
   input_stream: "video_stream_info_demux"
   input_stream: "detect_interval_side_packet"
+  output_stream: "lpr_notification"
   output_stream: "imgStream1080p_aplOut"
+  output_stream: "mlops_notification"
   stream_sync: {
     drop_strategy: DROP_INCOMPLETE_PACKETS
     timeout_ms: 0
@@ -64,7 +66,6 @@ node {
       traffic_parking_alert_alarm_time_in_sec: 30.0
       traffic_parking_zone_notify_time_in_sec: 0.0
       tracklet_reporting_interval_in_sec: 60
-      http_listener_server: ""
       alarm_clear_frame_delay: 7
       # Halting related configs
       halting_alert_len_in_sec: 10.0
@@ -108,6 +109,7 @@ node {
       traffic_only_notify_vehicle_with_LP: false
       traffic_notify_reporting_interval: true
       traffic_update_image_mode: "plate"
+      send_mlops_notifications: false
       # Misc
       save_eval_results: true
       camera_id: 0

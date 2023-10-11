@@ -5,6 +5,7 @@ node {
   input_stream: "image_stream_decode"
   input_stream: "video_stream_info_demux"
   input_stream: "detect_interval"
+  output_stream: "crowd_flow_notification"
   output_stream: "image_stream_crowd_flow"
   stream_sync: {
     drop_strategy: DROP_INCOMPLETE_PACKETS

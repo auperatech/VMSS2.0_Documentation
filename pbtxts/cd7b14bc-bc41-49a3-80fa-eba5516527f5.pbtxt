@@ -50,7 +50,7 @@ node {
   name: "detector"
   calculator: "box_detector"
   input_stream: "image_stream_decode"
-  output_stream: "detections_stream"
+  output_stream: "detection_stream"
   output_stream: "detect_interval"
   ml_model_kernel_name: "RESNET18SSD_ITER115000_PRIVATE_FINAL501IMAGES_AND_55IMAGES_FROMFIELD_ADDED_01JULY2021_CROWD_FLOW_PERSON_HEAD_v205_vitis2_5"
   node_options: {
@@ -83,47 +83,79 @@ node {
   }
 }
 
-
 node {
-  name: "visualizer"
-  calculator: "box_visualizer"
-  input_stream: "detections_stream"
+  name: "tracker"
+  calculator: "box_tracker"
+  input_stream: "detection_stream"
   input_stream: "image_stream_decode"
-  output_stream: "image_stream_viz"
-  stream_sync: {
-    drop_strategy: DROP_INCOMPLETE_PACKETS
-    timeout_ms: 5000
-  }
+  input_stream: "detect_interval"
+  output_stream: "tracks_stream"
   node_options: {
-    [type.googleapis.com/aup.avaf.BoxVisualizerOptions]: {
-      text_color: {
-        r: 255
-        g: 0
-        b: 0
-      }
-      box_color: {
-        r: 255
-        g: 0
-        b: 0
-      }
-      text_offset: {
-        x: 0
-        y: 0
-      }
-      font: 0 
-      line_type: 0
-      box_thickness: 3
-      text_size: 3 
+    [type.googleapis.com/aup.avaf.BoxTrackerOptions]: {
+      max_keep_alive: 5
+      min_hits: 1
+      affinity_threshold: 0.008  
+      shape_weight: 1
+      position_weight: 1
+      appearance_weight: 1
+      shape_dist_max: 1
+      position_dist_max: 1
+      use_exp_cost: true
+      tracker_type: "SORT++"
+      min_object_area_th: 200
     }
   }
 }
 
 
 node {
+  name: "crowd_flow"
+  calculator: "apl_crowd_flow"
+  input_stream: "tracks_stream"
+  input_stream: "image_stream_decode"
+  input_stream: "video_stream_info_demux"
+  input_stream: "detect_interval"
+  output_stream: "crowd_flow_notification"
+  output_stream: "image_stream_crowd_flow"
+  stream_sync: {
+    drop_strategy: DROP_INCOMPLETE_PACKETS
+    timeout_ms: 5000
+  }
+  node_options: {
+    [type.googleapis.com/aup.avaf.AplCrowdFlowOptions]: {
+      update_interval_seconds: 30
+      initial_entering_count: 0
+      initial_exiting_count: 0
+      max_allowed_borders: 10
+      
+      common_fields: {
+        max_file_cache: 100
+        max_cluster_size: 100
+        debug: true
+        draw: true
+        
+        border: {
+          p1: {
+            x: 0
+            y: 900
+            
+          }
+          p2: {
+            x: 1920
+            y: 900
+          }
+          threshold: 0.055
+        }
+      }
+    }
+  }
+}
+
+node {
   name: "vfilter_node"
   calculator: "ff_vfilter"
   vendor: "Aupera"
-  input_stream: "image_stream_viz"
+  input_stream: "image_stream_crowd_flow"
   input_stream: "video_stream_info_decode"
   output_stream: "image_stream_vfilter"
   output_stream: "video_stream_info_vfilter"
@@ -176,6 +208,20 @@ node {
        rtsp_transport: "tcp"
        auto_reconnect: true
      }
+    }
+  }
+}
+
+node {
+    name: "crowd_flow_udp_notification"
+    calculator: "notification_web"
+    vendor: "Aupera"
+    input_stream: "crowd_flow_notification"
+    node_options: {
+    [type.googleapis.com/aup.avaf.NotificationWebOptions]: {
+        notification_url: ""
+        notification_q_size: 1
+        protocol_type: UDP
     }
   }
 }
