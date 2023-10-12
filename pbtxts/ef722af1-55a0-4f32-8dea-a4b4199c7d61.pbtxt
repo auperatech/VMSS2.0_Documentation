@@ -93,12 +93,6 @@ node {
           y: 1080
         }
       }
-      crop_region: {
-        x: 260
-        y: 210
-        w: 1400
-        h: 870
-      }
     }
   }
 }
@@ -316,20 +310,6 @@ node {
     calculator: "notification_web"
     vendor: "Aupera"
     input_stream: "lpr_notification"
-    node_options: {
-    [type.googleapis.com/aup.avaf.NotificationWebOptions]: {
-        notification_url: ""
-        notification_q_size: 1
-        protocol_type: HTTP
-    }
-  }
-}
-
-node {
-    name: "notification_web_mlops"
-    calculator: "notification_web"
-    vendor: "Aupera"
-    input_stream: "mlops_notification"
     node_options: {
     [type.googleapis.com/aup.avaf.NotificationWebOptions]: {
         notification_url: ""
