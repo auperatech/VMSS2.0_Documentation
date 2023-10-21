@@ -3870,6 +3870,30 @@
       "node_pbtxt": "7b8ab88b-d7de-4a87-91ac-87cb5718951d",
       "pipeline_pbtxt": "76ffa149-f112-4578-a9f7-93fd314f60dd",
       "throughput_pbtxt": "da86dd78-d6b7-438c-8b13-efcf6f4793f9"
+    },
+    {
+      "guid": "848b99d4-1982-46d8-b2e3-aea28c7ffbff",
+      "model_zoo_name": "dk_tiny-yolov3_416_416_5.46G_2.0",
+      "kernel": "dk_tiny-yolov3_416_416_5.46G_2.0",
+      "vendor": "Xilinx",
+      "ml_task": "detection",
+      "application": "retail",
+      "hardware_type": "aupera_u30_gen3x4_base_1",
+      "hardware_arch": "DPUCZDX8G",
+      "hardware_engine": "", 
+      "model_format": "xmodel",
+      "ml_lib": "darknet",
+      "inference_lib": "vitis2.5",
+      "checksum": "2b0c0d200177581a2457228d41134368",
+      "download_link": "", 
+      "ops": "5.46G",
+      "input_size": "416x416",
+      "float_accuracy": "0.9739",
+      "quantized_accuracy": "0.9650",
+      "dataset": "private-dataset",
+      "node_pbtxt": "64c94b96-024b-4cd7-bd51-ec8b8b168cab",
+      "pipeline_pbtxt": "1ba6b23c-25d1-4f87-bf00-b3cb704334cd",
+      "throughput_pbtxt": "a8063fba-0949-409a-aee2-6aaefdefbce8"
     }
   ],
 
@@ -4254,6 +4278,29 @@
                 "cde737e0-5865-46d6-be71-b43b5522ea15", "65186a8f-80c0-4b26-8453-bd05da30eecd",
                 "231d2fb4-6527-42b9-aa3e-eade58446a37", "cbbeb075-5517-4d0e-9f56-cec8cad595da", 
                 "8a2d1c42-0d85-4423-be85-2651d9e13a50", "60e96d25-07dd-45be-8c19-4175b2884fc3"]
+    },
+
+    {
+      "guid": "a9e80935-1893-43c0-bc1e-ca848a192957",
+      "name": "demo: retail detection (dk_tiny-yolov3, 7ev). Inference on device",
+      "description": "retail detector (dk_tiny-yolov3, 7ev) runs on retail videos",
+      "pbtxt": "1ba6b23c-25d1-4f87-bf00-b3cb704334cd",
+      "models": ["848b99d4-1982-46d8-b2e3-aea28c7ffbff"],
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
+                "cde737e0-5865-46d6-be71-b43b5522ea15", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
+                "60e96d25-07dd-45be-8c19-4175b2884fc3"]
+    },
+    {
+      "guid": "c517481b-70c7-468a-b431-e523f9950ba2",
+      "name": "demo: retail detection (dk_tiny-yolov3, 7ev). Decode and inference on device",
+      "description": "retail detector (dk_tiny-yolov3, 7ev) runs on retail videos",
+      "pbtxt": "a0d02b0e-9e8e-4861-9229-80ba1705b087",
+      "models": ["848b99d4-1982-46d8-b2e3-aea28c7ffbff"],
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
+                "cde737e0-5865-46d6-be71-b43b5522ea15", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
+                "60e96d25-07dd-45be-8c19-4175b2884fc3"]
     }
   ],
 
@@ -8476,6 +8523,43 @@
       "description": "throughput measurement for adas segmentor (SemanticFPN_cityscapes_pt)",
       "models": ["0de7753a-8558-4a5d-ad91-c393019adf5c"],
       "nodes": ["5618ff66-748c-4342-86f9-fb019535430f", "8649db51-7e22-48a9-819e-fe927b827e07",
+                "ef596576-6e27-4637-af19-38272b008593", "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
+    },
+
+    
+    {
+      "guid": "1ba6b23c-25d1-4f87-bf00-b3cb704334cd",
+      "name": "demo: retail detection (dk_tiny-yolov3, 7ev). Inference on device",
+      "description": "retail detector (dk_tiny-yolov3, 7ev) runs on retail videos",
+      "models": ["848b99d4-1982-46d8-b2e3-aea28c7ffbff"],
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
+                "cde737e0-5865-46d6-be71-b43b5522ea15", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
+                "60e96d25-07dd-45be-8c19-4175b2884fc3"]
+    },
+    {
+      "guid": "a0d02b0e-9e8e-4861-9229-80ba1705b087",
+      "name": "demo: retail detection (dk_tiny-yolov3, 7ev). Decode and Inference on device",
+      "description": "retail detector (dk_tiny-yolov3, 7ev) runs on retail videos",
+      "models": ["848b99d4-1982-46d8-b2e3-aea28c7ffbff"],
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
+                "cde737e0-5865-46d6-be71-b43b5522ea15", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
+                "60e96d25-07dd-45be-8c19-4175b2884fc3"]
+    },
+    {
+      "guid": "64c94b96-024b-4cd7-bd51-ec8b8b168cab",
+      "name": "node: box_detector",
+      "description": "box detector (dk_tiny-yolov3, 7ev) as retail detector",
+      "models": ["848b99d4-1982-46d8-b2e3-aea28c7ffbff"],
+      "nodes": ["cde737e0-5865-46d6-be71-b43b5522ea15"]
+    },
+    {
+      "guid": "a8063fba-0949-409a-aee2-6aaefdefbce8",
+      "name": "demo: throughput measurement",
+      "description": "throughput measurement for retail detector (dk_tiny-yolov3, 7ev)",
+      "models": ["848b99d4-1982-46d8-b2e3-aea28c7ffbff"],
+      "nodes": ["5618ff66-748c-4342-86f9-fb019535430f", "cde737e0-5865-46d6-be71-b43b5522ea15",
                 "ef596576-6e27-4637-af19-38272b008593", "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
     }
   ],
