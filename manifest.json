@@ -4180,6 +4180,46 @@
       "hardware_types": ["xilinx_vck5000_gen3x16_xdma_base_1", "xilinx_v70_gen5x8_qdma_base_2", "A-U50-P00G-LV-G", "aupera_v205_1", "aupera_u30_gen3x4_base_1", "aupera_som_1", "aupera_sbc_x7_1"],
       "hardware_archs": ["DPUCVDX8H", "DPUCV2DX8G", "DPUCAHX8H", "DPUCAHX8L", "DPUCZDX8G"],
       "hardware_engines": ["4pe", "6pe", "8pe"]
+    },
+    {
+      "guid": "3e95745c-b11b-440f-a1c5-959c9854f04f",
+      "type": "aupera_free",
+      "name": "subgraph",
+      "vendor": "Aupera",
+      "pbtxt": "7032348f-ff61-486a-84e3-00e61a153ef4",
+      "hardware_types": ["aupera_u30_gen3x4_base_1"],
+      "hardware_archs": ["DPUCZDX8G"],
+      "hardware_engines": []
+    },
+    {
+      "guid": "b1bd4200-7cdb-44fd-8de5-fc68d3a1b584",
+      "type": "aupera_free",
+      "name": "host_source",
+      "vendor": "Aupera",
+      "pbtxt": "78605242-a801-452f-bc57-1cf4ca8c8cad",
+      "hardware_types": ["aupera_u30_gen3x4_base_1"],
+      "hardware_archs": ["DPUCZDX8G"],
+      "hardware_engines": []
+    },
+    {
+      "guid": "7cfd7346-89fe-474e-bded-65b426aeaf67",
+      "type": "aupera_free",
+      "name": "host_sink",
+      "vendor": "Aupera",
+      "pbtxt": "7d9ea61e-2a0c-495b-a874-c971f953e234",
+      "hardware_types": ["aupera_u30_gen3x4_base_1"],
+      "hardware_archs": ["DPUCZDX8G"],
+      "hardware_engines": []
+    },
+    {
+      "guid": "9389f756-9673-47db-bb24-c5b4fff3c369",
+      "type": "aupera_free",
+      "name": "u30_dec_device",
+      "vendor": "Aupera",
+      "pbtxt": "901a5bec-12ed-48ee-8600-dee07d34dbae",
+      "hardware_types": ["aupera_u30_gen3x4_base_1"],
+      "hardware_archs": ["DPUCZDX8G"],
+      "hardware_engines": []
     }
   ],
   
@@ -4408,10 +4448,11 @@
       "description": "retail detector (dk_tiny-yolov3, 7ev) runs on retail videos",
       "pbtxt": "1ba6b23c-25d1-4f87-bf00-b3cb704334cd",
       "models": ["848b99d4-1982-46d8-b2e3-aea28c7ffbff"],
-      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",      
                 "cde737e0-5865-46d6-be71-b43b5522ea15", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
                 "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
-                "60e96d25-07dd-45be-8c19-4175b2884fc3"]
+                "60e96d25-07dd-45be-8c19-4175b2884fc3", "3e95745c-b11b-440f-a1c5-959c9854f04f", 
+                "b1bd4200-7cdb-44fd-8de5-fc68d3a1b584", "7cfd7346-89fe-474e-bded-65b426aeaf67"]
     },
     {
       "guid": "c517481b-70c7-468a-b431-e523f9950ba2",
@@ -4422,7 +4463,9 @@
       "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
                 "cde737e0-5865-46d6-be71-b43b5522ea15", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
                 "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
-                "60e96d25-07dd-45be-8c19-4175b2884fc3"]
+                "60e96d25-07dd-45be-8c19-4175b2884fc3", "3e95745c-b11b-440f-a1c5-959c9854f04f", 
+                "b1bd4200-7cdb-44fd-8de5-fc68d3a1b584", "7cfd7346-89fe-474e-bded-65b426aeaf67",
+                "9389f756-9673-47db-bb24-c5b4fff3c369"]
     }
   ],
 
@@ -4539,7 +4582,34 @@
       "models": [],
       "nodes": ["231d2fb4-6527-42b9-aa3e-eade58446a37"]
     },
-
+    {
+      "guid": "7032348f-ff61-486a-84e3-00e61a153ef4",
+      "name": "node: subgraph default",
+      "description": "default parameters for subgraph node",
+      "models": [],
+      "nodes": ["3e95745c-b11b-440f-a1c5-959c9854f04f"]
+    },
+    {
+      "guid": "78605242-a801-452f-bc57-1cf4ca8c8cad",
+      "name": "node: host_source default",
+      "description": "default parameters for host_source node",
+      "models": [],
+      "nodes": ["b1bd4200-7cdb-44fd-8de5-fc68d3a1b584"]
+    },
+    {
+      "guid": "7d9ea61e-2a0c-495b-a874-c971f953e234",
+      "name": "node: host_sink default",
+      "description": "default parameters for host_sink node",
+      "models": [],
+      "nodes": ["7cfd7346-89fe-474e-bded-65b426aeaf67"]
+    },
+    {
+      "guid": "901a5bec-12ed-48ee-8600-dee07d34dbae",
+      "name": "node: u30_dec_device default",
+      "description": "default parameters for u30_dec_device node",
+      "models": [],
+      "nodes": ["9389f756-9673-47db-bb24-c5b4fff3c369"]
+    },
     
     {
       "guid": "bb989898-064d-4efd-8b3e-88ca388a6bc0",
@@ -8654,10 +8724,11 @@
       "name": "demo: retail detection (dk_tiny-yolov3, 7ev). Inference on device",
       "description": "retail detector (dk_tiny-yolov3, 7ev) runs on retail videos",
       "models": ["848b99d4-1982-46d8-b2e3-aea28c7ffbff"],
-      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",      
                 "cde737e0-5865-46d6-be71-b43b5522ea15", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
                 "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
-                "60e96d25-07dd-45be-8c19-4175b2884fc3"]
+                "60e96d25-07dd-45be-8c19-4175b2884fc3", "3e95745c-b11b-440f-a1c5-959c9854f04f", 
+                "b1bd4200-7cdb-44fd-8de5-fc68d3a1b584", "7cfd7346-89fe-474e-bded-65b426aeaf67"]
     },
     {
       "guid": "a0d02b0e-9e8e-4861-9229-80ba1705b087",
@@ -8667,7 +8738,9 @@
       "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
                 "cde737e0-5865-46d6-be71-b43b5522ea15", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
                 "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
-                "60e96d25-07dd-45be-8c19-4175b2884fc3"]
+                "60e96d25-07dd-45be-8c19-4175b2884fc3", "3e95745c-b11b-440f-a1c5-959c9854f04f", 
+                "b1bd4200-7cdb-44fd-8de5-fc68d3a1b584", "7cfd7346-89fe-474e-bded-65b426aeaf67",
+                "9389f756-9673-47db-bb24-c5b4fff3c369"]
     },
     {
       "guid": "64c94b96-024b-4cd7-bd51-ec8b8b168cab",

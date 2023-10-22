@@ -1,0 +1,20 @@
+node {
+    name: "decode_node"
+    calculator: "u30_dec_device"
+    input_stream: "packet_stream"
+    input_stream: "video_info_side_packet_demux"
+    output_stream: "image_stream"
+    output_stream: "video_info_side_packet_decode"
+    node_options: {
+    [type.googleapis.com/aup.avaf.VideoCodecOptions]: {
+        dec: {
+        ow: 1920
+        oh: 1080
+        opixfmt: PIXFMT_BGR24
+        queue_size: 12
+        low_latency: false
+        }
+        drop_packet_on_full_data_stream: true
+    }
+    }
+}

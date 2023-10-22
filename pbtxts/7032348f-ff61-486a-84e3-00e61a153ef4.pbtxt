@@ -1,0 +1,30 @@
+node {
+  name: "subgraph"
+  calculator: "subgraph"
+  input_stream: "input_stream"
+  output_stream: "output_stream"
+  node_options: {
+    [type.googleapis.com/aup.avaf.SubgraphOptions]: {
+      input_attrs: {
+        type: PACKET_TYPE_IMAGE
+        pool_sz: 2
+        entry_sz_kb: 6080
+        has_packet_on_init: false
+        image_packet_width: 1920
+        image_packet_height: 1080
+        image_packet_pixfmt: PIXFMT_BGR24
+      }
+      output_attrs: {
+        type: PACKET_TYPE_DETECTIONS_OR_TRACKS
+        pool_sz: 2
+        entry_sz_kb: 64
+        has_packet_on_init: false
+        image_packet_width: 1920
+        image_packet_height: 1080
+        image_packet_pixfmt: PIXFMT_BGR24
+      }
+      subgraph_config: {
+      }
+    }
+  }
+}
