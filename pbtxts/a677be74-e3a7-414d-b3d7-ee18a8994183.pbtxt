@@ -1,0 +1,62 @@
+node {
+    name: "detector"
+    calculator: "box_detector"
+    input_stream: "image_stream"
+    output_stream: "detection_stream"
+    output_stream: "detect_interval_side_packet_dangling"
+    ml_model_kernel_name: "aeva_dk_tiny-yolov3_416_416_5.46G_2.0"
+    node_options: {
+    [type.googleapis.com/aup.avaf.BoxDetectorOptions]: {
+        detect_interval: 1
+        detector_type: "TinyYolo"
+        need_preprocess: true
+        log_performance: false
+        run_on_letterboxed_img: false
+        batch_size: 1
+        return_frames_inorder: true 
+        batch_collection_timeout_ms: 0
+        ignore_black_frames: false
+        max_detection_lib_q_size: 30
+        label_confidence: {
+        label: 0
+        confidence: 0.5
+        }
+        label_confidence: {
+        label: 1
+        confidence: 0.5
+        }
+        label_confidence: {
+        label: 2
+        confidence: 0.5
+        }
+        label_confidence: {
+        label: 3
+        confidence: 0.5
+        }
+        label_confidence: {
+        label: 4
+        confidence: 0.5
+        }
+        label_confidence: {
+        label: 5
+        confidence: 0.5
+        }
+        label_confidence: {
+        label: 6
+        confidence: 0.5
+        }
+        label_confidence: {
+        label: 7
+        confidence: 0.5
+        }
+        label_confidence: {
+        label: 8
+        confidence: 0.5
+        }
+        label_confidence: {
+        label: 9
+        confidence: 0.1
+        }
+    }
+    }
+}

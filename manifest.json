@@ -3917,9 +3917,9 @@
       "float_accuracy": "0.8833",
       "quantized_accuracy": "0.8783",
       "dataset": "WIDER_FACE",
-      "node_pbtxt": "",
-      "pipeline_pbtxt": "",
-      "throughput_pbtxt": ""
+      "node_pbtxt": "e570f4d0-6049-4554-a87a-3dd3814d301b",
+      "pipeline_pbtxt": "cdf817b0-9276-4808-99d9-41d292d41833",
+      "throughput_pbtxt": "2a6f6115-29fb-4752-add1-5fe488eed7b0"
     },
     {
       "guid": "b93e2e00-b869-4173-b13d-80fa2052b886",
@@ -3965,9 +3965,9 @@
       "float_accuracy": "0.5980",
       "quantized_accuracy": "0.5920",
       "dataset": "private-dataset",
-      "node_pbtxt": "",
-      "pipeline_pbtxt": "",
-      "throughput_pbtxt": ""
+      "node_pbtxt": "598ae4e9-5a62-457b-9a36-129494c61c00",
+      "pipeline_pbtxt": "12b7c44a-f004-4527-bfd6-860b014108c6",
+      "throughput_pbtxt": "16bef172-210a-4845-997b-50d30ff50dda"
     },
     {
       "guid": "bc8acb56-eacb-40a7-b23e-1d6c8a9e880f",
@@ -3989,9 +3989,9 @@
       "float_accuracy": "0.8860",
       "quantized_accuracy": "0.8810",
       "dataset": "face_mask",
-      "node_pbtxt": "",
-      "pipeline_pbtxt": "",
-      "throughput_pbtxt": ""
+      "node_pbtxt": "8e7b559f-5e85-4e69-b90e-6c00c9d35035",
+      "pipeline_pbtxt": "1d58930c-6bd8-4ae6-ad3c-529610031d36",
+      "throughput_pbtxt": "13531e98-5962-44d0-ba2f-eb2a38d5152a"
     },
     {
       "guid": "3b2e473d-60f8-4910-a084-6bababe6c1eb",
@@ -4013,9 +4013,9 @@
       "float_accuracy": "0.9739",
       "quantized_accuracy": "0.9650",
       "dataset": "private-dataset",
-      "node_pbtxt": "",
-      "pipeline_pbtxt": "",
-      "throughput_pbtxt": ""
+      "node_pbtxt": "a677be74-e3a7-414d-b3d7-ee18a8994183",
+      "pipeline_pbtxt": "7a22037c-b847-4b65-99c3-bc5422a3a711",
+      "throughput_pbtxt": "db5ac5a5-ef99-4970-915f-8df22b3c84f7"
     }
   ],
 
@@ -4460,6 +4460,110 @@
       "description": "retail detector (dk_tiny-yolov3, 7ev) runs on retail videos",
       "pbtxt": "a0d02b0e-9e8e-4861-9229-80ba1705b087",
       "models": ["848b99d4-1982-46d8-b2e3-aea28c7ffbff"],
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
+                "cde737e0-5865-46d6-be71-b43b5522ea15", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
+                "60e96d25-07dd-45be-8c19-4175b2884fc3", "3e95745c-b11b-440f-a1c5-959c9854f04f", 
+                "b1bd4200-7cdb-44fd-8de5-fc68d3a1b584", "7cfd7346-89fe-474e-bded-65b426aeaf67",
+                "9389f756-9673-47db-bb24-c5b4fff3c369"]
+    },
+
+    {
+      "guid": "b7b441e6-ac24-46ad-a84c-7131682a9ded",
+      "name": "demo: face detection (cf_densebox_wider, 5ev). Inference on device",
+      "description": "face detector (cf_densebox_wider, 5ev) runs on crowd videos",
+      "pbtxt": "cdf817b0-9276-4808-99d9-41d292d41833",
+      "models": ["90de5b39-ab2f-4a5b-bb2d-1df606239161"],
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",      
+                "cde737e0-5865-46d6-be71-b43b5522ea15", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
+                "60e96d25-07dd-45be-8c19-4175b2884fc3", "3e95745c-b11b-440f-a1c5-959c9854f04f", 
+                "b1bd4200-7cdb-44fd-8de5-fc68d3a1b584", "7cfd7346-89fe-474e-bded-65b426aeaf67"]
+    },
+    {
+      "guid": "dd6781b4-3b8f-4966-a594-ee2976d60294",
+      "name": "demo: face detection (cf_densebox_wider, 5ev). Decode and inference on device",
+      "description": "face detector (cf_densebox_wider, 5ev) runs on crowd videos",
+      "pbtxt": "eb7f6c28-4c8a-47fc-bb3a-b5a36df2eaa2",
+      "models": ["90de5b39-ab2f-4a5b-bb2d-1df606239161"],
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
+                "cde737e0-5865-46d6-be71-b43b5522ea15", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
+                "60e96d25-07dd-45be-8c19-4175b2884fc3", "3e95745c-b11b-440f-a1c5-959c9854f04f", 
+                "b1bd4200-7cdb-44fd-8de5-fc68d3a1b584", "7cfd7346-89fe-474e-bded-65b426aeaf67",
+                "9389f756-9673-47db-bb24-c5b4fff3c369"]
+    },
+
+    {
+      "guid": "ad53eebd-6494-41e1-8e99-95489b5e67d2",
+      "name": "demo: adas detection (cf_ssdtraffic, 5ev). Inference on device",
+      "description": "adas detector (cf_ssdtraffic, 5ev) runs on car videos",
+      "pbtxt": "12b7c44a-f004-4527-bfd6-860b014108c6",
+      "models": ["f280f937-fe97-489d-925f-302e8794ca92"],
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",      
+                "cde737e0-5865-46d6-be71-b43b5522ea15", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
+                "60e96d25-07dd-45be-8c19-4175b2884fc3", "3e95745c-b11b-440f-a1c5-959c9854f04f", 
+                "b1bd4200-7cdb-44fd-8de5-fc68d3a1b584", "7cfd7346-89fe-474e-bded-65b426aeaf67"]
+    },
+    {
+      "guid": "13b4f273-2bf2-4749-9a2d-454a2c1379a3",
+      "name": "demo: adas detection (cf_ssdtraffic, 5ev). Decode and inference on device",
+      "description": "adas detector (cf_ssdtraffic, 5ev) runs on car videos",
+      "pbtxt": "27089219-cbfe-4c33-9263-adda97780554",
+      "models": ["f280f937-fe97-489d-925f-302e8794ca92"],
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
+                "cde737e0-5865-46d6-be71-b43b5522ea15", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
+                "60e96d25-07dd-45be-8c19-4175b2884fc3", "3e95745c-b11b-440f-a1c5-959c9854f04f", 
+                "b1bd4200-7cdb-44fd-8de5-fc68d3a1b584", "7cfd7346-89fe-474e-bded-65b426aeaf67",
+                "9389f756-9673-47db-bb24-c5b4fff3c369"]
+    },
+
+    {
+      "guid": "e99e180c-1773-48a1-a90d-abc01778b33b",
+      "name": "demo: face mask detection (pt_face-mask, 5ev). Inference on device",
+      "description": "face mask detector (pt_face-mask, 5ev) runs on crowd videos",
+      "pbtxt": "1d58930c-6bd8-4ae6-ad3c-529610031d36",
+      "models": ["bc8acb56-eacb-40a7-b23e-1d6c8a9e880f"],
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",      
+                "cde737e0-5865-46d6-be71-b43b5522ea15", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
+                "60e96d25-07dd-45be-8c19-4175b2884fc3", "3e95745c-b11b-440f-a1c5-959c9854f04f", 
+                "b1bd4200-7cdb-44fd-8de5-fc68d3a1b584", "7cfd7346-89fe-474e-bded-65b426aeaf67"]
+    },
+    {
+      "guid": "d0d76d73-ec77-44c1-8559-07f341f08547",
+      "name": "demo: face mask detection (pt_face-mask, 5ev). Decode and inference on device",
+      "description": "face mask detector (pt_face-mask, 5ev) runs on crowd videos",
+      "pbtxt": "07ab43bb-47ff-4b43-a323-040824fd3ed9",
+      "models": ["bc8acb56-eacb-40a7-b23e-1d6c8a9e880f"],
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
+                "cde737e0-5865-46d6-be71-b43b5522ea15", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
+                "60e96d25-07dd-45be-8c19-4175b2884fc3", "3e95745c-b11b-440f-a1c5-959c9854f04f", 
+                "b1bd4200-7cdb-44fd-8de5-fc68d3a1b584", "7cfd7346-89fe-474e-bded-65b426aeaf67",
+                "9389f756-9673-47db-bb24-c5b4fff3c369"]
+    },
+
+    {
+      "guid": "8d9457ea-916d-4996-9bba-da96aee8e402",
+      "name": "demo: retail detection (dk_tiny-yolov3, 5ev). Inference on device",
+      "description": "retail detector (dk_tiny-yolov3, 5ev) runs on retail videos",
+      "pbtxt": "7a22037c-b847-4b65-99c3-bc5422a3a711",
+      "models": ["3b2e473d-60f8-4910-a084-6bababe6c1eb"],
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",      
+                "cde737e0-5865-46d6-be71-b43b5522ea15", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
+                "60e96d25-07dd-45be-8c19-4175b2884fc3", "3e95745c-b11b-440f-a1c5-959c9854f04f", 
+                "b1bd4200-7cdb-44fd-8de5-fc68d3a1b584", "7cfd7346-89fe-474e-bded-65b426aeaf67"]
+    },
+    {
+      "guid": "38b94abb-da26-43a9-8b20-47bc3f960348",
+      "name": "demo: retail detection (dk_tiny-yolov3, 5ev). Decode and inference on device",
+      "description": "retail detector (dk_tiny-yolov3, 5ev) runs on retail videos",
+      "pbtxt": "39215a44-5f56-42ec-acdb-8e0e21f53f06",
+      "models": ["3b2e473d-60f8-4910-a084-6bababe6c1eb"],
       "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
                 "cde737e0-5865-46d6-be71-b43b5522ea15", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
                 "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
@@ -8754,6 +8858,158 @@
       "name": "demo: throughput measurement",
       "description": "throughput measurement for retail detector (dk_tiny-yolov3, 7ev)",
       "models": ["848b99d4-1982-46d8-b2e3-aea28c7ffbff"],
+      "nodes": ["5618ff66-748c-4342-86f9-fb019535430f", "cde737e0-5865-46d6-be71-b43b5522ea15",
+                "ef596576-6e27-4637-af19-38272b008593", "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
+    },
+    {
+      "guid": "cdf817b0-9276-4808-99d9-41d292d41833",
+      "name": "demo: face detection (cf_densebox_wider, 5ev). Inference on device",
+      "description": "face detector (cf_densebox_wider, 5ev) runs on crowd videos",
+      "models": ["90de5b39-ab2f-4a5b-bb2d-1df606239161"],
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",      
+                "cde737e0-5865-46d6-be71-b43b5522ea15", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
+                "60e96d25-07dd-45be-8c19-4175b2884fc3", "3e95745c-b11b-440f-a1c5-959c9854f04f", 
+                "b1bd4200-7cdb-44fd-8de5-fc68d3a1b584", "7cfd7346-89fe-474e-bded-65b426aeaf67"]
+    },
+    {
+      "guid": "eb7f6c28-4c8a-47fc-bb3a-b5a36df2eaa2",
+      "name": "demo: face detection (cf_densebox_wider, 5ev). Decode and Inference on device",
+      "description": "face detector (cf_densebox_wider, 5ev) runs on crowd videos",
+      "models": ["90de5b39-ab2f-4a5b-bb2d-1df606239161"],
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
+                "cde737e0-5865-46d6-be71-b43b5522ea15", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
+                "60e96d25-07dd-45be-8c19-4175b2884fc3", "3e95745c-b11b-440f-a1c5-959c9854f04f", 
+                "b1bd4200-7cdb-44fd-8de5-fc68d3a1b584", "7cfd7346-89fe-474e-bded-65b426aeaf67",
+                "9389f756-9673-47db-bb24-c5b4fff3c369"]
+    },
+    {
+      "guid": "e570f4d0-6049-4554-a87a-3dd3814d301b",
+      "name": "node: box_detector",
+      "description": "box detector (cf_densebox_wider, 5ev) as face detector",
+      "models": ["90de5b39-ab2f-4a5b-bb2d-1df606239161"],
+      "nodes": ["cde737e0-5865-46d6-be71-b43b5522ea15"]
+    },
+    {
+      "guid": "2a6f6115-29fb-4752-add1-5fe488eed7b0",
+      "name": "demo: throughput measurement",
+      "description": "throughput measurement for face detector (cf_densebox_wider, 5ev)",
+      "models": ["90de5b39-ab2f-4a5b-bb2d-1df606239161"],
+      "nodes": ["5618ff66-748c-4342-86f9-fb019535430f", "cde737e0-5865-46d6-be71-b43b5522ea15",
+                "ef596576-6e27-4637-af19-38272b008593", "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
+    },
+    {
+      "guid": "12b7c44a-f004-4527-bfd6-860b014108c6",
+      "name": "demo: adas detection (cf_ssdtraffic, 5ev). Inference on device",
+      "description": "adas detector (cf_ssdtraffic, 5ev) runs on car videos",
+      "models": ["f280f937-fe97-489d-925f-302e8794ca92"],
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",      
+                "cde737e0-5865-46d6-be71-b43b5522ea15", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
+                "60e96d25-07dd-45be-8c19-4175b2884fc3", "3e95745c-b11b-440f-a1c5-959c9854f04f", 
+                "b1bd4200-7cdb-44fd-8de5-fc68d3a1b584", "7cfd7346-89fe-474e-bded-65b426aeaf67"]
+    },
+    {
+      "guid": "27089219-cbfe-4c33-9263-adda97780554",
+      "name": "demo: adas detection (cf_ssdtraffic, 5ev). Decode and Inference on device",
+      "description": "adas detector (cf_ssdtraffic, 5ev) runs on car videos",
+      "models": ["f280f937-fe97-489d-925f-302e8794ca92"],
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
+                "cde737e0-5865-46d6-be71-b43b5522ea15", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
+                "60e96d25-07dd-45be-8c19-4175b2884fc3", "3e95745c-b11b-440f-a1c5-959c9854f04f", 
+                "b1bd4200-7cdb-44fd-8de5-fc68d3a1b584", "7cfd7346-89fe-474e-bded-65b426aeaf67",
+                "9389f756-9673-47db-bb24-c5b4fff3c369"]
+    },
+    {
+      "guid": "598ae4e9-5a62-457b-9a36-129494c61c00",
+      "name": "node: box_detector",
+      "description": "box detector (cf_ssdtraffic, 5ev) as adas detector",
+      "models": ["f280f937-fe97-489d-925f-302e8794ca92"],
+      "nodes": ["cde737e0-5865-46d6-be71-b43b5522ea15"]
+    },
+    {
+      "guid": "16bef172-210a-4845-997b-50d30ff50dda",
+      "name": "demo: throughput measurement",
+      "description": "throughput measurement for adas detector (cf_ssdtraffic, 5ev)",
+      "models": ["f280f937-fe97-489d-925f-302e8794ca92"],
+      "nodes": ["5618ff66-748c-4342-86f9-fb019535430f", "cde737e0-5865-46d6-be71-b43b5522ea15",
+                "ef596576-6e27-4637-af19-38272b008593", "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
+    },
+    {
+      "guid": "1d58930c-6bd8-4ae6-ad3c-529610031d36",
+      "name": "demo: face mask detection (pt_face-mask, 5ev). Inference on device",
+      "description": "face mask detector (pt_face-mask, 5ev) runs on crowd videos",
+      "models": ["bc8acb56-eacb-40a7-b23e-1d6c8a9e880f"],
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",      
+                "cde737e0-5865-46d6-be71-b43b5522ea15", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
+                "60e96d25-07dd-45be-8c19-4175b2884fc3", "3e95745c-b11b-440f-a1c5-959c9854f04f", 
+                "b1bd4200-7cdb-44fd-8de5-fc68d3a1b584", "7cfd7346-89fe-474e-bded-65b426aeaf67"]
+    },
+    {
+      "guid": "07ab43bb-47ff-4b43-a323-040824fd3ed9",
+      "name": "demo: face mask detection (pt_face-mask, 5ev). Decode and Inference on device",
+      "description": "face mask detector (pt_face-mask, 5ev) runs on crowd videos",
+      "models": ["bc8acb56-eacb-40a7-b23e-1d6c8a9e880f"],
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
+                "cde737e0-5865-46d6-be71-b43b5522ea15", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
+                "60e96d25-07dd-45be-8c19-4175b2884fc3", "3e95745c-b11b-440f-a1c5-959c9854f04f", 
+                "b1bd4200-7cdb-44fd-8de5-fc68d3a1b584", "7cfd7346-89fe-474e-bded-65b426aeaf67",
+                "9389f756-9673-47db-bb24-c5b4fff3c369"]
+    },
+    {
+      "guid": "8e7b559f-5e85-4e69-b90e-6c00c9d35035",
+      "name": "node: box_detector",
+      "description": "box detector (pt_face-mask, 5ev) as face mask detector",
+      "models": ["bc8acb56-eacb-40a7-b23e-1d6c8a9e880f"],
+      "nodes": ["cde737e0-5865-46d6-be71-b43b5522ea15"]
+    },
+    {
+      "guid": "13531e98-5962-44d0-ba2f-eb2a38d5152a",
+      "name": "demo: throughput measurement",
+      "description": "throughput measurement for face mask detector (pt_face-mask, 5ev)",
+      "models": ["bc8acb56-eacb-40a7-b23e-1d6c8a9e880f"],
+      "nodes": ["5618ff66-748c-4342-86f9-fb019535430f", "cde737e0-5865-46d6-be71-b43b5522ea15",
+                "ef596576-6e27-4637-af19-38272b008593", "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
+    },
+    {
+      "guid": "7a22037c-b847-4b65-99c3-bc5422a3a711",
+      "name": "demo: retail detection (dk_tiny-yolov3, 5ev). Inference on device",
+      "description": "retail detector (dk_tiny-yolov3, 5ev) runs on retail videos",
+      "models": ["3b2e473d-60f8-4910-a084-6bababe6c1eb"],
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",      
+                "cde737e0-5865-46d6-be71-b43b5522ea15", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
+                "60e96d25-07dd-45be-8c19-4175b2884fc3", "3e95745c-b11b-440f-a1c5-959c9854f04f", 
+                "b1bd4200-7cdb-44fd-8de5-fc68d3a1b584", "7cfd7346-89fe-474e-bded-65b426aeaf67"]
+    },
+    {
+      "guid": "39215a44-5f56-42ec-acdb-8e0e21f53f06",
+      "name": "demo: retail detection (dk_tiny-yolov3, 5ev). Decode and Inference on device",
+      "description": "retail detector (dk_tiny-yolov3, 5ev) runs on retail videos",
+      "models": ["3b2e473d-60f8-4910-a084-6bababe6c1eb"],
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
+                "cde737e0-5865-46d6-be71-b43b5522ea15", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
+                "60e96d25-07dd-45be-8c19-4175b2884fc3", "3e95745c-b11b-440f-a1c5-959c9854f04f", 
+                "b1bd4200-7cdb-44fd-8de5-fc68d3a1b584", "7cfd7346-89fe-474e-bded-65b426aeaf67",
+                "9389f756-9673-47db-bb24-c5b4fff3c369"]
+    },
+    {
+      "guid": "a677be74-e3a7-414d-b3d7-ee18a8994183",
+      "name": "node: box_detector",
+      "description": "box detector (dk_tiny-yolov3, 5ev) as retail detector",
+      "models": ["3b2e473d-60f8-4910-a084-6bababe6c1eb"],
+      "nodes": ["cde737e0-5865-46d6-be71-b43b5522ea15"]
+    },
+    {
+      "guid": "db5ac5a5-ef99-4970-915f-8df22b3c84f7",
+      "name": "demo: throughput measurement",
+      "description": "throughput measurement for retail detector (dk_tiny-yolov3, 5ev)",
+      "models": ["3b2e473d-60f8-4910-a084-6bababe6c1eb"],
       "nodes": ["5618ff66-748c-4342-86f9-fb019535430f", "cde737e0-5865-46d6-be71-b43b5522ea15",
                 "ef596576-6e27-4637-af19-38272b008593", "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
     }
