@@ -3871,6 +3871,126 @@
       "pipeline_pbtxt": "76ffa149-f112-4578-a9f7-93fd314f60dd",
       "throughput_pbtxt": "da86dd78-d6b7-438c-8b13-efcf6f4793f9"
     },
+    {
+      "guid": "8e7249e3-5dd7-4d75-97d1-0e578a0702ac",
+      "model_zoo_name": "pt_movenet_coco_192_192_0.5G_2.5",
+      "kernel": "movenet_ntd_pt",
+      "vendor": "Xilinx",
+      "ml_task": "landmark_prediction",
+      "application": "general",
+      "hardware_type": "aupera_v205_1",
+      "hardware_arch": "DPUCZDX8G",
+      "hardware_engine": "", 
+      "model_format": "xmodel",
+      "ml_lib": "pytorch1.7.0",
+      "inference_lib": "vitis2.5",
+      "checksum": "65985187e9a45ee8d1e61d3febcd1e3c",
+      "download_link": "https://amd.vmaccel.com/object-store/v1/aup_models/movenet_ntd_pt.tar.gz", 
+      "ops": "0.5G",
+      "input_size": "192x192",
+      "float_accuracy": "0.7972",
+      "quantized_accuracy": "0.7981",
+      "dataset": "coco",
+      "node_pbtxt": "a25981de-a524-49fc-adf8-4ac04f2f61b6",
+      "pipeline_pbtxt": "cffcbd0a-773c-4998-8d2a-bece58b5923c",
+      "throughput_pbtxt": "05bf5b35-e307-442c-b241-2729be288a44"
+    },
+    {
+      "guid": "807f503a-fb1c-4a4b-be96-a91d63565a18",
+      "model_zoo_name": "cf_hourglass_mpii_256_256_10.2G_2.5",
+      "kernel": "hourglass_pe_mpii",
+      "vendor": "Xilinx",
+      "ml_task": "landmark_prediction",
+      "application": "general",
+      "hardware_type": "aupera_v205_1",
+      "hardware_arch": "DPUCZDX8G",
+      "hardware_engine": "", 
+      "model_format": "xmodel",
+      "ml_lib": "caffe1.0",
+      "inference_lib": "vitis2.5",
+      "checksum": "4043b586a872307556cf0ad3227c65cc",
+      "download_link": "https://amd.vmaccel.com/object-store/v1/aup_models/hourglass_pe_mpii.tar.gz", 
+      "ops": "10.2G",
+      "input_size": "256x256",
+      "float_accuracy": "0.8718",
+      "quantized_accuracy": "0.8661",
+      "dataset": "MPII-Human-Pose",
+      "node_pbtxt": "2c7d8d1a-837b-4454-bcef-603540a5e162",
+      "pipeline_pbtxt": "10d74b23-2436-4af6-81ee-7c0a2173163f",
+      "throughput_pbtxt": "9e06010c-5a38-4f57-b06e-39e7657662d0"
+    },
+    {
+      "guid": "ce6eab2a-a95d-4844-a5c2-17c085f4d522",
+      "model_zoo_name": "cf_openpose_aichallenger_368_368_0.3_189.7G_2.5",
+      "kernel": "openpose_pruned_0_3",
+      "vendor": "Xilinx",
+      "ml_task": "landmark_prediction",
+      "application": "general",
+      "hardware_type": "aupera_v205_1",
+      "hardware_arch": "DPUCZDX8G",
+      "hardware_engine": "", 
+      "model_format": "xmodel",
+      "ml_lib": "caffe1.0",
+      "inference_lib": "vitis2.5",
+      "checksum": "c415459d9a69fb5ef5a50a3108e73aca",
+      "download_link": "https://amd.vmaccel.com/object-store/v1/aup_models/openpose_pruned_0_3.tar.gz", 
+      "ops": "189.7G",
+      "input_size": "368x368",
+      "float_accuracy": "0.4507",
+      "quantized_accuracy": "0.4429",
+      "dataset": "private-dataset",
+      "node_pbtxt": "9f15b7b7-1f23-4441-85f6-55bc61472734",
+      "pipeline_pbtxt": "d2e6f1dc-d404-4cdc-adef-1744872b5a1b",
+      "throughput_pbtxt": "5c69ecfc-fc26-46e0-a554-4df8ab3d7d48"
+    },
+    {
+      "guid": "fb60a56a-86ff-4454-acb0-92ba576cf6b6",
+      "model_zoo_name": "cf_landmark_celeba_96_72_0.14G_2.5",
+      "kernel": "face_landmark",
+      "vendor": "Xilinx",
+      "ml_task": "landmark_prediction",
+      "application": "general",
+      "hardware_type": "aupera_v205_1",
+      "hardware_arch": "DPUCZDX8G",
+      "hardware_engine": "", 
+      "model_format": "xmodel",
+      "ml_lib": "caffe1.0",
+      "inference_lib": "vitis2.5",
+      "checksum": "1f4a1caa8f8401dc108d6123103dc6b8",
+      "download_link": "https://amd.vmaccel.com/object-store/v1/aup_models/face_landmark.tar.gz", 
+      "ops": "0.14G",
+      "input_size": "96x72",
+      "float_accuracy": "0.1952",
+      "quantized_accuracy": "0.1971",
+      "dataset": "private-dataset",
+      "node_pbtxt": "5a303571-e823-40ff-9cad-c7d5744e1a64",
+      "pipeline_pbtxt": "188e5af9-2dbe-4582-a166-36baedbe71db",
+      "throughput_pbtxt": "255de6a2-641d-4991-af6c-f2b9df7c2fd8"
+    },
+    {
+      "guid": "fea02ecd-7ea1-485e-9c32-14374b060ad1",
+      "model_zoo_name": "cf_retinaface_wider_360_640_1.11G_2.0",
+      "kernel": "retinaface",
+      "vendor": "Xilinx",
+      "ml_task": "landmark_prediction",
+      "application": "general",
+      "hardware_type": "aupera_v205_1",
+      "hardware_arch": "DPUCZDX8G",
+      "hardware_engine": "", 
+      "model_format": "xmodel",
+      "ml_lib": "caffe1.0",
+      "inference_lib": "vitis2.5",
+      "checksum": "688d1dd68bd99c59a48e19fc404bedfe",
+      "download_link": "https://amd.vmaccel.com/object-store/v1/aup_models/retinaface.tar.gz", 
+      "ops": "1.11G",
+      "input_size": "360x640",
+      "float_accuracy": "0.9140",
+      "quantized_accuracy": "0.8940",
+      "dataset": "WIDER_FACE",
+      "node_pbtxt": "15cd0cf6-bb44-45bf-974c-1a9df997cfe1",
+      "pipeline_pbtxt": "9e7b03a0-8452-44bc-9fa0-bbbad0cbb5db",
+      "throughput_pbtxt": "dce64601-b50d-41a2-b436-e958e220ef19"
+    },
 
     
     {
@@ -4182,6 +4302,16 @@
       "hardware_engines": ["4pe", "6pe", "8pe"]
     },
     {
+      "guid": "2fb72d88-2c3b-43dc-9599-c9ef20c63b48",
+      "type": "aupera_free",
+      "name": "landmark_predictor",
+      "vendor": "Aupera",
+      "pbtxt": "2df0c487-7dad-49b7-8490-502c93f2cd13",
+      "hardware_types": ["xilinx_vck5000_gen3x16_xdma_base_1", "xilinx_v70_gen5x8_qdma_base_2", "A-U50-P00G-LV-G", "aupera_v205_1", "aupera_u30_gen3x4_base_1", "aupera_som_1", "aupera_sbc_x7_1"],
+      "hardware_archs": ["DPUCVDX8H", "DPUCV2DX8G", "DPUCAHX8H", "DPUCAHX8L", "DPUCZDX8G"],
+      "hardware_engines": ["4pe", "6pe", "8pe"]
+    },
+    {
       "guid": "3e95745c-b11b-440f-a1c5-959c9854f04f",
       "type": "aupera_free",
       "name": "subgraph",
@@ -4441,6 +4571,17 @@
                 "231d2fb4-6527-42b9-aa3e-eade58446a37", "cbbeb075-5517-4d0e-9f56-cec8cad595da", 
                 "8a2d1c42-0d85-4423-be85-2651d9e13a50", "60e96d25-07dd-45be-8c19-4175b2884fc3"]
     },
+    {
+      "guid": "a19a693b-f1ce-4f46-9e97-4ad68c06b561",
+      "name": "demo: general detection and landmark prediction cascade",
+      "description": "box detector and landmark predictor cascade runs on crowd videos",
+      "pbtxt": "cffcbd0a-773c-4998-8d2a-bece58b5923c",
+      "models": ["1e6d28be-b1d2-41be-b82a-b34fade75bde", "8e7249e3-5dd7-4d75-97d1-0e578a0702ac"],
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "8785871e-21d8-4f22-84cd-38636297daef",
+                "cde737e0-5865-46d6-be71-b43b5522ea15", "2fb72d88-2c3b-43dc-9599-c9ef20c63b48",
+                "f6d4c0be-7146-463e-9e75-7c7aae7dbdac", "cbbeb075-5517-4d0e-9f56-cec8cad595da",
+                "8a2d1c42-0d85-4423-be85-2651d9e13a50", "60e96d25-07dd-45be-8c19-4175b2884fc3"]
+    },
 
     {
       "guid": "a9e80935-1893-43c0-bc1e-ca848a192957",
@@ -4581,6 +4722,13 @@
       "description": "default parameters for apl_vehicle_reid node",
       "models": [],
       "nodes": ["231d2fb4-6527-42b9-aa3e-eade58446a37"]
+    },
+    {
+      "guid": "2df0c487-7dad-49b7-8490-502c93f2cd13",
+      "name": "node: landmark_predictor default",
+      "description": "default parameters for landmark_predictor node",
+      "models": [],
+      "nodes": ["2fb72d88-2c3b-43dc-9599-c9ef20c63b48"]
     },
     {
       "guid": "7032348f-ff61-486a-84e3-00e61a153ef4",
@@ -8718,6 +8866,132 @@
                 "ef596576-6e27-4637-af19-38272b008593", "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
     },
 
+    {
+      "guid": "cffcbd0a-773c-4998-8d2a-bece58b5923c",
+      "name": "demo: general detection and landmark prediction cascade",
+      "description": "box detector (ssd_pedestrian_pruned_0_97) and pose landmark predictor (movenet_ntd_pt) cascade runs on crowd videos",
+      "models": ["1e6d28be-b1d2-41be-b82a-b34fade75bde", "8e7249e3-5dd7-4d75-97d1-0e578a0702ac"],
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "8785871e-21d8-4f22-84cd-38636297daef",
+                "cde737e0-5865-46d6-be71-b43b5522ea15", "2fb72d88-2c3b-43dc-9599-c9ef20c63b48",
+                "f6d4c0be-7146-463e-9e75-7c7aae7dbdac", "cbbeb075-5517-4d0e-9f56-cec8cad595da",
+                "8a2d1c42-0d85-4423-be85-2651d9e13a50", "60e96d25-07dd-45be-8c19-4175b2884fc3"]
+    },
+    {
+      "guid": "a25981de-a524-49fc-adf8-4ac04f2f61b6",
+      "name": "node: landmark_predictor",
+      "description": "landmark_predictor (movenet_ntd_pt)",
+      "models": ["8e7249e3-5dd7-4d75-97d1-0e578a0702ac"],
+      "nodes": ["2fb72d88-2c3b-43dc-9599-c9ef20c63b48"]
+    },
+    {
+      "guid": "05bf5b35-e307-442c-b241-2729be288a44",
+      "name": "demo: throughput measurement",
+      "description": "throughput measurement for landmark predictor (movenet_ntd_pt)",
+      "models": ["8e7249e3-5dd7-4d75-97d1-0e578a0702ac"],
+      "nodes": ["5618ff66-748c-4342-86f9-fb019535430f", "2fb72d88-2c3b-43dc-9599-c9ef20c63b48",
+                "ef596576-6e27-4637-af19-38272b008593", "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
+    },
+
+    {
+      "guid": "10d74b23-2436-4af6-81ee-7c0a2173163f",
+      "name": "demo: general detection and landmark prediction cascade",
+      "description": "box detector (ssd_pedestrian_pruned_0_97) and pose landmark predictor (hourglass_pe_mpii) cascade runs on crowd videos",
+      "models": ["1e6d28be-b1d2-41be-b82a-b34fade75bde", "807f503a-fb1c-4a4b-be96-a91d63565a18"],
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "8785871e-21d8-4f22-84cd-38636297daef",
+                "cde737e0-5865-46d6-be71-b43b5522ea15", "2fb72d88-2c3b-43dc-9599-c9ef20c63b48",
+                "f6d4c0be-7146-463e-9e75-7c7aae7dbdac", "cbbeb075-5517-4d0e-9f56-cec8cad595da",
+                "8a2d1c42-0d85-4423-be85-2651d9e13a50", "60e96d25-07dd-45be-8c19-4175b2884fc3"]
+    },
+    {
+      "guid": "2c7d8d1a-837b-4454-bcef-603540a5e162",
+      "name": "node: landmark_predictor",
+      "description": "landmark_predictor (hourglass_pe_mpii)",
+      "models": ["807f503a-fb1c-4a4b-be96-a91d63565a18"],
+      "nodes": ["2fb72d88-2c3b-43dc-9599-c9ef20c63b48"]
+    },
+    {
+      "guid": "9e06010c-5a38-4f57-b06e-39e7657662d0",
+      "name": "demo: throughput measurement",
+      "description": "throughput measurement for landmark predictor (hourglass_pe_mpii)",
+      "models": ["807f503a-fb1c-4a4b-be96-a91d63565a18"],
+      "nodes": ["5618ff66-748c-4342-86f9-fb019535430f", "2fb72d88-2c3b-43dc-9599-c9ef20c63b48",
+                "ef596576-6e27-4637-af19-38272b008593", "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
+    },
+    {
+      "guid": "d2e6f1dc-d404-4cdc-adef-1744872b5a1b",
+      "name": "demo: general detection and landmark prediction cascade",
+      "description": "box detector (ssd_pedestrian_pruned_0_97) and pose landmark predictor (openpose_pruned_0_3) cascade runs on crowd videos",
+      "models": ["1e6d28be-b1d2-41be-b82a-b34fade75bde", "ce6eab2a-a95d-4844-a5c2-17c085f4d522"],
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "8785871e-21d8-4f22-84cd-38636297daef",
+                "cde737e0-5865-46d6-be71-b43b5522ea15", "2fb72d88-2c3b-43dc-9599-c9ef20c63b48",
+                "f6d4c0be-7146-463e-9e75-7c7aae7dbdac", "cbbeb075-5517-4d0e-9f56-cec8cad595da",
+                "8a2d1c42-0d85-4423-be85-2651d9e13a50", "60e96d25-07dd-45be-8c19-4175b2884fc3"]
+    },
+    {
+      "guid": "9f15b7b7-1f23-4441-85f6-55bc61472734",
+      "name": "node: landmark_predictor",
+      "description": "landmark_predictor (openpose_pruned_0_3)",
+      "models": ["ce6eab2a-a95d-4844-a5c2-17c085f4d522"],
+      "nodes": ["2fb72d88-2c3b-43dc-9599-c9ef20c63b48"]
+    },
+    {
+      "guid": "5c69ecfc-fc26-46e0-a554-4df8ab3d7d48",
+      "name": "demo: throughput measurement",
+      "description": "throughput measurement for landmark predictor (openpose_pruned_0_3)",
+      "models": ["ce6eab2a-a95d-4844-a5c2-17c085f4d522"],
+      "nodes": ["5618ff66-748c-4342-86f9-fb019535430f", "2fb72d88-2c3b-43dc-9599-c9ef20c63b48",
+                "ef596576-6e27-4637-af19-38272b008593", "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
+    },
+    {
+      "guid": "188e5af9-2dbe-4582-a166-36baedbe71db",
+      "name": "demo: general detection and landmark prediction cascade",
+      "description": "box detector (densebox_320_320) and face landmark predictor (face_landmark) cascade runs on crowd videos",
+      "models": ["d05f8f64-14d0-42fe-9908-ff3c29490c66", "fb60a56a-86ff-4454-acb0-92ba576cf6b6"],
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "8785871e-21d8-4f22-84cd-38636297daef",
+                "cde737e0-5865-46d6-be71-b43b5522ea15", "2fb72d88-2c3b-43dc-9599-c9ef20c63b48",
+                "f6d4c0be-7146-463e-9e75-7c7aae7dbdac", "cbbeb075-5517-4d0e-9f56-cec8cad595da",
+                "8a2d1c42-0d85-4423-be85-2651d9e13a50", "60e96d25-07dd-45be-8c19-4175b2884fc3"]
+    },
+    {
+      "guid": "5a303571-e823-40ff-9cad-c7d5744e1a64",
+      "name": "node: landmark_predictor",
+      "description": "landmark_predictor (face_landmark)",
+      "models": ["fb60a56a-86ff-4454-acb0-92ba576cf6b6"],
+      "nodes": ["2fb72d88-2c3b-43dc-9599-c9ef20c63b48"]
+    },
+    {
+      "guid": "255de6a2-641d-4991-af6c-f2b9df7c2fd8",
+      "name": "demo: throughput measurement",
+      "description": "throughput measurement for landmark predictor (face_landmark)",
+      "models": ["fb60a56a-86ff-4454-acb0-92ba576cf6b6"],
+      "nodes": ["5618ff66-748c-4342-86f9-fb019535430f", "2fb72d88-2c3b-43dc-9599-c9ef20c63b48",
+                "ef596576-6e27-4637-af19-38272b008593", "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
+    },
+    {
+      "guid": "9e7b03a0-8452-44bc-9fa0-bbbad0cbb5db",
+      "name": "demo: general detection and landmark prediction cascade",
+      "description": "box detector (densebox_320_320) and face landmark predictor (retinaface) cascade runs on crowd videos",
+      "models": ["d05f8f64-14d0-42fe-9908-ff3c29490c66", "fea02ecd-7ea1-485e-9c32-14374b060ad1"],
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "8785871e-21d8-4f22-84cd-38636297daef",
+                "cde737e0-5865-46d6-be71-b43b5522ea15", "2fb72d88-2c3b-43dc-9599-c9ef20c63b48",
+                "f6d4c0be-7146-463e-9e75-7c7aae7dbdac", "cbbeb075-5517-4d0e-9f56-cec8cad595da",
+                "8a2d1c42-0d85-4423-be85-2651d9e13a50", "60e96d25-07dd-45be-8c19-4175b2884fc3"]
+    },
+    {
+      "guid": "15cd0cf6-bb44-45bf-974c-1a9df997cfe1",
+      "name": "node: landmark_predictor",
+      "description": "landmark_predictor (retinaface)",
+      "models": ["fea02ecd-7ea1-485e-9c32-14374b060ad1"],
+      "nodes": ["2fb72d88-2c3b-43dc-9599-c9ef20c63b48"]
+    },
+    {
+      "guid": "dce64601-b50d-41a2-b436-e958e220ef19",
+      "name": "demo: throughput measurement",
+      "description": "throughput measurement for landmark predictor (retinaface)",
+      "models": ["fea02ecd-7ea1-485e-9c32-14374b060ad1"],
+      "nodes": ["5618ff66-748c-4342-86f9-fb019535430f", "2fb72d88-2c3b-43dc-9599-c9ef20c63b48",
+                "ef596576-6e27-4637-af19-38272b008593", "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
+    },
     
     {
       "guid": "1ba6b23c-25d1-4f87-bf00-b3cb704334cd",
@@ -8761,10 +9035,11 @@
 
   "enums":{
     "hardware_engines": ["4pe", "6pe", "8pe"],
-    "ml_tasks": ["detection", "classification", "segmentation", "vehicle_reid_lpr"],
+    "ml_tasks": ["detection", "classification", "segmentation", "vehicle_reid_lpr", "landmark_prediction"],
     "model_formats": ["xmodel", "tf", "pt"],
     "ml_libs": ["tensorflow1.0", "tensorflow1.15.0", "tensorflow2.0", "tensorflow2.3.0",
-                 "pytorch1.1", "pytorch2.1", "pytorch1.7.1", "pytorch1.4.0", "pytorch1.9.0", "pytorch1.10.0", "pytorch1.10.1", "caffe1.0", "darknet"],
+                 "pytorch1.1", "pytorch2.1", "pytorch1.7.1", "pytorch1.4.0", "pytorch1.9.0", "pytorch1.10.0", "pytorch1.10.1", "pytorch1.7.0",
+                 "caffe1.0", "darknet"],
     "inference_libs": ["vitis1.4.1", "vitis2.0.0", "ZenDNN1.1.0"]
   },
   

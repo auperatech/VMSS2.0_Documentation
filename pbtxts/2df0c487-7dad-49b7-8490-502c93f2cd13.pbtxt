@@ -1,0 +1,19 @@
+node {
+  name: "landmark"
+  calculator: "landmark_predictor"
+  input_stream: "detections_stream"
+  input_stream: "image_stream_decode"
+  output_stream: "landmark_stream"
+  stream_sync: {
+    drop_strategy: DROP_INCOMPLETE_PACKETS
+    timeout_ms: 5000
+  }
+  node_options: {
+    [type.googleapis.com/aup.avaf.LandmarkPredictorOptions]: {
+        landmark_predictor_type: ""
+        kernel_name: ""
+        need_preprocess: true
+        log_performance: false
+    }
+  }
+}
