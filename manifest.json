@@ -3870,6 +3870,152 @@
       "node_pbtxt": "7b8ab88b-d7de-4a87-91ac-87cb5718951d",
       "pipeline_pbtxt": "76ffa149-f112-4578-a9f7-93fd314f60dd",
       "throughput_pbtxt": "da86dd78-d6b7-438c-8b13-efcf6f4793f9"
+    },
+
+    
+    {
+      "guid": "848b99d4-1982-46d8-b2e3-aea28c7ffbff",
+      "model_zoo_name": "dk_tiny-yolov3_416_416_5.46G_2.0",
+      "kernel": "dk_tiny-yolov3_416_416_5.46G_2.0",
+      "vendor": "Xilinx",
+      "ml_task": "detection",
+      "application": "retail",
+      "hardware_type": "aupera_u30_gen3x4_base_1",
+      "hardware_arch": "DPUCZDX8G",
+      "hardware_engine": "", 
+      "model_format": "xmodel",
+      "ml_lib": "darknet",
+      "inference_lib": "vitis2.5",
+      "checksum": "2b0c0d200177581a2457228d41134368",
+      "download_link": "", 
+      "ops": "5.46G",
+      "input_size": "416x416",
+      "float_accuracy": "0.9739",
+      "quantized_accuracy": "0.9650",
+      "dataset": "private-dataset",
+      "node_pbtxt": "64c94b96-024b-4cd7-bd51-ec8b8b168cab",
+      "pipeline_pbtxt": "1ba6b23c-25d1-4f87-bf00-b3cb704334cd",
+      "throughput_pbtxt": "a8063fba-0949-409a-aee2-6aaefdefbce8"
+    },
+    {
+      "guid": "90de5b39-ab2f-4a5b-bb2d-1df606239161",
+      "model_zoo_name": "cf_densebox_wider_320_320_0.49G_2.0",
+      "kernel": "aeva_cf_densebox_wider_320_320_0.49G_2.0",
+      "vendor": "Xilinx",
+      "ml_task": "detection",
+      "application": "person-head",
+      "hardware_type": "aupera_u30_gen3x4_base_1",
+      "hardware_arch": "DPUCZDX8G",
+      "hardware_engine": "", 
+      "model_format": "xmodel",
+      "ml_lib": "caffe1.0",
+      "inference_lib": "vitis2.5",
+      "checksum": "fb58bbbbd83f90547e6e7cd6eaa3fdcd",
+      "download_link": "", 
+      "ops": "0.49G",
+      "input_size": "320x320",
+      "float_accuracy": "0.8833",
+      "quantized_accuracy": "0.8783",
+      "dataset": "WIDER_FACE",
+      "node_pbtxt": "",
+      "pipeline_pbtxt": "",
+      "throughput_pbtxt": ""
+    },
+    {
+      "guid": "b93e2e00-b869-4173-b13d-80fa2052b886",
+      "model_zoo_name": "cf_plate-detection_320_320_0.49G_2.0",
+      "kernel": "aeva_cf_plate-detection_320_320_0.49G_2.0",
+      "vendor": "Xilinx",
+      "ml_task": "detection",
+      "application": "plate",
+      "hardware_type": "aupera_u30_gen3x4_base_1",
+      "hardware_arch": "DPUCZDX8G",
+      "hardware_engine": "", 
+      "model_format": "xmodel",
+      "ml_lib": "caffe1.0",
+      "inference_lib": "vitis2.5",
+      "checksum": "b2d76e97a788918459648e1405fcc426",
+      "download_link": "", 
+      "ops": "0.49G",
+      "input_size": "320x320",
+      "float_accuracy": "0.9660",
+      "quantized_accuracy": "0.9650",
+      "dataset": "private-dataset",
+      "node_pbtxt": "",
+      "pipeline_pbtxt": "",
+      "throughput_pbtxt": ""
+    },
+    {
+      "guid": "f280f937-fe97-489d-925f-302e8794ca92",
+      "model_zoo_name": "cf_ssdtraffic_360_480_0.9_11.6G_2.0",
+      "kernel": "aeva_cf_ssdtraffic_360_480_0.9_11.6G_2.0",
+      "vendor": "Xilinx",
+      "ml_task": "detection",
+      "application": "adas",
+      "hardware_type": "aupera_u30_gen3x4_base_1",
+      "hardware_arch": "DPUCZDX8G",
+      "hardware_engine": "", 
+      "model_format": "xmodel",
+      "ml_lib": "caffe1.0",
+      "inference_lib": "vitis2.5",
+      "checksum": "6e1bc3d5f7715d1aa731a879ab065427",
+      "download_link": "", 
+      "ops": "11.6G",
+      "input_size": "360x480",
+      "float_accuracy": "0.5980",
+      "quantized_accuracy": "0.5920",
+      "dataset": "private-dataset",
+      "node_pbtxt": "",
+      "pipeline_pbtxt": "",
+      "throughput_pbtxt": ""
+    },
+    {
+      "guid": "bc8acb56-eacb-40a7-b23e-1d6c8a9e880f",
+      "model_zoo_name": "pt_face-mask-detection_512_512_0.59G_2.5",
+      "kernel": "aeva_pt_face-mask-detection_512_512_0.59G_2.5",
+      "vendor": "Xilinx",
+      "ml_task": "detection",
+      "application": "adas",
+      "hardware_type": "aupera_u30_gen3x4_base_1",
+      "hardware_arch": "DPUCZDX8G",
+      "hardware_engine": "", 
+      "model_format": "xmodel",
+      "ml_lib": "pytorch1.10.1",
+      "inference_lib": "vitis2.5",
+      "checksum": "1346566041809adb0f39700b6ceae5b9",
+      "download_link": "", 
+      "ops": "0.59G",
+      "input_size": "512x512",
+      "float_accuracy": "0.8860",
+      "quantized_accuracy": "0.8810",
+      "dataset": "face_mask",
+      "node_pbtxt": "",
+      "pipeline_pbtxt": "",
+      "throughput_pbtxt": ""
+    },
+    {
+      "guid": "3b2e473d-60f8-4910-a084-6bababe6c1eb",
+      "model_zoo_name": "dk_tiny-yolov3_416_416_5.46G_2.0",
+      "kernel": "aeva_dk_tiny-yolov3_416_416_5.46G_2.0",
+      "vendor": "Xilinx",
+      "ml_task": "detection",
+      "application": "retail",
+      "hardware_type": "aupera_u30_gen3x4_base_1",
+      "hardware_arch": "DPUCZDX8G",
+      "hardware_engine": "", 
+      "model_format": "xmodel",
+      "ml_lib": "darknet",
+      "inference_lib": "vitis2.5",
+      "checksum": "371419ef96aa2f1ec85565265c108521",
+      "download_link": "", 
+      "ops": "5.46G",
+      "input_size": "416x416",
+      "float_accuracy": "0.9739",
+      "quantized_accuracy": "0.9650",
+      "dataset": "private-dataset",
+      "node_pbtxt": "",
+      "pipeline_pbtxt": "",
+      "throughput_pbtxt": ""
     }
   ],
 
@@ -4034,6 +4180,46 @@
       "hardware_types": ["xilinx_vck5000_gen3x16_xdma_base_1", "xilinx_v70_gen5x8_qdma_base_2", "A-U50-P00G-LV-G", "aupera_v205_1", "aupera_u30_gen3x4_base_1", "aupera_som_1", "aupera_sbc_x7_1"],
       "hardware_archs": ["DPUCVDX8H", "DPUCV2DX8G", "DPUCAHX8H", "DPUCAHX8L", "DPUCZDX8G"],
       "hardware_engines": ["4pe", "6pe", "8pe"]
+    },
+    {
+      "guid": "3e95745c-b11b-440f-a1c5-959c9854f04f",
+      "type": "aupera_free",
+      "name": "subgraph",
+      "vendor": "Aupera",
+      "pbtxt": "7032348f-ff61-486a-84e3-00e61a153ef4",
+      "hardware_types": ["aupera_u30_gen3x4_base_1"],
+      "hardware_archs": ["DPUCZDX8G"],
+      "hardware_engines": []
+    },
+    {
+      "guid": "b1bd4200-7cdb-44fd-8de5-fc68d3a1b584",
+      "type": "aupera_free",
+      "name": "host_source",
+      "vendor": "Aupera",
+      "pbtxt": "78605242-a801-452f-bc57-1cf4ca8c8cad",
+      "hardware_types": ["aupera_u30_gen3x4_base_1"],
+      "hardware_archs": ["DPUCZDX8G"],
+      "hardware_engines": []
+    },
+    {
+      "guid": "7cfd7346-89fe-474e-bded-65b426aeaf67",
+      "type": "aupera_free",
+      "name": "host_sink",
+      "vendor": "Aupera",
+      "pbtxt": "7d9ea61e-2a0c-495b-a874-c971f953e234",
+      "hardware_types": ["aupera_u30_gen3x4_base_1"],
+      "hardware_archs": ["DPUCZDX8G"],
+      "hardware_engines": []
+    },
+    {
+      "guid": "9389f756-9673-47db-bb24-c5b4fff3c369",
+      "type": "aupera_free",
+      "name": "u30_dec_device",
+      "vendor": "Aupera",
+      "pbtxt": "901a5bec-12ed-48ee-8600-dee07d34dbae",
+      "hardware_types": ["aupera_u30_gen3x4_base_1"],
+      "hardware_archs": ["DPUCZDX8G"],
+      "hardware_engines": []
     }
   ],
   
@@ -4254,6 +4440,32 @@
                 "cde737e0-5865-46d6-be71-b43b5522ea15", "65186a8f-80c0-4b26-8453-bd05da30eecd",
                 "231d2fb4-6527-42b9-aa3e-eade58446a37", "cbbeb075-5517-4d0e-9f56-cec8cad595da", 
                 "8a2d1c42-0d85-4423-be85-2651d9e13a50", "60e96d25-07dd-45be-8c19-4175b2884fc3"]
+    },
+
+    {
+      "guid": "a9e80935-1893-43c0-bc1e-ca848a192957",
+      "name": "demo: retail detection (dk_tiny-yolov3, 7ev). Inference on device",
+      "description": "retail detector (dk_tiny-yolov3, 7ev) runs on retail videos",
+      "pbtxt": "1ba6b23c-25d1-4f87-bf00-b3cb704334cd",
+      "models": ["848b99d4-1982-46d8-b2e3-aea28c7ffbff"],
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",      
+                "cde737e0-5865-46d6-be71-b43b5522ea15", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
+                "60e96d25-07dd-45be-8c19-4175b2884fc3", "3e95745c-b11b-440f-a1c5-959c9854f04f", 
+                "b1bd4200-7cdb-44fd-8de5-fc68d3a1b584", "7cfd7346-89fe-474e-bded-65b426aeaf67"]
+    },
+    {
+      "guid": "c517481b-70c7-468a-b431-e523f9950ba2",
+      "name": "demo: retail detection (dk_tiny-yolov3, 7ev). Decode and inference on device",
+      "description": "retail detector (dk_tiny-yolov3, 7ev) runs on retail videos",
+      "pbtxt": "a0d02b0e-9e8e-4861-9229-80ba1705b087",
+      "models": ["848b99d4-1982-46d8-b2e3-aea28c7ffbff"],
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
+                "cde737e0-5865-46d6-be71-b43b5522ea15", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
+                "60e96d25-07dd-45be-8c19-4175b2884fc3", "3e95745c-b11b-440f-a1c5-959c9854f04f", 
+                "b1bd4200-7cdb-44fd-8de5-fc68d3a1b584", "7cfd7346-89fe-474e-bded-65b426aeaf67",
+                "9389f756-9673-47db-bb24-c5b4fff3c369"]
     }
   ],
 
@@ -4370,7 +4582,34 @@
       "models": [],
       "nodes": ["231d2fb4-6527-42b9-aa3e-eade58446a37"]
     },
-
+    {
+      "guid": "7032348f-ff61-486a-84e3-00e61a153ef4",
+      "name": "node: subgraph default",
+      "description": "default parameters for subgraph node",
+      "models": [],
+      "nodes": ["3e95745c-b11b-440f-a1c5-959c9854f04f"]
+    },
+    {
+      "guid": "78605242-a801-452f-bc57-1cf4ca8c8cad",
+      "name": "node: host_source default",
+      "description": "default parameters for host_source node",
+      "models": [],
+      "nodes": ["b1bd4200-7cdb-44fd-8de5-fc68d3a1b584"]
+    },
+    {
+      "guid": "7d9ea61e-2a0c-495b-a874-c971f953e234",
+      "name": "node: host_sink default",
+      "description": "default parameters for host_sink node",
+      "models": [],
+      "nodes": ["7cfd7346-89fe-474e-bded-65b426aeaf67"]
+    },
+    {
+      "guid": "901a5bec-12ed-48ee-8600-dee07d34dbae",
+      "name": "node: u30_dec_device default",
+      "description": "default parameters for u30_dec_device node",
+      "models": [],
+      "nodes": ["9389f756-9673-47db-bb24-c5b4fff3c369"]
+    },
     
     {
       "guid": "bb989898-064d-4efd-8b3e-88ca388a6bc0",
@@ -8477,6 +8716,46 @@
       "models": ["0de7753a-8558-4a5d-ad91-c393019adf5c"],
       "nodes": ["5618ff66-748c-4342-86f9-fb019535430f", "8649db51-7e22-48a9-819e-fe927b827e07",
                 "ef596576-6e27-4637-af19-38272b008593", "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
+    },
+
+    
+    {
+      "guid": "1ba6b23c-25d1-4f87-bf00-b3cb704334cd",
+      "name": "demo: retail detection (dk_tiny-yolov3, 7ev). Inference on device",
+      "description": "retail detector (dk_tiny-yolov3, 7ev) runs on retail videos",
+      "models": ["848b99d4-1982-46d8-b2e3-aea28c7ffbff"],
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",      
+                "cde737e0-5865-46d6-be71-b43b5522ea15", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
+                "60e96d25-07dd-45be-8c19-4175b2884fc3", "3e95745c-b11b-440f-a1c5-959c9854f04f", 
+                "b1bd4200-7cdb-44fd-8de5-fc68d3a1b584", "7cfd7346-89fe-474e-bded-65b426aeaf67"]
+    },
+    {
+      "guid": "a0d02b0e-9e8e-4861-9229-80ba1705b087",
+      "name": "demo: retail detection (dk_tiny-yolov3, 7ev). Decode and Inference on device",
+      "description": "retail detector (dk_tiny-yolov3, 7ev) runs on retail videos",
+      "models": ["848b99d4-1982-46d8-b2e3-aea28c7ffbff"],
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
+                "cde737e0-5865-46d6-be71-b43b5522ea15", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
+                "60e96d25-07dd-45be-8c19-4175b2884fc3", "3e95745c-b11b-440f-a1c5-959c9854f04f", 
+                "b1bd4200-7cdb-44fd-8de5-fc68d3a1b584", "7cfd7346-89fe-474e-bded-65b426aeaf67",
+                "9389f756-9673-47db-bb24-c5b4fff3c369"]
+    },
+    {
+      "guid": "64c94b96-024b-4cd7-bd51-ec8b8b168cab",
+      "name": "node: box_detector",
+      "description": "box detector (dk_tiny-yolov3, 7ev) as retail detector",
+      "models": ["848b99d4-1982-46d8-b2e3-aea28c7ffbff"],
+      "nodes": ["cde737e0-5865-46d6-be71-b43b5522ea15"]
+    },
+    {
+      "guid": "a8063fba-0949-409a-aee2-6aaefdefbce8",
+      "name": "demo: throughput measurement",
+      "description": "throughput measurement for retail detector (dk_tiny-yolov3, 7ev)",
+      "models": ["848b99d4-1982-46d8-b2e3-aea28c7ffbff"],
+      "nodes": ["5618ff66-748c-4342-86f9-fb019535430f", "cde737e0-5865-46d6-be71-b43b5522ea15",
+                "ef596576-6e27-4637-af19-38272b008593", "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
     }
   ],
 
@@ -8485,7 +8764,7 @@
     "ml_tasks": ["detection", "classification", "segmentation", "vehicle_reid_lpr"],
     "model_formats": ["xmodel", "tf", "pt"],
     "ml_libs": ["tensorflow1.0", "tensorflow1.15.0", "tensorflow2.0", "tensorflow2.3.0",
-                 "pytorch1.1", "pytorch2.1", "pytorch1.7.1", "pytorch1.4.0", "pytorch1.9.0", "pytorch1.10.0", "caffe1.0", "darknet"],
+                 "pytorch1.1", "pytorch2.1", "pytorch1.7.1", "pytorch1.4.0", "pytorch1.9.0", "pytorch1.10.0", "pytorch1.10.1", "caffe1.0", "darknet"],
     "inference_libs": ["vitis1.4.1", "vitis2.0.0", "ZenDNN1.1.0"]
   },
   

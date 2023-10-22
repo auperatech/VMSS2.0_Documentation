@@ -1,0 +1,10 @@
+node {
+    name: "host_source"
+    calculator: "host_source"
+    output_stream: "image_stream"
+    node_options: {
+    [type.googleapis.com/aup.avaf.HostSourceSinkOptions]: {
+        index: 0
+    }
+    }
+}

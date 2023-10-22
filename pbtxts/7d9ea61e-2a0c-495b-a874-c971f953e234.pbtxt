@@ -1,0 +1,10 @@
+node {
+    name: "host_sink"
+    calculator: "host_sink"
+    input_stream: "input_stream"
+    node_options: {
+    [type.googleapis.com/aup.avaf.HostSourceSinkOptions]: {
+        index: 0
+    }
+    }
+}
