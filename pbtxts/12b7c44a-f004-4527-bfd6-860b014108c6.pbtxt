@@ -1,0 +1,230 @@
+control_port: 51881
+
+node {
+  name: "demux_node"
+  calculator: "stream_demux"
+  output_stream: "packet_stream"
+  output_stream: "video_info_side_packet_demux"
+  node_options: {
+    [type.googleapis.com/aup.avaf.StreamMuxOptions]: {
+      demux: {
+        rtsp_transport: "tcp"  
+        iframe_extract: false
+        auto_reconnect: true
+        input_url: "rtsp://108.160.220.169:8554/retail"
+      }
+    }
+  }
+}
+node {
+  name: "decode_node"
+  calculator: "x86_dec"
+  input_stream: "packet_stream"
+  input_stream: "video_info_side_packet_demux"
+  output_stream: "image_stream"
+  output_stream: "video_info_side_packet_decode"
+  node_options: {
+    [type.googleapis.com/aup.avaf.VideoCodecOptions]: {
+      dec: {
+        ow: 1920
+        oh: 1080
+        opixfmt: PIXFMT_BGR24
+        queue_size: 12
+        low_latency: false
+      }
+    }
+  }
+}
+
+node {
+  name: "subgraph"
+  calculator: "subgraph"
+  input_stream: "image_stream"
+  output_stream: "detection_stream"
+  node_options: {
+    [type.googleapis.com/aup.avaf.SubgraphOptions]: {
+      input_attrs: {
+        type: PACKET_TYPE_IMAGE
+        pool_sz: 2
+        entry_sz_kb: 6080
+      }
+      output_attrs: {
+        type: PACKET_TYPE_DETECTIONS_OR_TRACKS
+        pool_sz: 2
+        entry_sz_kb: 64
+      }
+      subgraph_config: {
+        node {
+          name: "host_source_image_stream"
+          calculator: "host_source"
+          output_stream: "image_stream"
+          node_options: {
+            [type.googleapis.com/aup.avaf.HostSourceSinkOptions]: {
+              index: 0
+            }
+          }
+        }
+        node {
+          name: "detector"
+          calculator: "box_detector"
+          input_stream: "image_stream"
+          output_stream: "detection_stream"
+          output_stream: "detect_interval_side_packet_dangling"
+          ml_model_kernel_name: "aeva_cf_ssdtraffic_360_480_0.9_11.6G_2.0"
+          node_options: {
+            [type.googleapis.com/aup.avaf.BoxDetectorOptions]: {
+              detect_interval: 1
+              detector_type: "SSD"
+              need_preprocess: true
+              log_performance: false
+              run_on_letterboxed_img: false
+              batch_size: 1
+              return_frames_inorder: true 
+              batch_collection_timeout_ms: 0
+              ignore_black_frames: false
+              max_detection_lib_q_size: 30
+              label_confidence: {
+                label: 0
+                confidence: 0.5
+              }
+              label_confidence: {
+                label: 1
+                confidence: 0.5
+              }
+              label_confidence: {
+                label: 2
+                confidence: 0.5
+              }
+              label_confidence: {
+                label: 3
+                confidence: 0.5
+              }
+            }
+          }
+        }
+        node {
+          name: "host_sink_detections"
+          calculator: "host_sink"
+          input_stream: "detection_stream"
+          node_options: {
+            [type.googleapis.com/aup.avaf.HostSourceSinkOptions]: {
+              index: 0
+            }
+          }
+        }
+        console_logging_filter: {
+          enable_all: true
+        }
+      }
+    }
+  }
+}
+
+node {
+  name: "visualizer"
+  calculator: "box_visualizer"
+  input_stream: "detection_stream"
+  input_stream: "image_stream"
+  output_stream: "image_stream_viz"
+  stream_sync: {
+    drop_strategy: DROP_INCOMPLETE_PACKETS
+    timeout_ms: 5000
+  }
+  node_options: {
+    [type.googleapis.com/aup.avaf.BoxVisualizerOptions]: {
+      text_color: {
+        r: 255
+        g: 0
+        b: 0
+      }
+      box_color: {
+        r: 255
+        g: 0
+        b: 0
+      }
+      class_color: {
+        label: 1
+        color: {
+          r: 0
+          g: 0
+          b: 0
+        }
+      }
+      class_color: {
+        label: 2
+        color: {
+          r: 0
+          g: 255
+          b: 0
+        }
+      }
+      text_offset: {
+        x: 0
+        y: 0
+      }
+      font: 0 
+      line_type: 0
+      box_thickness: 5
+      text_size: 5 
+    }
+  }
+}
+
+node {
+  name: "vfilter_node"
+  calculator: "ff_vfilter"
+  vendor: "Aupera"
+  input_stream: "image_stream_viz"
+  input_stream: "video_info_side_packet_decode"
+  output_stream: "image_stream_vfilter_node"
+  output_stream: "video_stream_info_vfilter_node"
+  node_options: {
+    [type.googleapis.com/aup.avaf.VideoFilterOptions]: {
+      opixfmt: PIXFMT_I420
+      ow: 1280
+      oh: 720
+      ofps: 20
+    }
+  }
+}
+
+node {
+  name: "encode_node"
+  calculator: "x86_enc"
+  vendor: "Aupera"
+  input_stream: "image_stream_vfilter_node"
+  input_stream: "video_stream_info_vfilter_node"
+  output_stream: "packet_stream_encode_node"
+  output_stream: "codec_context_stream"
+  node_options: {
+    [type.googleapis.com/aup.avaf.VideoCodecOptions]: {
+      enc: {
+        type: MPEG4
+        w: 0
+        h: 0
+        #  fps: 20
+      }
+    }
+  }
+}
+
+node {
+  name: "mux_node"
+  calculator: "stream_mux"
+  vendor: "Aupera"
+  input_stream: "packet_stream_encode_node"
+  input_stream: "codec_context_stream"
+  node_options: {
+    [type.googleapis.com/aup.avaf.StreamMuxOptions]: {
+     mux: {
+       rtsp_transport: "tcp"
+       auto_reconnect: true
+       output_url: "rtsp://108.160.220.169:8554/retail-out-7ev"
+     }
+    }
+  }
+}
+
+console_logging_filter: {
+  enable_all: true
+}
