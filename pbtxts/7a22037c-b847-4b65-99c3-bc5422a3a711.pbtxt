@@ -1,8 +1,12 @@
 control_port: 51881
 
+graph_input: "graph_input"
+graph_output: "graph_output"
+
 node {
   name: "demux_node"
   calculator: "stream_demux"
+  graph_input: "graph_input"
   output_stream: "packet_stream"
   output_stream: "video_info_side_packet_demux"
   node_options: {
@@ -11,11 +15,11 @@ node {
         rtsp_transport: "tcp"  
         iframe_extract: false
         auto_reconnect: true
-        input_url: "rtsp://108.160.220.169:8554/retail"
       }
     }
   }
 }
+
 node {
   name: "decode_node"
   calculator: "x86_dec"
@@ -226,7 +230,6 @@ node {
         type: MPEG4
         w: 0
         h: 0
-        #  fps: 20
       }
     }
   }
@@ -238,17 +241,13 @@ node {
   vendor: "Aupera"
   input_stream: "packet_stream_encode_node"
   input_stream: "codec_context_stream"
+  graph_output: "graph_output"
   node_options: {
     [type.googleapis.com/aup.avaf.StreamMuxOptions]: {
      mux: {
        rtsp_transport: "tcp"
        auto_reconnect: true
-       output_url: "rtsp://108.160.220.169:8554/retail-out-7ev"
      }
     }
   }
-}
-
-console_logging_filter: {
-  enable_all: true
 }

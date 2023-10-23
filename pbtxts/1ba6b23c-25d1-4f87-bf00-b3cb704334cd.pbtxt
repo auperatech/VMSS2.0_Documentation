@@ -232,7 +232,6 @@ node {
         type: MPEG4
         w: 0
         h: 0
-        #  fps: 20
       }
     }
   }

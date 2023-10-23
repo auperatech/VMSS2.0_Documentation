@@ -1,8 +1,12 @@
 control_port: 51881
 
+graph_input: "graph_input"
+graph_output: "graph_output"
+
 node {
   name: "demux_node"
   calculator: "stream_demux"
+  graph_input: "graph_input"
   output_stream: "packet_stream"
   output_stream: "video_info_side_packet_demux"
   node_options: {
@@ -11,10 +15,6 @@ node {
         rtsp_transport: "tcp"  
         iframe_extract: false
         auto_reconnect: true
-        # input_url: "rtsp://108.160.220.169:8554/car"
-        input_url: "rtsp://108.160.220.169:8554/retail"
-        # input_url: "rtsp://10.53.170.128:954/ci-car"
-        # input_url: "/home/aupera/mehdiz/smart_edge_box/corst2/SharedFiles/videos/retail.mp4"
       }
     }
   }
@@ -299,7 +299,7 @@ node {
   node_options: {
     [type.googleapis.com/aup.avaf.VideoCodecOptions]: {
       enc: {
-        type: H265
+        type: MPEG4
         w: 0
         h: 0
       }
@@ -313,20 +313,13 @@ node {
   vendor: "Aupera"
   input_stream: "packet_stream_encode_node"
   input_stream: "codec_context_stream"
+  graph_output: "graph_output"
   node_options: {
     [type.googleapis.com/aup.avaf.StreamMuxOptions]: {
      mux: {
        rtsp_transport: "tcp"
        auto_reconnect: true
-      #  output_url: "rtsp://108.160.220.169:8554/car-out-7ev"
-       output_url: "rtsp://108.160.220.169:8554/retail-out-7ev"
-       # output_url: "rtsp://10.53.170.128:954/ci-car-out-7ev"
-       # output_url: "/tmp/output_video.mp4"
      }
     }
   }
-}
-
-console_logging_filter: {
-  enable_all: true
 }
