@@ -104,9 +104,6 @@ node {
             }
           }
         }
-        console_logging_filter: {
-          enable_all: true
-        }
       }
     }
   }

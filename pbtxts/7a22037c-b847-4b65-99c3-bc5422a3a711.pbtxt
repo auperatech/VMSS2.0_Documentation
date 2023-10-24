@@ -130,19 +130,6 @@ node {
             }
           }
         }
-        node {
-          name: "host_sink_detections"
-          calculator: "host_sink"
-          input_stream: "detection_stream"
-          node_options: {
-            [type.googleapis.com/aup.avaf.HostSourceSinkOptions]: {
-              index: 0
-            }
-          }
-        }
-        console_logging_filter: {
-          enable_all: true
-        }
       }
     }
   }
@@ -160,6 +147,7 @@ node {
   }
   node_options: {
     [type.googleapis.com/aup.avaf.BoxVisualizerOptions]: {
+      label_name_file: "/opt/aupera/avas/label_files/dk_tiny_yolo.txt"
       text_color: {
         r: 255
         g: 0

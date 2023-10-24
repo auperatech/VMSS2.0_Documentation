@@ -97,7 +97,6 @@ node {
                 queue_size: 12
                 low_latency: false
               }
-              drop_packet_on_full_data_stream: true
             }
           }
         }
@@ -157,32 +156,10 @@ node {
             }
           }
         }
-        console_logging_filter: {
-          enable_all: true
-        }
-        statistics_collector: {
-          target_file: "/tmp/stats-latency"
-          latency_stream_start: "image_stream"
-          latency_stream_end: "detection_stream"
-        }
       }
     }
   }
 }
-
-# node {
-#   name: "frame_saver"
-#   calculator: "frame_saver"
-#   input_stream: "image_stream"
-#   node_options: {
-#     [type.googleapis.com/aup.avaf.FrameSaverOptions]: {
-#       directory: "/tmp/saved_frames/"
-#       directory_cleanup: true
-#       save_limit: 10000
-#       output_type: JPEG
-#     }
-#   }
-# }
 
 node {
   name: "visualizer"
