@@ -4176,7 +4176,7 @@
       "name": "v205_dec",
       "vendor": "Aupera",
       "pbtxt": "f02b12c7-1544-4be4-8834-75ba1d0be59d",
-      "hardware_types": ["aupera_v205_1", "aupera_u30_gen3x4_base_1", "aupera_som_1", "aupera_sbc_x7_1"],
+      "hardware_types": ["aupera_v205_1", "aupera_som_1", "aupera_sbc_x7_1"],
       "hardware_archs": ["DPUCZDX8G"],
       "hardware_engines": []
     },
