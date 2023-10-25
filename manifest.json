@@ -4206,7 +4206,7 @@
       "name": "x86_enc",
       "vendor": "Aupera",
       "pbtxt": "99838e85-60d2-4bec-a4b2-51dfe11289a3",
-      "hardware_types": ["xilinx_vck5000_gen3x16_xdma_base_1", "xilinx_v70_gen5x8_qdma_base_2", "A-U50-P00G-LV-G", "aupera_v205_1", "aupera_u30_gen3x4_base_1", "aupera_som_1", "aupera_sbc_x7_1"],
+      "hardware_types": ["xilinx_vck5000_gen3x16_xdma_base_1", "xilinx_v70_gen5x8_qdma_base_2", "A-U50-P00G-LV-G", "aupera_v205_1", "aupera_som_1", "aupera_sbc_x7_1"],
       "hardware_archs": ["DPUCVDX8H", "DPUCV2DX8G", "DPUCAHX8H", "DPUCAHX8L", "DPUCZDX8G"],
       "hardware_engines": ["4pe", "6pe", "8pe"]
     },
