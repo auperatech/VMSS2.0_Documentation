@@ -121,11 +121,11 @@ node {
               max_detection_lib_q_size: 30
               label_confidence: {
                 label: 0
-                confidence: 0.5
+                confidence: 0.25
               }
               label_confidence: {
                 label: 1
-                confidence: 0.5
+                confidence: 0.25
               }
             }
           }

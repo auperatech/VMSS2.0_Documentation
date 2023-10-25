@@ -106,6 +106,16 @@ node {
             }
           }
         }
+        node {
+          name: "host_sink_detections"
+          calculator: "host_sink"
+          input_stream: "detection_stream"
+          node_options: {
+            [type.googleapis.com/aup.avaf.HostSourceSinkOptions]: {
+              index: 0
+            }
+          }
+        }
       }
     }
   }
