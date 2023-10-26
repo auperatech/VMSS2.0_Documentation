@@ -90,6 +90,7 @@ node {
     drop_strategy: DROP_INCOMPLETE_PACKETS
     timeout_ms: 5000
   }
+  ml_model_kernel_name: "face_landmark"
   node_options: {
     [type.googleapis.com/aup.avaf.LandmarkPredictorOptions]: {
         landmark_predictor_type: "FaceLandmark"
