@@ -3,6 +3,7 @@
 control_port: 51881
 graph_input: "graph_input1"
 graph_output: "graph_output1"
+task_id: "task_RESNET18SSD_4CAR_v205"
 
 node {
   name: "demux"
@@ -129,7 +130,6 @@ node {
   input_stream: "detect_interval_side_packet"
   output_stream: "lpr_notification"
   output_stream: "imgStream1080p_aplOut"
-  output_stream: "mlops_notification"
   stream_sync: {
     drop_strategy: DROP_INCOMPLETE_PACKETS
     timeout_ms: 5000
@@ -231,7 +231,7 @@ node {
       traffic_only_notify_vehicle_with_LP: false
       traffic_notify_reporting_interval: true
       traffic_update_image_mode: "plate"
-      send_mlops_notifications: true
+      send_mlops_notifications: false
       # Misc
       save_eval_results: true
       camera_id: 1
@@ -311,7 +311,7 @@ node {
     input_stream: "lpr_notification"
     node_options: {
     [type.googleapis.com/aup.avaf.NotificationWebOptions]: {
-        notification_url: ""
+        notification_url: "http://127.0.0.1:56111/lpr/notification"
         notification_q_size: 1
         protocol_type: HTTP
     }
