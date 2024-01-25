@@ -9023,11 +9023,11 @@
     },
     {
       "guid": "d2e6f1dc-d404-4cdc-adef-1744872b5a1b",
-      "name": "demo: general detection and landmark prediction cascade",
-      "description": "box detector (ssd_pedestrian_pruned_0_97) and pose landmark predictor (openpose_pruned_0_3) cascade runs on crowd videos",
-      "models": ["1e6d28be-b1d2-41be-b82a-b34fade75bde", "ce6eab2a-a95d-4844-a5c2-17c085f4d522"],
+      "name": "demo: general face landmark prediction",
+      "description": "face landmark predictor (openpose_pruned_0_3) runs on crowd videos",
+      "models": ["ce6eab2a-a95d-4844-a5c2-17c085f4d522"],
       "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "8785871e-21d8-4f22-84cd-38636297daef",
-                "cde737e0-5865-46d6-be71-b43b5522ea15", "2fb72d88-2c3b-43dc-9599-c9ef20c63b48",
+                "2fb72d88-2c3b-43dc-9599-c9ef20c63b48",
                 "f6d4c0be-7146-463e-9e75-7c7aae7dbdac", "cbbeb075-5517-4d0e-9f56-cec8cad595da",
                 "8a2d1c42-0d85-4423-be85-2651d9e13a50", "60e96d25-07dd-45be-8c19-4175b2884fc3"]
     },
@@ -9049,8 +9049,8 @@
     {
       "guid": "188e5af9-2dbe-4582-a166-36baedbe71db",
       "name": "demo: general detection and landmark prediction cascade",
-      "description": "box detector (densebox_320_320) and face landmark predictor (face_landmark) cascade runs on crowd videos",
-      "models": ["d05f8f64-14d0-42fe-9908-ff3c29490c66", "fb60a56a-86ff-4454-acb0-92ba576cf6b6"],
+      "description": "person head detector (RESNET18SSD) and face landmark predictor (face_landmark) cascade runs on crowd videos",
+      "models": ["e55b542d-df38-45c5-a500-d6ce38de965b", "fb60a56a-86ff-4454-acb0-92ba576cf6b6"],
       "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "8785871e-21d8-4f22-84cd-38636297daef",
                 "cde737e0-5865-46d6-be71-b43b5522ea15", "2fb72d88-2c3b-43dc-9599-c9ef20c63b48",
                 "f6d4c0be-7146-463e-9e75-7c7aae7dbdac", "cbbeb075-5517-4d0e-9f56-cec8cad595da",
@@ -9073,11 +9073,11 @@
     },
     {
       "guid": "9e7b03a0-8452-44bc-9fa0-bbbad0cbb5db",
-      "name": "demo: general detection and landmark prediction cascade",
-      "description": "box detector (densebox_320_320) and face landmark predictor (retinaface) cascade runs on crowd videos",
-      "models": ["d05f8f64-14d0-42fe-9908-ff3c29490c66", "fea02ecd-7ea1-485e-9c32-14374b060ad1"],
+      "name": "demo: general face landmark prediction cascade",
+      "description": "face landmark predictor (retinaface) runs on crowd videos",
+      "models": ["fea02ecd-7ea1-485e-9c32-14374b060ad1"],
       "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "8785871e-21d8-4f22-84cd-38636297daef",
-                "cde737e0-5865-46d6-be71-b43b5522ea15", "2fb72d88-2c3b-43dc-9599-c9ef20c63b48",
+                "2fb72d88-2c3b-43dc-9599-c9ef20c63b48",
                 "f6d4c0be-7146-463e-9e75-7c7aae7dbdac", "cbbeb075-5517-4d0e-9f56-cec8cad595da",
                 "8a2d1c42-0d85-4423-be85-2651d9e13a50", "60e96d25-07dd-45be-8c19-4175b2884fc3"]
     },

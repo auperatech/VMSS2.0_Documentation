@@ -1,19 +1,22 @@
 node {
   name: "landmark"
   calculator: "landmark_predictor"
-  input_stream: "detections_stream"
   input_stream: "image_stream_decode"
   output_stream: "landmark_stream"
-  stream_sync: {
-    drop_strategy: DROP_INCOMPLETE_PACKETS
-    timeout_ms: 5000
-  }
+  ml_model_kernel_name: ""
   node_options: {
     [type.googleapis.com/aup.avaf.LandmarkPredictorOptions]: {
         landmark_predictor_type: ""
-        kernel_name: ""
-        need_preprocess: true
+        use_detections: false
+        need_preprocess: false
         log_performance: false
+        run_on_letterboxed_img: false
+        batch_size: 1
+        force_batch_size: false
+        return_frames_inorder: false
+        landmark_prediction_threads: 1
+        batch_collection_timeout_ms: 0
+        max_landmark_prediction_lib_q_size: 30
     }
   }
 }

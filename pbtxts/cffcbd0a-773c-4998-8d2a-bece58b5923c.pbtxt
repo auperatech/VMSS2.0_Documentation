@@ -100,9 +100,16 @@ node {
   node_options: {
     [type.googleapis.com/aup.avaf.LandmarkPredictorOptions]: {
         landmark_predictor_type: "Movenet"
-        kernel_name: "movenet_ntd_pt"
+        use_detections: true
         need_preprocess: true
-        log_performance: false
+        log_performance: true
+        run_on_letterboxed_img: false
+        batch_size: 3
+        force_batch_size: false
+        return_frames_inorder: true
+        landmark_prediction_threads: 2
+        batch_collection_timeout_ms: 0
+        max_landmark_prediction_lib_q_size: 30
     }
   }
 }
@@ -117,8 +124,8 @@ node {
     [type.googleapis.com/aup.avaf.BoxVisualizerOptions] {
       input_type: INPUT_TYPE_LANDMARK
       connect_landmarks: true
-      arm_raise_check: "height" 
-      apply_filter_on_landmarks: "hat" # mask bbox
+      arm_raise_check: "" 
+      apply_filter_on_landmarks: "hat"
     }
   }
 }
