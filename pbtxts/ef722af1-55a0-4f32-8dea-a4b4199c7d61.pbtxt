@@ -3,7 +3,6 @@
 control_port: 51881
 graph_input: "graph_input1"
 graph_output: "graph_output1"
-task_id: "task_RESNET18SSD_4CAR_v205"
 
 node {
   name: "demux"
