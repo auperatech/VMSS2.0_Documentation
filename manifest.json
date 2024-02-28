@@ -5310,6 +5310,16 @@
       "hardware_engines": []
     },
     {
+      "guid": "04d1c5d1-06d4-4e9b-85bc-d890265583be",
+      "type": "aupera_free",
+      "name": "video_source",
+      "vendor": "Aupera",
+      "pbtxt": "f9ac384c-3202-40c1-b1b5-19561c45a570",
+      "hardware_types": ["xilinx_kria_som_1"],
+      "hardware_archs": ["DPUCZDX8G"],
+      "hardware_engines": []
+    },
+    {
       "guid": "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
       "type": "aupera_free",
       "name": "box_visualizer",
@@ -5969,6 +5979,13 @@
       "description": "default parameters for v205_dec node",
       "models": [],
       "nodes": ["8785871e-21d8-4f22-84cd-38636297daef"]
+    },
+    {
+      "guid": "f9ac384c-3202-40c1-b1b5-19561c45a570",
+      "name": "node: video_source default",
+      "description": "default parameters for video_source node",
+      "models": [],
+      "nodes": ["04d1c5d1-06d4-4e9b-85bc-d890265583be"]
     },
     {
       "guid": "8149a886-36ac-4446-a63d-b8a29aab2cfb",

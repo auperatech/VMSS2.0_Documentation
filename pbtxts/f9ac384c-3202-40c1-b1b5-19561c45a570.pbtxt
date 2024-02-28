@@ -1,0 +1,10 @@
+node {
+  name: "usb_cam"
+  calculator: "video_source"
+  output_stream: "image_stream_decode"
+  output_stream: "video_stream_info_decode"
+  node_options: {
+    [type.googleapis.com/aup.avaf.VideoSourceOptions]: {
+    }
+  }
+}
