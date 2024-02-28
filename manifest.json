@@ -4299,7 +4299,7 @@
     },
     {
       "guid": "fea02ecd-7ea1-485e-9c32-14374b060ad1",
-      "model_zoo_name": "cf_retinaface_wider_360_640_1.11G_2.0",
+      "model_zoo_name": "cf_retinaface_wider_360_640_1.11G_2.5",
       "kernel": "retinaface",
       "model_type": "RetinaFace",
       "vendor": "Xilinx",
@@ -10616,7 +10616,7 @@
       "name": "demo: general classification",
       "description": "box classifier (inception_v4) runs on imagenet videos",
       "models": ["9a22aa87-2dc2-4b41-9830-7759f7aad405"],
-      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "8785871e-21d8-4f22-84cd-38636297daef",
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
                 "1d049bee-88bb-419f-97c9-4f10db4008b3", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac", 
                 "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50", 
                 "60e96d25-07dd-45be-8c19-4175b2884fc3"]
@@ -10641,7 +10641,7 @@
       "name": "demo: general classification",
       "description": "box classifier (mobilenet_v2) runs on imagenet videos",
       "models": ["b82edad1-9b79-478e-93ad-92829fb7a342"],
-      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "8785871e-21d8-4f22-84cd-38636297daef",
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
                 "1d049bee-88bb-419f-97c9-4f10db4008b3", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac", 
                 "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50", 
                 "60e96d25-07dd-45be-8c19-4175b2884fc3"]
@@ -10666,7 +10666,7 @@
       "name": "demo: general classification",
       "description": "box classifier (resnet18) runs on imagenet videos",
       "models": ["c7f81a54-b283-4d61-9cae-dbb3d49271b6"],
-      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "8785871e-21d8-4f22-84cd-38636297daef",
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
                 "1d049bee-88bb-419f-97c9-4f10db4008b3", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac", 
                 "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50", 
                 "60e96d25-07dd-45be-8c19-4175b2884fc3"]
@@ -10691,7 +10691,7 @@
       "name": "demo: general classification",
       "description": "box classifier (resnet50) runs on imagenet videos",
       "models": ["7badb2d6-6cd4-49c5-8aa9-830ac161bf9b"],
-      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "8785871e-21d8-4f22-84cd-38636297daef",
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
                 "1d049bee-88bb-419f-97c9-4f10db4008b3", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac", 
                 "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50", 
                 "60e96d25-07dd-45be-8c19-4175b2884fc3"]
@@ -10716,7 +10716,7 @@
       "name": "demo: general classification",
       "description": "box classifier (squeezenet) runs on imagenet videos",
       "models": ["ffda9d06-bec6-4968-8c05-5bea16fe829d"],
-      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "8785871e-21d8-4f22-84cd-38636297daef",
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
                 "1d049bee-88bb-419f-97c9-4f10db4008b3", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac", 
                 "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50", 
                 "60e96d25-07dd-45be-8c19-4175b2884fc3"]
@@ -10741,7 +10741,7 @@
       "name": "demo: general classification",
       "description": "box classifier (resnet_v2_50_tf) runs on imagenet videos",
       "models": ["8f972d89-3df7-43e3-bf63-dab8020392e1"],
-      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "8785871e-21d8-4f22-84cd-38636297daef",
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
                 "1d049bee-88bb-419f-97c9-4f10db4008b3", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac", 
                 "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50", 
                 "60e96d25-07dd-45be-8c19-4175b2884fc3"]
@@ -10766,7 +10766,7 @@
       "name": "demo: general classification",
       "description": "box classifier (vgg_16_tf) runs on imagenet videos",
       "models": ["706bc31d-e05f-4742-bc23-6fbd2eaeb0ce"],
-      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "8785871e-21d8-4f22-84cd-38636297daef",
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
                 "1d049bee-88bb-419f-97c9-4f10db4008b3", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac", 
                 "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50", 
                 "60e96d25-07dd-45be-8c19-4175b2884fc3"]
@@ -10791,7 +10791,7 @@
       "name": "demo: general classification",
       "description": "box classifier (vgg_19_tf) runs on imagenet videos",
       "models": ["1ed203bd-c0bc-43f7-8cf7-f292dabb9352"],
-      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "8785871e-21d8-4f22-84cd-38636297daef",
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
                 "1d049bee-88bb-419f-97c9-4f10db4008b3", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac", 
                 "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50", 
                 "60e96d25-07dd-45be-8c19-4175b2884fc3"]
