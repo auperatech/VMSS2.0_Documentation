@@ -4483,32 +4483,6 @@
     },
 
     {
-      "guid": "3bf1f08e-9e1b-48ad-888c-996f0b573105",
-      "model_zoo_name": "cf_SSD-RESNET18_PERSON-HEAD-SHIUN_540_960_0_6.3G_2.5",
-      "kernel": "RESNET18SSD_ITER115000_PRIVATE_FINAL501IMAGES_AND_55IMAGES_FROMFIELD_ADDED_01JULY2021_CROWD_FLOW_PERSON_HEAD_kria_som_vitis2_5",
-      "model_type": "SSD",
-      "vendor": "Aupera",
-      "ml_task": "detection",
-      "application": "person-head",
-      "hardware_type": "xilinx_kria_som_1",
-      "hardware_arch": "DPUCZDX8G",
-      "hardware_engine": "", 
-      "model_format": "xmodel",
-      "ml_lib": "caffe1.0",
-      "inference_lib": "vitis2.5",
-      "checksum": "",
-      "download_link": "", 
-      "ops": "6.3G",
-      "input_size": "540x960",
-      "float_accuracy": "0.8037",
-      "quantized_accuracy": "0.6323",
-      "dataset": "person-head-shiun",
-      "label": "Person_Head",
-      "node_pbtxt": "6f57269b-df4f-4c88-9358-6d8977f2b2ee",
-      "pipeline_pbtxt": "17506299-6d90-4ca4-a6f5-6955b9ddd639",
-      "throughput_pbtxt": "12fdb9c2-177c-427d-be67-2d53a9223cb0"
-    },
-    {
       "guid": "50b49a64-b34b-41ec-95e6-e640baa65e64",
       "model_zoo_name": "cf_densebox_wider_320_320_0.49G_2.5",
       "kernel": "densebox_320_320",
@@ -10443,31 +10417,7 @@
                 "ef596576-6e27-4637-af19-38272b008593", "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
     },
 
-    {
-      "guid": "17506299-6d90-4ca4-a6f5-6955b9ddd639",
-      "name": "demo: head person detection",
-      "description": "head person detector (RESNET18SSD) runs on crowd videos",
-      "models": ["3bf1f08e-9e1b-48ad-888c-996f0b573105"],
-      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
-              "cde737e0-5865-46d6-be71-b43b5522ea15", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
-              "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
-              "60e96d25-07dd-45be-8c19-4175b2884fc3"]
-    },
-    {
-      "guid": "6f57269b-df4f-4c88-9358-6d8977f2b2ee",
-      "name": "node: box_detector",
-      "description": "box detector (RESNET18SSD) as head person detector",
-      "models": ["3bf1f08e-9e1b-48ad-888c-996f0b573105"],
-      "nodes": ["cde737e0-5865-46d6-be71-b43b5522ea15"]
-    },
-    {
-      "guid": "12fdb9c2-177c-427d-be67-2d53a9223cb0",
-      "name": "demo: throughput measurement",
-      "description": "throughput measurement for head person detector (RESNET18SSD)",
-      "models": ["3bf1f08e-9e1b-48ad-888c-996f0b573105"],
-      "nodes": ["5618ff66-748c-4342-86f9-fb019535430f", "cde737e0-5865-46d6-be71-b43b5522ea15",
-              "ef596576-6e27-4637-af19-38272b008593", "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
-    },
+
     {
       "guid": "71449417-6928-4ef2-a12b-b7ee2d3f9061",
       "name": "demo: person face detection",
