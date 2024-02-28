@@ -1,0 +1,27 @@
+node {
+  name: "landmark"
+  calculator: "landmark_predictor"
+  input_stream: "detections_stream"
+  input_stream: "image_stream_decode"
+  output_stream: "landmark_stream"
+  stream_sync: {
+    drop_strategy: DROP_INCOMPLETE_PACKETS
+    timeout_ms: 5000
+  }
+  ml_model_kernel_name: "movenet_ntd_pt"
+  node_options: {
+    [type.googleapis.com/aup.avaf.LandmarkPredictorOptions]: {
+        landmark_predictor_type: "Movenet"
+        use_detections: true
+        need_preprocess: true
+        log_performance: true
+        run_on_letterboxed_img: false
+        batch_size: 3
+        force_batch_size: false
+        return_frames_inorder: true
+        landmark_prediction_threads: 2
+        batch_collection_timeout_ms: 0
+        max_landmark_prediction_lib_q_size: 30
+    }
+  }
+}

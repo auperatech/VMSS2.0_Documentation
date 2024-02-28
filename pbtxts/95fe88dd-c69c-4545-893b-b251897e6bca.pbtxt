@@ -1,0 +1,22 @@
+node {
+  name: "landmark"
+  calculator: "landmark_predictor"
+  input_stream: "image_stream_decode"
+  output_stream: "landmark_stream"
+  ml_model_kernel_name: "openpose_pruned_0_3"
+  node_options: {
+    [type.googleapis.com/aup.avaf.LandmarkPredictorOptions]: {
+        landmark_predictor_type: "Openpose"
+        use_detections: false
+        need_preprocess: true
+        log_performance: false
+        run_on_letterboxed_img: false
+        batch_size: 3
+        force_batch_size: false
+        return_frames_inorder: true
+        landmark_prediction_threads: 1
+        batch_collection_timeout_ms: 0
+        max_landmark_prediction_lib_q_size: 30
+    }
+  }
+}
