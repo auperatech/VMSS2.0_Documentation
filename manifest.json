@@ -5872,6 +5872,14 @@
                 "9389f756-9673-47db-bb24-c5b4fff3c369"]
     },
 
+
+
+
+
+
+
+
+
     {
       "guid": "f526b6d9-da88-42e5-8da6-8a63b6f424f7",
       "name": "demo: person face detection (usb camera)",
@@ -5917,18 +5925,6 @@
                 "60e96d25-07dd-45be-8c19-4175b2884fc3"]
     },
     {
-      "guid": "ae7aee01-9cfd-4c3b-b509-7c0dfcf5bdf5",
-      "name": "demo: crowd flow application (usb camera)",
-      "description": "crowd flow application runs on crowd videos",
-      "pbtxt": "2cadedf2-e1c6-49cc-825e-831b4eb67f2c",
-      "models": ["9abde40f-f7b1-4dbf-bb9f-e9512be44fe0"],
-      "nodes": ["04d1c5d1-06d4-4e9b-85bc-d890265583be",
-                "cde737e0-5865-46d6-be71-b43b5522ea15", "65186a8f-80c0-4b26-8453-bd05da30eecd",
-                "642bc22b-1038-465b-b90a-895a99d18474", "cbbeb075-5517-4d0e-9f56-cec8cad595da",
-                "8a2d1c42-0d85-4423-be85-2651d9e13a50", "60e96d25-07dd-45be-8c19-4175b2884fc3",
-                "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
-    },
-    {
       "guid": "bb63c215-37dd-420a-b921-ecbb7aef0397",
       "name": "demo: general detection and landmark prediction cascade (usb camera)",
       "description": "box detector and landmark predictor cascade runs on crowd videos",
@@ -5939,6 +5935,19 @@
                 "f6d4c0be-7146-463e-9e75-7c7aae7dbdac", "cbbeb075-5517-4d0e-9f56-cec8cad595da",
                 "8a2d1c42-0d85-4423-be85-2651d9e13a50", "60e96d25-07dd-45be-8c19-4175b2884fc3"]
     },
+    {
+      "guid": "ae7aee01-9cfd-4c3b-b509-7c0dfcf5bdf5",
+      "name": "demo: pedestrians detection (usb camera with udp notification)",
+      "description": "pedestrians detection runs on crowd videos",
+      "pbtxt": "2cadedf2-e1c6-49cc-825e-831b4eb67f2c",
+      "models": ["9abde40f-f7b1-4dbf-bb9f-e9512be44fe0"],
+      "nodes": ["04d1c5d1-06d4-4e9b-85bc-d890265583be",
+                "cde737e0-5865-46d6-be71-b43b5522ea15", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
+                "60e96d25-07dd-45be-8c19-4175b2884fc3",
+                "ef596576-6e27-4637-af19-38272b008593", "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
+    },
+
     {
       "guid": "c8c7299f-70a4-487a-8609-f882169c83cc",
       "name": "demo: person face detection (x86 decode)",
@@ -5984,18 +5993,6 @@
                 "60e96d25-07dd-45be-8c19-4175b2884fc3"]
     },
     {
-      "guid": "d5a3196f-ed0f-48d8-9cc6-ff827e97e72f",
-      "name": "demo: crowd flow application (x86 decode)",
-      "description": "crowd flow application runs on crowd videos",
-      "pbtxt": "77c70567-9534-4454-8f40-922bbfd2e01e",
-      "models": ["9abde40f-f7b1-4dbf-bb9f-e9512be44fe0"],
-      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
-                "cde737e0-5865-46d6-be71-b43b5522ea15", "65186a8f-80c0-4b26-8453-bd05da30eecd",
-                "642bc22b-1038-465b-b90a-895a99d18474", "cbbeb075-5517-4d0e-9f56-cec8cad595da",
-                "8a2d1c42-0d85-4423-be85-2651d9e13a50", "60e96d25-07dd-45be-8c19-4175b2884fc3",
-                "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
-    },
-    {
       "guid": "05ad0cb4-dfd1-45cb-8f48-4ed6eb502fc5",
       "name": "demo: general detection and landmark prediction cascade (x86 decode)",
       "description": "box detector and landmark predictor cascade runs on crowd videos",
@@ -6014,6 +6011,18 @@
       "models": ["c7f81a54-b283-4d61-9cae-dbb3d49271b6"],
       "nodes": ["5618ff66-748c-4342-86f9-fb019535430f", "1d049bee-88bb-419f-97c9-4f10db4008b3",
                 "ef596576-6e27-4637-af19-38272b008593", "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
+    },
+    {
+      "guid": "d5a3196f-ed0f-48d8-9cc6-ff827e97e72f",
+      "name": "demo: crowd flow application (x86 decode)",
+      "description": "crowd flow application runs on crowd videos",
+      "pbtxt": "77c70567-9534-4454-8f40-922bbfd2e01e",
+      "models": ["9abde40f-f7b1-4dbf-bb9f-e9512be44fe0"],
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
+                "cde737e0-5865-46d6-be71-b43b5522ea15", "65186a8f-80c0-4b26-8453-bd05da30eecd",
+                "642bc22b-1038-465b-b90a-895a99d18474", "cbbeb075-5517-4d0e-9f56-cec8cad595da",
+                "8a2d1c42-0d85-4423-be85-2651d9e13a50", "60e96d25-07dd-45be-8c19-4175b2884fc3",
+                "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
     }
   ],
 
@@ -11426,17 +11435,6 @@
                 "60e96d25-07dd-45be-8c19-4175b2884fc3"]
     },
     {
-      "guid": "2cadedf2-e1c6-49cc-825e-831b4eb67f2c",
-      "name": "demo: crowd flow application (usb camera)",
-      "description": "crowd flow application runs on crowd videos",
-      "models": ["9abde40f-f7b1-4dbf-bb9f-e9512be44fe0"],
-      "nodes": ["04d1c5d1-06d4-4e9b-85bc-d890265583be",
-                "cde737e0-5865-46d6-be71-b43b5522ea15", "65186a8f-80c0-4b26-8453-bd05da30eecd",
-                "642bc22b-1038-465b-b90a-895a99d18474", "cbbeb075-5517-4d0e-9f56-cec8cad595da",
-                "8a2d1c42-0d85-4423-be85-2651d9e13a50", "60e96d25-07dd-45be-8c19-4175b2884fc3",
-                "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
-    },
-    {
       "guid": "bc05ff20-0ed7-4861-8bf9-0458c7e568c4",
       "name": "demo: general detection and landmark prediction cascade (usb camera)",
       "description": "box detector (ssd_pedestrian_pruned_0_97) and pose landmark predictor (movenet_ntd_pt) cascade runs on crowd videos",
@@ -11445,7 +11443,18 @@
                 "cde737e0-5865-46d6-be71-b43b5522ea15", "2fb72d88-2c3b-43dc-9599-c9ef20c63b48",
                 "f6d4c0be-7146-463e-9e75-7c7aae7dbdac", "cbbeb075-5517-4d0e-9f56-cec8cad595da",
                 "8a2d1c42-0d85-4423-be85-2651d9e13a50", "60e96d25-07dd-45be-8c19-4175b2884fc3"]
-    }    
+    },
+    {
+      "guid": "2cadedf2-e1c6-49cc-825e-831b4eb67f2c",
+      "name": "demo: pedestrians detection (usb camera with udp notification)",
+      "description": "pedestrians detection runs on crowd videos",
+      "models": ["9abde40f-f7b1-4dbf-bb9f-e9512be44fe0"],
+      "nodes": ["04d1c5d1-06d4-4e9b-85bc-d890265583be",
+                "cde737e0-5865-46d6-be71-b43b5522ea15", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
+                "60e96d25-07dd-45be-8c19-4175b2884fc3",
+                "ef596576-6e27-4637-af19-38272b008593", "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
+    }     
   ],
 
   "enums":{
