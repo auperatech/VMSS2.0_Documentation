@@ -5421,6 +5421,26 @@
       "hardware_engines": ["4pe", "6pe", "8pe"]
     },
     {
+      "guid": "678f87c2-570a-4a67-b78e-8e0a0494552e",
+      "type": "aupera_free",
+      "name": "notification_message",
+      "vendor": "Aupera",
+      "pbtxt": "322d3373-9aaa-4c88-8fb9-d4a8205c7b15",
+      "hardware_types": ["xilinx_vck5000_gen3x16_xdma_base_1", "aupera_v205_1", "xilinx_kria_som_1", "aupera_sbc_x7_1"],
+      "hardware_archs": ["DPUCVDX8H", "DPUCZDX8G"],
+      "hardware_engines": ["4pe", "6pe", "8pe"]
+    },
+    {
+      "guid": "2e450e5e-7752-4083-abd3-cbb8821e54c2",
+      "type": "aupera_free",
+      "name": "notification_mongo",
+      "vendor": "Aupera",
+      "pbtxt": "1ce4b48d-da4b-4f60-8f86-25887bb56517",
+      "hardware_types": ["xilinx_vck5000_gen3x16_xdma_base_1", "xilinx_kria_som_1"],
+      "hardware_archs": ["DPUCVDX8H", "DPUCZDX8G"],
+      "hardware_engines": ["4pe", "6pe", "8pe"]
+    },
+    {
       "guid": "8649db51-7e22-48a9-819e-fe927b827e07",
       "type": "aupera_free",
       "name": "box_segmentor",
@@ -6102,6 +6122,20 @@
       "description": "default parameters for notification_web node",
       "models": [],
       "nodes": ["abf9b8da-d8bc-4f89-b181-aef7c025536e"]
+    },
+    {
+      "guid": "322d3373-9aaa-4c88-8fb9-d4a8205c7b15",
+      "name": "node: notification_message default",
+      "description": "default parameters for notification_message node",
+      "models": [],
+      "nodes": ["678f87c2-570a-4a67-b78e-8e0a0494552e"]
+    },
+    {
+      "guid": "1ce4b48d-da4b-4f60-8f86-25887bb56517",
+      "name": "node: notification_mongo default",
+      "description": "default parameters for notification_mongo node",
+      "models": [],
+      "nodes": ["2e450e5e-7752-4083-abd3-cbb8821e54c2"]
     },
     {
       "guid": "9cc76b42-21b1-4f6a-bb6f-81a81f3e7e99",
