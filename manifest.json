@@ -5873,23 +5873,79 @@
     },
 
     {
-      "guid": "c8c7299f-70a4-487a-8609-f882169c83cc",
-      "name": "demo: person face detection (x86 decode)",
-      "description": "person face detector runs on crowd videos",
-      "pbtxt": "71449417-6928-4ef2-a12b-b7ee2d3f9061",
-      "models": ["50b49a64-b34b-41ec-95e6-e640baa65e64"],
-      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
-                "cde737e0-5865-46d6-be71-b43b5522ea15", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
-                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
-                "60e96d25-07dd-45be-8c19-4175b2884fc3"]
-    },
-    {
       "guid": "f526b6d9-da88-42e5-8da6-8a63b6f424f7",
       "name": "demo: person face detection (usb camera)",
       "description": "person face detector runs on crowd videos",
       "pbtxt": "e007c255-e830-489d-9f61-54c6a70bee86",
       "models": ["50b49a64-b34b-41ec-95e6-e640baa65e64"],
       "nodes": ["04d1c5d1-06d4-4e9b-85bc-d890265583be",
+                "cde737e0-5865-46d6-be71-b43b5522ea15", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
+                "60e96d25-07dd-45be-8c19-4175b2884fc3"]
+    },
+    {
+      "guid": "ecb2b8f6-c9cd-4a0d-a7a3-488fcffda353",
+      "name": "demo: general classification (usb camera)",
+      "description": "box classifier runs on imagenet videos",
+      "pbtxt": "82ea98bc-8fc7-4710-b144-28a209b93da1",
+      "models": ["c7f81a54-b283-4d61-9cae-dbb3d49271b6"],
+      "nodes": ["04d1c5d1-06d4-4e9b-85bc-d890265583be",
+                "1d049bee-88bb-419f-97c9-4f10db4008b3", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac", 
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50", 
+                "60e96d25-07dd-45be-8c19-4175b2884fc3"]
+    },
+    {
+      "guid": "c65a528f-d654-4fcf-b1d9-93cc2dbf0871",
+      "name": "demo: general detection and classification cascade (usb camera)",
+      "description": "box detector and classifier cascade runs on car videos",
+      "pbtxt": "b219f08f-9d58-46a9-9b60-d75a2d4ed73a",
+      "models": ["6ddd800d-a7d7-4e88-924e-10269038cc94", "c7f81a54-b283-4d61-9cae-dbb3d49271b6"],
+      "nodes": ["04d1c5d1-06d4-4e9b-85bc-d890265583be",
+                "cde737e0-5865-46d6-be71-b43b5522ea15", "1d049bee-88bb-419f-97c9-4f10db4008b3",
+                "f6d4c0be-7146-463e-9e75-7c7aae7dbdac", "cbbeb075-5517-4d0e-9f56-cec8cad595da",
+                "8a2d1c42-0d85-4423-be85-2651d9e13a50", "60e96d25-07dd-45be-8c19-4175b2884fc3"]
+    },
+    {
+      "guid": "ac200d25-f374-4f41-a5b9-788bc311fd67",
+      "name": "demo: adas segmentation (usb camera)",
+      "description": "box segmentor runs on car videos",
+      "pbtxt": "454a0a4b-16d4-4311-9a00-b3904e6e5eef",
+      "models": ["2f0a2431-1657-4735-bd1d-aeeeeb43b179"],
+      "nodes": ["04d1c5d1-06d4-4e9b-85bc-d890265583be",
+                "8649db51-7e22-48a9-819e-fe927b827e07", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac", 
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50", 
+                "60e96d25-07dd-45be-8c19-4175b2884fc3"]
+    },
+    {
+      "guid": "ae7aee01-9cfd-4c3b-b509-7c0dfcf5bdf5",
+      "name": "demo: crowd flow application (usb camera)",
+      "description": "crowd flow application runs on crowd videos",
+      "pbtxt": "2cadedf2-e1c6-49cc-825e-831b4eb67f2c",
+      "models": ["9abde40f-f7b1-4dbf-bb9f-e9512be44fe0"],
+      "nodes": ["04d1c5d1-06d4-4e9b-85bc-d890265583be",
+                "cde737e0-5865-46d6-be71-b43b5522ea15", "65186a8f-80c0-4b26-8453-bd05da30eecd",
+                "642bc22b-1038-465b-b90a-895a99d18474", "cbbeb075-5517-4d0e-9f56-cec8cad595da",
+                "8a2d1c42-0d85-4423-be85-2651d9e13a50", "60e96d25-07dd-45be-8c19-4175b2884fc3",
+                "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
+    },
+    {
+      "guid": "bb63c215-37dd-420a-b921-ecbb7aef0397",
+      "name": "demo: general detection and landmark prediction cascade (usb camera)",
+      "description": "box detector and landmark predictor cascade runs on crowd videos",
+      "pbtxt": "bc05ff20-0ed7-4861-8bf9-0458c7e568c4",
+      "models": ["9abde40f-f7b1-4dbf-bb9f-e9512be44fe0", "1cfa34ef-2f0c-4bbf-b154-7afc39f6a474"],
+      "nodes": ["04d1c5d1-06d4-4e9b-85bc-d890265583be",
+                "cde737e0-5865-46d6-be71-b43b5522ea15", "2fb72d88-2c3b-43dc-9599-c9ef20c63b48",
+                "f6d4c0be-7146-463e-9e75-7c7aae7dbdac", "cbbeb075-5517-4d0e-9f56-cec8cad595da",
+                "8a2d1c42-0d85-4423-be85-2651d9e13a50", "60e96d25-07dd-45be-8c19-4175b2884fc3"]
+    },
+    {
+      "guid": "c8c7299f-70a4-487a-8609-f882169c83cc",
+      "name": "demo: person face detection (x86 decode)",
+      "description": "person face detector runs on crowd videos",
+      "pbtxt": "71449417-6928-4ef2-a12b-b7ee2d3f9061",
+      "models": ["50b49a64-b34b-41ec-95e6-e640baa65e64"],
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
                 "cde737e0-5865-46d6-be71-b43b5522ea15", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
                 "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
                 "60e96d25-07dd-45be-8c19-4175b2884fc3"]
@@ -5906,34 +5962,12 @@
                 "60e96d25-07dd-45be-8c19-4175b2884fc3"]
     },
     {
-      "guid": "ecb2b8f6-c9cd-4a0d-a7a3-488fcffda353",
-      "name": "demo: general classification (usb camera)",
-      "description": "box classifier runs on imagenet videos",
-      "pbtxt": "82ea98bc-8fc7-4710-b144-28a209b93da1",
-      "models": ["c7f81a54-b283-4d61-9cae-dbb3d49271b6"],
-      "nodes": ["04d1c5d1-06d4-4e9b-85bc-d890265583be",
-                "1d049bee-88bb-419f-97c9-4f10db4008b3", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac", 
-                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50", 
-                "60e96d25-07dd-45be-8c19-4175b2884fc3"]
-    },
-    {
       "guid": "0cdfaa15-3019-41f1-bcff-93ded1afd355",
       "name": "demo: general detection and classification cascade (x86 decode)",
       "description": "box detector and classifier cascade runs on car videos",
       "pbtxt": "21ceff31-06f8-45cd-8ce8-4b357f50700a",
       "models": ["6ddd800d-a7d7-4e88-924e-10269038cc94", "c7f81a54-b283-4d61-9cae-dbb3d49271b6"],
       "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
-                "cde737e0-5865-46d6-be71-b43b5522ea15", "1d049bee-88bb-419f-97c9-4f10db4008b3",
-                "f6d4c0be-7146-463e-9e75-7c7aae7dbdac", "cbbeb075-5517-4d0e-9f56-cec8cad595da",
-                "8a2d1c42-0d85-4423-be85-2651d9e13a50", "60e96d25-07dd-45be-8c19-4175b2884fc3"]
-    },
-    {
-      "guid": "c65a528f-d654-4fcf-b1d9-93cc2dbf0871",
-      "name": "demo: general detection and classification cascade (usb camera)",
-      "description": "box detector and classifier cascade runs on car videos",
-      "pbtxt": "b219f08f-9d58-46a9-9b60-d75a2d4ed73a",
-      "models": ["6ddd800d-a7d7-4e88-924e-10269038cc94", "c7f81a54-b283-4d61-9cae-dbb3d49271b6"],
-      "nodes": ["04d1c5d1-06d4-4e9b-85bc-d890265583be",
                 "cde737e0-5865-46d6-be71-b43b5522ea15", "1d049bee-88bb-419f-97c9-4f10db4008b3",
                 "f6d4c0be-7146-463e-9e75-7c7aae7dbdac", "cbbeb075-5517-4d0e-9f56-cec8cad595da",
                 "8a2d1c42-0d85-4423-be85-2651d9e13a50", "60e96d25-07dd-45be-8c19-4175b2884fc3"]
@@ -5950,44 +5984,12 @@
                 "60e96d25-07dd-45be-8c19-4175b2884fc3"]
     },
     {
-      "guid": "ac200d25-f374-4f41-a5b9-788bc311fd67",
-      "name": "demo: adas segmentation (usb camera)",
-      "description": "box segmentor runs on car videos",
-      "pbtxt": "454a0a4b-16d4-4311-9a00-b3904e6e5eef",
-      "models": ["2f0a2431-1657-4735-bd1d-aeeeeb43b179"],
-      "nodes": ["04d1c5d1-06d4-4e9b-85bc-d890265583be",
-                "8649db51-7e22-48a9-819e-fe927b827e07", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac", 
-                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50", 
-                "60e96d25-07dd-45be-8c19-4175b2884fc3"]
-    },
-    {
-      "guid": "0e7b79a6-3d0e-4c1f-b1c1-75a88734f970",
-      "name": "demo: throughput measurement",
-      "description": "throughput measurement for general classifier (resnet18)",
-      "pbtxt": "72795224-9508-4a9a-8971-11be1ded3ba8",
-      "models": ["c7f81a54-b283-4d61-9cae-dbb3d49271b6"],
-      "nodes": ["5618ff66-748c-4342-86f9-fb019535430f", "1d049bee-88bb-419f-97c9-4f10db4008b3",
-                "ef596576-6e27-4637-af19-38272b008593", "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
-    },
-    {
       "guid": "d5a3196f-ed0f-48d8-9cc6-ff827e97e72f",
       "name": "demo: crowd flow application (x86 decode)",
       "description": "crowd flow application runs on crowd videos",
       "pbtxt": "77c70567-9534-4454-8f40-922bbfd2e01e",
       "models": ["9abde40f-f7b1-4dbf-bb9f-e9512be44fe0"],
       "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
-                "cde737e0-5865-46d6-be71-b43b5522ea15", "65186a8f-80c0-4b26-8453-bd05da30eecd",
-                "642bc22b-1038-465b-b90a-895a99d18474", "cbbeb075-5517-4d0e-9f56-cec8cad595da",
-                "8a2d1c42-0d85-4423-be85-2651d9e13a50", "60e96d25-07dd-45be-8c19-4175b2884fc3",
-                "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
-    },
-    {
-      "guid": "ae7aee01-9cfd-4c3b-b509-7c0dfcf5bdf5",
-      "name": "demo: crowd flow application (usb camera)",
-      "description": "crowd flow application runs on crowd videos",
-      "pbtxt": "2cadedf2-e1c6-49cc-825e-831b4eb67f2c",
-      "models": ["9abde40f-f7b1-4dbf-bb9f-e9512be44fe0"],
-      "nodes": ["04d1c5d1-06d4-4e9b-85bc-d890265583be",
                 "cde737e0-5865-46d6-be71-b43b5522ea15", "65186a8f-80c0-4b26-8453-bd05da30eecd",
                 "642bc22b-1038-465b-b90a-895a99d18474", "cbbeb075-5517-4d0e-9f56-cec8cad595da",
                 "8a2d1c42-0d85-4423-be85-2651d9e13a50", "60e96d25-07dd-45be-8c19-4175b2884fc3",
@@ -6005,15 +6007,13 @@
                 "8a2d1c42-0d85-4423-be85-2651d9e13a50", "60e96d25-07dd-45be-8c19-4175b2884fc3"]
     },
     {
-      "guid": "bb63c215-37dd-420a-b921-ecbb7aef0397",
-      "name": "demo: general detection and landmark prediction cascade (usb camera)",
-      "description": "box detector and landmark predictor cascade runs on crowd videos",
-      "pbtxt": "bc05ff20-0ed7-4861-8bf9-0458c7e568c4",
-      "models": ["9abde40f-f7b1-4dbf-bb9f-e9512be44fe0", "1cfa34ef-2f0c-4bbf-b154-7afc39f6a474"],
-      "nodes": ["04d1c5d1-06d4-4e9b-85bc-d890265583be",
-                "cde737e0-5865-46d6-be71-b43b5522ea15", "2fb72d88-2c3b-43dc-9599-c9ef20c63b48",
-                "f6d4c0be-7146-463e-9e75-7c7aae7dbdac", "cbbeb075-5517-4d0e-9f56-cec8cad595da",
-                "8a2d1c42-0d85-4423-be85-2651d9e13a50", "60e96d25-07dd-45be-8c19-4175b2884fc3"]
+      "guid": "0e7b79a6-3d0e-4c1f-b1c1-75a88734f970",
+      "name": "demo: throughput measurement",
+      "description": "throughput measurement for general classifier (resnet18)",
+      "pbtxt": "72795224-9508-4a9a-8971-11be1ded3ba8",
+      "models": ["c7f81a54-b283-4d61-9cae-dbb3d49271b6"],
+      "nodes": ["5618ff66-748c-4342-86f9-fb019535430f", "1d049bee-88bb-419f-97c9-4f10db4008b3",
+                "ef596576-6e27-4637-af19-38272b008593", "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
     }
   ],
 
