@@ -3,7 +3,7 @@ node {
   calculator: "box_segmentor"
   input_stream: "image_stream_decode"
   output_stream: "segmentation_stream"
-  ml_model_kernel_name: "SemanticFPN_Mobilenetv2_pt"
+  ml_model_kernel_name: "SemanticFPN_cityscapes_pt"
   node_options: {
     [type.googleapis.com/aup.avaf.BoxSegmentorOptions]: {
       segmentor_type: "Segmentation2D"
