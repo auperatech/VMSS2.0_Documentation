@@ -5947,6 +5947,42 @@
                 "60e96d25-07dd-45be-8c19-4175b2884fc3",
                 "ef596576-6e27-4637-af19-38272b008593", "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
     },
+    {
+      "guid": "f9d490ae-8941-45a1-b0be-55a764da3706",
+      "name": "demo: pedestrians detection (usb camera with sms notification)",
+      "description": "pedestrians detection runs on crowd videos",
+      "pbtxt": "cc591df1-b336-4c7d-b8b9-a92d4c33e9aa",
+      "models": ["9abde40f-f7b1-4dbf-bb9f-e9512be44fe0"],
+      "nodes": ["04d1c5d1-06d4-4e9b-85bc-d890265583be",
+                "cde737e0-5865-46d6-be71-b43b5522ea15", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
+                "60e96d25-07dd-45be-8c19-4175b2884fc3",
+                "ef596576-6e27-4637-af19-38272b008593", "678f87c2-570a-4a67-b78e-8e0a0494552e"]
+    },
+    {
+      "guid": "f5c24e04-62d6-42bd-9f41-41b590e18b63",
+      "name": "demo: pedestrians detection (usb camera with email notification)",
+      "description": "pedestrians detection runs on crowd videos",
+      "pbtxt": "7120c78c-1e52-4eaa-ac03-d88e24a2ba83",
+      "models": ["9abde40f-f7b1-4dbf-bb9f-e9512be44fe0"],
+      "nodes": ["04d1c5d1-06d4-4e9b-85bc-d890265583be",
+                "cde737e0-5865-46d6-be71-b43b5522ea15", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
+                "60e96d25-07dd-45be-8c19-4175b2884fc3",
+                "ef596576-6e27-4637-af19-38272b008593", "678f87c2-570a-4a67-b78e-8e0a0494552e"]
+    },    
+    {
+      "guid": "18c58e76-0e90-4dfe-9a9e-0e4043f623a6",
+      "name": "demo: pedestrians detection (usb camera with mongo notification)",
+      "description": "pedestrians detection runs on crowd videos",
+      "pbtxt": "8a29cefe-0b6a-43f4-98f5-1d37e89817ab",
+      "models": ["9abde40f-f7b1-4dbf-bb9f-e9512be44fe0"],
+      "nodes": ["04d1c5d1-06d4-4e9b-85bc-d890265583be",
+                "cde737e0-5865-46d6-be71-b43b5522ea15", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
+                "60e96d25-07dd-45be-8c19-4175b2884fc3",
+                "ef596576-6e27-4637-af19-38272b008593", "2e450e5e-7752-4083-abd3-cbb8821e54c2"]
+    },
 
     {
       "guid": "c8c7299f-70a4-487a-8609-f882169c83cc",
@@ -6014,7 +6050,7 @@
     },
     {
       "guid": "d5a3196f-ed0f-48d8-9cc6-ff827e97e72f",
-      "name": "demo: crowd flow application (x86 decode)",
+      "name": "demo: crowd flow application (x86 decode with udp notification) ",
       "description": "crowd flow application runs on crowd videos",
       "pbtxt": "77c70567-9534-4454-8f40-922bbfd2e01e",
       "models": ["9abde40f-f7b1-4dbf-bb9f-e9512be44fe0"],
@@ -6023,6 +6059,42 @@
                 "642bc22b-1038-465b-b90a-895a99d18474", "cbbeb075-5517-4d0e-9f56-cec8cad595da",
                 "8a2d1c42-0d85-4423-be85-2651d9e13a50", "60e96d25-07dd-45be-8c19-4175b2884fc3",
                 "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
+    },
+    {
+      "guid": "d7c55cbe-3c1c-4ffc-bb21-199b64fbb9e6",
+      "name": "demo: crowd flow application (x86 decode with sms notification)",
+      "description": "crowd flow application runs on crowd videos",
+      "pbtxt": "c285ee06-eabd-4b1f-ac57-33ec50692bd9",
+      "models": ["9abde40f-f7b1-4dbf-bb9f-e9512be44fe0"],
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
+                "cde737e0-5865-46d6-be71-b43b5522ea15", "65186a8f-80c0-4b26-8453-bd05da30eecd",
+                "642bc22b-1038-465b-b90a-895a99d18474", "cbbeb075-5517-4d0e-9f56-cec8cad595da",
+                "8a2d1c42-0d85-4423-be85-2651d9e13a50", "60e96d25-07dd-45be-8c19-4175b2884fc3",
+                "678f87c2-570a-4a67-b78e-8e0a0494552e"]
+    },
+    {
+      "guid": "a1a81c95-1f1f-44cc-97b8-1d1f4d76fab6",
+      "name": "demo: crowd flow application (x86 decode with email notification)",
+      "description": "crowd flow application runs on crowd videos",
+      "pbtxt": "90434d1c-67ed-44e5-9ba8-c0cefa6ab6c4",
+      "models": ["9abde40f-f7b1-4dbf-bb9f-e9512be44fe0"],
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
+                "cde737e0-5865-46d6-be71-b43b5522ea15", "65186a8f-80c0-4b26-8453-bd05da30eecd",
+                "642bc22b-1038-465b-b90a-895a99d18474", "cbbeb075-5517-4d0e-9f56-cec8cad595da",
+                "8a2d1c42-0d85-4423-be85-2651d9e13a50", "60e96d25-07dd-45be-8c19-4175b2884fc3",
+                "678f87c2-570a-4a67-b78e-8e0a0494552e"]
+    },    
+    {
+      "guid": "e64a80cf-965f-4562-8340-0c6a3ec0e9a4",
+      "name": "demo: crowd flow application (x86 decode with mongo notification)",
+      "description": "crowd flow application runs on crowd videos",
+      "pbtxt": "ae98f0b7-5ae9-4504-b277-5a57131474c1",
+      "models": ["9abde40f-f7b1-4dbf-bb9f-e9512be44fe0"],
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
+                "cde737e0-5865-46d6-be71-b43b5522ea15", "65186a8f-80c0-4b26-8453-bd05da30eecd",
+                "642bc22b-1038-465b-b90a-895a99d18474", "cbbeb075-5517-4d0e-9f56-cec8cad595da",
+                "8a2d1c42-0d85-4423-be85-2651d9e13a50", "60e96d25-07dd-45be-8c19-4175b2884fc3",
+                "2e450e5e-7752-4083-abd3-cbb8821e54c2"]
     }
   ],
 
@@ -11384,7 +11456,7 @@
                 "8a2d1c42-0d85-4423-be85-2651d9e13a50", "60e96d25-07dd-45be-8c19-4175b2884fc3"]
     },
     {
-      "guid": "77c70567-9534-4454-8f40-922bbfd2e01e",
+      "guid": "demo: crowd flow application (x86 decode with udp notification)",
       "name": "demo: crowd flow application (x86 decode)",
       "description": "crowd flow application runs on crowd videos",
       "models": ["9abde40f-f7b1-4dbf-bb9f-e9512be44fe0"],
@@ -11393,6 +11465,40 @@
                 "642bc22b-1038-465b-b90a-895a99d18474", "cbbeb075-5517-4d0e-9f56-cec8cad595da",
                 "8a2d1c42-0d85-4423-be85-2651d9e13a50", "60e96d25-07dd-45be-8c19-4175b2884fc3",
                 "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
+    },
+
+    {
+      "guid": "c285ee06-eabd-4b1f-ac57-33ec50692bd9",
+      "name": "demo: crowd flow application (x86 decode with sms notification)",
+      "description": "crowd flow application runs on crowd videos",
+      "models": ["9abde40f-f7b1-4dbf-bb9f-e9512be44fe0"],
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
+                "cde737e0-5865-46d6-be71-b43b5522ea15", "65186a8f-80c0-4b26-8453-bd05da30eecd",
+                "642bc22b-1038-465b-b90a-895a99d18474", "cbbeb075-5517-4d0e-9f56-cec8cad595da",
+                "8a2d1c42-0d85-4423-be85-2651d9e13a50", "60e96d25-07dd-45be-8c19-4175b2884fc3",
+                "678f87c2-570a-4a67-b78e-8e0a0494552e"]
+    },
+    {
+      "guid": "90434d1c-67ed-44e5-9ba8-c0cefa6ab6c4",
+      "name": "demo: crowd flow application (x86 decode with email notification)",
+      "description": "crowd flow application runs on crowd videos",
+      "models": ["9abde40f-f7b1-4dbf-bb9f-e9512be44fe0"],
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
+                "cde737e0-5865-46d6-be71-b43b5522ea15", "65186a8f-80c0-4b26-8453-bd05da30eecd",
+                "642bc22b-1038-465b-b90a-895a99d18474", "cbbeb075-5517-4d0e-9f56-cec8cad595da",
+                "8a2d1c42-0d85-4423-be85-2651d9e13a50", "60e96d25-07dd-45be-8c19-4175b2884fc3",
+                "678f87c2-570a-4a67-b78e-8e0a0494552e"]
+    },
+    {
+      "guid": "ae98f0b7-5ae9-4504-b277-5a57131474c1",
+      "name": "demo: crowd flow application (x86 decode with mongo notification)",
+      "description": "crowd flow application runs on crowd videos",
+      "models": ["9abde40f-f7b1-4dbf-bb9f-e9512be44fe0"],
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
+                "cde737e0-5865-46d6-be71-b43b5522ea15", "65186a8f-80c0-4b26-8453-bd05da30eecd",
+                "642bc22b-1038-465b-b90a-895a99d18474", "cbbeb075-5517-4d0e-9f56-cec8cad595da",
+                "8a2d1c42-0d85-4423-be85-2651d9e13a50", "60e96d25-07dd-45be-8c19-4175b2884fc3",
+                "2e450e5e-7752-4083-abd3-cbb8821e54c2"]
     },
     {
       "guid": "e007c255-e830-489d-9f61-54c6a70bee86",
@@ -11454,7 +11560,40 @@
                 "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
                 "60e96d25-07dd-45be-8c19-4175b2884fc3",
                 "ef596576-6e27-4637-af19-38272b008593", "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
-    }     
+    },
+    {
+      "guid": "cc591df1-b336-4c7d-b8b9-a92d4c33e9aa",
+      "name": "demo: pedestrians detection (usb camera with sms notification)",
+      "description": "pedestrians detection runs on crowd videos",
+      "models": ["9abde40f-f7b1-4dbf-bb9f-e9512be44fe0"],
+      "nodes": ["04d1c5d1-06d4-4e9b-85bc-d890265583be",
+                "cde737e0-5865-46d6-be71-b43b5522ea15", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
+                "60e96d25-07dd-45be-8c19-4175b2884fc3",
+                "ef596576-6e27-4637-af19-38272b008593", "678f87c2-570a-4a67-b78e-8e0a0494552e"]
+    },
+    {
+      "guid": "7120c78c-1e52-4eaa-ac03-d88e24a2ba83",
+      "name": "demo: pedestrians detection (usb camera with email notification)",
+      "description": "pedestrians detection runs on crowd videos",
+      "models": ["9abde40f-f7b1-4dbf-bb9f-e9512be44fe0"],
+      "nodes": ["04d1c5d1-06d4-4e9b-85bc-d890265583be",
+                "cde737e0-5865-46d6-be71-b43b5522ea15", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
+                "60e96d25-07dd-45be-8c19-4175b2884fc3",
+                "ef596576-6e27-4637-af19-38272b008593", "678f87c2-570a-4a67-b78e-8e0a0494552e"]
+    },
+    {
+      "guid": "8a29cefe-0b6a-43f4-98f5-1d37e89817ab",
+      "name": "demo: pedestrians detection (usb camera with mongo notification)",
+      "description": "pedestrians detection runs on crowd videos",
+      "models": ["9abde40f-f7b1-4dbf-bb9f-e9512be44fe0"],
+      "nodes": ["04d1c5d1-06d4-4e9b-85bc-d890265583be",
+                "cde737e0-5865-46d6-be71-b43b5522ea15", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
+                "60e96d25-07dd-45be-8c19-4175b2884fc3",
+                "ef596576-6e27-4637-af19-38272b008593", "2e450e5e-7752-4083-abd3-cbb8821e54c2"]
+    }
   ],
 
   "enums":{
