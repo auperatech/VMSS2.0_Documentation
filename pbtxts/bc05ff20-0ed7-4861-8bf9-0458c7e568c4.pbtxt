@@ -141,7 +141,7 @@ node {
   calculator: "stream_mux"
   input_stream: "packetStream21"
   input_stream: "code_context_side_packet1"
-  graph_output: "outStraem1"
+  graph_output: "graph_output1"
   node_options: {
     [type.googleapis.com/aup.avaf.StreamMuxOptions]: {
      mux: {
