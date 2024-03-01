@@ -1,0 +1,13 @@
+node {
+ name: "mongo_node"
+ calculator: "notification_mongo"
+ input_stream: "json_notification"
+ node_options: {
+   [type.googleapis.com/aup.avaf.NotificationMongoOptions]: {
+     mongodb_address: "mongodb://127.0.0.1:27017"
+     database_name: "aupera_mongodb"
+     collection_name: "test_collection"
+     notification_q_size: 2
+   }
+ }
+}

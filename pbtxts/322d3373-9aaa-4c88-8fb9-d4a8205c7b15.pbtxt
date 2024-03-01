@@ -1,0 +1,28 @@
+node {
+ name: "email_notification"
+ calculator: "notification_message"
+ input_stream: "json_notification"
+ node_options: {
+   [type.googleapis.com/aup.avaf.NotificationMessageOptions]: {
+    # enum MessageType {
+    #   EMAIL = 0; // Use EMAIL protocol.
+    #   SMS = 1; // Use SMS protocol.
+    # }
+     message_type: EMAIL
+     sender: "xxxxxx@auperatech.com"
+     receiver: ["xxxxxxx1@gmail.com", "xxxxxxx2@gmail.com"]
+     notification_q_size: 2
+     sender_username: "xxxxxxxxxxxx"
+     sender_password: "xxxxxxxxxxxxx"
+     server_url: "smtps://mail.auperatech.com:465"
+     trigger: {
+       trigger_type: JQ
+       trigger_consecutive_packet: 3
+       jq_query_string: "'select(.total_persons_entering > 10 and .interval_persons_entering % 2 == 1)'"
+       notification_title: "email_notification_test"
+       notification_body: "xxxxxxxxxxxxxxxxxx"
+       attach_json: true
+     }
+   }
+ }
+}

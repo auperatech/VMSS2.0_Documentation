@@ -11,6 +11,8 @@ node {
         notification_url: ""
         notification_q_size: 1
         protocol_type: HTTP
+        https_username: ""
+        https_password: ""
     }
   }
 }

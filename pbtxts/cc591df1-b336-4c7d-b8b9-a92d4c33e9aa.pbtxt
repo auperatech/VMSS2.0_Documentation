@@ -151,7 +151,7 @@ node {
 }
 
 statistics_collector: {
-    target_file: "/tmp/stats/stats_ssd_pedestrian_pruned_0_97_udp.json"
+    target_file: "/tmp/stats/stats_ssd_pedestrian_pruned_0_97_sms.json"
     latency_stream_start: "packet_stream_demux"
     latency_stream_end: "packet_stream_encode"
     throughput_stream_name: ["packet_stream_demux", "packet_stream_encode"]
@@ -166,7 +166,7 @@ node {
     node_options: {
     [type.googleapis.com/aup.avaf.StatisticsReaderOptions]: {
         interval_us: 1000000
-        input_path: "/tmp/stats/stats_ssd_pedestrian_pruned_0_97_udp.json"
+        input_path: "/tmp/stats/stats_ssd_pedestrian_pruned_0_97_sms.json"
         loop_over: true
         input_type: FILE
         only_send_throughput: true
@@ -175,15 +175,25 @@ node {
 }
 
 node {
-    name: "udp_notification"
-    calculator: "notification_web"
-    vendor: "Aupera"
-    input_stream: "json_notification"
-    node_options: {
-    [type.googleapis.com/aup.avaf.NotificationWebOptions]: {
-        notification_url: "udp://127.0.0.1:60159"
-        notification_q_size: 1
-        protocol_type: UDP
+  name: "sms_notification"
+  calculator: "notification_message"
+  input_stream: "json_notification"
+  node_options: {
+    [type.googleapis.com/aup.avaf.NotificationMessageOptions]: {
+      message_type: SMS
+      sender: "1xxxxxxxxxxx"
+      receiver: ["1xxxxxxxxxxx"]
+      notification_q_size: 2
+      sender_username: "xxxxxxxxxxxxxxxxxxxxx"
+      sender_password: "xxxxxxxxxxxxxxxxxxxxx"
+      server_url: "https://api.twilio.com/2010-04-01/Accounts/ACf7ec64f832871ba7f8512d64bf566f68/Messages.json"
+      trigger: {
+        trigger_type: JQ
+        trigger_consecutive_packet: 3
+        jq_query_string: "'select(.average_throughput_value > 20)'"
+        notification_title: "sms_notification_test"
+        notification_body: "xxxxxxxxxxxxxxxxxx"
+      }
     }
   }
 }
