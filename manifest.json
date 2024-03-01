@@ -6082,6 +6082,18 @@
                 "642bc22b-1038-465b-b90a-895a99d18474", "cbbeb075-5517-4d0e-9f56-cec8cad595da",
                 "8a2d1c42-0d85-4423-be85-2651d9e13a50", "60e96d25-07dd-45be-8c19-4175b2884fc3",
                 "2e450e5e-7752-4083-abd3-cbb8821e54c2"]
+    },
+    {
+      "guid": "20b3b4c3-80cc-44c3-a354-11e09f1ab7df",
+      "name": "demo: pedestrians detection (x86 decode with mongo notification)",
+      "description": "pedestrians detection runs on crowd videos",
+      "pbtxt": "24c39710-b4a2-4dde-94d7-c4810497e6f1",
+      "models": ["9abde40f-f7b1-4dbf-bb9f-e9512be44fe0"],
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
+                "cde737e0-5865-46d6-be71-b43b5522ea15", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
+                "60e96d25-07dd-45be-8c19-4175b2884fc3",
+                "b4c2dd28-ea59-4d8d-8908-367bc8a764cd", "2e450e5e-7752-4083-abd3-cbb8821e54c2"]
     }
   ],
 
@@ -11469,6 +11481,18 @@
                 "642bc22b-1038-465b-b90a-895a99d18474", "cbbeb075-5517-4d0e-9f56-cec8cad595da",
                 "8a2d1c42-0d85-4423-be85-2651d9e13a50", "60e96d25-07dd-45be-8c19-4175b2884fc3",
                 "2e450e5e-7752-4083-abd3-cbb8821e54c2"]
+    },
+
+    {
+      "guid": "24c39710-b4a2-4dde-94d7-c4810497e6f1",
+      "name": "demo: pedestrians detection (x86 decode with mongo notification)",
+      "description": "pedestrians detection runs on crowd videos",
+      "models": ["9abde40f-f7b1-4dbf-bb9f-e9512be44fe0"],
+      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
+                "cde737e0-5865-46d6-be71-b43b5522ea15", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
+                "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
+                "60e96d25-07dd-45be-8c19-4175b2884fc3",
+                "b4c2dd28-ea59-4d8d-8908-367bc8a764cd", "2e450e5e-7752-4083-abd3-cbb8821e54c2"]
     },
     {
       "guid": "e007c255-e830-489d-9f61-54c6a70bee86",
