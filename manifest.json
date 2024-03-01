@@ -5162,32 +5162,7 @@
       "pipeline_pbtxt": "f63b1b6c-4b0c-437b-92ba-c2727abd9d03",
       "throughput_pbtxt": "789b6b37-91d6-44f6-b83c-7805b0b54280"
     },
-    {
-      "guid": "dc3bcd7f-a8f3-46e4-a0ec-a3454a57fc93",
-      "model_zoo_name": "cf_hourglass_mpii_256_256_10.2G_2.5",
-      "kernel": "hourglass_pe_mpii",
-      "model_type": "Hourglass",
-      "vendor": "Xilinx",
-      "ml_task": "landmark_prediction",
-      "application": "general",
-      "hardware_type": "xilinx_kria_som_1",
-      "hardware_arch": "DPUCZDX8G",
-      "hardware_engine": "", 
-      "model_format": "xmodel",
-      "ml_lib": "caffe1.0",
-      "inference_lib": "vitis2.5",
-      "checksum": "c3f2c142e13ef7d6d97aecbc8bc9e51d",
-      "download_link": "https://www.xilinx.com/bin/public/openDownload?filename=hourglass-pe_mpii-zcu102_zcu104_kv260-r2.5.0.tar.gz", 
-      "ops": "10.2G",
-      "input_size": "256x256",
-      "float_accuracy": "0.8718",
-      "quantized_accuracy": "0.8661",
-      "dataset": "MPII-Human-Pose",
-      "label": "Pose_Landmarks_Option2",
-      "node_pbtxt": "7adf3722-6b8f-4125-8215-82758d79c758",
-      "pipeline_pbtxt": "d393106c-1cca-49ed-9f92-90a38aa7955f",
-      "throughput_pbtxt": "fbcf663d-a35d-46e0-a705-d22898164227"
-    },
+
     {
       "guid": "4756518d-fc31-4a44-af4c-eb89936e509c",
       "model_zoo_name": "cf_openpose_aichallenger_368_368_0.3_189.7G_2.5",
@@ -11364,31 +11339,7 @@
       "nodes": ["5618ff66-748c-4342-86f9-fb019535430f", "2fb72d88-2c3b-43dc-9599-c9ef20c63b48",
                 "ef596576-6e27-4637-af19-38272b008593", "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
     },
-    {
-      "guid": "d393106c-1cca-49ed-9f92-90a38aa7955f",
-      "name": "demo: general detection and landmark prediction cascade",
-      "description": "box detector (ssd_pedestrian_pruned_0_97) and pose landmark predictor (hourglass_pe_mpii) cascade runs on crowd videos",
-      "models": ["9abde40f-f7b1-4dbf-bb9f-e9512be44fe0", "dc3bcd7f-a8f3-46e4-a0ec-a3454a57fc93"],
-      "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
-                "cde737e0-5865-46d6-be71-b43b5522ea15", "2fb72d88-2c3b-43dc-9599-c9ef20c63b48",
-                "f6d4c0be-7146-463e-9e75-7c7aae7dbdac", "cbbeb075-5517-4d0e-9f56-cec8cad595da",
-                "8a2d1c42-0d85-4423-be85-2651d9e13a50", "60e96d25-07dd-45be-8c19-4175b2884fc3"]
-    },
-    {
-      "guid": "7adf3722-6b8f-4125-8215-82758d79c758",
-      "name": "node: landmark_predictor",
-      "description": "landmark_predictor (hourglass_pe_mpii)",
-      "models": ["dc3bcd7f-a8f3-46e4-a0ec-a3454a57fc93"],
-      "nodes": ["2fb72d88-2c3b-43dc-9599-c9ef20c63b48"]
-    },
-    {
-      "guid": "fbcf663d-a35d-46e0-a705-d22898164227",
-      "name": "demo: throughput measurement",
-      "description": "throughput measurement for landmark predictor (hourglass_pe_mpii)",
-      "models": ["dc3bcd7f-a8f3-46e4-a0ec-a3454a57fc93"],
-      "nodes": ["5618ff66-748c-4342-86f9-fb019535430f", "2fb72d88-2c3b-43dc-9599-c9ef20c63b48",
-                "ef596576-6e27-4637-af19-38272b008593", "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
-    },
+
     {
       "guid": "fb655124-012b-4f61-9c1e-5106924b9bdf",
       "name": "demo: general face landmark prediction",
