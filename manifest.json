@@ -6052,7 +6052,7 @@
     },
     {
       "guid": "d5a3196f-ed0f-48d8-9cc6-ff827e97e72f",
-      "name": "demo: crowd flow application (x86 decode with udp notification) ",
+      "name": "demo: crowd flow application (x86 decode with udp notification)",
       "description": "crowd flow application runs on crowd videos",
       "pbtxt": "77c70567-9534-4454-8f40-922bbfd2e01e",
       "models": ["9abde40f-f7b1-4dbf-bb9f-e9512be44fe0"],
@@ -11458,8 +11458,8 @@
                 "8a2d1c42-0d85-4423-be85-2651d9e13a50", "60e96d25-07dd-45be-8c19-4175b2884fc3"]
     },
     {
-      "guid": "demo: crowd flow application (x86 decode with udp notification)",
-      "name": "demo: crowd flow application (x86 decode)",
+      "guid": "77c70567-9534-4454-8f40-922bbfd2e01e",
+      "name": "demo: crowd flow application (x86 decode with udp notification)",
       "description": "crowd flow application runs on crowd videos",
       "models": ["9abde40f-f7b1-4dbf-bb9f-e9512be44fe0"],
       "nodes": ["b177e388-d082-4d3c-ad8e-9f9d8ebcce8b", "1c34840d-2ca9-4d42-b229-101c55115824",
