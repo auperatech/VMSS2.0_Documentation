@@ -238,7 +238,7 @@ node {
   input_stream: "crowd_flow_notification"
   node_options: {
     [type.googleapis.com/aup.avaf.NotificationMongoOptions]: {
-      mongodb_address: "mongodb://127.0.0.1.27019"
+      mongodb_address: "mongodb://127.0.0.1:27019"
       database_name: "kria_som"
       collection_name: "test_collection"
       notification_q_size: 2
