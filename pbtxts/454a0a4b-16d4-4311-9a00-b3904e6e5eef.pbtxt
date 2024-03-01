@@ -95,7 +95,7 @@ node {
   node_options: {
     [type.googleapis.com/aup.avaf.VideoCodecOptions]: {
      enc: {
-       type: MPEG4
+       type: H264
        w: 0 
        h: 0
        fps: 0

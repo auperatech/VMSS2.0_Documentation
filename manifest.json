@@ -5411,6 +5411,16 @@
       "hardware_engines": ["4pe", "6pe", "8pe"]
     },
     {
+      "guid": "b4c2dd28-ea59-4d8d-8908-367bc8a764cd",
+      "type": "aupera_free",
+      "name": "to_json",
+      "vendor": "Aupera",
+      "pbtxt": "03fd179d-af97-4933-b5b1-5523c4bebee0",
+      "hardware_types": ["xilinx_vck5000_gen3x16_xdma_base_1", "xilinx_v70_gen5x8_qdma_base_2", "A-U50-P00G-LV-G", "aupera_v205_1", "aupera_u30_gen3x4_base_1", "aupera_alvea_zu5ev", "aupera_alvea_zu7ev", "xilinx_kria_som_1", "aupera_sbc_x7_1"],
+      "hardware_archs": ["DPUCVDX8H", "DPUCV2DX8G", "DPUCAHX8H", "DPUCAHX8L", "DPUCZDX8G"],
+      "hardware_engines": ["4pe", "6pe", "8pe"]
+    },
+    {
       "guid": "abf9b8da-d8bc-4f89-b181-aef7c025536e",
       "type": "aupera_free",
       "name": "notification_web",
@@ -5945,7 +5955,7 @@
                 "cde737e0-5865-46d6-be71-b43b5522ea15", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
                 "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
                 "60e96d25-07dd-45be-8c19-4175b2884fc3",
-                "ef596576-6e27-4637-af19-38272b008593", "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
+                "b4c2dd28-ea59-4d8d-8908-367bc8a764cd", "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
     },
     {
       "guid": "f9d490ae-8941-45a1-b0be-55a764da3706",
@@ -5957,7 +5967,7 @@
                 "cde737e0-5865-46d6-be71-b43b5522ea15", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
                 "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
                 "60e96d25-07dd-45be-8c19-4175b2884fc3",
-                "ef596576-6e27-4637-af19-38272b008593", "678f87c2-570a-4a67-b78e-8e0a0494552e"]
+                "b4c2dd28-ea59-4d8d-8908-367bc8a764cd", "678f87c2-570a-4a67-b78e-8e0a0494552e"]
     },
     {
       "guid": "f5c24e04-62d6-42bd-9f41-41b590e18b63",
@@ -5969,7 +5979,7 @@
                 "cde737e0-5865-46d6-be71-b43b5522ea15", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
                 "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
                 "60e96d25-07dd-45be-8c19-4175b2884fc3",
-                "ef596576-6e27-4637-af19-38272b008593", "678f87c2-570a-4a67-b78e-8e0a0494552e"]
+                "b4c2dd28-ea59-4d8d-8908-367bc8a764cd", "678f87c2-570a-4a67-b78e-8e0a0494552e"]
     },    
     {
       "guid": "18c58e76-0e90-4dfe-9a9e-0e4043f623a6",
@@ -5981,7 +5991,7 @@
                 "cde737e0-5865-46d6-be71-b43b5522ea15", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
                 "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
                 "60e96d25-07dd-45be-8c19-4175b2884fc3",
-                "ef596576-6e27-4637-af19-38272b008593", "2e450e5e-7752-4083-abd3-cbb8821e54c2"]
+                "b4c2dd28-ea59-4d8d-8908-367bc8a764cd", "2e450e5e-7752-4083-abd3-cbb8821e54c2"]
     },
 
 
@@ -6198,6 +6208,13 @@
       "description": "default parameters for statistics_reader node",
       "models": [],
       "nodes": ["ef596576-6e27-4637-af19-38272b008593"]
+    },
+    {
+      "guid": "03fd179d-af97-4933-b5b1-5523c4bebee0",
+      "name": "node: to_json default",
+      "description": "default parameters for to_json node",
+      "models": [],
+      "nodes": ["b4c2dd28-ea59-4d8d-8908-367bc8a764cd"]
     },
     {
       "guid": "8f23b04f-1c5b-4804-8263-fa5043981e55",
@@ -11561,7 +11578,7 @@
                 "cde737e0-5865-46d6-be71-b43b5522ea15", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
                 "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
                 "60e96d25-07dd-45be-8c19-4175b2884fc3",
-                "ef596576-6e27-4637-af19-38272b008593", "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
+                "b4c2dd28-ea59-4d8d-8908-367bc8a764cd", "abf9b8da-d8bc-4f89-b181-aef7c025536e"]
     },
     {
       "guid": "cc591df1-b336-4c7d-b8b9-a92d4c33e9aa",
@@ -11572,7 +11589,7 @@
                 "cde737e0-5865-46d6-be71-b43b5522ea15", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
                 "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
                 "60e96d25-07dd-45be-8c19-4175b2884fc3",
-                "ef596576-6e27-4637-af19-38272b008593", "678f87c2-570a-4a67-b78e-8e0a0494552e"]
+                "b4c2dd28-ea59-4d8d-8908-367bc8a764cd", "678f87c2-570a-4a67-b78e-8e0a0494552e"]
     },
     {
       "guid": "7120c78c-1e52-4eaa-ac03-d88e24a2ba83",
@@ -11583,7 +11600,7 @@
                 "cde737e0-5865-46d6-be71-b43b5522ea15", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
                 "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
                 "60e96d25-07dd-45be-8c19-4175b2884fc3",
-                "ef596576-6e27-4637-af19-38272b008593", "678f87c2-570a-4a67-b78e-8e0a0494552e"]
+                "b4c2dd28-ea59-4d8d-8908-367bc8a764cd", "678f87c2-570a-4a67-b78e-8e0a0494552e"]
     },
     {
       "guid": "8a29cefe-0b6a-43f4-98f5-1d37e89817ab",
@@ -11594,7 +11611,7 @@
                 "cde737e0-5865-46d6-be71-b43b5522ea15", "f6d4c0be-7146-463e-9e75-7c7aae7dbdac",
                 "cbbeb075-5517-4d0e-9f56-cec8cad595da", "8a2d1c42-0d85-4423-be85-2651d9e13a50",
                 "60e96d25-07dd-45be-8c19-4175b2884fc3",
-                "ef596576-6e27-4637-af19-38272b008593", "2e450e5e-7752-4083-abd3-cbb8821e54c2"]
+                "b4c2dd28-ea59-4d8d-8908-367bc8a764cd", "2e450e5e-7752-4083-abd3-cbb8821e54c2"]
     }
   ],
 

@@ -120,7 +120,7 @@ node {
   node_options: {
     [type.googleapis.com/aup.avaf.VideoCodecOptions]: {
      enc: {
-       type: MPEG4
+       type: H264
        w: 0 
        h: 0
        fps: 0
@@ -146,26 +146,16 @@ node {
   }
 }
 
-statistics_collector: {
-    target_file: "/tmp/stats/stats_ssd_pedestrian_pruned_0_97_email.json"
-    latency_stream_start: "packet_stream_demux"
-    latency_stream_end: "packet_stream_encode"
-    throughput_stream_name: ["packet_stream_demux", "packet_stream_encode"]
-    throughput_ignore_initial_packets_count: 5
-    size_stream_name: ["packet_stream_demux", "packet_stream_encode"]
-}
-
 node {
-    name: "statistics_reader_node"
-    calculator: "statistics_reader"
-    output_stream: "json_notification"
-    node_options: {
-    [type.googleapis.com/aup.avaf.StatisticsReaderOptions]: {
-        interval_us: 1000000
-        input_path: "/tmp/stats/stats_ssd_pedestrian_pruned_0_97_email.json"
-        loop_over: true
-        input_type: FILE
-        only_send_throughput: true
+  name: "to_json"
+  calculator: "to_json"
+  input_stream: "detections_stream"
+  output_stream: "json_stream"
+  node_options: {
+    [type.googleapis.com/aup.avaf.ToJsonOptions]: {
+      label_name_file: "/opt/aupera/avas/label_files/pedestrain_labels.txt"
+      network: "SSD"
+      input_type: PACKET_TYPE_DETECTIONS_OR_TRACKS
     }
   }
 }
@@ -173,7 +163,7 @@ node {
 node {
   name: "email_notification"
   calculator: "notification_message"
-  input_stream: "json_notification"
+  input_stream: "json_stream"
   node_options: {
     [type.googleapis.com/aup.avaf.NotificationMessageOptions]: {
       message_type: EMAIL

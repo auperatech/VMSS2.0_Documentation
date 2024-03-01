@@ -1,0 +1,13 @@
+ node {
+   name: "to_json"
+   calculator: "to_json"
+   input_stream: "detection_stream"
+   output_stream: "json_stream"
+   node_options: {
+     [type.googleapis.com/aup.avaf.ToJsonOptions]: {
+       label_name_file: "/opt/aupera/avas/label_files/pedestrain_labels.txt"
+       network: "SSD"
+       input_type: PACKET_TYPE_DETECTIONS
+     }
+   }
+ }
