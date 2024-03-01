@@ -54,7 +54,6 @@ node {
   }
 }
 
-
 node {
   name: "visualizer"
   calculator: "box_visualizer"
@@ -89,7 +88,6 @@ node {
   }
 }
 
-
 node {
   name: "vfilter_node"
   calculator: "ff_vfilter"
@@ -111,7 +109,6 @@ node {
   }
 }
 
-
 node {
   name: "encode_node"
   calculator: "x86_enc"
@@ -131,7 +128,6 @@ node {
     }
   }
 }
-
 
 node {
   name: "mux_node"

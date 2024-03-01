@@ -54,7 +54,6 @@ node {
   }
 }
 
-
 node {
   name: "visualizer"
   calculator: "box_visualizer"
@@ -88,7 +87,6 @@ node {
     }
   }
 }
-
 
 node {
   name: "vfilter_node"
@@ -131,7 +129,6 @@ node {
     }
   }
 }
-
 
 node {
   name: "mux_node"
@@ -181,7 +178,7 @@ node {
     input_stream: "json_notification"
     node_options: {
     [type.googleapis.com/aup.avaf.NotificationWebOptions]: {
-        notification_url: "udp://127.0.0.1:60159"
+        notification_url: "udp://127.0.0.1:8888"
         notification_q_size: 1
         protocol_type: UDP
     }

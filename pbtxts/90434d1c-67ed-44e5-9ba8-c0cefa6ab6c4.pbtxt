@@ -5,7 +5,6 @@ graph_input: "graph_input1"
 graph_output: "graph_output1"
 task_id: "DEFAULT"
 
-
 node {
   name: "demux_node"
   calculator: "stream_demux"
@@ -23,7 +22,6 @@ node {
     }
   }
 }
-
 
 node {
   name: "decode_node"
@@ -45,7 +43,6 @@ node {
     }
   }
 }
-
 
 node {
   name: "detector"
@@ -88,7 +85,6 @@ node {
   }
 }
 
-
 node {
   name: "tracker"
   calculator: "box_tracker"
@@ -111,7 +107,6 @@ node {
     }
   }
 }
-
 
 node {
   name: "crowd_flow"
@@ -156,7 +151,6 @@ node {
   }
 }
 
-
 node {
   name: "vfilter_node"
   calculator: "ff_vfilter"
@@ -179,7 +173,6 @@ node {
   }
 }
 
-
 node {
   name: "encode_node"
   calculator: "x86_enc"
@@ -200,7 +193,6 @@ node {
   }
 }
 
-
 node {
   name: "mux_node"
   calculator: "stream_mux"
@@ -219,28 +211,13 @@ node {
 }
 
 node {
-    name: "crowd_flow_udp_notification"
-    calculator: "notification_web"
-    vendor: "Aupera"
-    input_stream: "crowd_flow_notification"
-    node_options: {
-    [type.googleapis.com/aup.avaf.NotificationWebOptions]: {
-        notification_url: "udp://127.0.0.1:60159"
-        notification_q_size: 1
-        protocol_type: UDP
-    }
-  }
-}
-
-
-node {
   name: "email_notification"
   calculator: "notification_message"
   input_stream: "crowd_flow_notification"
   node_options: {
     [type.googleapis.com/aup.avaf.NotificationMessageOptions]: {
       sender: "xxxxxx@auperatech.com"
-      receiver: ["xxxxxxx@gmail.com"]
+      receiver: ["xxxxxxx@gmail.com", "xxxxxxx2@gmail.com"]
       notification_q_size: 2
       sender_username: "xxxxxxxxxxxx"
       sender_password: "xxxxxxxxxxxxx"

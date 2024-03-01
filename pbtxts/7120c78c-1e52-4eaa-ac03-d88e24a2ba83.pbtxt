@@ -54,7 +54,6 @@ node {
   }
 }
 
-
 node {
   name: "visualizer"
   calculator: "box_visualizer"
@@ -89,7 +88,6 @@ node {
   }
 }
 
-
 node {
   name: "vfilter_node"
   calculator: "ff_vfilter"
@@ -111,7 +109,6 @@ node {
   }
 }
 
-
 node {
   name: "encode_node"
   calculator: "x86_enc"
@@ -131,7 +128,6 @@ node {
     }
   }
 }
-
 
 node {
   name: "mux_node"
@@ -182,7 +178,7 @@ node {
     [type.googleapis.com/aup.avaf.NotificationMessageOptions]: {
       message_type: EMAIL
       sender: "xxxxxx@auperatech.com"
-      receiver: ["xxxxxxx@gmail.com"]
+      receiver: ["xxxxxxx1@gmail.com", "xxxxxxx2@gmail.com"]
       notification_q_size: 2
       sender_username: "xxxxxxxxxxxx"
       sender_password: "xxxxxxxxxxxxx"

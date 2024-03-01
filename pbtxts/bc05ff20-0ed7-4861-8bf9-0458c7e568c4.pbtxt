@@ -1,7 +1,6 @@
 control_port: 51881
 graph_output: "graph_output1"
 
-
 node {
   name: "usb_cam"
   calculator: "video_source"
@@ -12,7 +11,6 @@ node {
     }
   }
 }
-
 
 node {
   name: "detector"
