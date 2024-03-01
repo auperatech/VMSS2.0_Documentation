@@ -90,7 +90,7 @@ node {
 node {
   name: "tracker"
   calculator: "box_tracker"
-  input_stream: "detection_stream"
+  input_stream: "detections_stream"
   input_stream: "detect_interval"
   output_stream: "tracks_stream"
   node_options: {
