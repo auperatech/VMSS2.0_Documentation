@@ -240,7 +240,7 @@ node {
   node_options: {
     [type.googleapis.com/aup.avaf.VideoCodecOptions]: {
       enc: {
-        type: H265
+        type: H264
         w: 0
         h: 0
       }
