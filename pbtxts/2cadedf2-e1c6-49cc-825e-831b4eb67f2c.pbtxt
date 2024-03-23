@@ -154,9 +154,9 @@ node {
   output_stream: "json_stream"
   node_options: {
     [type.googleapis.com/aup.avaf.ToJsonOptions]: {
-      label_name_file: "/opt/aupera/avas/label_files/pedestrain_labels.txt"
+      label_name_file: ""
       network: "SSD"
-      input_type: PACKET_TYPE_DETECTIONS_OR_TRACKS
+      input_type: PACKET_TYPE_DETECTIONS
     }
   }
 }
